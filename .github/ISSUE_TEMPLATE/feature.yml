@@ -1,0 +1,50 @@
+name: Feature / User Story
+description: New functionality for the phishing detection system
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: Use the format: As a ___, I want ___ so that ___
+      placeholder: |
+        As a student,
+        I want my emails to be analyzed for phishing risk
+        so that I can avoid malicious links.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Use GIVEN / WHEN / THEN format
+      placeholder: |
+        GIVEN an email is received
+        WHEN the email is processed
+        THEN extract phishing features
+        AND assign a risk score
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security Considerations
+      placeholder: |
+        - Avoid storing sensitive content
+        - Handle headers securely
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - Feature implemented
+        - Tests pass
+        - Documentation updated
+    validations:
+      required: true
