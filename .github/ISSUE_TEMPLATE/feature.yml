@@ -1,13 +1,15 @@
 name: Feature / User Story
-description: New functionality for the phishing detection system
+description: "New functionality for the phishing detection system"
 title: "[Feature]: "
-labels: ["feature"]
+labels:
+  - feature
+
 body:
   - type: textarea
     id: user_story
     attributes:
       label: User Story
-      description: Use the format: As a ___, I want ___ so that ___
+      description: "Use the format: As a ___, I want ___ so that ___"
       placeholder: |
         As a student,
         I want my emails to be analyzed for phishing risk
@@ -19,7 +21,7 @@ body:
     id: acceptance
     attributes:
       label: Acceptance Criteria
-      description: Use GIVEN / WHEN / THEN format
+      description: "Use GIVEN / WHEN / THEN format."
       placeholder: |
         GIVEN an email is received
         WHEN the email is processed
