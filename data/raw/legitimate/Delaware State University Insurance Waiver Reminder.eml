@@ -1,0 +1,834 @@
+Received: from CH3PR01MB8313.prod.exchangelabs.com (2603:10b6:610:17c::22) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Fri, 22 Sep 2023 12:36:14
+ +0000
+Received: from BN9P220CA0006.NAMP220.PROD.OUTLOOK.COM (2603:10b6:408:13e::11)
+ by CH3PR01MB8313.prod.exchangelabs.com (2603:10b6:610:17c::22) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6792.30; Fri, 22 Sep 2023 12:36:10 +0000
+Received: from BN8NAM04FT029.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:408:13e:cafe::a6) by BN9P220CA0006.outlook.office365.com
+ (2603:10b6:408:13e::11) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6792.34 via Frontend
+ Transport; Fri, 22 Sep 2023 12:36:10 +0000
+Authentication-Results: spf=pass (sender IP is 203.55.21.53)
+ smtp.mailfrom=cmail20.com; dkim=pass (signature was verified)
+ header.d=cmail2.com;dmarc=none action=none header.from=desu.edu;compauth=pass
+ reason=118
+Received-SPF: Pass (protection.outlook.com: domain of cmail20.com designates
+ 203.55.21.53 as permitted sender) receiver=protection.outlook.com;
+ client-ip=203.55.21.53; helo=mx53.a.outbound.createsend.com; pr=C
+Received: from mx53.a.outbound.createsend.com (203.55.21.53) by
+ BN8NAM04FT029.mail.protection.outlook.com (10.13.161.86) with Microsoft SMTP
+ Server id 15.20.6813.23 via Frontend Transport; Fri, 22 Sep 2023 12:36:09
+ +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=cs2013; d=cmail2.com;
+ h=Subject:From:To:Reply-To:Date:MIME-Version:Content-Type:List-Unsubscribe:
+ Message-ID;
+ bh=H2QF8fACIRx/Cg4e9k7lXC38H0NXu0lqMnk5Q9SjuZA=;
+ b=c0G8JvKUYYMdJcbjVjOP4c6vx3s7IZ4u2vqfKmsW71RdqJ1RLG53+bvjYJSD1SYRLVbeY22zy3+5
+   NVyO9bh5aLVRs3xBuQqKC2eH8CivfnhwVaqC6J278DUZSpqj426NG8z9bRL5fJ6axh1U7VfURh6B
+   pGvRD68r55aeJJDVRdM=
+Subject: Delaware State University Insurance Waiver Reminder
+From: "Student Accounts" <studentaccounts@desu.edu> 
+To: "djefferson22@students.desu.edu" <djefferson22@students.desu.edu>
+Reply-To: studentaccounts@desu.edu
+Date: Fri, 22 Sep 2023 22:30:15 +1000
+Content-Type: multipart/alternative;
+ boundary="_01aed28f-7425-4103-8a2b-e2c7333ab9e2_"; charset=utf-8
+X-Mailer: Create Send
+X-Complaints-To: abuse@cmail20.com
+X-Feedback-ID: CA1-d-virhtuk:LI1-d-truhby:CL1-d-xhllj:createSEND
+List-Unsubscribe: <http://unsub.cmail20.com/t/d-u-virhtuk-dlujsltkd/>,
+ <mailto:unsubscribe-virhtuk2dlujsltkd2d-095D28E1@cmail20.com?subject=Unsubscribe>
+Message-ID: <cm.2230150771232.virhtuk.dlujsltkd.d@cmail20.com>
+Return-Path: StudentAccounts-virhtuk1dlujsltkd1d@cmail20.com
+X-MS-Exchange-Organization-ExpirationStartTime: 22 Sep 2023 12:36:10.0547
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 5f35b6eb-d393-44b3-f580-08dbbb687ff0
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BN8NAM04FT029:EE_|CH3PR01MB8313:EE_|BL0PR01MB4161:EE_
+X-MS-Exchange-Organization-AuthSource: BN8NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 5f35b6eb-d393-44b3-f580-08dbbb687ff0
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:4;
+X-Forefront-Antispam-Report: CIP:203.55.21.53;CTRY:AU;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:mx53.a.outbound.createsend.com;PTR:mx53.a.outbound.createsend.com;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Sep 2023 12:36:09.8360
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5f35b6eb-d393-44b3-f580-08dbbb687ff0
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-AuthSource: BN8NAM04FT029.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR01MB8313
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.7633859
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6813.024
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cUc5aXhON1JOUmR5M2d5d1N0dWpQM2VpOUxrMnU2ckZYN05peXdhL1Exb2VP?=
+ =?utf-8?B?OEtYYm5uVy90TmdJS1ZMSnVESkJkeVRKeCtqY0QyWndLK2pJMm5JODBBY3hM?=
+ =?utf-8?B?ZDNiWHhqSWRXdGU1WXVqSTFERUpWWmFiUzI0MS9NZ0w4K2FNVG8yaGVHWlFZ?=
+ =?utf-8?B?TlkvNXhzRXdrd3pVTnNPN3E5aVQ0Nm5vVDV2MGtVMi9mSFRteXpvaThFaFlt?=
+ =?utf-8?B?ZzBGYkFZdTRHaEVFeDFkL3RXRDhpVklONGduZ3dCNUh0dlBiVEZVdC9KYlJt?=
+ =?utf-8?B?TkRoUkhIRkpTcHFlTjB3RDQ3MWoxaHFjSVFycVNCdlc0TzJncFprQVNCZU9t?=
+ =?utf-8?B?RWd0dDZsL3hZYWQ3VkhNc21VLysvdW9jeHc2K3ArNjExZ3MwakFoMzQrZGx5?=
+ =?utf-8?B?ZWNoYXVuR214b0lXZkhscHVKaVk4VnREd2svWGJVdXBOVzhBUXY0QW96TjVF?=
+ =?utf-8?B?TGNYbkprYlRiSUFhaFZXTVRjL1pqaG8raXlDZ2lVc2lGOGNYZGpPejRqc1hC?=
+ =?utf-8?B?b1FvbkdNc2lZZk4vci91Q3MzWk1XQzliUkpjZ2x4a3ppVTVNWU9aSzYvbCtO?=
+ =?utf-8?B?WGRuM3ZKN3NFVWtxSTJlWTBRZEx6TDd3SGxQL3NZMFZQQkxNZmRJOWhsbVJC?=
+ =?utf-8?B?WDE2MFh4YXZzcnJEaXFtSUhtWmxDRVdXci9UYW1xSEpXVEljWE5aV0h3bTg0?=
+ =?utf-8?B?RGJWZUJybm52UTJmVjdENmRyK2pjVUhjZDRDbS9JU1kzeU1VQlRRdWNkdWpw?=
+ =?utf-8?B?Q0Q4a1M2N2ZyUkNwSTlPOTBtek5lNENjWTFUYWFTQXV5UW9keE9Wd3ZVZlJh?=
+ =?utf-8?B?dWhaM0MrdlhKeEU0bG92TkdhTUVTbzdhOG83eHR3NDlLaTR6d1VINENsaERp?=
+ =?utf-8?B?QU52ZzZVeXplNVc2WnNzQzNLSHNKbTBvVUVlTGp0aWUvc0FjSTNyTzluQnd1?=
+ =?utf-8?B?VUVrSzNmYk5kdW5ORWJ0TisvemttL2NvTkdLTGdYR0R2SGprWTVvVDk2Y2lz?=
+ =?utf-8?B?MExxUi9kUlRXRVEzbTBsRWErcitUN1JjWDk2SjNQM0RxUTdINmF4c2hzd04x?=
+ =?utf-8?B?M1Y0cmJCK0ZHUm1KZmR3VjhwdWxSd2dXeG1EcHVaRHhnSUhHVmVRakJHM3Zl?=
+ =?utf-8?B?Y1QwY3Rsd3RRRWFiNnhrTGF0RTJGd0pPYXd1K2IwaUtvWmJ3SEE4VlkyMWdB?=
+ =?utf-8?B?WWVqS1RwZURBVGNPT0dyekJicFExTlEzeVhrTHBFaU5XNUhDaGpEem5PY1hM?=
+ =?utf-8?B?Ny93Q3VrVFkraGVmcWoxWW1VVzhVK0dQT0hSTndoQXBlaDdVUnkxRzU5TmNN?=
+ =?utf-8?B?TzJwdHJmUmdNQUVCU2pUMVZabmE2SWFheGhuZFNEOTY3aGxBcGlPZ043b01X?=
+ =?utf-8?B?VUcwdlR1V0dSTnJEVUJtSzh1MEZtM1p6NEhLbU1iNFRZYkJFY0xZWmtNVGd6?=
+ =?utf-8?B?LzIxZm9KaWFTNmtmYjNnWHRKRXpUczc2UDFXVWJ5ZnVxaGNZd0svWVdGdldy?=
+ =?utf-8?B?V0czb1pFbFBQQzhPYyt2WDRwN01QZE1yREdncW0vWmVHNzFlTk5wTkxETGJ3?=
+ =?utf-8?B?MUVNNHZhZWJTYXRKUmZBWFYwMzlPeFFLb2NxMG9hekowSExHVmVuTUxjUGM3?=
+ =?utf-8?B?dG0zUmFMTjJCVVJwSDRETGp5ci9MUGlHQTdJOElBNy9BTUxvZkJFalZwY2ly?=
+ =?utf-8?B?VFZXM0tsS05ocTF2SUdHV0o3bm1CUmFUS3d5Sk5NYVZaemlkUmYrdGRnSU0x?=
+ =?utf-8?B?blZtQmdWaUFKVXVZYWt3V041NytablMwK01ENk5VbWlRZWVUcExRd2t1VmFG?=
+ =?utf-8?B?MGJYRWRVNTdYUU1iRTJCOVZ6a3RjVXpMdklhdU5xaWNvL2J4MUNVQmRaZlBV?=
+ =?utf-8?B?L1daWVZCcWNnNFNtVlVLZms0RXpvclRxS0I1ZnFMVGZSR3VUUlVxeDNad0l4?=
+ =?utf-8?B?SE5Kc0VNbWI0anI1VzBMd3BmaVJJaGl0M1VCaGRodit1eEhNajRoUUE3ZWxR?=
+ =?utf-8?B?ZUNncmVlMS9ZdzJOL0xNTlRUemQzVXhVR2tCeUQ2a3BFRnp2UlBkWmx6MHZj?=
+ =?utf-8?B?WnlpYTFpUFZwOUE4bHFmUStVUnc0dmlWckhXTHN6WDdOVHkxaWo1Ym9iSFpa?=
+ =?utf-8?B?a1U0c1VYaU9MYlN3ZzcwREhPNUgvY1Nrbi9NZ0dkZXpRUHdCS0M0K0FkUHN4?=
+ =?utf-8?B?dDVPbWtiUlNFYUdYaDc4eGxQWFFmL0V1MVdmNGxmT0NiZ013VUtXSVZBb0tD?=
+ =?utf-8?B?RVBXL2lWRzBQbk1WV21xS0IvamVzSXFSTE04RVlOalBWMkl0ajFVVDhZSDlJ?=
+ =?utf-8?B?N2M2a1dadW9pNytETmwrMzdrTzFjOEdSOEJzbmxjUVovMkFray9mZVBGUVl6?=
+ =?utf-8?B?K1RCNWc0YmVrdnRkVUxoUXNiRVZCVXhDU093UHI3aUs4SEUxU0RwQmxlQlNB?=
+ =?utf-8?B?MFgrWEVHZ01oakJSNlhtUldFN2JOQllRMnFZU0k5OEdpV2E3QVEyVU9hZjlm?=
+ =?utf-8?B?UFJCS3FiNWVrVXYzT0lSV1dnTjRKTGZNbzMxYU1VUi83WXRXSzZVSEVzMk1z?=
+ =?utf-8?B?MTNzeVI4Z2k0WGFHWmgxN0NXZTI5cTkxZk9Ndk50czBZYmVxRjFuanIxVUcy?=
+ =?utf-8?B?UDhKckhOaGVOZTVKdjZ0N0ZTQWR1REQxeStqSG9nQ1JBSUZoUnppT2dBVWxl?=
+ =?utf-8?Q?Wy9U?=
+MIME-Version: 1.0
+
+--_01aed28f-7425-4103-8a2b-e2c7333ab9e2_
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Delaware State University requires you to carry medical insurance in orde=
+r to help defray eligible medical costs in the event of an injury or sick=
+ness.
+
+We have selected student injury and sickness insurance provided and admin=
+istered by UnitedHealthcare StudentResources.
+
+If you are currently covered by a comparable plan, you now have the optio=
+n to complete a Waiver Form to request a review of your existing coverage=
+=2E If we determine that your coverage meets our minimum coverage standards=
+, you will not be required to enroll in Delaware State University=E2=80=99=
+s student insurance plan.
+
+We will accept your waiver request until 09/13/2023. If you do not comple=
+te and submit a waiver request by 09/13/2023 you will be required to purc=
+hase Delaware State University=E2=80=99s coverage.
+
+Please go to  [https://studentcenter.uhcsr.com/desu] to complete and sub=
+mit your Waiver Request. At the end of the online waiver request process =
+you will have the opportunity to print a copy of your request for your re=
+cords.
+
+You may receive an automatic approval or declination of your request onli=
+ne. If you do not, the school will contact you by email with further info=
+rmation about the status of your waiver request.
+
+Unsubscribe https://partnercenter.cmail20.com/t/d-u-virhtuk-=
+dlujsltkd-y/
+
+--_01aed28f-7425-4103-8a2b-e2c7333ab9e2_
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html style=3D"margin: 0;pad=
+ding: 0;" xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+    <title></title>
+    <!--[if !mso]><!--><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=
+=3Dedge"><!--<![endif]-->
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width"><style type=3D=
+"text/css">
+@media only screen and (min-width: 620px){.column{}.wrapper{min-width:600px=
+ !important}.wrapper h1{}.wrapper h1{font-size:32px !important;line-height:=
+40px !important}.wrapper h2{}.wrapper h2{font-size:22px !important;line-hei=
+ght:31px !important}.wrapper h3{}.wrapper h3{font-size:18px !important;line=
+-height:26px !important}.wrapper .size-8,.wrapper .size-8-m,.wrapper .size-=
+8-l{font-size:8px !important;line-height:14px !important}.wrapper .size-8-m=
+{line-height:16px !important}.wrapper .size-8-l{line-height:24px !important=
+}.wrapper .size-9,.wrapper .size-9-m,.wrapper .size-9-l{font-size:9px !impo=
+rtant;line-height:16px !important}.wrapper .size-9-m{line-height:18px !impo=
+rtant}.wrapper .size-9-l{line-height:27px !important}.wrapper .size-10,.wra=
+pper .size-10-m,.wrapper .size-10-l{font-size:10px !important;line-height:1=
+8px !important}.wrapper .size-10-m{line-height:20px !important}.wrapper=20
+.size-10-l{line-height:30px !important}.wrapper .size-11,.wrapper .size-11-=
+m,.wrapper .size-11-l{font-size:11px !important;line-height:19px !important=
+}.wrapper .size-11-m{line-height:22px !important}.wrapper .size-11-l{line-h=
+eight:33px !important}.wrapper .size-12,.wrapper .size-12-m,.wrapper .size-=
+12-l{font-size:12px !important;line-height:19px !important}.wrapper .size-1=
+2-m{line-height:24px !important}.wrapper .size-12-l{line-height:36px !impor=
+tant}.wrapper .size-13,.wrapper .size-13-m,.wrapper .size-13-l{font-size:13=
+px !important;line-height:21px !important}.wrapper .size-13-m{line-height:2=
+6px !important}.wrapper .size-13-l{line-height:39px !important}.wrapper .si=
+ze-14,.wrapper .size-14-m,.wrapper .size-14-l{font-size:14px !important;lin=
+e-height:21px !important}.wrapper .size-14-m{line-height:28px !important}.w=
+rapper .size-14-l{line-height:42px !important}.wrapper .size-15,.wrapper=20
+.size-15-m,.wrapper .size-15-l{font-size:15px !important;line-height:23px !=
+important}.wrapper .size-15-m{line-height:30px !important}.wrapper .size-15=
+-l{line-height:45px !important}.wrapper .size-16,.wrapper .size-16-m,.wrapp=
+er .size-16-l{font-size:16px !important;line-height:24px !important}.wrappe=
+r .size-16-m{line-height:32px !important}.wrapper .size-16-l{line-height:48=
+px !important}.wrapper .size-17,.wrapper .size-17-m,.wrapper .size-17-l{fon=
+t-size:17px !important;line-height:26px !important}.wrapper .size-17-m{line=
+-height:34px !important}.wrapper .size-17-l{line-height:51px !important}.wr=
+apper .size-18,.wrapper .size-18-m,.wrapper .size-18-l{font-size:18px !impo=
+rtant;line-height:26px !important}.wrapper .size-18-m{line-height:36px !imp=
+ortant}.wrapper .size-18-l{line-height:54px !important}.wrapper .size-20,.w=
+rapper .size-20-m,.wrapper .size-20-l{font-size:20px=20
+!important;line-height:28px !important}.wrapper .size-20-m{line-height:40px=
+ !important}.wrapper .size-20-l{line-height:60px !important}.wrapper .size-=
+22,.wrapper .size-22-m,.wrapper .size-22-l{font-size:22px !important;line-h=
+eight:31px !important}.wrapper .size-22-m{line-height:44px !important}.wrap=
+per .size-22-l{line-height:66px !important}.wrapper .size-24,.wrapper .size=
+-24-m,.wrapper .size-24-l{font-size:24px !important;line-height:32px !impor=
+tant}.wrapper .size-24-m{line-height:48px !important}.wrapper .size-24-l{li=
+ne-height:72px !important}.wrapper .size-26,.wrapper .size-26-m,.wrapper .s=
+ize-26-l{font-size:26px !important;line-height:34px !important}.wrapper .si=
+ze-26-m{line-height:52px !important}.wrapper .size-26-l{line-height:78px !i=
+mportant}.wrapper .size-28,.wrapper .size-28-m,.wrapper .size-28-l{font-siz=
+e:28px !important;line-height:36px !important}.wrapper=20
+.size-28-m{line-height:56px !important}.wrapper .size-28-l{line-height:84px=
+ !important}.wrapper .size-30,.wrapper .size-30-m,.wrapper .size-30-l{font-=
+size:30px !important;line-height:38px !important}.wrapper .size-30-m{line-h=
+eight:60px !important}.wrapper .size-30-l{line-height:90px !important}.wrap=
+per .size-32,.wrapper .size-32-m,.wrapper .size-32-l{font-size:32px !import=
+ant;line-height:40px !important}.wrapper .size-32-m{line-height:64px !impor=
+tant}.wrapper .size-32-l{line-height:96px !important}.wrapper .size-34,.wra=
+pper .size-34-m,.wrapper .size-34-l{font-size:34px !important;line-height:4=
+3px !important}.wrapper .size-34-m{line-height:68px !important}.wrapper .si=
+ze-34-l{line-height:102px !important}.wrapper .size-36,.wrapper .size-36-m,=
+.wrapper .size-36-l{font-size:36px !important;line-height:43px !important}.=
+wrapper .size-36-m{line-height:72px !important}.wrapper=20
+.size-36-l{line-height:108px !important}.wrapper .size-40,.wrapper .size-40=
+-m,.wrapper .size-40-l{font-size:40px !important;line-height:47px !importan=
+t}.wrapper .size-40-m{line-height:80px !important}.wrapper .size-40-l{line-=
+height:120px !important}.wrapper .size-44,.wrapper .size-44-m,.wrapper .siz=
+e-44-l{font-size:44px !important;line-height:50px !important}.wrapper .size=
+-44-m{line-height:88px !important}.wrapper .size-44-l{line-height:132px !im=
+portant}.wrapper .size-48,.wrapper .size-48-m,.wrapper .size-48-l{font-size=
+:48px !important;line-height:54px !important}.wrapper .size-48-m{line-heigh=
+t:96px !important}.wrapper .size-48-l{line-height:144px !important}.wrapper=
+ .size-56,.wrapper .size-56-m,.wrapper .size-56-l{font-size:56px !important=
+;line-height:60px !important}.wrapper .size-56-m{line-height:112px !importa=
+nt}.wrapper .size-56-l{line-height:168px !important}.wrapper=20
+.size-64,.wrapper .size-64-m,.wrapper .size-64-l{font-size:64px !important;=
+line-height:68px !important}.wrapper .size-64-m{line-height:128px !importan=
+t}.wrapper .size-64-l{line-height:192px !important}.wrapper .size-72,.wrapp=
+er .size-72-m,.wrapper .size-72-l{font-size:72px !important;line-height:76p=
+x !important}.wrapper .size-72-m{line-height:144px !important}.wrapper .siz=
+e-72-l{line-height:216px !important}.wrapper .size-80,.wrapper .size-80-m,.=
+wrapper .size-80-l{font-size:80px !important;line-height:84px !important}.w=
+rapper .size-80-m{line-height:160px !important}.wrapper .size-80-l{line-hei=
+ght:240px !important}.wrapper .size-96,.wrapper .size-96-m,.wrapper .size-9=
+6-l{font-size:96px !important;line-height:100px !important}.wrapper .size-9=
+6-m{line-height:192px !important}.wrapper .size-96-l{line-height:288px !imp=
+ortant}.wrapper .size-112,.wrapper .size-112-m,.wrapper=20
+.size-112-l{font-size:112px !important;line-height:116px !important}.wrappe=
+r .size-112-m{line-height:224px !important}.wrapper .size-112-l{line-height=
+:336px !important}.wrapper .size-128,.wrapper .size-128-m,.wrapper .size-12=
+8-l{font-size:128px !important;line-height:132px !important}.wrapper .size-=
+128-m{line-height:256px !important}.wrapper .size-128-l{line-height:384px !=
+important}.wrapper .size-144,.wrapper .size-144-m,.wrapper .size-144-l{font=
+-size:144px !important;line-height:148px !important}.wrapper .size-144-m{li=
+ne-height:288px !important}.wrapper .size-144-l{line-height:432px !importan=
+t}}
+</style>
+    <meta name=3D"x-apple-disable-message-reformatting">
+    <style type=3D"text/css">
+.main, .mso {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+* {
+  line-height: inherit;
+}
+[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.wrapper .footer__share-button a:hover,
+.wrapper .footer__share-button a:focus {
+  color: #ffffff !important;
+}
+.wrapper .footer__share-button a.icon-white:hover,
+.wrapper .footer__share-button a.icon-white:focus {
+  color: #ffffff !important;
+}
+.wrapper .footer__share-button a.icon-black:hover,
+.wrapper .footer__share-button a.icon-black:focus {
+  color: #000000 !important;
+}
+.btn a:hover,
+.btn a:focus,
+.footer__share-button a:hover,
+.footer__share-button a:focus,
+.email-footer__links a:hover,
+.email-footer__links a:focus {
+  opacity: 0.8;
+}
+.preheader,
+.header,
+.layout,
+.column {
+  transition: width 0.25s ease-in-out, max-width 0.25s ease-in-out;
+}
+.preheader td {
+  padding-bottom: 8px;
+}
+.layout,
+div.header {
+  max-width: 400px !important;
+  -fallback-width: 95% !important;
+  width: calc(100% - 20px) !important;
+}
+div.preheader {
+  max-width: 360px !important;
+  -fallback-width: 90% !important;
+  width: calc(100% - 60px) !important;
+}
+.snippet,
+.webversion {
+  Float: none !important;
+}
+.stack .column {
+  max-width: 400px !important;
+  width: 100% !important;
+}
+.fixed-width.has-border {
+  max-width: 402px !important;
+}
+.fixed-width.has-border .layout__inner {
+  box-sizing: border-box;
+}
+.snippet,
+.webversion {
+  width: 50% !important;
+}
+.mso .layout__edges {
+  font-size: 0;
+}
+.layout-fixed-width,
+.mso .layout-full-width {
+  background-color: #ffffff;
+}
+@media only screen and (min-width: 620px) {
+  .column,
+  .gutter {
+    display: table-cell;
+    Float: none !important;
+    vertical-align: top;
+  }
+  div.preheader,
+  .email-footer {
+    max-width: 560px !important;
+    width: 560px !important;
+  }
+  .snippet,
+  .webversion {
+    width: 280px !important;
+  }
+  div.header,
+  .layout,
+  .one-col .column {
+    max-width: 600px !important;
+    width: 600px !important;
+  }
+  .fixed-width.has-border,
+  .fixed-width.x_has-border,
+  .has-gutter.has-border,
+  .has-gutter.x_has-border {
+    max-width: 602px !important;
+    width: 602px !important;
+  }
+  .two-col .column {
+    max-width: 300px !important;
+    width: 300px !important;
+  }
+  .three-col .column,
+  .column.narrow,
+  .column.x_narrow {
+    max-width: 200px !important;
+    width: 200px !important;
+  }
+  .column.wide,
+  .column.x_wide {
+    width: 400px !important;
+  }
+  .two-col.has-gutter .column,
+  .two-col.x_has-gutter .column {
+    max-width: 290px !important;
+    width: 290px !important;
+  }
+  .three-col.has-gutter .column,
+  .three-col.x_has-gutter .column,
+  .has-gutter .narrow {
+    max-width: 188px !important;
+    width: 188px !important;
+  }
+  .has-gutter .wide {
+    max-width: 394px !important;
+    width: 394px !important;
+  }
+  .two-col.has-gutter.has-border .column,
+  .two-col.x_has-gutter.x_has-border .column {
+    max-width: 292px !important;
+    width: 292px !important;
+  }
+  .three-col.has-gutter.has-border .column,
+  .three-col.x_has-gutter.x_has-border .column,
+  .has-gutter.has-border .narrow,
+  .has-gutter.x_has-border .narrow {
+    max-width: 190px !important;
+    width: 190px !important;
+  }
+  .has-gutter.has-border .wide,
+  .has-gutter.x_has-border .wide {
+    max-width: 396px !important;
+    width: 396px !important;
+  }
+}
+@supports (display: flex) {
+  @media only screen and (min-width: 620px) {
+    .fixed-width.has-border .layout__inner {
+      display: flex !important;
+    }
+  }
+}
+/***
+* Mobile Styles
+*
+* 1. Overriding inline styles
+*/
+@media(max-width: 619px) {
+  .email-flexible-footer .left-aligned-footer .column,
+  .email-flexible-footer .center-aligned-footer,
+  .email-flexible-footer .right-aligned-footer .column {
+    max-width: 100% !important; /* [1] */
+    text-align: center !important; /* [1] */
+    width: 100% !important; /* [1] */
+  }
+  .flexible-footer-logo {
+    margin-left: 0px !important; /* [1] */
+    margin-right: 0px !important; /* [1] */
+  }
+  .email-flexible-footer .left-aligned-footer .flexible-footer__share-butto=
+n__container,
+  .email-flexible-footer .center-aligned-footer .flexible-footer__share-but=
+ton__container,
+  .email-flexible-footer .right-aligned-footer .flexible-footer__share-butt=
+on__container {
+    display: inline-block;
+    margin-left: 5px !important; /* [1] */
+    margin-right: 5px !important; /* [1] */
+  }
+  .email-flexible-footer__additionalinfo--center {
+    text-align: center !important; /* [1] */
+  }
+ =20
+  .email-flexible-footer .left-aligned-footer table,
+  .email-flexible-footer .center-aligned-footer table,
+  .email-flexible-footer .right-aligned-footer table {
+    display: table !important; /* [1] */
+    width: 100% !important; /* [1] */
+  }
+  .email-flexible-footer .footer__share-button,
+  .email-flexible-footer .email-footer__additional-info {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and=
+ (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-rat=
+io: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min=
+-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .fblike {
+    background-image: url(http://i7.cmail20.com/static/eb/master/13-the-blu=
+eprint-3/images/fblike@2x.png) !important;
+  }
+  .tweet {
+    background-image: url(http://i8.cmail20.com/static/eb/master/13-the-blu=
+eprint-3/images/tweet@2x.png) !important;
+  }
+  .linkedinshare {
+    background-image: url(http://i9.cmail20.com/static/eb/master/13-the-blu=
+eprint-3/images/lishare@2x.png) !important;
+  }
+  .forwardtoafriend {
+    background-image: url(http://i10.cmail20.com/static/eb/master/13-the-bl=
+ueprint-3/images/forward@2x.png) !important;
+  }
+}
+@media (max-width: 321px) {
+  .fixed-width.has-border .layout__inner {
+    border-width: 1px 0 !important;
+  }
+  .layout,
+  .stack .column {
+    min-width: 320px !important;
+    width: 320px !important;
+  }
+  .border {
+    display: none;
+  }
+  .has-gutter .border {
+    display: table-cell;
+  }
+}
+.cmctbl--inline table {
+  border-collapse: collapse;
+}
+</style>
+   =20
+  <!--[if !mso]><!--><style type=3D"text/css">
+@import url(https://fonts.googleapis.com/css?family=3DMerriweather:400itali=
+c,400,700,700italic);
+</style><link href=3D"https://fonts.googleapis.com/css?family=3DMerriweathe=
+r:400italic,400,700,700italic" rel=3D"stylesheet" type=3D"text/css"><!--<![=
+endif]--><style type=3D"text/css">
+.main,.mso{background-color:#fefefe}.logo a:hover,.logo a:focus{color:#000 =
+!important}.footer-logo a:hover,.footer-logo a:focus{color:#372d1b !importa=
+nt}.mso .layout-has-border{border-top:1px solid #cbcbcb;border-bottom:1px s=
+olid #cbcbcb}.mso .layout-has-bottom-border{border-bottom:1px solid #cbcbcb=
+}.mso .border{background-color:#cbcbcb}.mso h1{}.mso h1{font-size:32px !imp=
+ortant;line-height:40px !important}.mso h2{}.mso h2{font-size:22px !importa=
+nt;line-height:31px !important}.mso h3{}.mso h3{font-size:18px !important;l=
+ine-height:26px !important}.mso .layout__inner{}.mso .footer__share-button =
+p{}.mso .footer__share-button p{font-family:Merriweather,Georgia,serif}
+</style><!--[if mso]><style type=3D"text/css" emb-not-inline>
+.mso div{border:0 none white !important}.mso .w560 .divider{}.mso .w560 .di=
+vider{Margin-left:260px !important;Margin-right:260px !important}.mso .w360=
+ .divider{}.mso .w360 .divider{Margin-left:160px !important;Margin-right:16=
+0px !important}.mso .w260 .divider{}.mso .w260 .divider{Margin-left:110px !=
+important;Margin-right:110px !important}.mso .w160 .divider{}.mso .w160 .di=
+vider{Margin-left:60px !important;Margin-right:60px !important}.mso .w60 .d=
+ivider{}.mso .w60 .divider{Margin-left:10px !important;Margin-right:10px !i=
+mportant}.mso .w354 .divider{}.mso .w354 .divider{Margin-left:157px !import=
+ant;Margin-right:157px !important}.mso .w250 .divider{}.mso .w250 .divider{=
+Margin-left:105px !important;Margin-right:105px !important}.mso .w148 .divi=
+der{}.mso .w148 .divider{Margin-left:54px !important;Margin-right:54px !imp=
+ortant}.mso .size-8,.mso .size-8-m,.mso .size-8-l{font-size:8px=20
+!important;line-height:14px !important}.mso .size-8-m{line-height:16px !imp=
+ortant}.mso .size-8-l{line-height:24px !important}.mso .size-9,.mso .size-9=
+-m,.mso .size-9-l{font-size:9px !important;line-height:16px !important}.mso=
+ .size-9-m{line-height:18px !important}.mso .size-9-l{line-height:27px !imp=
+ortant}.mso .size-10,.mso .size-10-m,.mso .size-10-l{font-size:10px !import=
+ant;line-height:18px !important}.mso .size-10-m{line-height:20px !important=
+}.mso .size-10-l{line-height:30px !important}.mso .size-11,.mso .size-11-m,=
+.mso .size-11-l{font-size:11px !important;line-height:19px !important}.mso =
+.size-11-m{line-height:22px !important}.mso .size-11-l{line-height:33px !im=
+portant}.mso .size-12,.mso .size-12-m,.mso .size-12-l{font-size:12px !impor=
+tant;line-height:19px !important}.mso .size-12-m{line-height:24px !importan=
+t}.mso .size-12-l{line-height:36px !important}.mso .size-13,.mso=20
+.size-13-m,.mso .size-13-l{font-size:13px !important;line-height:21px !impo=
+rtant}.mso .size-13-m{line-height:26px !important}.mso .size-13-l{line-heig=
+ht:39px !important}.mso .size-14,.mso .size-14-m,.mso .size-14-l{font-size:=
+14px !important;line-height:21px !important}.mso .size-14-m{line-height:28p=
+x !important}.mso .size-14-l{line-height:42px !important}.mso .size-15,.mso=
+ .size-15-m,.mso .size-15-l{font-size:15px !important;line-height:23px !imp=
+ortant}.mso .size-15-m{line-height:30px !important}.mso .size-15-l{line-hei=
+ght:45px !important}.mso .size-16,.mso .size-16-m,.mso .size-16-l{font-size=
+:16px !important;line-height:24px !important}.mso .size-16-m{line-height:32=
+px !important}.mso .size-16-l{line-height:48px !important}.mso .size-17,.ms=
+o .size-17-m,.mso .size-17-l{font-size:17px !important;line-height:26px !im=
+portant}.mso .size-17-m{line-height:34px !important}.mso=20
+.size-17-l{line-height:51px !important}.mso .size-18,.mso .size-18-m,.mso .=
+size-18-l{font-size:18px !important;line-height:26px !important}.mso .size-=
+18-m{line-height:36px !important}.mso .size-18-l{line-height:54px !importan=
+t}.mso .size-20,.mso .size-20-m,.mso .size-20-l{font-size:20px !important;l=
+ine-height:28px !important}.mso .size-20-m{line-height:40px !important}.mso=
+ .size-20-l{line-height:60px !important}.mso .size-22,.mso .size-22-m,.mso =
+.size-22-l{font-size:22px !important;line-height:31px !important}.mso .size=
+-22-m{line-height:44px !important}.mso .size-22-l{line-height:66px !importa=
+nt}.mso .size-24,.mso .size-24-m,.mso .size-24-l{font-size:24px !important;=
+line-height:32px !important}.mso .size-24-m{line-height:48px !important}.ms=
+o .size-24-l{line-height:72px !important}.mso .size-26,.mso .size-26-m,.mso=
+ .size-26-l{font-size:26px !important;line-height:34px !important}.mso=20
+.size-26-m{line-height:52px !important}.mso .size-26-l{line-height:78px !im=
+portant}.mso .size-28,.mso .size-28-m,.mso .size-28-l{font-size:28px !impor=
+tant;line-height:36px !important}.mso .size-28-m{line-height:56px !importan=
+t}.mso .size-28-l{line-height:84px !important}.mso .size-30,.mso .size-30-m=
+,.mso .size-30-l{font-size:30px !important;line-height:38px !important}.mso=
+ .size-30-m{line-height:60px !important}.mso .size-30-l{line-height:90px !i=
+mportant}.mso .size-32,.mso .size-32-m,.mso .size-32-l{font-size:32px !impo=
+rtant;line-height:40px !important}.mso .size-32-m{line-height:64px !importa=
+nt}.mso .size-32-l{line-height:96px !important}.mso .size-34,.mso .size-34-=
+m,.mso .size-34-l{font-size:34px !important;line-height:43px !important}.ms=
+o .size-34-m{line-height:68px !important}.mso .size-34-l{line-height:102px =
+!important}.mso .size-36,.mso .size-36-m,.mso .size-36-l{font-size:36px=20
+!important;line-height:43px !important}.mso .size-36-m{line-height:72px !im=
+portant}.mso .size-36-l{line-height:108px !important}.mso .size-40,.mso .si=
+ze-40-m,.mso .size-40-l{font-size:40px !important;line-height:47px !importa=
+nt}.mso .size-40-m{line-height:80px !important}.mso .size-40-l{line-height:=
+120px !important}.mso .size-44,.mso .size-44-m,.mso .size-44-l{font-size:44=
+px !important;line-height:50px !important}.mso .size-44-m{line-height:88px =
+!important}.mso .size-44-l{line-height:132px !important}.mso .size-48,.mso =
+.size-48-m,.mso .size-48-l{font-size:48px !important;line-height:54px !impo=
+rtant}.mso .size-48-m{line-height:96px !important}.mso .size-48-l{line-heig=
+ht:144px !important}.mso .size-56,.mso .size-56-m,.mso .size-56-l{font-size=
+:56px !important;line-height:60px !important}.mso .size-56-m{line-height:11=
+2px !important}.mso .size-56-l{line-height:168px !important}.mso=20
+.size-64,.mso .size-64-m,.mso .size-64-l{font-size:64px !important;line-hei=
+ght:68px !important}.mso .size-64-m{line-height:128px !important}.mso .size=
+-64-l{line-height:192px !important}.mso .size-72,.mso .size-72-m,.mso .size=
+-72-l{font-size:72px !important;line-height:76px !important}.mso .size-72-m=
+{line-height:144px !important}.mso .size-72-l{line-height:216px !important}=
+.mso .size-80,.mso .size-80-m,.mso .size-80-l{font-size:80px !important;lin=
+e-height:84px !important}.mso .size-80-m{line-height:160px !important}.mso =
+.size-80-l{line-height:240px !important}.mso .size-96,.mso .size-96-m,.mso =
+.size-96-l{font-size:96px !important;line-height:100px !important}.mso .siz=
+e-96-m{line-height:192px !important}.mso .size-96-l{line-height:288px !impo=
+rtant}.mso .size-112,.mso .size-112-m,.mso .size-112-l{font-size:112px !imp=
+ortant;line-height:116px !important}.mso .size-112-m{line-height:224px=20
+!important}.mso .size-112-l{line-height:336px !important}.mso .size-128,.ms=
+o .size-128-m,.mso .size-128-l{font-size:128px !important;line-height:132px=
+ !important}.mso .size-128-m{line-height:256px !important}.mso .size-128-l{=
+line-height:384px !important}.mso .size-144,.mso .size-144-m,.mso .size-144=
+-l{font-size:144px !important;line-height:148px !important}.mso .size-144-m=
+{line-height:288px !important}.mso .size-144-l{line-height:432px !important=
+}.mso .cmctbl table td,.mso .cmctbl table th{Margin-left:20px !important;Ma=
+rgin-right:20px !important}.mso .cmctbl- -inline,.mso .cmctbl{padding-left:=
+20px !important;padding-right:20px !important}.mso .cmctbl- -inline table,.=
+mso .cmctbl=20
+table{mso-table-lspace:0pt;mso-table-rspace:0pt;
+mso-line-height-rule:exactly}.size-8,.size-9{mso-text-raise:9px}.size-34,h1=
+{mso-text-raise:13px}.size-36{mso-text-raise:14px}.size-40{mso-text-raise:1=
+6px}.size-44{mso-text-raise:17px}.size-48{mso-text-raise:18px}.size-56{mso-=
+text-raise:22px}.size-64{mso-text-raise:25px}.size-72{mso-text-raise:28px}.=
+size-80{mso-text-raise:32px}.size-96{mso-text-raise:40px}.size-112{mso-text=
+-raise:46px}.size-128{mso-text-raise:54px}.size-144{mso-text-raise:58px}.si=
+ze-11-m,.size-12-m{mso-text-raise:6px}.size-13-m,.size-14-m{mso-text-raise:=
+7px}.size-15-m,.size-16-m,.size-8-l{mso-text-raise:8px}.size-17-m,.size-18-=
+m{mso-text-raise:9px}.size-20-m,.size-10-l{mso-text-raise:10px}.size-22-m,.=
+size-11-l{mso-text-raise:11px}.size-24-m,.size-12-l{mso-text-raise:12px}.si=
+ze-26-m,.size-13-l{mso-text-raise:13px}.size-28-m,.size-14-l{mso-text-raise=
+:14px}.size-30-m,.size-15-l{mso-text-raise:15px}.size-32-m,.size-16
+-l{mso-text-raise:16px}.size-34-m,.size-17-l{mso-text-raise:17px}.size-36-m=
+,.size-18-l{mso-text-raise:18px}.size-40-m,.size-20-l{mso-text-raise:20px}.=
+size-44-m,.size-22-l{mso-text-raise:22px}.size-48-m,.size-24-l{mso-text-rai=
+se:24px}.size-26-l{mso-text-raise:26px}.size-56-m,.size-28-l{mso-text-raise=
+:28px}.size-30-l{mso-text-raise:30px}.size-64-m,.size-32-l{mso-text-raise:3=
+2px}.size-34-l{mso-text-raise:34px}.size-72-m,.size-36-l{mso-text-raise:36p=
+x}.size-80-m,.size-40-l{mso-text-raise:40px}.size-44-l{mso-text-raise:44px}=
+.size-96-m,.size-48-l{mso-text-raise:48px}.size-112-m,.size-56-l{mso-text-r=
+aise:56px}.size-128-m,.size-64-l{mso-text-raise:64px}.size-144-m,.size-72-l=
+{mso-text-raise:72px}.size-80-l{mso-text-raise:80px}.size-96-l{mso-text-rai=
+se:96px}.size-112-l{mso-text-raise:112px}.size-128-l{mso-text-raise:128px}.=
+size-144-l{mso-text-raise:144px}
+</style><![endif]--></head>
+<!--[if mso]>
+  <body class=3D"mso">
+<![endif]-->
+<!--[if !mso]><!-->
+  <body class=3D"main full-padding" style=3D"margin: 0;padding: 0;-webkit-t=
+ext-size-adjust: 100%;">
+<!--<![endif]-->
+    <table class=3D"wrapper" style=3D"border-collapse: collapse;table-layou=
+t: fixed;min-width: 320px;width: 100%;background-color: #fefefe;" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation"><tbody><tr><td>
+      <div role=3D"banner">
+        <div class=3D"preheader" style=3D"Margin: 0 auto;max-width: 560px;m=
+in-width: 280px; width: 280px;width: calc(28000% - 167440px);">
+          <div style=3D"border-collapse: collapse;display: table;width: 100=
+%;">
+          <!--[if mso]><table align=3D"center" class=3D"preheader" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><td style=3D"width: 2=
+80px" valign=3D"top"><![endif]-->
+            <div class=3D"snippet" style=3D"display: table-cell;Float: left=
+;font-size: 12px;line-height: 19px;max-width: 280px;min-width: 140px; width=
+: 140px;width: calc(14000% - 78120px);padding: 10px 0 5px 0;color: #bbb;fon=
+t-family: Merriweather,Georgia,serif;">
+             =20
+            </div>
+          <!--[if mso]></td><td style=3D"width: 280px" valign=3D"top"><![en=
+dif]-->
+            <div class=3D"webversion" style=3D"display: table-cell;Float: l=
+eft;font-size: 12px;line-height: 19px;max-width: 280px;min-width: 139px; wi=
+dth: 139px;width: calc(14100% - 78680px);padding: 10px 0 5px 0;text-align: =
+right;color: #bbb;font-family: Merriweather,Georgia,serif;">
+             =20
+            </div>
+          <!--[if mso]></td></tr></table><![endif]-->
+          </div>
+        </div>
+       =20
+      </div>
+      <div>
+      <div class=3D"layout one-col fixed-width stack" style=3D"Margin: 0 au=
+to;max-width: 600px;min-width: 320px; width: 320px;width: calc(28000% - 167=
+400px);overflow-wrap: break-word;word-wrap: break-word;word-break: break-wo=
+rd;">
+        <div class=3D"layout__inner" style=3D"border-collapse: collapse;dis=
+play: table;width: 100%;background-color: #fefefe;">
+        <!--[if mso]><table align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation"><tr class=3D"layout-fixed-width" style=3D"back=
+ground-color: #fefefe;"><td style=3D"width: 600px" class=3D"w560"><![endif]=
+-->
+          <div class=3D"column" style=3D"text-align: left;color: #353638;fo=
+nt-size: 17px;line-height: 26px;font-family: Merriweather,Georgia,serif;">
+       =20
+            <div style=3D"Margin-left: 20px;Margin-right: 20px;Margin-top: =
+24px;Margin-bottom: 24px;">
+      <div style=3D"mso-line-height-rule: exactly;mso-text-raise: 11px;vert=
+ical-align: middle;">
+        <p style=3D"Margin-top: 0;Margin-bottom: 0;">Delaware State Univers=
+ity requires you to carry medical insurance in order to help defray eligibl=
+e medical costs in the event of an injury or sickness.<br>
+<br>
+We have selected student injury and sickness insurance provided and adminis=
+tered by UnitedHealthcare StudentResources.<br>
+<br>
+If you are currently covered by a comparable plan, you now have the option =
+to complete a Waiver Form to request a review of your existing coverage. If=
+ we determine that your coverage meets our minimum coverage standards, you =
+will not be required to enroll in Delaware State University=E2=80=99s stude=
+nt insurance plan.<br>
+<br>
+We will accept your waiver request until 09/13/2023. If you do not complete=
+ and submit a waiver request by 09/13/2023 you will be required to purchase=
+ Delaware State University=E2=80=99s coverage.<br>
+<br>
+Please go to <a style=3D"text-decoration: underline;transition: opacity 0.1=
+s ease-in;color: #289fd8;" href=3D"https://partnercenter.cmail20.com/t/d-l-=
+virhtuk-dlujsltkd-r/">https://studentcenter.uhcsr.com/desu</a> to complete =
+and submit your Waiver Request. At the end of the online waiver request pro=
+cess you will have the opportunity to print a copy of your request for your=
+ records.<br>
+<br>
+You may receive an automatic approval or declination of your request online=
+. If you do not, the school will contact you by email with further informat=
+ion about the status of your waiver request.</p>
+      </div>
+    </div>
+       =20
+          </div>
+        <!--[if mso]></td></tr></table><![endif]-->
+        </div>
+      </div>
+ =20
+      <div style=3D"mso-line-height-rule: exactly;line-height: 20px;font-si=
+ze: 20px;">&nbsp;</div>
+ =20
+      </div>
+      <div role=3D"contentinfo"><div style=3D"line-height:4px;font-size:4px=
+;" id=3D"footer-top-spacing">&nbsp;</div><div class=3D"layout email-flexibl=
+e-footer email-footer" style=3D"Margin: 0 auto;max-width: 600px;min-width: =
+320px; width: 320px;width: calc(28000% - 167400px);overflow-wrap: break-wor=
+d;word-wrap: break-word;word-break: break-word;" id=3D"footer-content">
+      <div class=3D"layout__inner left-aligned-footer" style=3D"border-coll=
+apse: collapse;display: table;width: 100%;">
+        <!--[if mso]><table align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation"><tr class=3D"layout-email-footer"><![endif]-->
+        <!--[if mso]><td><table cellpadding=3D"0" cellspacing=3D"0"><![endi=
+f]-->
+        <!--[if mso]><td valign=3D"top"><![endif]-->
+          <div class=3D"column" style=3D"text-align: left;font-size: 12px;l=
+ine-height: 19px;color: #bbb;font-family: Merriweather,Georgia,serif;displa=
+y: none;">
+      <div class=3D"footer-logo emb-logo-margin-box" style=3D"font-size: 26=
+px;line-height: 32px;Margin-top: 10px;Margin-bottom: 20px;color: #7b663d;fo=
+nt-family: Roboto,Tahoma,sans-serif;" align=3D"center">
+        <div emb-flexible-footer-logo=3D"" align=3D"center"></div>
+      </div>
+    </div>
+        <!--[if mso]></td><![endif]-->
+        <!--[if mso]><td valign=3D"top"><![endif]-->
+          <div class=3D"column" style=3D"text-align: left;font-size: 12px;l=
+ine-height: 19px;color: #bbb;font-family: Merriweather,Georgia,serif;displa=
+y: none;">
+      <div style=3D"margin-left: 0;margin-right: 0;Margin-top: 10px;Margin-=
+bottom: 10px;">
+        <div class=3D"footer__share-button">
+         =20
+         =20
+         =20
+         =20
+        </div>
+      </div>
+    </div>
+        <!--[if mso]></td><![endif]-->
+        <!--[if mso]><td valign=3D"top"><![endif]-->
+          <table style=3D"border-collapse: collapse;table-layout: fixed;dis=
+play: inline-block;width: 600px;" cellpadding=3D"0" cellspacing=3D"0"><tbod=
+y><tr><td><div class=3D"column js-footer-additional-info" style=3D"text-ali=
+gn: left;font-size: 12px;line-height: 19px;color: #bbb;font-family: Merriwe=
+ather,Georgia,serif;width: 600px;">
+      <div style=3D"margin-left: 0;margin-right: 0;Margin-top: 10px;Margin-=
+bottom: 10px;">
+       =20
+       =20
+       =20
+        <div class=3D"email-footer__additional-info" style=3D"font-size: 12=
+px;line-height: 19px;margin-bottom: 15px;">
+          <a style=3D"text-decoration: underline;transition: opacity 0.1s e=
+ase-in;color: #bbb;" href=3D"https://partnercenter.cmail20.com/t/d-u-virhtu=
+k-dlujsltkd-j/" lang=3D"en">Unsubscribe</a>
+        </div>
+        <!--[if mso]>&nbsp;<![endif]-->
+      </div>
+    </div></td></tr></tbody></table>
+        <!--[if mso]></table></td><![endif]-->
+        <!--[if mso]></td></tr></table><![endif]-->
+      </div>
+    </div><div style=3D"line-height:40px;font-size:40px;" id=3D"footer-bott=
+om-spacing">&nbsp;</div></div>
+     =20
+    </td></tr></tbody></table>
+  <style type=3D"text/css">
+@media (max-width:619px){.email-flexible-footer .left-aligned-footer .colum=
+n,.email-flexible-footer .center-aligned-footer,.email-flexible-footer .rig=
+ht-aligned-footer .column{max-width:100% !important;text-align:center !impo=
+rtant;width:100% !important}.flexible-footer-logo{margin-left:0px !importan=
+t;margin-right:0px !important}.email-flexible-footer .left-aligned-footer .=
+flexible-footer__share-button__container,.email-flexible-footer .center-ali=
+gned-footer .flexible-footer__share-button__container,.email-flexible-foote=
+r .right-aligned-footer .flexible-footer__share-button__container{display:i=
+nline-block;margin-left:5px !important;margin-right:5px !important}.email-f=
+lexible-footer__additionalinfo--center{text-align:center !important}.email-=
+flexible-footer .left-aligned-footer table,.email-flexible-footer .center-a=
+ligned-footer table,.email-flexible-footer .right-aligned-footer=20
+table{display:table !important;width:100% !important}.email-flexible-footer=
+ .footer__share-button,.email-flexible-footer .email-footer__additional-inf=
+o{margin-left:20px;margin-right:20px}}
+</style><img style=3D"visibility: hidden !important; display: block !import=
+ant; height:1px !important; width:1px !important; border: 0 !important; mar=
+gin: 0 !important; padding: 0 !important" src=3D"https://partnercenter.cmai=
+l20.com/t/d-o-virhtuk-dlujsltkd/o.gif" width=3D"1" height=3D"1" border=3D"0=
+" alt=3D"">
+</body></html>
+
+
+
+--_01aed28f-7425-4103-8a2b-e2c7333ab9e2_--

@@ -1,0 +1,621 @@
+Received: from CH3PR01MB8441.prod.exchangelabs.com (::1) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Wed, 10 Dec 2025 18:10:45
+ +0000
+Received: from BY1PR01MB8710.prod.exchangelabs.com (2603:10b6:a03:5ae::6) by
+ CH3PR01MB8441.prod.exchangelabs.com (2603:10b6:610:1a4::19) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9388.14; Wed, 10 Dec 2025 18:10:26 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=ICJua3tSot4Vz/sCoo92pZ1YKBgiDG2pS/Do2CsfLpbbsu7hrrFqDspzAesyeNHeywxmSiwg8rBSJucLUpFbusk1+G5xoLe7DdEOE2+epebJ1cmrQ/jaSN9E2EpCBSg7PhAm+vj0qfCKlDQBtAqPO1tpA7B1Ag1U725Ui91U1acoJW+mXKqmbh3PtMN7RFxpz7e3v3yN5xTXDjgLV2vv8TWsyB+imZ9D2nkYMQV4ISmnccKH/j3hvwjCS7M5iXHH7WkvN0uCHH6VSaEcS3y6WGFGQUCALWtXP73T9X0BDxPgrJVkweAjNhrINRnRU2FLqoxvzc7NkcEMK+fh46Vsqw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=8a6zn9mmdulviI3aa8wtb5zl4YS0yOq7BpM6zCihQ8A=;
+ b=tbIyINvtWvVySp/Okh/WhhahK9xWGiE7ShhWN7kMucsimNW/0Nu5SFSq/SnEV5kRa2xnl0zC+lVc0O9cqse9GEgEysltAeb+2eTZnhU+RB+a4HlyDjQaLswAAiFx0cQMQXjuWYkafiRHATBuCVmPT2gfagymYA2qOzGbZSHccJrOf+zLx1IXDGbz3SfrFjEFF5Wqy6EOXSEjYUURStikvHfcKobhQRNQLUNEth+T70uDFGs+BnyogN90nGjNWbdEnCDGqqM3isI5Q+5s4gf1Q0DM9wXStczFYwSEjvrwN0TuMMqA8ji+cnCCiHhkWEMydiEWIqgZvX29Zjgxm6P0Zg==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:c101::7) smtp.rcpttodomain=students.desu.edu
+ smtp.mailfrom=desu.edu; dmarc=bestguesspass action=none header.from=desu.edu;
+ dkim=pass (signature was verified) header.d=desu.edu; arc=pass (0 oda=1
+ ltdi=1 spf=[1,1,smtp.mailfrom=desu.edu] dkim=[1,1,header.d=desu.edu]
+ dmarc=[1,1,header.from=desu.edu])
+Received: from SN7PR04CA0095.namprd04.prod.outlook.com (2603:10b6:806:122::10)
+ by BY1PR01MB8710.prod.exchangelabs.com (2603:10b6:a03:5ae::6) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9412.8; Wed, 10 Dec 2025 18:08:32 +0000
+Received: from SA2PEPF00003F65.namprd04.prod.outlook.com
+ (2603:10b6:806:122:cafe::af) by SN7PR04CA0095.outlook.office365.com
+ (2603:10b6:806:122::10) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9412.9 via Frontend Transport; Wed,
+ 10 Dec 2025 18:08:32 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:c101::7)
+ smtp.mailfrom=desu.edu; dkim=pass (signature was verified)
+ header.d=desu.edu;dmarc=bestguesspass action=none
+ header.from=desu.edu;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of desu.edu designates
+ 2a01:111:f403:c101::7 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a01:111:f403:c101::7;
+ helo=BL0PR03CU003.outbound.protection.outlook.com; pr=C
+Received: from BL0PR03CU003.outbound.protection.outlook.com
+ (2a01:111:f403:c101::7) by SA2PEPF00003F65.mail.protection.outlook.com
+ (2603:10b6:80f:fc04::28) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9412.4 via Frontend Transport; Wed,
+ 10 Dec 2025 18:08:30 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=MR5teReKJfjcQGL85fbY4KJ9kVnNHHOWretFPjji7PUNxH63RWiyqYESuDTb4Fh50JsAbVh1CXQAcTcGmbm5g7ISro67RmUX6nNGzAkX+Q/TSaEyRqcGpekdezAmgLIku4uPBlnQLDhsJF9GnFof0MZDyDtgP9BWhiho0R8Dr6nsVtkUiR9gqF7hQ+JuYTaA9kdS4xrGEfm+uAdJKpiQbSj3MUBzrxusxu/EeX/1hcW7mQ7ldzwML6gT5i560NaC+jvhgsubbaF+LsRbClIL/2Vd7xTh1sBgfg58G6UnsnfHx2VIHggAD6UCoKRvTMPZTcS/hCaHmg6T+3G1jAaf3A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=8a6zn9mmdulviI3aa8wtb5zl4YS0yOq7BpM6zCihQ8A=;
+ b=F3ul6d+qK5TDczsvmuW86AGVsmOBzMNtJYo++ZkGDeRDYKcrnjYR22fX0dDHrNV2j3EvgSZ06dP/t8hzIMgHVg2fJqZV315JErFarodriGU7TiqjVZ2BF/H6FhgR29ZJEw7O50k8Ga50nZx0vQumXcsZD1i1+ezxibekyDyl9enROa12FYMUAtVvnoKalO+FzXdRB4Az9dRV6kjpctPwLO99Mq2H7ZQnQLCamnDaIiI/+ZgnNC8wzTvcd8mqJfha3ZabSHyqnm29gPQJSp/+EInUqoX7rB5KdNqxv7Z7X3XyJdNHhrQMoTS3B0Sb8mmnxxV9PqtgZzk+3fbSHS92nA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=desu.edu; dmarc=pass action=none header.from=desu.edu;
+ dkim=pass header.d=desu.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=desu.edu; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=8a6zn9mmdulviI3aa8wtb5zl4YS0yOq7BpM6zCihQ8A=;
+ b=yVlN6178rFJtD0ZCMKvR1ipe35MKk8aqYt9ushhMy9d5DPZgT1auddgROTF7h3fR9LjZTaXwjl04kL1vn8VwJFsLH8KpmHGtzO+NkM0kl/a6ZoqbckUeUe/WH4Lng+M0sqXkYTF2THyVteF2YeMBzl0+VdHqQBTa6PacDmhFBcs=
+Received: from MN2PR13MB4336.namprd13.prod.outlook.com (2603:10b6:208:fe::11)
+ by BY3PR13MB4851.namprd13.prod.outlook.com (2603:10b6:a03:36e::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9412.7; Wed, 10 Dec
+ 2025 18:08:25 +0000
+Received: from MN2PR13MB4336.namprd13.prod.outlook.com
+ ([fe80::f5b7:7c40:7481:532]) by MN2PR13MB4336.namprd13.prod.outlook.com
+ ([fe80::f5b7:7c40:7481:532%4]) with mapi id 15.20.9412.005; Wed, 10 Dec 2025
+ 18:08:25 +0000
+From: eNews <enews@desu.edu>
+To: "students@students.desu.edu" <students@students.desu.edu>
+Subject: Spring 2026 Student Health Insurance waiver/enrollment now open!
+Thread-Topic: Spring 2026 Student Health Insurance waiver/enrollment now open!
+Thread-Index: AQHcaf9ph69t8ksHUkSdcmFXUGNTmQ==
+Date: Wed, 10 Dec 2025 18:08:25 +0000
+Message-ID: <MN2PR13MB43365A12FA48AE26ABFA4663CCA0A@MN2PR13MB4336.namprd13.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-reactions: allow
+Authentication-Results-Original: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=desu.edu;
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-traffictypediagnostic: MN2PR13MB4336:EE_|BY3PR13MB4851:EE_|SA2PEPF00003F65:EE_|BY1PR01MB8710:EE_|CH3PR01MB8441:EE_|BL0PR01MB4161:EE_
+X-MS-Office365-Filtering-Correlation-Id: 280568db-3477-4ac3-b546-08de38172020
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|69100299015|376014|366016|1800799024|10070799003|38070700021|8096899003|13003099007|3122999012;
+X-Microsoft-Antispam-Message-Info-Original: =?us-ascii?Q?Z+Zx/fabb2GZh6syN+tPbZxUbz53zILS1Htzb100eTV5HvHnTq8YnnmsemCU?=
+ =?us-ascii?Q?+fw5NVXdPbeYXjgvXxcJx80a989l9rLORVakdhpjdvSNzvyBVa52dbGuaH/p?=
+ =?us-ascii?Q?NehLwxTVolXA7SMuvMJkEUoOcZIYRxajk/yYiWCb8stk18Xyw+7Z8rWbTG9T?=
+ =?us-ascii?Q?d1CkDU7iEXBkTJm+JFhBNsUYvryDDVk+D7BXOMm7MDDqkgUibHPCCZQOVOr9?=
+ =?us-ascii?Q?Ua4Ft+nNf/Qr9cNs5rcWrMy8zEbkV/ITBkOCGy2pqZD2U1aZoYuy/tg5BQN6?=
+ =?us-ascii?Q?dXIPtB6lRpC/A55Lh2w3FwD9ksU2kQwFpQ+l++mGCon5IF79n2xjTyzFXTQK?=
+ =?us-ascii?Q?s/3iNqxXgOr9wTNmerPrIi25NsXHlICjQEcExXhhuNy4ovllIFBpJKNdSGSD?=
+ =?us-ascii?Q?t9S70q2eGt/wfz1bCAIpMy1iO1rF9Vdp5RPcnHizzSbBKuLtk/vJumchRJhg?=
+ =?us-ascii?Q?M2kzoKT4XT5ltCN+td0HORnERiJCIyzTgcRg0g67jZqQrAvVYrn39LueWKQS?=
+ =?us-ascii?Q?CPLYH7k6YWH/jERKmcsPlcFMwopO0RXr9fHACK5gAcYeZFHfICsirOLbCAGh?=
+ =?us-ascii?Q?kldaKBXQ6gm8WLF/O8/Ywel8zrhudjJkWyybZTNSkGXnHwJDuut+geEJdekC?=
+ =?us-ascii?Q?wShIo5td2kBejRCrZMZT0jrpvmIypXAZYlEuUuCyu08I0f9azGc/ye/xhqHw?=
+ =?us-ascii?Q?NpPn1p0aJCvltIqzWdVG6oEj+3GJWuHhrfcJs2B1awwExjYURraWOP4y2dex?=
+ =?us-ascii?Q?bUiHmWhbk/tDDQRxr7DWtFf2zZBkNHVp+AD5UQ2fKWiqWrjJhHQmxEIIYQ/t?=
+ =?us-ascii?Q?uOifNqEi2rWzSWS4V3AJmv4Earht2+T/l0lIIAMWUvEHHCfLg5ZL27GwAD/f?=
+ =?us-ascii?Q?5PvwdIOayhWdIniD/o0+SoMU28/V6dBpuB+uq1CpTIpGzuoRhMwKuvyXkZcc?=
+ =?us-ascii?Q?9mMouJSdNTM5DoL1zqwjeTvkOOATZvM8VIXogHPPXXuW0o5hQsVHcJrbuZ7N?=
+ =?us-ascii?Q?7T6ZNDiGxCCXQH2iQ6Rs1P1wszFwaLBVjwDD0F7OdRNG17YhFQVdLyH/uTxG?=
+ =?us-ascii?Q?Sneokcg083TsDzhzziv2euhx+XAKb/CtlxklovLcIXKW37MdkpixjFugB02N?=
+ =?us-ascii?Q?etY1xBdD0jtwHaUFfYeVjAFtjYYdagijx/QaQ+/T1MFyRiXcJIaxpvdZRain?=
+ =?us-ascii?Q?b0AwA8RA5UgXo2hF74k3lN4IfBmGOiD99DwpP4uP6diN2n5vdUfQj55sKVQ9?=
+ =?us-ascii?Q?n7Mvt5yix6JnpUnupvUM8L6Gb2Ko/RGMZa3VR/Rr32oZtxN4cMEk/r0fb0At?=
+ =?us-ascii?Q?r+DL5BMjju5nzOE4pNkfOPT/EC6IScUW4W2//rFQ4cRwa7NTqLW4lqPlLSVY?=
+ =?us-ascii?Q?PFDr+UFXVmZgB7fA78dvkfqDcQh70Ib3VZaXOjNGSdVyWs3/OpD0dRr5vAEQ?=
+ =?us-ascii?Q?mfhkdRVzYccBCfaEuFq9gUrHicxVw05D?=
+X-Forefront-Antispam-Report-Untrusted: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MN2PR13MB4336.namprd13.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(69100299015)(376014)(366016)(1800799024)(10070799003)(38070700021)(8096899003)(13003099007)(3122999012);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-Original-0: =?Windows-1252?Q?/MmnKlnWJeqBxdvJ7dO1IFBatC5Hxg4JP49h2w9NG6Lz5dJYHNoEPk4g?=
+ =?Windows-1252?Q?umb9LLn/zPgNirUVzcyJN5ptDfekHT+mWoHcNAbSk1z7kKQKKlaQez/m?=
+ =?Windows-1252?Q?CkVqD64tsamK9zWmk0xQi6gqe+41fAWE8k4caQ653xBa0vrmo8ZlipLs?=
+ =?Windows-1252?Q?HIGCVNTW04W9hGXB3ZEbubYz+dclumqbHQsJ7ti0ym2oOwI3KXfxDZfp?=
+ =?Windows-1252?Q?FkgtRJUQgorGHzMgB/pI3eIIWLEdP+95mkoRQwdU7LiBP0f/4+If+T2X?=
+ =?Windows-1252?Q?a+U8oMR4PkVE42Gcy73B9RZuKJSHKweQ/PTIsJvkXobn6Rn3mOk8STOD?=
+ =?Windows-1252?Q?alpr4UcVH91NVYamh+59cIg8A4lFvc67iEYksS6ckEW7CxYMRsg3SVO6?=
+ =?Windows-1252?Q?VXxjdmVjTAfOkGFANGCkBoYsmzw6BdKbWBrzJ35lKnE+bADdaAQl8wk4?=
+ =?Windows-1252?Q?/pI3Gd4AA79JiDGX+TMhKfsSrVjTXD8imauVQEcjthMyOxksWAr1njhy?=
+ =?Windows-1252?Q?Rj2HS7TONXYm8wnYwyDZYEAZWo1vFI3IP0Cl26XCrKAXZVuFf7KCtcjI?=
+ =?Windows-1252?Q?kxqtbRKtQQDuOA8DhIzI5beyTbuTUwuFKjG1/GjvzlnSxeO+yybzSaK0?=
+ =?Windows-1252?Q?Sql82Y44QSHttbe9JyBHcgNGXOzuYETZqDji6PGr8OpQFQh2UxVoF6SJ?=
+ =?Windows-1252?Q?3wKz2hobbWNbFNy8GapyDUHbqUAfwik+IktETs32KZaaRMjatqzEpdCy?=
+ =?Windows-1252?Q?wR2Pl4zO3RfyLxrEw8U1aQzix/GTg8OYjwIU7bd2Gv0C2HyCZP6y9YQ4?=
+ =?Windows-1252?Q?Xt8wnXwli06vtMwDakkZjMIcfJQCJFGl33x+jXU+9dFRXMOQjl+MYf5K?=
+ =?Windows-1252?Q?Grq+5zOBZAN4adOfl4JYAQd/1x311KXU6yc58XSRyaCScWY1Hm8DF51R?=
+ =?Windows-1252?Q?69ovHrQsKskcic5yMRPDhP2aYUGCchdAjyuHcQbDot+qiP4RylTqTqV1?=
+ =?Windows-1252?Q?qCYaz9KsQr99P4UaFtwZQyncmXVLTax4NhRmOxhdCHrZtAwKAuveeBkm?=
+ =?Windows-1252?Q?C9yBvn+K9ijcbVC2YnZVqHBjdvmot4aYOKPsstwEK6U/B13BI4gOE0yb?=
+ =?Windows-1252?Q?XFx6DXIs18rVmkCibLx4MYmlKhSbBgBueCO7W8NA0vk5aVzshxc3/5zV?=
+ =?Windows-1252?Q?tDIT9OCp3yUPSHtftCXbYZkVhhtmNWLbuM10W3Ss0+vL1+GWsQS27M/Z?=
+ =?Windows-1252?Q?rIWLEY413vSuFTGD/UJNvYYMa/03bNpXoo4qU5AoQbZqgctaqsLhNVXe?=
+ =?Windows-1252?Q?cIYt8DmXncB4L5GX+FecXdT5D6QLFobCKEhg8RmwX0d4NyIq3uDC3G2U?=
+ =?Windows-1252?Q?OFntQIqd8rGIU82tMO0Fsrw0FYpB8HKZCCoPYi4JOcs+8/5MGNm/MrSo?=
+ =?Windows-1252?Q?HpmSzy5mJLL62YqNIl7BAomAQR8okcykO4xbU7jGZESBdPWbCxbyRrYn?=
+ =?Windows-1252?Q?2niu1cq1KZMkAk7CqHKHhGFAVotj5MGjWfWWVkYlYnA2rFaBX5dQ/x4A?=
+ =?Windows-1252?Q?56kILaeF1P4Ts6EknyjjL/kexzNRpGWGVStrMe/EQWVxF47NjN4lCONy?=
+ =?Windows-1252?Q?eZ/SSucQU39fXTcbqaytUGlR++abfQKwapaHAbvVuQyJCbWsAOLhAV3J?=
+ =?Windows-1252?Q?YwcsGLRKJHIeSG3YFaflpE6t32zlG+YpA6I9A/MCiyEktv7Ux76ANAur?=
+ =?Windows-1252?Q?IcwMC8y2nhugfw1fygpiSQp8+bg48nmmZsUmd+lGgzHlGgw03nytM4R1?=
+ =?Windows-1252?Q?f3jS1Q=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_MN2PR13MB43365A12FA48AE26ABFA4663CCA0AMN2PR13MB4336namp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY3PR13MB4851
+Return-Path: enews@desu.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Dec 2025 18:08:30.7606
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 280568db-3477-4ac3-b546-08de38172020
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 1c0f71f2-c703-4787-e1c8-08de38171cca
+X-MS-Exchange-Organization-AuthSource: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-LD-Processed: cce03e76-6214-4113-9961-c1c0feb3a60b,ExtFwd
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:4;ARA:13230040|2092899012|12012899012|13012899012|35042699022|3092899012|3072899012|69100299015|5062899012|4092899012|13102899012|3122999012|4076899003|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:c101::7;CTRY:;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SFE;H:BL0PR03CU003.outbound.protection.outlook.com;PTR:mail-eastusazlp170120007.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(2092899012)(12012899012)(13012899012)(35042699022)(3092899012)(3072899012)(69100299015)(5062899012)(4092899012)(13102899012)(3122999012)(4076899003)(13003099007)(8096899003);DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Dec 2025 18:08:30.4289
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 280568db-3477-4ac3-b546-08de38172020
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-AuthSource: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR01MB8441
+X-MS-Exchange-Transport-EndToEndLatency: 00:02:14.7453653
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9412.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944490095)(920097)(811242)(255002)(410001)(930201)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?aTZwQJFbIKph8g3vkW4dvbEXIDFkQIC4YLUJj+mjLz1JRFA+DCF0OBOC?=
+ =?Windows-1252?Q?/mVKbPzQH5EqzwUV5JttCe00MHH3kTL/+ZoTQHdsxbuEKnCJYivhafMt?=
+ =?Windows-1252?Q?Y1NmnMdPxo889hzR0hptp6FrpE6+yKsQTskrQwSgezhn/ljjXSuCMDMD?=
+ =?Windows-1252?Q?kgFNp+7CV8BEoA60Yo6io8jq5s0CXzacYz9o7v2gazC4P1H9rSMmJJG+?=
+ =?Windows-1252?Q?hevm3IRoivntcMm97pCYosARVK+o+ekBtUwLes2FqLWg+ZJb9wwzdgHC?=
+ =?Windows-1252?Q?G0zbH5T+j+fK8kAToMwj6M+idxeGbyig8C8Dnd3VlUfREFflUl+MDXLj?=
+ =?Windows-1252?Q?xC9Q2jBaG1ESBEtpUF4nukEoV0p7WODgO98A7eJEagoePc7fdzsWO7Vd?=
+ =?Windows-1252?Q?mKxzBOSwHQQfkgKnRD0wYableiGWTjpdsmmCbB/MflArm58jc4MVBmoe?=
+ =?Windows-1252?Q?b/jdMueLs+s+lRzLJG/nJ2GspO2DdUDl8HmAEVh4EFOLJNQhhA6gc1Pg?=
+ =?Windows-1252?Q?801S/6RrrfVinMUPbfqiOYX3nwGQKPQ3wL3PWNDvOK2+xblTSQ6IJqee?=
+ =?Windows-1252?Q?vHbBnAvClQSHTmhRblwP4aooydCzGEurc8eSr6qzHbrI9iQ3G8+ZaAKr?=
+ =?Windows-1252?Q?vvmgk48StYEfXxDmLgbMKyNMr/YSnvHMWpj8zhGLPQI3I8ghFM5Fpb2B?=
+ =?Windows-1252?Q?bRMoRY/8Blx/ozmnzi3biDh5yNtb+NCavmg/ALTwWWU9gHu2uyFGdeQK?=
+ =?Windows-1252?Q?TCY6CBR0MhNtR1p4qgtGwkzhq733AKrjkB/WuZCJuFMVYPU0kli9qb1K?=
+ =?Windows-1252?Q?oL0M9ZpullZi+EdrG95RtK4BGPhNC3+JCWVvfqkbIyVgUomLMoZ/ZowV?=
+ =?Windows-1252?Q?gG4aZOyhEa7KC0fGTCRSyuEiilgaTiAp2iTX7nw7B0g8Y2JdroNq75yV?=
+ =?Windows-1252?Q?xyTCo4hRhXCEwHWfQ2SkTSspZj9OCcQbGHLRYuyDI98gVeERY6WhbhnF?=
+ =?Windows-1252?Q?NKJY/WO+8TelPdQoNbOdACAm0m3dv0AbyUGsoYbRnfNpCNtnHIZRCqug?=
+ =?Windows-1252?Q?SafNdJRQNtTRX+KMCip8G0Rd3Mm3Y9m/JM8MCi6tOGPj7bVK6EDEhi88?=
+ =?Windows-1252?Q?zwrg01vUdfiEOUmV7bbvE6C2gbMPV2FEY0Mqp46zZQJA1RThcoFh0OK3?=
+ =?Windows-1252?Q?IYdqyfy9s2U7wGoCtapNbyvBl38dv5WiZYweJy2kWTfNMqi2yxouFNo/?=
+ =?Windows-1252?Q?YvXwsMggwKW8bgmiN9c9U23vtq1sPQRPNc54Km8lCoxesRT6mF8nsEKx?=
+ =?Windows-1252?Q?5xhpsHLANOjvPfHouFtfp2XXODifrMivLFhfuCTO/5VFl5MKpqGU2txt?=
+ =?Windows-1252?Q?XUBdkNXQmFJTWIEGZhz0XWsVFwLTEb/GgixMvjkVM+avLKHj1fDGVT9G?=
+ =?Windows-1252?Q?xbjX4qWGFgS1leIPiCLuNoWuAyA2/fye0iDj6JlNO2wgzF5PgHY4L37Y?=
+ =?Windows-1252?Q?Y0Q0Etn/FRGJsvPR0fuz8h5+zBYx//7n/AoN0PZwd6ZLXk1Q/Ty7sgqY?=
+ =?Windows-1252?Q?7Nm1HKnGNSCuHavQcNzdHm1JjhArTaSFwn2ebjeGDR3prwjQmutdOCUx?=
+ =?Windows-1252?Q?ShE49hoD048Yz5tIx3kiFLCKXLMAG7ILQGMfxV4tkUEGGoWqNGpqBBxw?=
+ =?Windows-1252?Q?Z3gk9iJ5nTgQRAxSoGAeHFiUDEAOoh+bBeBIaLncIN18Odq+PllJruTl?=
+ =?Windows-1252?Q?qKfEcGXeng2GiWllPToTjjXzuz9slP0/QxoZpYHmZwZIfFn7YZwqNUvO?=
+ =?Windows-1252?Q?yh21/gFSxgCKHE0HoAGJQJ47s3fyQkh9afcB5CvA3aMZfUaEjOJn/snJ?=
+ =?Windows-1252?Q?MucSYJNdzH68SsNP1xI7mbCwXkm7/fw2w3r9Y54Y5f3fFT2l9JAaKmJu?=
+ =?Windows-1252?Q?vSDY/XAuOJ4fwb1emiIAKot346HdEB0rmVX6qTkXqo3Yn3Ij8aRGBbh/?=
+ =?Windows-1252?Q?qmpq+WxQCXQfzKO0qz1s7cY5be5faCB0dqZ6Oe54sEsrHLpiRbZ9VIW1?=
+ =?Windows-1252?Q?6HyNhZusXnerrR3JxYdxlG2GpxkK/BNKMm4L2Gp0GnnHRmrXXfXk+Rgj?=
+ =?Windows-1252?Q?tNXWgoOlm6b+fywrCtzDNYz0RE1ZMsPjmxkGoVeG2xvu6p29uHKNvox4?=
+ =?Windows-1252?Q?1jf8zQYQHI5xN0dcIodaWVzETT438xSiGKltUWYDOVmBGUqhXcM11QaM?=
+ =?Windows-1252?Q?ZjYvHf4OauQvzERzJp6L6jx7+zR3F0vgdmGespjQKyopVIKns9BIeJw7?=
+ =?Windows-1252?Q?qOi5Z6KyqgepGq8dpfph56MPd42chyhLMUMAqrvDl/yqRbHVFCqwNBkg?=
+ =?Windows-1252?Q?SdSVRCcmJBzctDx0AajjJksN11XNDXJpPwrdwGF54oT05AmvagzRKTww?=
+ =?Windows-1252?Q?mIHl/svfH2Gg+JWuQJh1eCtzNnebPLdtt9U6OaH1GCbUT0U1dmVYEgxc?=
+ =?Windows-1252?Q?61BkKQOHwttvqSrR4MOPUtiKjE03KNB3N31gACwPM3oy35Cp4C0Ccp4l?=
+ =?Windows-1252?Q?EbEJDDDeYpVfIrZifxxi90yRZJhgw0oISoeXqGURVyetyI7eiDxxn7Is?=
+ =?Windows-1252?Q?ugaJhy4Gik68s6c8w1uHmjmjelWwZuFWRfpB8Tx1r6ETF6/1wBIiKJmF?=
+ =?Windows-1252?Q?e5ZJm/+GIvI+ZamyKS9De4hEqJZ1PaPtJiQqH3F/jYapRElhN3IyHqUJ?=
+ =?Windows-1252?Q?wEANp4iEPapAThvKI7DQoHd8+0O+pK9tpUUrHDWhZrp/VigWvdC4jsDm?=
+ =?Windows-1252?Q?suClcXD6pfujIuoaIpI/O4ZD4Yv0ZwF7K8HKgR7cg3lSk/TQeaeMurMT?=
+ =?Windows-1252?Q?MF7mpi+2h84vY4E6PogI5VVWxN83MbOfNV8ETtZ9V7535JctDjA2k3Lm?=
+ =?Windows-1252?Q?qVnd8OpiRnNJte5rnAq8XIP+j5oWOY+HOyrisqlvhpmqx8wfREwI/nCu?=
+ =?Windows-1252?Q?4cvQ2u2G60br02s9IsjiIvUA5Cxm8w=3D=3D?=
+MIME-Version: 1.0
+
+--_000_MN2PR13MB43365A12FA48AE26ABFA4663CCA0AMN2PR13MB4336namp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+[https://ezcwp.stripocdn.email/content/guids/CABINET_57ba593c152a0cba7b7a5f=
+e50dbca631e457dfd4c504409e480dd8f3034dd6ad/images/dsu_horizflags__full_colo=
+r_it_all_matters_5op.png]
+
+STUDENT HEALTH INSURANCE
+
+Spring semester waiver/enrollment is open now!
+
+Delaware State University provides access for students to a cost-effective =
+Student Health Insurance Plan (SHIP) through UnitedHealthcare.
+
+  *   All full-time (12 or more credit hour) U.S. undergraduate students, U=
+niversity-sponsored graduate students* and international students must comp=
+lete an online student health insurance enrollment/waiver process by the de=
+adline for each semester.
+  *   Students who are able to demonstrate comparable coverage may be able =
+to opt out of the SHIP. Students who submit a waiver application before the=
+ deadline will avoid mandatory enrollment in the SHIP and billing of the $5=
+32 per semester premium to their Student Account upon approval of the waive=
+r.
+  *   For students enrolling in the SHIP, the cost of the full $532 per sem=
+ester insurance premium will be billed to their Student Account.
+  *   The cost of the SHIP is $1,064 annually.
+
+
+You must complete an online waiver or enroll in the University=92s policy e=
+ach semester.
+
+
+The deadline for the Spring 2026 semester is February 28.
+
+
+*Graduate students who are not University-sponsored and who do not have ins=
+urance coverage may voluntarily enroll in the SHIP and pay for the insuranc=
+e on their own.
+
+HOW TO APPLY FOR A WAIVER
+
+If you have insurance coverage, you must apply for a waiver to opt out of t=
+he SHIP. To apply for a waiver, please follow the steps below:
+
+  1.  Go to https://studentcenter.uhcsr.com/desu and click =93Waive Coverag=
+e.=94
+  2.  Sign into the waiver site using your Delaware State University studen=
+t ID number (include the letter D) and your date of birth (MM/DD/YYYY).
+  3.  Follow the instructions to complete the waiver application. Once comp=
+lete, you will receive an on-screen confirmation and an email notifying you=
+ of the waiver request decision. If you receive a:
+     *   Pending email =96 Your waiver is pending until it can be verified =
+that your coverage is equivalent to the SHIP.  The status of your waiver ap=
+plication will be updated in 5 to 7 business days and you will be contacted=
+ by email.
+     *   Denial email =96 Your waiver was denied.
+     *   Approval email =96 Your waiver was approved. You should print this=
+ email and save it with your records.
+
+HOW TO ENROLL
+
+If you do not have insurance coverage, you must enroll in the SHIP. This wi=
+ll allow you to get your insurance ID card sooner and will also prevent you=
+ from receiving future reminders about this process. To enroll for coverage=
+, please follow the steps below:
+
+  1.  Go to https://studentcenter.uhcsr.com/desu
+  2.  Click =93Opt-In=94 and log in to the waiver site using your Delaware =
+State University student ID number (include the letter D) and your date of =
+birth (MM/DD/YYYY).
+  3.  Review the information and follow the on-screen directions.  Once enr=
+olled, you will receive an on-screen confirmation and an email confirmation=
+.
+
+QUESTIONS OR CONCERNS?
+
+Please visit uhcsr.com<https://uhcsr.com> to contact Customer Service.
+
+--_000_MN2PR13MB43365A12FA48AE26ABFA4663CCA0AMN2PR13MB4336namp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+</head>
+<body>
+<div style=3D"background-color: rgb(246, 246, 246);">
+<table dir=3D"ltr" class=3D"es-wrapper" cellspacing=3D"0" cellpadding=3D"0"=
+ style=3D"background-color: rgb(246, 246, 246); margin: 0px; width: 100%; h=
+eight: 100%; box-sizing: border-box; border-collapse: collapse; border-spac=
+ing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"es-wrapper" style=3D"vertical-align: top;">
+<table dir=3D"ltr" class=3D"o" id=3D"table_0" align=3D"center" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"width: 100%; table-layout: fixed; box-siz=
+ing: border-box; border-collapse: collapse; border-spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"o" align=3D"center">
+<table dir=3D"ltr" class=3D"bb" id=3D"table_1" align=3D"center" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"background-color: rgb(255, 255, 255); wid=
+th: 600px; box-sizing: border-box; border-collapse: collapse; border-spacin=
+g: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-top: 20px; pad=
+ding-right: 20px; padding-left: 20px;">
+<table dir=3D"ltr" class=3D"bb" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width: 100%; box-sizing: border-box; border-collapse: collapse; border-=
+spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"vertical-align: top;=
+ width: 560px;">
+<table dir=3D"ltr" class=3D"bb" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width: 100%; box-sizing: border-box; border-collapse: collapse; border-=
+spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center"><span style=3D"font-size: 0px=
+;"><img src=3D"https://ezcwp.stripocdn.email/content/guids/CABINET_57ba593c=
+152a0cba7b7a5fe50dbca631e457dfd4c504409e480dd8f3034dd6ad/images/dsu_horizfl=
+ags__full_color_it_all_matters_5op.png" width=3D"250" height=3D"79" style=
+=3D"width: 250px; height: 79px; display: block; outline: none;"></span></td=
+>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-right: 20px; p=
+adding-left: 20px;">
+<table dir=3D"ltr" class=3D"bb" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width: 100%; box-sizing: border-box; border-collapse: collapse; border-=
+spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"vertical-align: top;=
+ width: 560px;">
+<table dir=3D"ltr" class=3D"bb" id=3D"table_2" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"width: 100%; box-sizing: border-box; border-collapse: coll=
+apse; border-spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"padding-top: 20px; p=
+adding-bottom: 10px;">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 31.5px; margin: 0px; font=
+-family: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-siz=
+e: 21px; color: rgb(19, 79, 92);">
+<b>STUDENT HEALTH INSURANCE</b></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"padding-bottom: 20px=
+;">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 28.5px; margin: 0px; font=
+-family: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-siz=
+e: 19px; color: rgb(51, 51, 51);">
+<b><i>Spring semester waiver/enrollment is open now!</i></b></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-bottom: 20px;"=
+>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+Delaware State University provides access for students to a cost-effective =
+Student Health Insurance Plan (SHIP) through&nbsp;UnitedHealthcare.</p>
+<ul dir=3D"ltr">
+<li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, he=
+lvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: =
+21px; margin-bottom: 15px; margin-left: 0px;">
+<b>All full-time (12 or more credit hour) U.S. undergraduate students,&nbsp=
+;University-sponsored graduate students* and international students&nbsp;mu=
+st complete an online student health insurance enrollment/waiver process by=
+ the deadline for each semester.</b></li><li dir=3D"ltr" style=3D"font-fami=
+ly: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size: 14=
+px; color: rgb(51, 51, 51); line-height: 21px; margin-bottom: 15px; margin-=
+left: 0px;">
+<b>Students who are able to demonstrate comparable coverage may be able to =
+opt out of the&nbsp;SHIP.
+<u>Students who submit a waiver application before the deadline will avoid =
+mandatory enrollment in the SHIP and billing of the $532 per semester&nbsp;=
+premium to their Student Account upon approval of the&nbsp;waiver</u>.</b><=
+/li><li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;=
+, helvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-heig=
+ht: 21px; margin-bottom: 15px; margin-left: 0px;">
+For students enrolling in the SHIP, the cost of the full $532 per semester&=
+nbsp;insurance premium will be billed to their Student&nbsp;Account.</li><l=
+i dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, helv=
+etica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: 21=
+px; margin-bottom: 15px; margin-left: 0px;">
+The cost of the SHIP is&nbsp;$1,064 annually.</li></ul>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+<br>
+</p>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+<i>You must complete an online waiver or enroll in the University=92s polic=
+y each&nbsp;semester.</i></p>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+<br>
+</p>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+<b>The deadline for the Spring 2026 semester is February 28.</b><br>
+<br>
+</p>
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+<i>*Graduate students who are not University-sponsored and who do not have =
+insurance coverage may voluntarily enroll in the SHIP and pay for the insur=
+ance on their&nbsp;own.</i></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"background-color: rg=
+b(19, 79, 92);">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 24px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 16px; color: rgb(255, 255, 255);">
+<b>HOW TO APPLY FOR A WAIVER</b></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-top: 15px;">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+If you have insurance coverage, you must apply for a waiver to opt out of t=
+he SHIP. To apply for a waiver, please follow the steps&nbsp;below:</p>
+<ol start=3D"1" dir=3D"ltr">
+<li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, he=
+lvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: =
+21px; margin-bottom: 15px; margin-left: 0px;">
+Go to <span style=3D"color: rgb(0, 84, 154);" role=3D"presentation"><u><a h=
+ref=3D"https://studentcenter.uhcsr.com/desu" target=3D"_blank" data-outlook=
+-id=3D"bfd5413b-d987-481a-ad33-4602e525a0fc" style=3D"color: rgb(0, 84, 154=
+);">https://studentcenter.uhcsr.com/desu</a></u></span>&nbsp;and
+ click =93Waive Coverage.=94</li><li dir=3D"ltr" style=3D"font-family: aria=
+l, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size: 14px; colo=
+r: rgb(51, 51, 51); line-height: 21px; margin-bottom: 15px; margin-left: 0p=
+x;">
+Sign into the waiver site using your Delaware State University student ID n=
+umber (include the letter D) and your date of birth&nbsp;(MM/DD/YYYY).</li>=
+<li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, he=
+lvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: =
+21px; margin-bottom: 15px; margin-left: 0px;">
+Follow the instructions to complete the waiver application. Once&nbsp;compl=
+ete, you will receive an on-screen confirmation and an email notifying you =
+of the waiver request decision. If you receive a:
+</li><ul dir=3D"ltr">
+<li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, he=
+lvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: =
+21px; margin-bottom: 15px; margin-left: 0px;">
+<b>Pending email</b>&nbsp;=96 Your waiver is pending until it can be&nbsp;v=
+erified&nbsp;that your coverage is equivalent to the SHIP.&nbsp;&nbsp;The s=
+tatus of your waiver application will be updated in 5 to 7 business days an=
+d you will be contacted by&nbsp;email.</li><li dir=3D"ltr" style=3D"font-fa=
+mily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size: =
+14px; color: rgb(51, 51, 51); line-height: 21px; margin-bottom: 15px; margi=
+n-left: 0px;">
+<b>Denial email</b>&nbsp;=96 Your waiver was&nbsp;denied.</li><li dir=3D"lt=
+r" style=3D"font-family: arial, &quot;helvetica neue&quot;, helvetica, sans=
+-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: 21px; margin-=
+bottom: 15px; margin-left: 0px;">
+<b>Approval email</b>&nbsp;=96 Your waiver was approved. You should print t=
+his email and save it with your&nbsp;records.</li></ul>
+</ol>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"background-color: rg=
+b(19, 79, 92);">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 24px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 16px; color: rgb(255, 255, 255);">
+<b>HOW TO ENROLL</b></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-top: 15px;">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 14px; color: rgb(51, 51, 51);">
+If you do not have insurance coverage, you must enroll in the SHIP. This wi=
+ll allow you to get your insurance ID card sooner and will also prevent you=
+ from receiving future reminders about this&nbsp;process. To enroll for cov=
+erage, please follow the steps&nbsp;below:</p>
+<ol start=3D"1" dir=3D"ltr">
+<li dir=3D"ltr" style=3D"font-family: arial, &quot;helvetica neue&quot;, he=
+lvetica, sans-serif; font-size: 14px; color: rgb(51, 51, 51); line-height: =
+21px; margin-bottom: 15px; margin-left: 0px;">
+Go to <span style=3D"color: rgb(0, 84, 154);" role=3D"presentation"><u><a h=
+ref=3D"https://studentcenter.uhcsr.com/desu" target=3D"_blank" data-outlook=
+-id=3D"2750b7f7-8946-4e35-9179-c84962c88d68" style=3D"color: rgb(0, 84, 154=
+);">https://studentcenter.uhcsr.com/desu</a></u></span></li><li dir=3D"ltr"=
+ style=3D"font-family: arial, &quot;helvetica neue&quot;, helvetica, sans-s=
+erif; font-size: 14px; color: rgb(51, 51, 51); line-height: 21px; margin-bo=
+ttom: 15px; margin-left: 0px;">
+Click =93Opt-In=94 and log in to the waiver site using your Delaware State =
+University student ID number (include the letter D) and your date of birth&=
+nbsp;(MM/DD/YYYY).</li><li dir=3D"ltr" style=3D"font-family: arial, &quot;h=
+elvetica neue&quot;, helvetica, sans-serif; font-size: 14px; color: rgb(51,=
+ 51, 51); line-height: 21px; margin-bottom: 15px; margin-left: 0px;">
+Review the information and follow the on-screen directions.&nbsp;&nbsp;Once=
+ enrolled, you will receive an on-screen confirmation and an email&nbsp;con=
+firmation.</li></ol>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"center" style=3D"padding: 10px 20px 2=
+0px;">
+<table dir=3D"ltr" class=3D"bb" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width: 100%; height: 100%; box-sizing: border-box; border-collapse: col=
+lapse; border-spacing: 0px;">
+<tbody>
+<tr>
+<td dir=3D"ltr" class=3D"bb" style=3D"border-bottom-width: 1px; border-bott=
+om-style: solid; border-bottom-color: rgb(204, 204, 204); width: 100%; heig=
+ht: 0px;">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left">
+<p dir=3D"ltr" class=3D"bb" style=3D"line-height: 24px; margin: 0px; font-f=
+amily: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size:=
+ 16px; color: rgb(19, 79, 92);">
+<b>QUESTIONS OR CONCERNS?</b></p>
+</td>
+</tr>
+<tr>
+<td dir=3D"ltr" class=3D"bb" align=3D"left" style=3D"padding-top: 10px;">
+<h2 dir=3D"ltr" class=3D"bb" style=3D"line-height: 21px; margin: 0px; font-=
+family: arial, &quot;helvetica neue&quot;, helvetica, sans-serif; font-size=
+: 14px; font-weight: normal; color: rgb(51, 51, 51);">
+Please visit <span style=3D"color: rgb(0, 84, 154);"><u><a href=3D"https://=
+uhcsr.com" target=3D"_blank" data-outlook-id=3D"147aa910-448e-4978-951e-7dd=
+bff787839" style=3D"color: rgb(0, 84, 154);">uhcsr.com</a></u></span>&nbsp;=
+to contact Customer&nbsp;Service.</h2>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div style=3D"background-color: rgb(246, 246, 246); margin: 0px; width: 100=
+%; height: 100%;">
+</div>
+</div>
+</body>
+</html>
+
+--_000_MN2PR13MB43365A12FA48AE26ABFA4663CCA0AMN2PR13MB4336namp_--

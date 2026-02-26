@@ -1,0 +1,524 @@
+Received: from CO1PR01MB7388.prod.exchangelabs.com (::1) by
+ DM6PR01MB4172.prod.exchangelabs.com with HTTPS; Fri, 17 Oct 2025 03:42:16
+ +0000
+Received: from BY3PR01MB6548.prod.exchangelabs.com (2603:10b6:a03:361::14) by
+ CO1PR01MB7388.prod.exchangelabs.com (2603:10b6:303:15b::18) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9228.12; Fri, 17 Oct 2025 03:42:08 +0000
+Received: from BY3PR01MB6548.prod.exchangelabs.com ([fe80::92:d186:a58b:d713])
+ by BY3PR01MB6548.prod.exchangelabs.com ([fe80::92:d186:a58b:d713%3]) with
+ mapi id 15.20.9228.011; Fri, 17 Oct 2025 03:42:08 +0000
+From: Niyonna V Johnson <nvjohnson25@students.desu.edu>
+CC: Jordyn A Gooding <jagooding24@students.desu.edu>, Nel'Quisha Pitts
+	<npitts15@students.desu.edu>, Tanika M Taylor <tmtaylor18@students.desu.edu>,
+	Karan S Foster <ksfoster20@students.desu.edu>, Sarah J Reed
+	<sjreed21@students.desu.edu>, Maximilien Deleon
+	<mdeleon15@students.desu.edu>, Ashley M Strawbridge
+	<AMStrawbridge09@students.desu.edu>, Edaysia L Hopkins
+	<elhopkins20@students.desu.edu>, Shatima S Butler
+	<ssbutler13@students.desu.edu>, Brian Hidalgo <bhidalgo19@students.desu.edu>,
+	David S Coates <dscoates16@students.desu.edu>, Amyiah S Fulmore
+	<asfulmore20@students.desu.edu>, Anthony F Moore
+	<afmoore12@students.desu.edu>, Tamara K Robinson
+	<tkrobinson19@students.desu.edu>, Jackson C Inniss
+	<jcinniss23@students.desu.edu>, Alexis K Maloney
+	<akmaloney15@students.desu.edu>, Sherricka A Mcgrier
+	<samcgrier17@students.desu.edu>, Brandin Jones <bjones171@students.desu.edu>,
+	Aminata Suma <asuma24@students.desu.edu>, Eleonora A Pierre
+	<eapierre22@students.desu.edu>, Kristyne Wemegah
+	<kwemegah23@students.desu.edu>, Tori N Walker <tnwalker18@students.desu.edu>,
+	Jenai Cooper <jcooper20@students.desu.edu>, Aleah A Heath
+	<aaheath12@students.desu.edu>, Zebalee Thomas Lll
+	<zthomaslll24@students.desu.edu>, Morgan T Tinsley
+	<mttinsley13@students.desu.edu>, Latoya S Ellison
+	<LEllison09@students.desu.edu>, Tyla L Daniels
+	<tldaniels11@students.desu.edu>, Sony PXW-X70 Green
+	<PXWX70Green@students.desu.edu>, Leslie J Carter
+	<ljcarter16@students.desu.edu>, Shihao Shen <sshen23@students.desu.edu>,
+	Ruijie Wang <rwang23@students.desu.edu>, Lennox F Nembhard
+	<lfnembhard18@students.desu.edu>, Tiana N Pratcher
+	<tnpratcher16@students.desu.edu>, Aja S Crosby
+	<ascrosby15@students.desu.edu>, Patrick O Hairston
+	<pohairston06@students.desu.edu>, Phara Jean-Baptiste
+	<pjeanbaptiste22@students.desu.edu>, Sean C Beach
+	<scbeach21@students.desu.edu>, Karolina Glowinska
+	<kglowinska20@students.desu.edu>, Gregory I Wilson
+	<giwilson24@students.desu.edu>, Jalina T Booker
+	<jtbooker13@students.desu.edu>, Joe A Brellahan
+	<jabrellahan11@students.desu.edu>, Isaac D Davis
+	<iddavis24@students.desu.edu>, Khaliyah A Flournory
+	<kaflournory14@students.desu.edu>, Randolph Hoston
+	<rhoston13@students.desu.edu>, Tierra I Sutton
+	<TISutton09@students.desu.edu>, Chyna A Gregory
+	<cagregory15@students.desu.edu>, Albert C Anderson
+	<acanderson14@students.desu.edu>, Briana F Chandler
+	<bfchandler23@students.desu.edu>, Mariah M Stanton
+	<mmstanton17@students.desu.edu>, Taylor D Leftwich
+	<tdleftwich15@students.desu.edu>, Emma Konopik
+	<ekonopik17@students.desu.edu>, Ameica T Smith <atsmith11@students.desu.edu>,
+	Crystal A Martin <CAMartin08@students.desu.edu>, Alexa Arlequin
+	<aarlequin12@students.desu.edu>, Monique N Flegler
+	<mnflegler09@students.desu.edu>, Rumana Begum <rbegum20@students.desu.edu>,
+	Jessica M Kuhn <jmkuhn15@students.desu.edu>, Bdoon Ahmed
+	<bahmed12@students.desu.edu>, Kamryn Z Donaldson
+	<kzdonaldson24@students.desu.edu>, "mcvaughn09@students.desu.edu"
+	<mcvaughn09@students.desu.edu>, Savannah E Vaughn
+	<sevaughn23@students.desu.edu>, Jiaqian Zhao <jzhao15@students.desu.edu>,
+	Luke D Hansen <ldhansen18@students.desu.edu>, "Camerone L. Bullard"
+	<clbullard23@students.desu.edu>, Gabriela S Lakhman
+	<gslakhman12@students.desu.edu>, Emma M White <emwhite22@students.desu.edu>,
+	Warren J Whitaker <wjwhitaker20@students.desu.edu>, Laquita Z Pryor
+	<lzpryor15@students.desu.edu>, Javon M Thomas <jmthomas09@students.desu.edu>,
+	Jasmie S Graham <jsgraham08@students.desu.edu>, Kaylan M Parker
+	<kmparker18@students.desu.edu>, Donnaya D Eborn
+	<ddeborn09@students.desu.edu>, Ryan D Green <rdgreen23@students.desu.edu>,
+	Terrance Johnson <tjohnson163@students.desu.edu>, Da'Nasha Stokes
+	<dstokes24@students.desu.edu>, Elisa B Chaze <ebchaze19@students.desu.edu>,
+	Mikayla Martinez <mmartinez22@students.desu.edu>, Kayla M Mcbean
+	<kmmcbean19@students.desu.edu>, Jasmine E Thompson
+	<jthompson105@students.desu.edu>, Melvin G Jones
+	<mgjones15@students.desu.edu>, Kayla R Anderson
+	<kranderson13@students.desu.edu>, Danielle A Sullivan
+	<dasullivan22@students.desu.edu>, "Kadene L. Gray"
+	<klgray13@students.desu.edu>, Alondra Anderson
+	<aanderson23@students.desu.edu>, Taliah Whitson
+	<twhitson17@students.desu.edu>, Ciani I Johnson
+	<cijohnson21@students.desu.edu>, Shaoyuan Dai <sdai15@students.desu.edu>,
+	Heyuan Yan <hyan23@students.desu.edu>, Kyung Ick Park
+	<kpark19@students.desu.edu>, Tiffany Keosombath
+	<tkeosombath11@students.desu.edu>, Kashayla S Daniels
+	<ksdaniels19@students.desu.edu>, Christian Hardy
+	<chardy15@students.desu.edu>, Trejah K Brown <tkbrown22@students.desu.edu>,
+	Ulises Camacho-Abellas <ucamachoabellas24@students.desu.edu>, Tamia J
+ Williams <tjwilliams17@students.desu.edu>, Courtney Ashley
+	<cashley09@students.desu.edu>, Zori-Ann T Weir <ztweir16@students.desu.edu>,
+	Matthew W Garnick <mwgarnick22@students.desu.edu>, Taylor M Baldwin
+	<tmbaldwin15@students.desu.edu>, Dynasty G Davis
+	<dgdavis21@students.desu.edu>, Suthep Prasertsantisuk
+	<sprasertsantisuk11@students.desu.edu>, Celeste A Sinegal
+	<casinegal10@students.desu.edu>, Katherine G Rivera
+	<kgrivera24@students.desu.edu>, Consuelo A Foster
+	<cafoster07@students.desu.edu>, Jayden I Bouie <jibouie23@students.desu.edu>,
+	Shamar K Cole <skcole24@students.desu.edu>, Tahir G Russell
+	<tgrussell10@students.desu.edu>, Jason A Moore <jamoore24@students.desu.edu>,
+	Dadrian A Ledet <daledet18@students.desu.edu>, Gabriella Hazzard
+	<ghazzard21@students.desu.edu>, Daisy Wiratama
+	<dwiratama21@students.desu.edu>, Luis R Calderon
+	<lrcalderon23@students.desu.edu>, Iyana D Andrews Thornton
+	<idandrewsthornton20@students.desu.edu>, Scott Poole
+	<spoole13@students.desu.edu>, Imani J Murray <ijmurray19@students.desu.edu>,
+	Corey T Gurley-Richardson <ctgurleyrichardson10@students.desu.edu>, Devin
+ Rollins <drollins21@students.desu.edu>, Tanae Smith
+	<tsmith241@students.desu.edu>, "Aaron B. Matthews"
+	<abmatthews10@students.desu.edu>, Iesha S Sample
+	<issample18@students.desu.edu>, Aliyah M Bennett
+	<ambennett171@students.desu.edu>, Adeneke M Reid
+	<amreid23@students.desu.edu>, Steven A Mcilwain
+	<samcilwain18@students.desu.edu>, Tyler Lattimore-Poole
+	<tlattimorepoole13@students.desu.edu>, Merton Smith
+	<msmith12@students.desu.edu>, Tahjay Smith <tsmith191@students.desu.edu>,
+	Tiana M Garnett <tmgarnett22@students.desu.edu>, Jared C Anderson
+	<jcanderson18@students.desu.edu>, Elijah A Fuller
+	<eafuller11@students.desu.edu>, Chris Bangura <cbangura16@students.desu.edu>,
+	Landra C Anderson <lcanderson09@students.desu.edu>, Jasmiahya Young
+	<jyoung18@students.desu.edu>, "cjnwakihe09@students.desu.edu"
+	<cjnwakihe09@students.desu.edu>, Amirah D Campbell
+	<adcampbell15@students.desu.edu>, Keiven J Rideau
+	<KJRideau09@students.desu.edu>, Regianie B Simeon
+	<rbsimeon17@students.desu.edu>, Lily E Kosal <lekosal24@students.desu.edu>,
+	Michael Donkor <mdonkor12@students.desu.edu>, Taman Thomas
+	<tthomas09@students.desu.edu>, Wenxin Liu <wliu181@students.desu.edu>,
+	Christopher W Williams <cwwilliams24@students.desu.edu>, Kayla J Foster
+	<kjfoster17@students.desu.edu>, Jacyra Moore <jmoore14@students.desu.edu>,
+	Leah E Springer <lespringer23@students.desu.edu>, Sarah E Baltes
+	<sebaltes10@students.desu.edu>, Christopher M Sears
+	<CMSears07@students.desu.edu>, Alaina D Suggs <adsuggs21@students.desu.edu>,
+	John J Hughes <jjhughes12@students.desu.edu>, Jessica Gdoviak
+	<jgdoviak21@students.desu.edu>, Hadiatou Bah <hbah19@students.desu.edu>,
+	Donghan Sui <dsui16@students.desu.edu>, Cara T Grant
+	<ctgrant12@students.desu.edu>, Megan E Clayville
+	<meclayville16@students.desu.edu>, Joe'L Kane <jkane19@students.desu.edu>,
+	Harold E Hazzard <hehazzard18@students.desu.edu>, Shannon G Barnes
+	<sgbarnes18@students.desu.edu>, Ana Martins <amartins22@students.desu.edu>,
+	Jerome E Patterson <jepatterson10@students.desu.edu>, Nikayla L Baker
+	<nlbaker19@students.desu.edu>, Kianna A Snoddy
+	<kasnoddy19@students.desu.edu>, I'Dalis S Beavers
+	<isbeavers15@students.desu.edu>, Jannette Dorsey
+	<jdorsey18@students.desu.edu>, Asad Lane <alane22@students.desu.edu>,
+	Shaunice Mcbride <smcbride20@students.desu.edu>, Jordan N Abbott
+	<jnabbott16@students.desu.edu>, Karizma A Williams
+	<kawilliams181@students.desu.edu>, Akeim G Mckenzie
+	<agmckenzie23@students.desu.edu>, Desiree M Steele
+	<dsteele05@students.desu.edu>, Lydia S Fayiah <lsfayiah20@students.desu.edu>,
+	Yeji Shin 2 <yshin20@students.desu.edu>, Ashanti Z Brown
+	<azbrown201@students.desu.edu>, Danielle V Burke
+	<dvburke23@students.desu.edu>, Carlos L Young <clyoung16@students.desu.edu>,
+	Shamara D Russell <sdrussell13@students.desu.edu>, Ophelia Opoku
+	<oopoku23@students.desu.edu>, Meng Wang <mwang24@students.desu.edu>, Lisa M
+ Indelicato <lmindelicato11@students.desu.edu>, "Robert J. Nelson"
+	<rjnelson10@students.desu.edu>, Henry N Coffield
+	<hncoffield08@students.desu.edu>, Anaiya M Washington
+	<amwashington18@students.desu.edu>, Jahieisa Rolle
+	<jrolle22@students.desu.edu>, "Paris  Boyer" <PBoyer09@students.desu.edu>,
+	Chaylia V Moore <cvmoore22@students.desu.edu>, Rosemarie C Christopoulos
+	<rcchristopoulos23@students.desu.edu>, Pamela W Williams
+	<pwwilliams09@students.desu.edu>, "Louis  Daguindeau"
+	<LDaguindeau09@students.desu.edu>, Jiali Yu <jyu23@students.desu.edu>, Shayan
+ W Kimotho <swkimotho17@students.desu.edu>, Eden Weah
+	<eweah19@students.desu.edu>, Qadeer R Lee <qrlee14@students.desu.edu>, John J
+ Dawo <jjdawo17@students.desu.edu>, Damai L Scott
+	<dlscott23@students.desu.edu>, Rachel J Lloyd <rjlloyd09@students.desu.edu>,
+	Treana J Baker <tjbaker15@students.desu.edu>, Dylan W Smith
+	<dwsmith20@students.desu.edu>, "Tameka L. Wingo"
+	<twingo08@students.desu.edu>, Amrita S Joseph-Morris
+	<asjosephmorris13@students.desu.edu>, Brianna Brudy
+	<bbrudy24@students.desu.edu>, Jamia S Sims <jssims15@students.desu.edu>,
+	Ashley D Satterfield <adsatterfield11@students.desu.edu>, Kelsey J Gibson
+	<kjgibson09@students.desu.edu>, Eugenie Y Ffrench
+	<eyffrench22@students.desu.edu>, Brandon Beckham
+	<bbeckham11@students.desu.edu>, Lovejeihnie P Roberts
+	<lproberts19@students.desu.edu>, Cierra M Redfield
+	<cmredfield09@students.desu.edu>, Tyra L Mitchell
+	<tlmitchell15@students.desu.edu>, Kesley Jackson
+	<kjackson09@students.desu.edu>, "Benjamin  Didonato"
+	<BDidonato09@students.desu.edu>, Angela D Apondi
+	<adapondi24@students.desu.edu>, Willie Jefferson
+	<wjefferson24@students.desu.edu>, Jordan M Ratliff
+	<jmratliff13@students.desu.edu>, Ashanti N Pallet
+	<anpallet20@students.desu.edu>, Phillip D Nix <pdnix16@students.desu.edu>,
+	Khya L Reynolds <klreynolds19@students.desu.edu>, Tiffany M Zimmerman
+	<tmzimmerman20@students.desu.edu>, Skye B Sampson
+	<sbsampson24@students.desu.edu>, Naya L Haynes
+	<nlhaynes10@students.desu.edu>, Keniya C White <kcwhite22@students.desu.edu>,
+	"Pinda  Traore" <ptraore04@students.desu.edu>, Chrystal I Clements
+	<ciclements12@students.desu.edu>, Tyneara S Williams
+	<tswilliams08@students.desu.edu>, Amelia Hall <ahall20@students.desu.edu>,
+	Leila C Brabham <lcbrabham22@students.desu.edu>, "Jeffrey T. Baggett"
+	<jtbaggett10@students.desu.edu>, Ericka Roy <eroy06@students.desu.edu>, James
+ D Lane <jdlane06@students.desu.edu>, Yusuf J Al-Khal
+	<yjalkhal20@students.desu.edu>, Christa B Philippe
+	<cbphilippe10@students.desu.edu>, Jasmyn C Sturgis
+	<jcsturgis18@students.desu.edu>, Bridget Gonzalez
+	<bgonzalez18@students.desu.edu>, Danisha M Cooper
+	<dmcooper12@students.desu.edu>, Donnell A Walker
+	<dawalker241@students.desu.edu>, Kenton A George
+	<kageorge23@students.desu.edu>, Yanell R Pimentel
+	<yrpimentel24@students.desu.edu>, Jessa L Whiting
+	<jlwhiting12@students.desu.edu>, Nick Francois
+	<nfrancois24@students.desu.edu>, Amber I Bryant
+	<aibryant15@students.desu.edu>, Jonathan B Benjamin
+	<jbbenjamin10@students.desu.edu>, Antoinette Washington
+	<awashington12@students.desu.edu>, Dondre' K Washington
+	<dkwashington09@students.desu.edu>, Jada C Malone
+	<jcmalone20@students.desu.edu>, Sean C Bean <scbean20@students.desu.edu>,
+	Donyae C Shelton <dcshelton17@students.desu.edu>, Steven C Hurd
+	<schurd22@students.desu.edu>, Tyrone F Kearse <tfkearse23@students.desu.edu>,
+	"Zhane N. Williams" <znwilliams22@students.desu.edu>, Shengyu Chen
+	<schen11@students.desu.edu>, Alexzandra P Austin
+	<apaustin21@students.desu.edu>, Savitre H Bachoo
+	<SHBachoo09@students.desu.edu>, Antoine Dickens
+	<adickens18@students.desu.edu>, Tazania N Whaley
+	<tnwhaley18@students.desu.edu>, Kaitlin A Hughes
+	<KAHughes09@students.desu.edu>, Nehemithe Pierre
+	<npierre24@students.desu.edu>, Bradley S Dedmon
+	<bsdedmon22@students.desu.edu>, "asmart07@students.desu.edu"
+	<asmart07@students.desu.edu>, Kenya N Moulden
+	<knmoulden11@students.desu.edu>, Quaron N Smith
+	<qnsmith14@students.desu.edu>, Imani' Daniels <idaniels23@students.desu.edu>,
+	Brittani J Travis <bjtravis08@students.desu.edu>, Jasmine M Herring
+	<jmherring15@students.desu.edu>, Alexis S James
+	<asjames20@students.desu.edu>, Armari S Harrod
+	<asharrod19@students.desu.edu>, Maysa S Whitley
+	<mswhitley17@students.desu.edu>, Chastadae D Harmon
+	<cdharmon23@students.desu.edu>, Daniela A Salas
+	<dasalas11@students.desu.edu>, Jordyn M Hale <jmhale19@students.desu.edu>,
+	Nadia Abi <nabi24@students.desu.edu>, Irving Rangel
+	<irangel13@students.desu.edu>, Jonathan W Hackshaw
+	<jwhackshaw18@students.desu.edu>, Dominique A Wilberforce
+	<dawilberforce16@students.desu.edu>, Chrishaad S Gibson
+	<CSGibson09@students.desu.edu>, Ibrahim Sesay <isesay18@students.desu.edu>,
+	Jada C Armstrong <jcarmstrong16@students.desu.edu>, Dahnir A Singleterry
+	<dasingleterry20@students.desu.edu>, Gvonte Holley
+	<gholley22@students.desu.edu>, Luther Wynder <lwynder99@students.desu.edu>,
+	Jadyn J Sims <jjsims22@students.desu.edu>, Tatiana Mcmiller
+	<tmcmiller15@students.desu.edu>, Rasheda N Hampton
+	<rnhampton12@students.desu.edu>, Naiya N Daisey
+	<nndaisey25@students.desu.edu>, Makalaih C Goree
+	<mcgoree20@students.desu.edu>, "Joseph  Thomas"
+	<JThomas09@students.desu.edu>, Altina A Herbert
+	<aaherbert23@students.desu.edu>, Ryan Carter <RHCarter09@students.desu.edu>,
+	Ariel V Bruce <avbruce16@students.desu.edu>, Brittany A Holmes
+	<baholmes13@students.desu.edu>, Brian D Wynn <bdwynn10@students.desu.edu>,
+	Daiahni B Cottle <dbcottle22@students.desu.edu>, Stephen B Sanders
+	<sbsanders18@students.desu.edu>, Dakota J Ward <djward18@students.desu.edu>,
+	Angel M Gonzalez <amgonzalez17@students.desu.edu>, Kiam T Holley
+	<ktholley17@students.desu.edu>, Beibei Chen <bchen13@students.desu.edu>,
+	Ra'Sontai Z Watson <rzwatson15@students.desu.edu>, Tyrone R Littman
+	<trlittman12@students.desu.edu>, Hollee S Tucker
+	<hstucker14@students.desu.edu>, Aniya D Berry <adberry15@students.desu.edu>,
+	Samantha I Cacoilo <sicacoilo09@students.desu.edu>, Ashley Matos
+	<amatos11@students.desu.edu>, Courtney R Brown <cbrown07@students.desu.edu>,
+	Alexa L Aguilar <alaguilar16@students.desu.edu>, Aniya James
+	<ajames23@students.desu.edu>, Sameer A German <sagerman24@students.desu.edu>,
+	Latetra A Ray <laray10@students.desu.edu>, Richard K Muttai
+	<rkmuttai11@students.desu.edu>, Araceli A Scott
+	<aascott24@students.desu.edu>, Cierra M Brown <cmbrown14@students.desu.edu>,
+	Trenisa T Norris <ttnorris03@students.desu.edu>, Nymaat N Bracey
+	<nnbracey24@students.desu.edu>, Daraymar M Stewart Harold
+	<dmstewartharold21@students.desu.edu>, Jarred R Reid Dixon
+	<jrreiddixon10@students.desu.edu>, Krystal D Tagliabue
+	<kdtagliabue20@students.desu.edu>, Rachel T Bullock
+	<rtbullock12@students.desu.edu>, Kimera T Peterson
+	<ktpeterson13@students.desu.edu>, Tah-Jay M Mclaughlin
+	<tmmclaughlin14@students.desu.edu>, Xavier L Rodriguez
+	<xlrodriguez23@students.desu.edu>, Russell K Boulware
+	<rkboulware22@students.desu.edu>, Kathryn W Ngugi
+	<kwngugi16@students.desu.edu>, Raphael Peterson
+	<rpeterson151@students.desu.edu>, Melanie R Battle
+	<mrbattle19@students.desu.edu>, Jahairah N Thomas
+	<jnthomas24@students.desu.edu>, Latosha S Diggs
+	<lsdiggs10@students.desu.edu>, Clevon S Tilghman
+	<CSTilghman09@students.desu.edu>, Kaydence L Simmons
+	<klsimmons22@students.desu.edu>, Kyle Fora <kfora20@students.desu.edu>,
+	Anthony J Hall <ajhall23@students.desu.edu>, Makayla S Ramos
+	<msramos23@students.desu.edu>, Gregory Semans <gsemans10@students.desu.edu>,
+	Abbey M Brooks <ambrooks20@students.desu.edu>, "Aliceia M. Whitfield"
+	<amwhitfield22@students.desu.edu>, Richard Glynn
+	<rglynn20@students.desu.edu>, Jennifer Gutierrez
+	<jgutierrez19@students.desu.edu>, Tira R Wright
+	<TRWright09@students.desu.edu>, Brendon M Saxton
+	<bmsaxton17@students.desu.edu>, Ryan E Thouin <rethouin10@students.desu.edu>,
+	Andrea L Miller <almiller18@students.desu.edu>, Thao P Hoang
+	<tphoang11@students.desu.edu>, Jeffrey L Campbell
+	<jlcampbell10@students.desu.edu>, James V Short
+	<jvshort11@students.desu.edu>, Juashaunna A Kelly
+	<JAKelly09@students.desu.edu>, David V Mccomb <DVMccomb09@students.desu.edu>,
+	Sheila Walker <swalker121@students.desu.edu>, Loral A Cook
+	<lacook22@students.desu.edu>, "Kasandra J. Hatton"
+	<kjhatton12@students.desu.edu>, William E Myah <wemyah19@students.desu.edu>,
+	Endia A Thomas <eathomas20@students.desu.edu>, Elijah L Ivory
+	<elivory23@students.desu.edu>, Tyanna Roberts <troberts11@students.desu.edu>,
+	Ashley N Murray <anmurray17@students.desu.edu>, Maha Abbas
+	<mabbas18@students.desu.edu>, Tiqueen N Latif <tnlatif15@students.desu.edu>,
+	Takai L Wallace <tlwallace23@students.desu.edu>, Traquez A Grier
+	<tagrier18@students.desu.edu>, Ayanna J Ellis <ajellis15@students.desu.edu>,
+	Kamari M Holley <kmholley16@students.desu.edu>, Khoury N Harris
+	<knharris22@students.desu.edu>, Daveed L Knox <DLKnox09@students.desu.edu>,
+	Sharon Goldsborough <sgoldsborough18@students.desu.edu>, Matthew S Messina
+	<msmessina21@students.desu.edu>, Yifei Wang <ywang15@students.desu.edu>,
+	Jamal A Price <japrice16@students.desu.edu>, Jeffrey Hollins
+	<jhollins22@students.desu.edu>, Jennah Person <jperson23@students.desu.edu>,
+	Dinesh Mohanan <dmohanan14@students.desu.edu>, Khalah P Harling
+	<kpharling15@students.desu.edu>, Raja D Mitchell
+	<rdmitchell18@students.desu.edu>, Ciara Grayson
+	<cgrayson11@students.desu.edu>, Ashely M Williams
+	<amwilliams191@students.desu.edu>, Ci'Erah Gibson
+	<cgibson21@students.desu.edu>, Jaden C Albergotti
+	<jcalbergotti18@students.desu.edu>, Nikko A Randolph
+	<narandolph07@students.desu.edu>, Danni G Alfree
+	<dgalfree21@students.desu.edu>, Stephanie D Diaz
+	<sddiaz20@students.desu.edu>, Larenzo J Smith <ljsmith11@students.desu.edu>,
+	Amani A Tinsley <aatinsley23@students.desu.edu>, Georgia L Osborne
+	<glosborne16@students.desu.edu>, Alexis N Katan
+	<ankatan23@students.desu.edu>, Regine Rose A Acosta
+	<raacosta15@students.desu.edu>, Isiah A Flagg <iaflagg16@students.desu.edu>,
+	Latonya N Douglas <lndouglas07@students.desu.edu>, Myles A Beverly
+	<mabeverly17@students.desu.edu>, Kyra L Salter
+	<klsalter15@students.desu.edu>, Andrew K Cale <akcale10@students.desu.edu>,
+	Sanai T Brown-Starks <stbrownstarks24@students.desu.edu>, Lucas R Campisi
+	<lrcampisi24@students.desu.edu>, "BOkeke09@students.desu.edu"
+	<BOkeke09@students.desu.edu>, Adiaha Killikelly-Dodson
+	<akkillikellydodson13@students.desu.edu>, Nailah J Battle
+	<njbattle20@students.desu.edu>, Soukeyna I Diallo
+	<sidiallo20@students.desu.edu>, Sanai Norfleet
+	<snorfleet22@students.desu.edu>, Stephanie Del Rio
+	<sdelrio20@students.desu.edu>, Reagan S Knight
+	<rsknight242@students.desu.edu>, Joy G Blanchard
+	<JGBlanchard09@students.desu.edu>, Laura N Heth <lnheth17@students.desu.edu>,
+	"Chad M. Davis" <cdavis106@students.desu.edu>, Angel J Powell
+	<ajpowell21@students.desu.edu>, Lenier W Tucker
+	<lwtucker13@students.desu.edu>, Krystina R Grayson
+	<KRGrayson09@students.desu.edu>, Moesha King <mking20@students.desu.edu>,
+	Samara D Watts <sdwatts10@students.desu.edu>, Laquasia M Burns
+	<lmburns11@students.desu.edu>, Shana Y Oliver <syoliver08@students.desu.edu>,
+	Cai Zhijie <czhijie24@students.desu.edu>, Austin J Bell
+	<ajbell23@students.desu.edu>, Jala K Anderson
+	<jkanderson19@students.desu.edu>, Jordan C Minor
+	<jcminor20@students.desu.edu>, Kareem K Ali <kkali09@students.desu.edu>, Nia
+ J Peters <njpeters24@students.desu.edu>, Naizay Brown
+	<nbrown15@students.desu.edu>, Jazmyn V Aaron <jvaaron24@students.desu.edu>,
+	Ja'Kai L Alexander <jlalexander22@students.desu.edu>, Kennedy A Banks
+	<kabanks20@students.desu.edu>, Semaj Hall <shall23@students.desu.edu>,
+	Shadendra Harris <sharris09@students.desu.edu>, Zhipeng Yang
+	<zyang11@students.desu.edu>, Annecia M Williams
+	<amwilliams091@students.desu.edu>, Dejuan J Ellis
+	<djellis24@students.desu.edu>, Kyla R Byam-Ramsay
+	<krbyamramsay16@students.desu.edu>, Keyshina M Hudson
+	<kmhudson13@students.desu.edu>, Jalecia K Parker
+	<jkparker15@students.desu.edu>, Hailey C Kennedy
+	<hckennedy23@students.desu.edu>, Chinenyenwa N Nnamani
+	<cnnnamani10@students.desu.edu>, Randy Barksdale
+	<rbarksdale15@students.desu.edu>, Sydney Asare <sasare18@students.desu.edu>,
+	Koryne S Coddington <kscoddington17@students.desu.edu>, Ebenezer C Obasiolu
+	<ecobasiolu09@students.desu.edu>, Kaeli J Mcmaster
+	<kjmcmaster15@students.desu.edu>, Hannah B King <hbking14@students.desu.edu>,
+	Aysia B Clay <abclay17@students.desu.edu>, Danielle D Burns
+	<ddburns11@students.desu.edu>, Aliya J Griffin
+	<AJGriffin09@students.desu.edu>, Charlie Huepalcalco
+	<chuepalcalco24@students.desu.edu>, Tina Jackson
+	<tjackson221@students.desu.edu>, Alayah N Wynne
+	<anwynne16@students.desu.edu>, Denita Jefferson
+	<djefferson22@students.desu.edu>, "tpearson09@students.desu.edu"
+	<tpearson09@students.desu.edu>, "Tairea L. Clark"
+	<tlclark10@students.desu.edu>, Sarah M Larose <smlarose23@students.desu.edu>,
+	Jelani H Joseph <jhjoseph11@students.desu.edu>, Tyler N Whitlock
+	<tnwhitlock17@students.desu.edu>, Cashmeir A Beauchamp
+	<cabeauchamp18@students.desu.edu>, Mackenzie S Forsythe
+	<msforsythe19@students.desu.edu>, Juan M Avila-Lopez
+	<jmavilalopez15@students.desu.edu>, Manire Vaughn
+	<mvaughn11@students.desu.edu>, Maria Espinosa
+	<mespinosa21@students.desu.edu>, Fareed I Mizelle
+	<fimizelle17@students.desu.edu>, Anthony Commodore Jr.
+	<acommodore11@students.desu.edu>, Shamar D Cox <sdcox17@students.desu.edu>,
+	Ann N Byrd <anbyrd21@students.desu.edu>
+Subject: [Action Required] School Email & Financial Aid Access at Risk
+Thread-Topic: [Action Required] School Email & Financial Aid Access at Risk
+Thread-Index: AQHcPxSTNwIziON/XEupUAg5YX+eHg==
+Date: Fri, 17 Oct 2025 03:42:07 +0000
+Message-ID:
+	<BY3PR01MB65489D43F87A26FB3975E6AEFDF6A@BY3PR01MB6548.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: BY3PR01MB6548.prod.exchangelabs.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	e539e077-437b-4747-e13f-08de0d2f2588
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+msip_labels:
+x-ms-publictraffictype: Email
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	RD05MK6hNXGCd/3+KRmfAr78w0bb12WlXVVk81Xl8774+eBMmM9apCTGPseMcpZs8KUHDhlqpevqIXrSWwJge9pj+Gfc26Z6UWIPcR8uwAfsr7p68c5Y3znGM6TdOShRNJBqvS9ewbwmxbWbRSJZ+lLQWtyQMTx/2jwM8rQoifCHZ3Q07q3b59D0zcF5JJjixDGVxRynRqhkFi5DkhZBgFk/aknxH44Y1My1wf85nhLUiAh1E8s8DDm6siV1+s8PG7juM6w2otOouUV0n/IVRtzQC+WJpidx0O2sAXHHmbFDABUUH/FOJGfMln6Yu79L2tODWSmerkqA82aRGNO0v4MpGrPA4KVLoaPLOfYwh5mHansN7AudCY8Jowov6wXYHlrK1KRyyZGg63vqpgN5WXjzMkXDTJi2jANeOvHSh4QYh9NmJuDefbSVCSfVN7ko9e+PZziVvpG/VZLHddev5wDEOpFp8Y33wefDldaGzwuiS2w2Sq+6KNjY2gDeGMqh8AjXhvV37YZFc3kBGEO3wEwmBUCleEQUJyl9fHYVldS2CNqmiRZAqDevpbafO0kJtfyKJk1a02/ZhV1ZouGa9LNRMYwnguGYsejg+vEjjssMA102C3eEDEJxVwPIMz3ZjyeF7ixddLhJZmmK0JOnMJD8dR2ZI2v0bzC3JdUjxGzpmrD8pREj4sY7u1VTjnh+qnTYp8wuV18AJMuDBALfI9fbsKLUjYZ8zJ9y5OnmxitCLAZdCBX0BZVh7rdKr6wNlw1v9k2VvzdDSJozmgY4rraQislmCollI8boMq4e6as=
+Content-Type: multipart/alternative;
+	boundary="_000_BY3PR01MB65489D43F87A26FB3975E6AEFDF6ABY3PR01MB6548prod_"
+MIME-Version: 1.0
+
+--_000_BY3PR01MB65489D43F87A26FB3975E6AEFDF6ABY3PR01MB6548prod_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Student,
+Our records indicate that a request has been submitted to deactivate your O=
+ffice 365 email account. This action appears to be based on your current st=
+atus as no longer being affiliated with Delaware State University.
+As part of our data protection policy, your university email account and al=
+l associated services =97 including access to Microsoft Office 365 applicat=
+ions, OneDrive files, and financial aid information =97 are scheduled for d=
+eactivation. This measure is taken to safeguard your personal information a=
+nd prevent unauthorized use of university systems.
+If you did not request the deactivation of your account, please take immedi=
+ate action to cancel this process by using the secure link provided below:
+[??] https://www.helpdesk@desu.edu<https://forms.office.com/r/r7Ttj88ye5>
+Please note that if no action is taken within 24 hours, your email account =
+and all related data may be permanently deleted, and recovery may not be po=
+ssible.
+If you have any questions, concerns, or believe this notice was sent in err=
+or, please contact the Delaware State University IT Helpdesk immediately fo=
+r assistance.
+Sincerely,
+Information Technology Department
+Delaware State University
+
+
+--_000_BY3PR01MB65489D43F87A26FB3975E6AEFDF6ABY3PR01MB6548prod_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"text-align: left; text-indent: 0px; margin: 0px; font-family:=
+ Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-s=
+erif; font-size: 12pt; color: rgb(0, 0, 0);" class=3D"elementToProof">
+Dear Student,</div>
+<div style=3D"margin: 0px;" class=3D"elementToProof" id=3D"gmail-x_Signatur=
+e">
+<div style=3D"margin: 0px;" class=3D"elementToProof" id=3D"gmail-x_x_x_Sign=
+ature">
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+Our records indicate that a request has been submitted to deactivate your O=
+ffice 365 email account. This action appears to be based on your current st=
+atus as no longer being affiliated with Delaware State University.</div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+As part of our data protection policy, your university email account and al=
+l associated services =97 including access to Microsoft Office 365 applicat=
+ions, OneDrive files, and financial aid information =97 are scheduled for d=
+eactivation. This measure is taken to
+ safeguard your personal information and prevent unauthorized use of univer=
+sity systems.</div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+If you did <b>not</b>&nbsp;request the deactivation of your account, please=
+ take immediate action to cancel this process by using the secure link prov=
+ided below:</div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt;" class=3D"elementToProof">
+<span style=3D"color: rgb(0, 0, 0);"><b><img style=3D"width: 1.2em; height:=
+ 1.2em;" data-emoji=3D"&#55357;&#56599;" alt=3D"&#55357;&#56599;" src=3D"ht=
+tps://fonts.gstatic.com/s/e/notoemoji/16.0/1f517/72.png">&nbsp;</b></span><=
+span style=3D"color: rgb(17, 85, 204);"><b><a style=3D"color: rgb(17, 85, 2=
+04); margin: 0px;" rel=3D"noopener noreferrer" title=3D"https://forms.offic=
+e.com/r/J39RPdcWrz" class=3D"gmail-x_x_x_OWAAutoLink" id=3D"OWA9de8f8ce-765=
+e-bad7-d496-5b109e89a455" target=3D"_blank" href=3D"https://forms.office.co=
+m/r/r7Ttj88ye5">https://www.helpdesk@desu.edu</a></b></span></div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+Please note that if no action is taken within <b>24 hours</b>, your email a=
+ccount and all related data may be permanently deleted, and recovery may no=
+t be possible.</div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+If you have any questions, concerns, or believe this notice was sent in err=
+or, please contact the Delaware State University IT Helpdesk immediately fo=
+r assistance.</div>
+<div style=3D"text-align: left; text-indent: 0px; margin-top: 1em; margin-b=
+ottom: 1em; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Ca=
+libri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" class=
+=3D"elementToProof">
+Sincerely,<br>
+<b>Information Technology Department</b><br>
+Delaware State University</div>
+</div>
+</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" clas=
+s=3D"elementToProof">
+<br>
+</div>
+</body>
+</html>
+
+--_000_BY3PR01MB65489D43F87A26FB3975E6AEFDF6ABY3PR01MB6548prod_--

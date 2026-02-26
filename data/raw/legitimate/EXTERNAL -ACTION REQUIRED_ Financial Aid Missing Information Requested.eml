@@ -1,0 +1,372 @@
+Received: from SA7PR01MB994294.prod.exchangelabs.com (2603:10b6:806:4ce::22)
+ by BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Sun, 7 Dec 2025 18:16:10
+ +0000
+Received: from CH2PR10CA0015.namprd10.prod.outlook.com (2603:10b6:610:4c::25)
+ by SA7PR01MB994294.prod.exchangelabs.com (2603:10b6:806:4ce::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9343.10; Sun, 7 Dec
+ 2025 18:16:08 +0000
+Received: from CH1PEPF0000AD7C.namprd04.prod.outlook.com
+ (2603:10b6:610:4c:cafe::dd) by CH2PR10CA0015.outlook.office365.com
+ (2603:10b6:610:4c::25) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9388.14 via Frontend Transport; Sun,
+ 7 Dec 2025 18:16:03 +0000
+Authentication-Results: spf=pass (sender IP is 2a00:1450:4864:20::635)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 2a00:1450:4864:20::635 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a00:1450:4864:20::635; helo=mail-ej1-x635.google.com; pr=C
+Received: from mail-ej1-x635.google.com (2a00:1450:4864:20::635) by
+ CH1PEPF0000AD7C.mail.protection.outlook.com (2603:10b6:61f:fc00::354) with
+ Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.20.9412.4 via Frontend Transport; Sun, 7 Dec 2025 18:16:08 +0000
+Received: by mail-ej1-x635.google.com with SMTP id a640c23a62f3a-b728a43e410so423624866b.1
+        for <djefferson22@students.desu.edu>; Sun, 07 Dec 2025 10:16:08 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1765131367; x=1765736167; darn=students.desu.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=h2kFIkYhGXiZWXeZYrvUtjHLEqSagT9qF0iqbi0hpm4=;
+        b=Uq4bmasharWp7ICXvTPF4T93k7aP7eroRDApyc67DkDE2iAkj9ogcO45HUs0k1FC+Y
+         uFbUztpL+jLhdmEWfZ4QVABWk33+NrJ8/7acahh+aZ4qcw3fs3rxzJu7q46wAPaAzjlT
+         Um2pzWAM1Yk9wwW83GAiXCXmUPHtr06ai2KN2OYqVSjCoi8JjtB0z0FJOR8yctzDAkll
+         N0+oteIQQq6cIqh/SM/h61v28kqRLJCs1tezx0+hrdq3+im9TZoe+KS5qHE2YnEFaH/w
+         ifVPQ6gZ3h0OFyGA+Yyt3bmpN6A3/u1zVT9l8k4YnuFo+csLO+UaGGykuV02mXQScVjl
+         hTvA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1765131367; x=1765736167;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=h2kFIkYhGXiZWXeZYrvUtjHLEqSagT9qF0iqbi0hpm4=;
+        b=OlxsWMEhxXpQCrVlG7SUDoHlF4Q5IowmHE61Onuh9unCYmt4xuUUWU4FhV0eoQta4g
+         FCUdfHHfL8n/cCIohZMEQVmX0NlRkXfj9S074TnQPFxYi2WV/XqLv8uZ13QDAAiNWR0z
+         fj5YkFlTg/UX254zijN0ng/b16rc8sWor1Y8bPAmwj4ULhqaplYUk4q2wzI9iMy9dHzs
+         k0wBZqvGq787vI/O9/KpTmJLAm4kc1AMtHguvrERrRCNIJY9bZIzlCH5Ud7YBC7tOg8C
+         WviOKbevU5Hcn5tSJldLZZtsTsvKilt8LAplwkr+nNC39rpRCDvvzNVNxq2sVol84zWA
+         AwiA==
+X-Forwarded-Encrypted: i=1; AJvYcCV+Y8BWBpOsOHvDuofYpE6tbW0eMjQLok5wSuQpjrEgBvRkCQ0B65sXTRBlXiQD1/Vg4Hq2fyYeEGj1eP0=@students.desu.edu
+X-Gm-Message-State: AOJu0YxyX98E2mpKIJ7gpZ6SmjtJt+8rg3K8q7LTvjasTuFsdNN4eKOO
+	a+yajzsXknlp0shw6v52HStzCJlmwE3j9mdMtjrhldC30BC64hlOts5s8ur09k6pdMfOgSvv5h9
+	zowpAOUccqbVzsN0f30NNDlj01LAp+NI=
+X-Gm-Gg: ASbGncs92UVEs0rdiwkRCrWmRzo9/uOc5qew9mfrDMRD9wvDjTwFE6yFMrgCUXKtu57
+	q5nmvwg74IzcjiQKmqauuKkOV/Ib1fKjKUKAd+NcUAnBkfIP2iPlhn/FsVH/y4Blvfj3KV06Ckr
+	diCvCwONnt4lcwd+M2mwv52ORTLA6iq2xLTH/rAk/PPmxWIX5ANUJAONHsxp42rDtNOVIojZEhu
+	LsQc2kpTy1si9xgl0VP9pQ7k3S5oqXoT3FcUCAdO9C+xeIoNys0LxXTY2WuHkZdcpXBOILWd9Sl
+	ppufzma9HUndodSFbcnglZAOLPqyzDEbY0w=
+X-Google-Smtp-Source: AGHT+IGAMejqv3Aoh3ecaLJ8k5drW63I1idZkO14btk71mz1bZ36pSx0QOkHEN2D/l+a05weV0Zq9YGrmGQbH6fbFQQ=
+X-Received: by 2002:a05:6512:1287:b0:598:e39b:d628 with SMTP id
+ 2adb3069b0e04-598e39bd65cmr227838e87.5.1765130967911; Sun, 07 Dec 2025
+ 10:09:27 -0800 (PST)
+From: DESU Office of Financial Aid <saadaali745@gmail.com>
+Date: Sun, 7 Dec 2025 12:05:30 -0600
+X-Gm-Features: AQt7F2rFqC1W8qJLQz4aCtEsUqyGI9BaHWRr35o6e3DeBlZQU6cpx030D4Ewyg8
+Message-ID: <CAH2Pk3-ARkPz5y4u5GB0BTvFc310XvLRFbEpa73n-ixGTd1ujg@mail.gmail.com>
+Subject: EXTERNAL -ACTION REQUIRED: Financial Aid Missing Information
+ Requested
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000005311bb0645609406"
+BCC: <djefferson22@students.desu.edu>
+Return-Path: saadaali745@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Dec 2025 18:16:08.3246
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 70c00c30-17cf-4a77-2e07-08de35bcb19e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CH1PEPF0000AD7C:EE_|SA7PR01MB994294:EE_|BL0PR01MB4161:EE_
+X-MS-Exchange-Organization-AuthSource: CH1PEPF0000AD7C.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 70c00c30-17cf-4a77-2e07-08de35bcb19e
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|12012899012|7093399015|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:2a00:1450:4864:20::635;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-ej1-x635.google.com;PTR:mail-ej1-x635.google.com;CAT:NONE;SFS:(13230040)(12012899012)(7093399015)(13003099007)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Dec 2025 18:16:08.1976
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 70c00c30-17cf-4a77-2e07-08de35bcb19e
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-AuthSource: CH1PEPF0000AD7C.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA7PR01MB994294
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.9208737
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9388.012
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OHBNRlNCODJEM0RRNmlSRmh0eHhRVlRtYWZSa2wxUUhQNmNQTlpidXZSMU5n?=
+ =?utf-8?B?Skp0dnJZSVlTVDJnVDBZelYyZ0dOdC9HMGpqd3p5Y2dDMm4zZmRzQm8wZ2JE?=
+ =?utf-8?B?TWtmazhQL1RqY3Q1YXA3MXFsazdtYmRDR0hBc09TWDlXYUszVmhqTE8zQ0dV?=
+ =?utf-8?B?eEpDQVUwMURNMUlieExDQ2E2K0xRZllKVlNpS25ZQkVVb3l2QzZGTmVUK0dD?=
+ =?utf-8?B?UTRqb3Bqejd3YVVMNU9tMEtxVnJBOWs2cFRvczN2b1Z3VmVUcXY2WnIvZ3dk?=
+ =?utf-8?B?RVkrcmg5Q2EycXB1ZG9MUEZzUGsyZ09oc3pSeXh5WXlPQnREOWJ3L3BhLzY0?=
+ =?utf-8?B?VmdPZ1RpMVVOSTZpS2dUcE5UTkVqMEZtak5sRXR2NGJUY0U1RWlwUnpJaWxi?=
+ =?utf-8?B?QWdwb2NjbGNIMURPSU1UdksrWFBYYkMxSEdQTCtmT3dSYkZ2VVNic0xVRnNR?=
+ =?utf-8?B?a3lPRGVtZFg2c0VjQ29Oalc4UzhFa2VHNmdvc295QjF1aXY5Z0kySXVOR2Q2?=
+ =?utf-8?B?V0t0a2FwemExUk9hOFR3OTZqSmNBVlBTamhuKzdjT0h1QTgvRkdVaTV6aWRr?=
+ =?utf-8?B?ZUZId0FyZTJHOGYyT3JMSU44T3liVkl2SENhL0lEN3RMcWx1UU9DRzRVaFlC?=
+ =?utf-8?B?N1NUdDhoUlhIRUZ4MGtucUJEbCswdW1uY3hEdDhjaDk0a1A3UGVIOWswY0JY?=
+ =?utf-8?B?MTdNSFB4UHhKZ0lXeXdaUWttOU5ZRnZLT0pQQzhaRnc3UTI1YmNNaEZ1Nmwy?=
+ =?utf-8?B?M1VySGMwVlF2WVduL3hXaG5OSkEvWmFORldWWXRPWVBMR1IvbSs3WVFLRFRZ?=
+ =?utf-8?B?enNyNlZ5VCt1bWxWK3BNc243Y05QSjM5c0VMblByMEtvYWtFSFRQb2VEaHhD?=
+ =?utf-8?B?V2oyWS9LYXRSZ0o0K20ybXFPczE5alBWSUNjVWhPMkZGaVpCMTV1YlFBdXZV?=
+ =?utf-8?B?ZXhJRDlveGIwbnltY3hGK0NSdUVPSHVsM3N4U0gxZzd4YzNKWWVvd0M4ampQ?=
+ =?utf-8?B?QUNjZVZJUnU3NHZYZGdPU0hXNFdSRHF3U2J1VEFxWFh2ZTEvSkZRVVVnVXpB?=
+ =?utf-8?B?Q1luTU91U2JQRnQyMmY2cGExS1FHODgwUVAvS1QrSXBIOWdHbGw2VUhYSFly?=
+ =?utf-8?B?WkNIMEhEUTVmYUQxenE0aWZaeUZ4b0xXWTF4ZmhEcndPNWV5N21wejFYUVJE?=
+ =?utf-8?B?QldOdFFVZjJPUGNIKzduS09KSzhYeHpuUWFLeXVuZGdpTXA5NloyL0dWM29Q?=
+ =?utf-8?B?UTdYMlllZVJnajZUTVVpb1JJSmhCK1hzeXF1ejdBelFrYlB2NDRhVkdHTzNr?=
+ =?utf-8?B?SU90eTF4NUIxcW8xbU1rTE5SZ2NMZGNUb0E0aW1NWTg4N1diSWhYUENZNmNV?=
+ =?utf-8?B?c3Vlc0hOeFpDaThXWGUwQXlCcDUvbVdYMDEwdjJLVWJXcHRPcmVIelgySGNY?=
+ =?utf-8?B?TlYxN3hyNzQ0SkY0Mm9qOGhGd2N2Y1NlMS92cVRVdUROa3ppZ1ZuZy9mVG8w?=
+ =?utf-8?B?alhEcFlmZTRNWUhMT01hdStNZXEwZ0FkNWx2V0RNT2ZxbHA4cnR1MndkZTd3?=
+ =?utf-8?B?dVFIS09BUVdSVmRkMjgwU0tsait4VFpNOUFsWVNkeDcyUGFtKzZ1ejMrWVJw?=
+ =?utf-8?B?NG1iSE5sOXNIYWZZbHJwU1lhQXNxVHBna0IzcHFhRjVXWjMrNlEzL1c1Mko0?=
+ =?utf-8?B?NzlodEhLUFc1a0lxQVJ4MTBkdTQxV1NjL01odm93blUzWU9PWERtQmVLMm90?=
+ =?utf-8?B?MkZRb1YrL0x0RjdHcG04SURhRjVrV3luZlIzdy9FZkorUFF0cHBrRHN1WEV6?=
+ =?utf-8?B?UGhNRndTM3lyalpMdkdOWFVZWWZwcUtmeWhEWFZlL3MxTE93NEJHbGdjK1Zh?=
+ =?utf-8?B?SzFjaUUzR2doQlhzMC9YZ0JQUktWWE56Z0x3VkZmMXpCWHI5RkdOVVAxTEEr?=
+ =?utf-8?B?ZU56L1RnTkpObTNKOFdnQ1MwYXE1RnFyKzRpRTRVaytudHZJK1NmRWhyUlNm?=
+ =?utf-8?B?bi9HYWs0Sk5hMEwxdlVYcXdmaHQ2aXdWcUZJZUgrT01GT2lDZkY2NHFxUVdy?=
+ =?utf-8?B?Y05GWVA2K29DSXRhSzZRdHREVEJ3bHBMenBlM2IrWU56T3lIUVRndHI0d0pj?=
+ =?utf-8?B?RU9WeWc3LzNFMXFhK0F5T2o0Q0ZuU080aXN4V3RHdTJwQkhiaG45NjJteHVP?=
+ =?utf-8?B?eWxxRER0QUxTdlVPUStlV29WdE9HOUhvWHdkbm1WZzY5THBNS3BRT1Y0M1Ny?=
+ =?utf-8?B?M1BTMlEyQ215SGM4R3hJSWNYbmNscmgzU2xGSkNwQjBKSlFQb2RHczR1TFQ3?=
+ =?utf-8?B?V01ERnE5UHJHdFE3YlhaeU9vUTVmSGdydFkrd2dzMk9mc2lTVFJIV0UwY2RF?=
+ =?utf-8?B?MEFBVkMybjFyTnZMZTdjZTBtWnV6aTdMNGFUVmVWZmhVeWp4cFNrWWhKemlB?=
+ =?utf-8?B?YXhKbVlYbUp3WnB1dXh3T1FCRUNjRGltQ2J0bGN0N21CbjFXMHZUb0MwaGlq?=
+ =?utf-8?B?aXlSOFAyT1BxYWVSVUFtU3owOUxkUDhZaTcvUDNkZXlmZ2RHYlowUVBlaXdT?=
+ =?utf-8?B?WS8vVU5HQXVPNHk1STlnZ3FKTG5uZE93djF0MllNODNDN1JtQ0prN2tJRHNZ?=
+ =?utf-8?B?eVhIN2tLU0I1MllUVnk5OEJHM2NWdmJkWVBOaUxlRGpKUGhDQkJGcFNyZ3Jx?=
+ =?utf-8?B?TCtSdlNVWmR4SEVjSTVXVG9HM3c0Yk5SU1FwT1hhMFdDVGpyNk5namtzbThW?=
+ =?utf-8?B?eHRVaEVYakJoNlZ0MlRxeGJtZURDZWFPSmdyTEk0YVNtWWhJNDJ3Qm5kWFpl?=
+ =?utf-8?B?RXIzL2prdWdNekVTcUQ1MmtGVThwdnYzR1dEdFBhQ1Bsd1dKMk5mLzZrOU93?=
+ =?utf-8?B?WDR6SzFwRnF3T1hzT3FqQWpNWXZ4emdhbFIzS0poU0dIaFozZ29OalAxcUtt?=
+ =?utf-8?B?V042Qy9zWGZBcm5GMStkOE14K0FoRFZ1WDJaSXNnaURLZW1BUFBCMGpTNFh4?=
+ =?utf-8?B?d0VJYVF1OVdVYkpRLzJ4UlNiNXJ4aTA3bmltUXArbmZ3dXAvWEdSQ3BpY1V3?=
+ =?utf-8?B?NHBsK2p0NWJjKzNzL0EwaFJDdkw4dDVWdUdTZ0ZJUE1OMVlzSkZvMWswdVpP?=
+ =?utf-8?B?TjNyNVZOdStUUERJSFlQV25XcmJPY1VmZWxENFJxcGNnR0pkbmQyN1lqelF1?=
+ =?utf-8?B?d0trUHlpNW5WN2Zxd0VHeTA3TGlFVzdrVVhpRDNXa2xzOGkvYmcvRzZ1cHgy?=
+ =?utf-8?B?Vndubk9zNVJtYVdQWmJZZVFTWWU5aE5MR1lqSHAyQWlGalBuSTFreGN5a2VH?=
+ =?utf-8?B?L1pjcjBTTHY4eEhyVjcwOUkzZUVUSDdCY3loLzZ4dVFjdENTK3pqYlBLWjd1?=
+ =?utf-8?B?RGZGSmZBVHAydkFmNFBNckxYK1pheXNja01nY3RMSkJKSEdkRlNZdXlYaVJH?=
+ =?utf-8?Q?u8PP87orHuFk+PUX7jk=3D?=
+MIME-Version: 1.0
+
+--0000000000005311bb0645609406
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+'
+**External Email**
+
+Caution: This email came from outside of the Delaware State University netw=
+ork. Do not click links or open attachments unless you recognize the sender=
+, and know the content is safe.
+
+Greetings,
+
+Thank you for making Delaware State University your choice for pursuing you=
+r higher educational goals. In order to complete the financial aid process =
+for the 2025-2026 Academic Year, you must complete and submit the missing i=
+tems listed below. If this is not completed, your aid cannot be processed a=
+nd you will be responsible for your entire account balance. To avoid a dela=
+y in processing your financial aid, please submit requested documentation w=
+ithin 10 days of this letter.
+
+Missing Requirements and instructions:
+
+  *   Annual Student Loan Acknowledgement-Sub/Unsub: The US Department of E=
+ducation recommends you complete an Annual Student Loan Acknowledgment each=
+ year you accept a new federal student loan. The goal is to help you unders=
+tand your loans and how they affect your financial future. If this is your =
+first time accepting a federal student loan, you are acknowledging that you=
+ understand your responsibility to repay your loan. If you have existing fe=
+deral student loans, you are acknowledging that you understand how much you=
+ owe and how much more you are eligible to borrow. You'll also see other fe=
+deral student aid information, including the interest rates and repayment o=
+ptions to make managing your student loans easier. Please proceed to the fo=
+llowing website ( https://studentaid.gov/asla<https://forms.office.com/r/Ei=
+xgCQJrbK>   ) to complete the Annual Student Loan Acknowledgment. This proc=
+ess is not required but recommended.
+
+If you have missing financial aid documents that are NOT related to admissi=
+ons or needing to complete a FAFSA, please log into Banner Self-Service<htt=
+ps://forms.office.com/r/EixgCQJrbK>
+
+Please Note: For documents that must be submitted through Student Forms<htt=
+ps://forms.office.com/r/EixgCQJrbK>,
+
+If you have any questions regarding this notification, please contact the O=
+ffice of Financial Aid.  Please be sure to have the above reference informa=
+tion available
+
+The Office of Financial Aid
+faid@desu.edu<https://forms.office.com/r/EixgCQJrbK>
+
+--0000000000005311bb0645609406
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+'
+<title></title>
+<div style=3D"background-color:#FFEB9C; width:100%; border-style: solid; bo=
+rder-color:#9C6500; border-width:1pt; padding:2pt; font-size:10pt; line-hei=
+ght:12pt; font-family:'Calibri'; color:Black; text-align: Center;">
+<span style=3D"color:#9C6500; font-weight:bold;">**External Email**</span><=
+/div>
+<div>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:8pt;margin-bottom:0pt;b=
+ackground-color:#ffffff;">
+<span id=3D"docs-internal-guid-042b3d3e-d312-0ebb-1e18-c6c1a209e4fd"><span =
+style=3D"font-size: 10.5pt; font-family: Arial; color: rgb(51, 51, 51); bac=
+kground-color: transparent; font-variant-numeric: normal; font-variant-east=
+-asian: normal; vertical-align: baseline;"><!DOCTYPE html></p>
+<p style=3D"color: #FF0000" ;=3D"">Caution: This email came from outside of=
+ the Delaware State University network. Do not click links or open attachme=
+nts unless you recognize the sender, and know the content is safe.
+</p>
+</span></span></div>
+<div>
+<div dir=3D"ltr">
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+Greetings,&nbsp;</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<br>
+</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+Thank you for making Delaware State University your choice for pursuing you=
+r higher educational goals. In order to&nbsp;complete the financial aid pro=
+cess for the&nbsp;<strong>2025-2026 Academic Year</strong>, you must comple=
+te and submit the missing items listed below.&nbsp;<em>If
+ this&nbsp;is not completed, your aid cannot be processed and you will be r=
+esponsible for your entire account balance</em>. To avoid a delay in proces=
+sing your financial aid, please submit&nbsp;requested documentation within =
+10 days of this letter.</div>
+<div aria-hidden=3D"true" style=3D"border:0px;font-variant-numeric:inherit;=
+font-variant-east-asian:inherit;font-variant-alternates:inherit;font-stretc=
+h:inherit;font-size:15px;line-height:inherit;font-size-adjust:inherit;font-=
+kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertic=
+al-align:baseline;color:rgb(36,36,36)">
+&nbsp;</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<strong>Missing Requirements and instructions:</strong></div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<ul>
+<li style=3D"margin-left:15px"><b><u>Annual Student Loan Acknowledgement-Su=
+b/Unsub:</u></b>&nbsp;The US Department of Education recommends you complet=
+e an Annual Student Loan Acknowledgment each year you accept a new federal =
+student loan. The goal is to help you understand
+ your loans and how they affect your financial future. If this is your firs=
+t time accepting a federal student loan, you are acknowledging that you und=
+erstand your responsibility to repay your loan. If you have existing federa=
+l student loans, you are acknowledging
+ that you understand how much you owe and how much more you are eligible to=
+ borrow. You'll also see other federal student aid information, including t=
+he interest rates and repayment options to make managing your student loans=
+ easier. Please proceed to the following
+ website (&nbsp;<a rel=3D"noopener noreferrer" href=3D"https://forms.office=
+.com/r/EixgCQJrbK" title=3D"https://dsu.my.campusapp.com/#/links?ids=3D2358=
+33,235832" target=3D"_blank" style=3D"font:inherit;border:0px;margin:0px;pa=
+dding:0px;vertical-align:baseline">https://studentaid.gov/asla</a>&nbsp;&nb=
+sp;
+ ) to complete the Annual Student Loan Acknowledgment. This process is not =
+required but recommended.</li></ul>
+</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<br>
+If you have missing financial aid documents that are&nbsp;<strong>NOT&nbsp;=
+</strong>related to admissions or needing to complete a FAFSA,&nbsp;please =
+log into&nbsp;<a rel=3D"noopener noreferrer" href=3D"https://forms.office.c=
+om/r/EixgCQJrbK" title=3D"https://dsu.my.campusapp.com/#/links?ids=3D235833=
+,235832" target=3D"_blank" style=3D"border:0px;font:inherit;margin:0px;padd=
+ing:0px;vertical-align:baseline">Banner
+ Self-Service</a>&nbsp;</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<br>
+</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<strong>Please Note:</strong>&nbsp;For documents that must be submitted thr=
+ough&nbsp;<a rel=3D"noopener noreferrer" href=3D"https://forms.office.com/r=
+/EixgCQJrbK" title=3D"http://desu.studentforms.com" target=3D"_blank" style=
+=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline"=
+>Student
+ Forms</a>,&nbsp;</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<br>
+</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+If you have any questions regarding this notification, please contact the&n=
+bsp;<b>Office of Financial Aid.</b>&nbsp; Please be sure to have the above =
+reference information available&nbsp;</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+<br>
+</div>
+<div style=3D"border:0px;font-variant-numeric:inherit;font-variant-east-asi=
+an:inherit;font-variant-alternates:inherit;font-stretch:inherit;font-size:1=
+5px;line-height:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(36,36,36)">
+The Office of Financial Aid<br>
+<a href=3D"https://forms.office.com/r/EixgCQJrbK" target=3D"_blank">faid@de=
+su.edu</a></div>
+</div>
+</div>
+</body>
+</html>
+
+--0000000000005311bb0645609406--

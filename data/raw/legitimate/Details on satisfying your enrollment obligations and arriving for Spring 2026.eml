@@ -1,0 +1,1496 @@
+Received: from BY1PR01MB9089.prod.exchangelabs.com (2603:10b6:a03:5b5::9) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Thu, 8 Jan 2026 23:18:29
+ +0000
+Received: from SA1PR04CA0007.namprd04.prod.outlook.com (2603:10b6:806:2ce::12)
+ by BY1PR01MB9089.prod.exchangelabs.com (2603:10b6:a03:5b5::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9499.4; Thu, 8 Jan 2026 23:18:26 +0000
+Received: from SA2PEPF00003F67.namprd04.prod.outlook.com
+ (2603:10b6:806:2ce:cafe::be) by SA1PR04CA0007.outlook.office365.com
+ (2603:10b6:806:2ce::12) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9499.3 via Frontend Transport; Thu, 8
+ Jan 2026 23:18:23 +0000
+Authentication-Results: spf=pass (sender IP is 77.32.149.6)
+ smtp.mailfrom=shared-p100-i6.d.sp1-brevo.net; dkim=pass (signature was
+ verified) header.d=desu.edu;dmarc=pass action=none
+ header.from=desu.edu;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ shared-p100-i6.d.sp1-brevo.net designates 77.32.149.6 as permitted sender)
+ receiver=protection.outlook.com; client-ip=77.32.149.6;
+ helo=shared-p100-i6.d.sp1-brevo.net; pr=C
+Received: from shared-p100-i6.d.sp1-brevo.net (77.32.149.6) by
+ SA2PEPF00003F67.mail.protection.outlook.com (10.167.248.42) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9520.1
+ via Frontend Transport; Thu, 8 Jan 2026 23:18:25 +0000
+DKIM-Signature: a=rsa-sha256; bh=WYGwx+sdmhYvHfNQkEgx124tDi+8ZbDkvzV5R7EV+8s=;
+ c=relaxed/relaxed; d=desu.edu;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id:bimi-selector;
+ q=dns/txt; s=brevo1; t=1767914251; v=1;
+ b=WH5mKya07QRy/Zg/wAh29i01qCBjKNYuJlF0M3BSYoRtPRvOoNu2rgjHZHurJGNv/u/w9Orh
+ 6FP6E6BhaUu7Cw81o0MRyG6XMYftMXGdUCURKyt55kRPANQnHz3G/9MvtTxyEjy3MWdNhgtycA2
+ s/BXgQuHlCvcND9D9o3ur4i1XzI9Ya83//+iFjVO0+FOiobfwccEYuKfcC8S+ynqQ3VILCyRUJp
+ L63ZpjjicZtOHazQ5hYMuyVn8vnmI6rl/qhw+p3NhX2/xiSIxEto9FBw+rQiQ0MbYjsd/aIJhQJ
+ YQOOgkPvYfnXmMY0C5p5rG5cjvXu1l3RSRU+X3aZFLp9w==
+To: <djefferson22@students.desu.edu>
+Subject: Details on satisfying your enrollment obligations and arriving for Spring 2026
+Content-Type: multipart/alternative; boundary="-------?=_25467-5524454927843"
+Date: Thu, 08 Jan 2026 23:17:31 +0000
+Feedback-ID: 77.32.149.6:9558954_78:9558954:Sendinblue
+From: Delaware State University <enews@desu.edu>
+List-Id: OTU1ODk1NC0yNzI4LTExMA== <OTU1ODk1NC0yNzI4LTExMA==.list-id.mailin.fr>
+List-Unsubscribe: <mailto:unsubscribe@shared-p100-i6.d.sp1-brevo.net?subject=unsub-av9wh3skuv7j&body=av9wh3skuv7j>,<https://gt7ps.r.sp1-brevo.net/mk/un/li/sh/SMJz09a0vkbXsUaHbnlcJAvCzkBV/FwZqwAgWjEUh>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-Id: <202608012317.av9wh3skuv7j@shared-p100-i6.d.sp1-brevo.net>
+Reply-To: <enews@desu.edu>
+X-Csa-Complaints: csa-complaints@eco.de
+X-Mailer: Sendinblue
+X-Mailin-Campaign: 78
+X-Mailin-Client: 9558954
+X-sib-id: EIp1by4Sm9y6J6sFvNEdEcEEnPnCxoUAvva13fsv57VcwIeLtO65zbIOtqt3rrNnFJdVjt5Rs1x3uv-bT-02C-fSf7bk406_ZSYTegHFqyRbxnazIcl_rpe0lBMucMX15GhqHVgTJsSzrCGYuIVdTJ1QLjW4L9MXXtzSUnqsD9BFlqZW6SmaCK-0HPJBAxVm7fq266saC6WI0Jm8EvD7jUmumlTCN83lk9v5UwfrKx8
+Return-Path: bounces-gt7ps-enews=desu.edu@shared-p100-i6.d.sp1-brevo.net
+X-MS-Exchange-Organization-ExpirationStartTime: 08 Jan 2026 23:18:26.2701
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 7d85c856-25f6-489f-0495-08de4f0c39e5
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SA2PEPF00003F67:EE_|BY1PR01MB9089:EE_|BL0PR01MB4161:EE_
+X-MS-Exchange-Organization-AuthSource: SA2PEPF00003F67.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 7d85c856-25f6-489f-0495-08de4f0c39e5
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:4;ARA:13230040|4022899009|2092899012|13012899012|5062899012|3072899012|3092899012|13102899012|12012899012|69100299015|13003099007|8096899003|4076899003;
+X-Forefront-Antispam-Report: CIP:77.32.149.6;CTRY:FR;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SFE;H:shared-p100-i6.d.sp1-brevo.net;PTR:shared-p100-i6.d.sp1-brevo.net;CAT:NONE;SFS:(13230040)(4022899009)(2092899012)(13012899012)(5062899012)(3072899012)(3092899012)(13102899012)(12012899012)(69100299015)(13003099007)(8096899003)(4076899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Jan 2026 23:18:25.9210
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7d85c856-25f6-489f-0495-08de4f0c39e5
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-AuthSource: SA2PEPF00003F67.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY1PR01MB9089
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.4286608
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9478.004
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944490095)(944506478)(944626604)(920097)(811242)(255002)(410001)(930201)(20251009114)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?elZ1NWgyWjYrbjRQUS96ZlUyMWNnRUZlNkdJZDdlVFIvS0NPTlh3d3Y3a1hU?=
+ =?utf-8?B?Zm5uZzdENFEwWHZkYkNkbkNsK1d4V1BNSDd5Z2dGZHBpVDZFSUxURzRNRE1p?=
+ =?utf-8?B?Mkh6YlJSRkZXMk9YL2xEQTRCeWl1dFViazI4eDB0c2ErTUVrZ0JUeVhScDhi?=
+ =?utf-8?B?a2JCRkw2K1VuM01uRjdlcGQvamVJNlhCRzZCSjJqQ0hIeGtNTGxqMmdVWXJ2?=
+ =?utf-8?B?Wk8yMjJPR3JsMXl1MlgzVEs3N1NFbTM1Q0IxbFlJRGxtTVk1dEJtMmplYjd0?=
+ =?utf-8?B?MVJPMzFhMTljUWZ6Q3orU1VSbEpyQ1ZyMzl2TTRtVGtRYk1ZWXFtNGI5VmtF?=
+ =?utf-8?B?TWtxUkVJZk9IczJiV29HcDlSRFo4dXdwVDBqSWlIL3FwR3RMcDRlbllZc0RJ?=
+ =?utf-8?B?QU9UU09NNzQyOFhEK1ZSS21scGtWR1ZaR21Ic0NkdVZ0bXpmaWtwM0lEcEgy?=
+ =?utf-8?B?elRwYkJIejEvZ3E2R3hVNjhSK01iSkFUd1VrcjZUNjl5NG13clBFTmRabXhq?=
+ =?utf-8?B?bXhPYXRVeWhFZVBlVnJZTWowbWcxWmV2LzM1ZWRVTkd3c2IvUDRFYXBDZDJm?=
+ =?utf-8?B?bDJYdWNpekkwQzVJbUMrejVZaEdDMWhJMDlsUUhJQVhiUUQzU01Iend0TEJP?=
+ =?utf-8?B?YWxjTHNzZUFtRGloOCtXMnFRQktkN0V0Nk5kNnJvb0RhS2pNQkNIVWRHZHg5?=
+ =?utf-8?B?VXByU3czb2Y1dDlsdWNmOG5OcHA5SnA0eXY1Sk5rQk5YbzhDYUNsT202cXF4?=
+ =?utf-8?B?eGg5UHdwcGJxTGZnSEg1SEtObWxsWlBGQ09JRVFTbS9GempDWTdaUkxjMytF?=
+ =?utf-8?B?K3laUnlXLzM1UG1JdW1tRDcyN0FPU0l5aWNCeXlua1ZaM0ttWGFUV3lLTGFz?=
+ =?utf-8?B?Z0NXYU5wUTg1V1I2R2QvN2dFeE4vQlQyeFN3aGFwb0dhanZJRWdaQm12OVBk?=
+ =?utf-8?B?Wis4ZUNqREdqaE9JQkhEMXNDRC94OHhwclpQRmd4dy96YXFQdHZOQklqOThF?=
+ =?utf-8?B?MjB3T3FaOWZtTjA5RTJ3dzJ4bjlzYnU1cHZzZ0U1Sjg3OXEwOVZYcW4xMXlX?=
+ =?utf-8?B?MXBYVEZtR0p4ZTBXQWFCSmZoaXRMdDhKZFRYeTJIQ1VXWTMzaDRPcHE2VTVG?=
+ =?utf-8?B?eXFWMGpHaFBiaEVjajdCaHlCblErUWRxOE5TZ1ZCVldkbnZ3RFo3U0Zjcm8y?=
+ =?utf-8?B?M2RNS2tYOUpqeDR3ZkI3Vkx3ZGMzMkI1blBtUC9yTzF6QUJiaDVMNUpVbnll?=
+ =?utf-8?B?dFQxZ3hHcitrZXdjZGRCclJWZ0JqNGtlVTZxNldUdnluTzNnVG9XUXpjcFF3?=
+ =?utf-8?B?b082ZjVoQ2FzK240Z05vcTlhQXlOU0pHK3lMbnZRSzdFOWQvN3Zhb1VpN0RJ?=
+ =?utf-8?B?YmtTVk8ydWxCeGFPbDRDQWtaUS9Dbmo2Tk94bUUrKzM4MzBocGp0SGt1anR5?=
+ =?utf-8?B?QXNhUGJwR3JvaDFMdDkzWVdxOE5Yc0VCN2Rsbm5udlVvM2VJdnJPZjF6ejAw?=
+ =?utf-8?B?cHRFcG5lR0NlT3doeXlzQWFhVUgzRGRBVUpTVDNRclQzTjEybm0xYm9obVVu?=
+ =?utf-8?B?UWc4ZTRmNXpuUWVDOGhiQ2FDZS9PWUdENGFPVVpMZ2hsUy9hSUV6Y0ViV3M0?=
+ =?utf-8?B?Tm5qdk9ZOUV3ZWJoR3ZMb1IranVQYlp0bnpnYy9ydG9reFUxbW9PZy9McVFH?=
+ =?utf-8?B?OHRNaDBKb1Jva3FXM1Nmd1pkT3htam5Qak9pbk9WY2RvSEFyU3J6V1VuWk4x?=
+ =?utf-8?B?NUVzWHZoc09NWnRkYThqU2tsVVJOQnRNeGlFa1lNL3VrVGhZRXVKRTh0TjMw?=
+ =?utf-8?B?NTE5UjRLNXdsMTVjeU0vZmdleGlqMnVtSHQwTHREY1Q4U0lpOWl1akUzYXhV?=
+ =?utf-8?B?V2pma1IweC9ibzZLSnY4SER0VUt1N2RneExRa2cwUXZzeGtqK25HMkZzcENx?=
+ =?utf-8?B?djU1T29rWHlVeGs2dHJnb3RueXNpMnpRMzA0NURrSWRud1FGeTYreE8vUnZI?=
+ =?utf-8?B?cEE5REVzZ1NMbEVMam1EM1psNGkvWktqVk5DNHRQYStLaWxzUDVVenlqMEpI?=
+ =?utf-8?B?Q29CTHdlVkNxaXF1bEJEb3ljZFBLaWJDN3BoYjR2ODNEOXkvR2c0WUJvL3lV?=
+ =?utf-8?B?eHNxUHNWWmJZa3Qvb1M0TWh4QmtqbmRMTlJCbStDcXVod0wrd0hUYjFSQTJ1?=
+ =?utf-8?B?OVB2R25lRnB6YkQvaEtJckd0VTdoR25MbFhreEhyVXEwUlIvUW80Nzg2N3Rt?=
+ =?utf-8?B?UEhNaCtYdm1qUDJSdnpzWW44THJTWFB2SDVqVDJJRlVCeDlyc2QwRkoxdFBz?=
+ =?utf-8?B?emhFcVY1YjJ2bzA3eUVRY0RIWERJZUhQdzREK3M3aWNWNjdBY0Z2Q2dyVXZY?=
+ =?utf-8?B?V3Z0REhDZUhxcDBOcDd3ZzVXZDRZbTA0dVQ2a3JxWEtpaHY0OE1iQXEwRERn?=
+ =?utf-8?B?NTA4c0hkMy9mRG9Id2w4UEZmNEtKZFBMVWF6MjgyNnFIRStPWC9UWEJ5NDc4?=
+ =?utf-8?B?a0lRMVpxN0QvNktHY2NJVE5sYTQ4M3RlMTVTV0tkSTR1Z0tJWlhNYlJGQlB3?=
+ =?utf-8?B?bGRHMFRmVkdDT2RtWTZ1NW5iTDRWcC8zZURjd2ZERmVqakl4eitSQW8vVlBF?=
+ =?utf-8?B?eHNjYXpudFZxcWJIUTJ4ZFFIbEZRZ2JyUUJqSVR6N0h2d0o0VldRZ2htZzZn?=
+ =?utf-8?B?K3NhSkplYloyd2pXWVFCOHBIT0tKd1NWZ3FaOWJReWx2QzcwMTVjVDZad0dJ?=
+ =?utf-8?B?eVlBM0NaaW1uRm5ZenpYV1hBV3hjRm9zRHFFSitaNm16eUdTZWtUcTIxQXM1?=
+ =?utf-8?B?dlRqODhHM1A1TjROeVA4VTA1M1ZTQngzb0R5RFpUb0NSSlJaR0lGWmFrbFpm?=
+ =?utf-8?B?eVhpMmdMRG9vOGp3QStZQ3NTUkpCYm5Fb3RDMnhLcmhNZWRoVDQrOEZWeXRw?=
+ =?utf-8?B?b3NXUVFDZlhkdmk3V09kRGlqWDRhaEVGUGRPVlltc2NJM3c4YUJ2Wk1zTSsv?=
+ =?utf-8?B?TVlLakFYSWhKeUdXMklXYW0vNWpFMHlIaElXVGxNbWpvZ0xHMlBxbENwSTFi?=
+ =?utf-8?B?NHBnRWdPV1YrR3EzSnVCMUN3TDJSMm5tTjI4aTRmVDlBbmxiWG5xV0JIcjB5?=
+ =?utf-8?B?Tm5kdER6QTkzNjlqZGtISlBLTWRieXY1ZGZMcjFabGJIRzljZDBJdStNK3h6?=
+ =?utf-8?B?Q21KVHVWTVBoaVpmdDhsdU9pcDl0RDBYZUFrQnBQcis2WVlheDRZOGwrVi9N?=
+ =?utf-8?B?Y3k0ZlBXQUcySFdLQkxBOXlLa1lwTFhFbTRFZEQyU1VGc05leXJqbTJpSC9m?=
+ =?utf-8?B?bFRabUVzdm1qQ2l4eUtNVEpmZXpMMGFlbm1TbnF5cnRUaHpuQ3U0KzIrVzVw?=
+ =?utf-8?B?ak95WkpBdGlLeHduVXExd2d4L0hnL2xRdk5pU0dxRUdpbWlHeVdnekJmSnRp?=
+ =?utf-8?B?SFl0dUIxdTFSaytJc0hkWFl2Rzk4enNsUFVqZVMzVEJkb1duK3VnUWdqSGhU?=
+ =?utf-8?B?WFFFK2YwbEowSzFvTUhXU2IxcTZVU2JzOVQyMHpWWnRlSmVSSy9Kem1IRHlX?=
+ =?utf-8?B?cmEzMVNYMW4rYUttOWR3Z0ZOYlo0K2hEdGF5SEhwVi9idEdRUWNlS0M2d0h5?=
+ =?utf-8?B?OE9TV2poUXpJNFNtbHloSmpJdGJ3UDBOaXpuK1dOdHBQcm1yZ0IvS1lpL242?=
+ =?utf-8?B?ZnJta1FsQjZDWnJBYkpNY0c1UFJhVTVMdWh0dWlwdHNuSHZsdEM1WEd6akRW?=
+ =?utf-8?B?eksycFFLM25PZjdhKzNJS25VYlhDUVBXcXBRcXkxb2duVEkyTUVQcEdiaHZv?=
+ =?utf-8?B?Rjh4SFN4dWQzc2pjTFhGOUxsdUxhYUtnNDJzL3RkcmQ5emNVbEhEdkZoUy9D?=
+ =?utf-8?B?WXZnPT0=?=
+MIME-Version: 1.0
+
+---------?=_25467-5524454927843
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Not Cleared
+
+FINANCIAL OBLIGATIONS
+
+Cleared
+
+STUDENT HEALTH FORM
+
+Cleared
+
+TRANSCRIPT
+
+Details on satisfying your enrollment obligations and arriving for Spring 2=
+026
+
+Hi Denita:
+
+Student ID: D10703461
+
+We look forward to welcoming you for the start of the Spring 2026 semester!=
+ Please see details below about satisfying your enrollment obligations, and=
+ if you're a residential or commuter student, your arrival on campus.
+
+Residential Students
+
+ARRIVAL INFORMATION
+
+Note: All students must have completely satisfied all financial obligations=
+ and requirements and must have a completed health form on file with Campus=
+ Health Services prior to moving into a residence hall.
+
+Move-in for new residential students will take place on the following dates=
+. Students may only check in on their assigned day (no early or late check-=
+in allowed).
+
+- FRIDAY, JANUARY 9 | 9 a.m.- 4 p.m. | New freshman and transfer students o=
+nly
+- SATURDAY, JANUARY 10 | 9 a.m.- noon | Returning students only
+-
+
+Students are asked to bring no more than two guests to campus; those two gu=
+ests may enter the building to help you unload items. Bring a personal cart=
+ or dolly if available, as DSU has limited carts on-site.
+
+Any student who does not successfully check in by January 21 to claim their=
+ room will automatically forfeit their room reservation.
+
+ARRIVING ON CAMPUS
+
+ALL STUDENTS WITH OUTSTANDING CLEARANCE REQUIREMENTS:
+
+- On your designated date, please enter the Main Campus through Gate 1, the=
+ first gate on College Road west of Route 13/North DuPont Highway.
+- Review your Red Pass and complete any outstanding requirements at the Mar=
+tin Luther King Jr. Student Center. [Main Campus Virtual Map](https://gt7ps=
+.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeFuBoPfytZhwHreKN3iz/4l8bn9yV9s69)
+- Once cleared, report to your designated residence hall.
+[Main Campus Virtual Map](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tH=
+eG13GYUw4jrQNgx4LMJF/uZKE-3vLvLiI) | [DSU Downtown Virtual Map](https://gt7=
+ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeG7uihJtFu0uTWFoJetV/fmn-Cahe8U_g)
+-
+
+Upon your arrival:
+
+- Present your digital FastPass and Photo ID to the Department of Residenti=
+al Education (DRE) team, who will verify your information and room assignme=
+nt.
+- Complete your key card details and return it to our staff. You will then =
+be provided with your room key. Incoming freshman and transfer students wil=
+l also receive a welcome packet.
+- After 30 minutes of unloading, you will be directed to park in a secondar=
+y parking lot.
+
+Commuter/Nonresidential/Online Students
+
+Commuter/nonresidential students receiving on-campus academic instruction w=
+ho have remaining enrollment obligations are asked to report to campus Frid=
+ay, January 9, from 9 a.m.-4 p.m. to meet with student services representat=
+ives and, once cleared, receive a welcome packet (new students) and/or digi=
+tal FastPass. On this date, please enter campus through Gate 1, the first g=
+ate on College Road west of Route 13/North DuPont Highway, and report to th=
+e Martin Luther King Jr. Student Center, 2nd Floor Parlors.[Virtual campus =
+map](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGEmAq8qR4AOZLYYHxTl/=
+zw9KbHjEdp9w)
+
+Please note:
+
+-
+
+Online-only students are not required to report to campus in person to sati=
+sfy enrollment obligations. Please follow the instructions in your enrollme=
+nt materials or contact the respective student services areas for assistanc=
+e.
+
+- Student Services offices will be closed in the Administration Building on=
+ Friday, January 9, to assist students in the MLK.
+
+SATISFY YOUR FINANCIAL OBLIGATIONS
+
+Satisfy your financial obligations with the Office of Student Accounts imme=
+diately (due date was January 2).
+
+- View your account and make payments using Banner Self Service at [my.desu=
+.edu](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGLdcyxncEJsfArIGG41=
+/WLto8CXejEud)
+- [Enroll in the Hornets Tuition Payment Plan](https://gt7ps.r.sp1-brevo.ne=
+t/mk/cl/f/sh/SMK1E8tHeGSV57mknOTMl0A2EYeH/FSTrx2wKjuOw)
+- Address prior semester balances by contacting the Office of Student Accou=
+nts at studentaccounts@desu.edu.
+- Get details about [Parent PLUS loans](https://gt7ps.r.sp1-brevo.net/mk/cl=
+/f/sh/SMK1E8tHeGZMXGbhyYcqqpSmCrEX/gzERmdSYDpxN) (for parents of dependent =
+undergraduate students)
+- FAFSA applicants =E2=80=93 Log into [Banner Self Service](https://gt7ps.r=
+.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGgDzPQf9imKwelWB9on/Kec8hcGgKpys) to:
+
+- View the status of your Spring 2026 award(s) (from the Financial Aid tab,=
+ select 2025-2026)
+- Review your current Satisfactory Academic Progress (SAP) status; and
+- Check for outstanding documents.
+
+- Unsatisfied documents can be completed/uploaded through the [DSU Student =
+Forms](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGn5RYFcKsvp2U4G9SP=
+3/y0Ur_Xl_7vsC) (To create an account, [click here](https://gt7ps.r.sp1-bre=
+vo.net/mk/cl/f/sh/SMK1E8tHeGtwth4ZW35J8JN07kzJ/Lf53Ov0fnkOO).). Even if you=
+ currently do not have outstanding requirements or need to submit an appeal=
+, we encourage you to create an account for future use.
+
+SUBMIT YOUR HEALTH FORM
+
+NEW FRESHMAN AND TRANSFER STUDENTS
+
+[Complete your health form](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/1t6Af4=
+OiGsDhYHeaVmbZc36U6CVirh/jp9PJ3zfWwdx) for the Office of Campus Health Serv=
+ices and #[complete your electronic medical history forms online via the St=
+udent Health Portal](https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/1t6Af4OiGsE9s=
+zr0u8hUmJAJU1USZl/zQ-0_fhTIUgW) immediately (due date was December 1).
+
+RETURNING STUDENTS
+
+Review the Pre-Entrance Exam section at https://gt7ps.r.sp1-brevo.net/mk/cl=
+/f/sh/1t6Af4OiGsEcDi3RIUnPwZE8rqTCHp/9741IEGONkH7 and complete the process =
+if you have not already.
+
+Please note:
+
+-
+
+You can bring the form with you when you arrive on campus for move-in rathe=
+r than mailing it. If you=E2=80=99re a commuter student, please stop at the=
+ Student Health Center to turn your form in when you arrive for the first d=
+ay of classes.
+
+-
+
+Students who previously submitted a health form do not have to resubmit one=
+.
+
+-
+
+If you are an online student who will not be taking any classes on campus, =
+you are waived from submitting a health form for the Spring 2026 term.
+
+SUBMIT YOUR FINAL HIGH SCHOOL TRANSCRIPT
+
+NEW FRESHMEN ONLY
+
+Submit your final official high school transcript (must be signed with grad=
+uation date) or final official college transcript (if applicable) by mail t=
+o the Office of Admissions, Delaware State University, 1200 N. DuPont Highw=
+ay, Dover, DE 19901 or have your high school counselor submit your signed o=
+fficial transcript to admissionsdocs@desu.edu immediately (due date was Dec=
+ember 1).
+
+Special Info for New Freshmen & Transfer Students
+
+STUDENT ID
+
+Residential students' ID will be available in their welcome packet if the I=
+D photo was emailed and approved prior to the deadline. Commuter students' =
+ID will be available for pickup from Campus Police. If you have not yet ema=
+iled your ID photo, please visit www.desu.edu/admissions/undergraduate-stud=
+ents/accepted-students for the instructions to complete this step. Instruct=
+ions for ID pickup for students with photos approved after the deadline wil=
+l be provided by Campus Police.
+
+We look forward to seeing you soon!
+
+
+---------?=_25467-5524454927843
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html lang=3D"en">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head>
+<body>  <!--[if mso]> <img width=3D"1" height=3D"1" src=3D"https://gt7ps.r.=
+sp1-brevo.net/mk/op/sh/SMJz09hnzmooEa3xNXvPRxoKFRnd/yOAccK5HPfVz" /> <![end=
+if]-->
+	<!--[if !mso]> <!----> <img style=3D"display:none" src=3D"https://gt7ps.r.=
+sp1-brevo.net/mk/op/sh/SMJz09hnzmooEa3xNXvPRxoKFRnd/yOAccK5HPfVz"> <!-- <![=
+endif]--> <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-=
+scale=3D1"><meta name=3D"x-apple-disable-message-reformatting"><meta http-e=
+quiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta name=3D"format-detecti=
+on" content=3D"telephone=3Dno"><title>Details on satisfying your enrollment=
+ obligations and arriving for Spring 2026</title><!--[if (mso 16)]><style t=
+ype=3D"text/css">     a {text-decoration: none;}     </style><![endif]--><!=
+--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif=
+]--><!--[if gte mso 9]><noscript> <xml> <o:officedocumentsettings> <o:allow=
+png></o:allowpng> <o:pixelsperinch>96</o:pixelsperinch> </o:officedocuments=
+ettings> </xml>
+ </noscript><![endif]--><!--[if mso]><xml> <w:WordDocument xmlns:w=3D"urn:s=
+chemas-microsoft-com:office:word"> <w:DontUseAdvancedTypographyReadingMail/=
+> </w:WordDocument> </xml>
+<![endif]--><style type=3D"text/css">#outlook a { padding:0;}.ExternalClass=
+ { width:100%;}.ExternalClass,.ExternalClass p,.ExternalClass span,.Externa=
+lClass font,.ExternalClass td,.ExternalClass div { line-height:100%;}.bo { =
+mso-style-priority:100!important; text-decoration:none!important;}a[x-apple=
+-data-detectors] { color:inherit!important; text-decoration:none!important;=
+ font-size:inherit!important; font-family:inherit!important; font-weight:in=
+herit!important; line-height:inherit!important;}.a { display:none; float:le=
+ft; overflow:hidden; width:0; max-height:0; line-height:0; mso-hide:all;}@m=
+edia only screen and (max-width:600px) {p, ul li, ol li, a { line-height:15=
+0%!important } h1, h2, h3, h1 a, h2 a, h3 a { line-height:120%!important } =
+h1 { font-size:30px!important; text-align:center } h2 { font-size:26px!impo=
+rtant; text-align:center } h3 { font-size:20px!important; text-align:center=
+ }
+ .cq p, .cq ul li, .cq ol li, .cq a { font-size:16px!important } *[class=3D=
+"gmail-fix"] { display:none!important } .cf table, .cg, .ch, .ci, .cj { wid=
+th:100%!important } .cc table, .cd table, .ce table, .cc, .ce, .cd { width:=
+100%!important; max-width:600px!important } .adapt-img { width:100%!importa=
+nt; height:auto!important } .bz { padding-right:0!important } .bv { padding=
+-bottom:20px!important } .h-auto { height:auto!important } }@media screen a=
+nd (max-width:384px) {.mail-message-content { width:414px!important } }</st=
+yle>
+<div dir=3D"ltr" lang=3D"en" style=3D"background-color: rgb(246, 246, 246);=
+ font-size: 16px; font-family: Arial;" fr-original-style=3D"background-colo=
+r:#F6F6F6;" fr-original-class=3D"es-wrapper-color"><!--[if gte mso 9]><v:ba=
+ckground xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t"> <v:fill type=
+=3D"tile" color=3D"#f6f6f6"></v:fill> </v:background><![endif]--><table wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"bord=
+er-collapse: collapse; border-spacing: 0px; padding: 0px; margin: 0px; widt=
+h: 100%; height: 100%; background-repeat: repeat; background-position: cent=
+er top; background-color: rgb(246, 246, 246); border: none; empty-cells: sh=
+ow; max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-styl=
+e=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bor=
+der-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat=
+:repeat;background-position:center top;background-color:#F6F6F6;" fr-origin=
+al-class=3D"es-wrapper"><tbody><tr style=3D"border-collapse:collapse;"><td =
+valign=3D"top" style=3D"padding: 0px; margin: 0px; min-width: 5px; user-sel=
+ect: text; border: 1px solid transparent; background: unset;" fr-original-s=
+tyle=3D"padding:0;Margin:0;"><table align=3D"center" cellspacing=3D"0" cell=
+padding=3D"0" role=3D"none" style=3D"border-collapse: collapse; border-spac=
+ing: 0px; width: 100%; table-layout: fixed !important; border: none; empty-=
+cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-orig=
+inal-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:col=
+lapse;border-spacing:0px;table-layout:fixed !important;width:100%;" fr-orig=
+inal-class=3D"cc"><tbody><tr style=3D"border-collapse:collapse;"><td align=
+=3D"center" style=3D"padding: 0px; margin: 0px; min-width: 5px; user-select=
+: text; border: 1px solid transparent; background: unset;" fr-original-styl=
+e=3D"padding:0;Margin:0;"><table align=3D"center" cellspacing=3D"0" cellpad=
+ding=3D"0" role=3D"none" style=3D"border-collapse: collapse; border-spacing=
+: 0px; background-color: rgb(255, 255, 255); width: 600px; border: none; em=
+pty-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-=
+original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px;" fr-orig=
+inal-class=3D"cq"><tbody><tr style=3D"border-collapse:collapse;"><td align=
+=3D"left" style=3D"padding: 20px 20px 0px; margin: 0px; min-width: 5px; use=
+r-select: text; border: 1px solid transparent; background: unset;" fr-origi=
+nal-style=3D"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-=
+right:20px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"none" style=3D"border-collapse: collapse; border-spacing: 0px; border: =
+none; empty-cells: show; max-width: 100%; font-size: 16px; font-family: Ari=
+al;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-=
+collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-collapse:=
+collapse;"><td align=3D"center" valign=3D"top" style=3D"padding: 0px; margi=
+n: 0px; width: 560px; min-width: 5px; user-select: text; border: 1px solid =
+transparent; background: unset;" fr-original-style=3D"padding:0;Margin:0;wi=
+dth:560px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"presentation" style=3D"border-collapse: collapse; border-spacing: 0px; =
+border: none; empty-cells: show; max-width: 100%; font-size: 16px; font-fam=
+ily: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt=
+;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-c=
+ollapse:collapse;"><td align=3D"center" style=3D"padding: 0px; margin: 0px;=
+ font-size: 0px; min-width: 5px; user-select: text; border: 1px solid trans=
+parent; background: unset;" fr-original-style=3D"padding:0;Margin:0;font-si=
+ze:0px;"><img src=3D"https://gt7ps.img.sp1-brevo.net/im/sh/-XSTscO7YiwR.jpg=
+?u=3D7xwQLFBtniwQn1MAmu4EkyyiDuXnrlx" alt=3D"" style=3D"display: block; bor=
+der: 0px; outline: none; text-decoration: none; cursor: pointer; padding: 0=
+px 1px; position: relative; max-width: 100%;" width=3D"560" fr-original-sty=
+le=3D"display:block;border:0;outline:none;text-decoration:none;-ms-interpol=
+ation-mode:bicubic;" fr-original-class=3D"adapt-img fr-draggable" sib_img_i=
+d=3D"0"></td></tr></tbody></table></td></tr></tbody></table></td></tr> <tr =
+style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padding: 20=
+px 20px 0px; margin: 0px; min-width: 5px; user-select: text; border: 1px so=
+lid transparent; background: unset;" fr-original-style=3D"padding:0;Margin:=
+0;padding-top:20px;padding-left:20px;padding-right:20px;"><!--[if mso]><tab=
+le style=3D"width:560px" cellpadding=3D"0" cellspacing=3D"0"><tr>
+<td style=3D"width:178px" valign=3D"top"><![endif]--><table align=3D"left" =
+cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"border-collapse:=
+ collapse; border-spacing: 0px; float: left; border: none; empty-cells: sho=
+w; max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px;float:left;" fr-original-class=3D"ci"><tbody><tr style=3D"bo=
+rder-collapse:collapse;"><td align=3D"center" style=3D"padding: 0px; margin=
+: 0px; width: 178px; min-width: 5px; user-select: text; border: 1px solid t=
+ransparent; background: unset;" fr-original-style=3D"padding:0;Margin:0;wid=
+th:178px;" fr-original-class=3D"bz bv"><table width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-collapse: colla=
+pse; border-spacing: 0px; border: none; empty-cells: show; max-width: 100%;=
+ font-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><t=
+body><tr style=3D"border-collapse:collapse;"><td align=3D"center" style=3D"=
+padding: 10px; margin: 0px; background-color: rgb(239, 239, 239); min-width=
+: 5px; user-select: text; border: 1px solid transparent; background-image: =
+unset; background-position: unset; background-size: unset; background-repea=
+t: unset; background-attachment: unset; background-origin: unset; backgroun=
+d-clip: unset;" fr-original-style=3D"padding: 10px; margin: 0px; background=
+-color: rgb(239, 239, 239);"><p style=3D"Margin:0;-webkit-text-size-adjust:=
+none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ari=
+al, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#333333;=
+font-size:20px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:non=
+e;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,=
+ 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#333333;fon=
+t-size:20px;">Not Cleared</p> </td></tr></tbody></table></td></tr></tbody><=
+/table><!--[if mso]></td><td style=3D"width:20px"></td>
+<td style=3D"width:362px" valign=3D"top"><![endif]--><table align=3D"right"=
+ cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"border-collapse=
+: collapse; border-spacing: 0px; float: right; border: none; empty-cells: s=
+how; max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bo=
+rder-spacing:0px;float:right;" fr-original-class=3D"cj"><tbody><tr style=3D=
+"border-collapse:collapse;"><td align=3D"center" style=3D"padding: 0px; mar=
+gin: 0px; width: 362px; min-width: 5px; user-select: text; border: 1px soli=
+d transparent; background: unset;" fr-original-style=3D"padding:0;Margin:0;=
+width:362px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" rol=
+e=3D"presentation" style=3D"border-collapse: collapse; border-spacing: 0px;=
+ border: none; empty-cells: show; max-width: 100%; font-size: 16px; font-fa=
+mily: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-=
+collapse:collapse;"><td align=3D"left" style=3D"padding: 10px; margin: 0px;=
+ min-width: 5px; user-select: text; border: 1px solid transparent; backgrou=
+nd: unset;" fr-original-style=3D"padding:10px;Margin:0;"><p style=3D"Margin=
+:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-=
+rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;lin=
+e-height:30px;color:#333333;font-size:20px;" fr-original-style=3D"Margin:0;=
+-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rul=
+e:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-h=
+eight:30px;color:#333333;font-size:20px;">FINANCIAL OBLIGATIONS</p></td></t=
+r></tbody></table></td></tr></tbody></table><!--[if mso]></td></tr></table>=
+<![endif]--></td></tr> <tr style=3D"border-collapse:collapse;"><td align=3D=
+"left" style=3D"padding: 20px 20px 0px; margin: 0px; min-width: 5px; user-s=
+elect: text; border: 1px solid transparent; background: unset;" fr-original=
+-style=3D"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-rig=
+ht:20px;"><!--[if mso]><table style=3D"width:560px" cellpadding=3D"0" cells=
+pacing=3D"0"><tr><td style=3D"width:178px" valign=3D"top"><![endif]--><tabl=
+e align=3D"left" cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D=
+"border-collapse: collapse; border-spacing: 0px; float: left; border: none;=
+ empty-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" =
+fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-colla=
+pse:collapse;border-spacing:0px;float:left;" fr-original-class=3D"ci"><tbod=
+y><tr style=3D"border-collapse:collapse;"><td align=3D"center" style=3D"pad=
+ding: 0px; margin: 0px; width: 178px; min-width: 5px; user-select: text; bo=
+rder: 1px solid transparent; background: unset;" fr-original-style=3D"paddi=
+ng:0;Margin:0;width:178px;" fr-original-class=3D"bz bv"><table width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"borde=
+r-collapse: collapse; border-spacing: 0px; border: none; empty-cells: show;=
+ max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td align=
+=3D"center" style=3D"padding: 10px; margin: 0px; background-color: rgb(239,=
+ 239, 239); min-width: 5px; user-select: text; border: 1px solid transparen=
+t; background-image: unset; background-position: unset; background-size: un=
+set; background-repeat: unset; background-attachment: unset; background-ori=
+gin: unset; background-clip: unset;" fr-original-style=3D"padding: 10px; ma=
+rgin: 0px; background-color: rgb(239, 239, 239);"><p style=3D"Margin:0;-web=
+kit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:ex=
+actly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-heigh=
+t:30px;color:#333333;font-size:20px;" fr-original-style=3D"Margin:0;-webkit=
+-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exact=
+ly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:3=
+0px;color:#333333;font-size:20px;">Cleared</p> </td></tr></tbody></table></=
+td></tr></tbody></table><!--[if mso]></td><td style=3D"width:20px"></td><td=
+ style=3D"width:362px" valign=3D"top"><![endif]--><table align=3D"right" ce=
+llspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"border-collapse: c=
+ollapse; border-spacing: 0px; float: right; border: none; empty-cells: show=
+; max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bord=
+er-spacing:0px;float:right;" fr-original-class=3D"cj"><tbody><tr style=3D"b=
+order-collapse:collapse;"><td align=3D"center" style=3D"padding: 0px; margi=
+n: 0px; width: 362px; min-width: 5px; user-select: text; border: 1px solid =
+transparent; background: unset;" fr-original-style=3D"padding:0;Margin:0;wi=
+dth:362px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=
+=3D"presentation" style=3D"border-collapse: collapse; border-spacing: 0px; =
+border: none; empty-cells: show; max-width: 100%; font-size: 16px; font-fam=
+ily: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt=
+;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-c=
+ollapse:collapse;"><td align=3D"left" style=3D"padding: 10px; margin: 0px; =
+min-width: 5px; user-select: text; border: 1px solid transparent; backgroun=
+d: unset;" fr-original-style=3D"padding:10px;Margin:0;"><p style=3D"Margin:=
+0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line=
+-height:30px;color:#333333;font-size:20px;" fr-original-style=3D"Margin:0;-=
+webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule=
+:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-he=
+ight:30px;color:#333333;font-size:20px;">STUDENT HEALTH FORM</p></td></tr><=
+/tbody></table></td></tr></tbody></table><!--[if mso]></td></tr></table><![=
+endif]--></td></tr> <tr style=3D"border-collapse:collapse;"><td align=3D"le=
+ft" style=3D"padding: 20px 20px 0px; margin: 0px; min-width: 5px; user-sele=
+ct: text; border: 1px solid transparent; background: unset;" fr-original-st=
+yle=3D"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-right:=
+20px;"><!--[if mso]><table style=3D"width:560px" cellpadding=3D"0" cellspac=
+ing=3D"0"><tr><td style=3D"width:178px" valign=3D"top"><![endif]--><table a=
+lign=3D"left" cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"bo=
+rder-collapse: collapse; border-spacing: 0px; float: left; border: none; em=
+pty-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-=
+original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:collapse;border-spacing:0px;float:left;" fr-original-class=3D"ci"><tbody><=
+tr style=3D"border-collapse:collapse;"><td align=3D"center" style=3D"paddin=
+g: 0px; margin: 0px; width: 178px; min-width: 5px; user-select: text; borde=
+r: 1px solid transparent; background: unset;" fr-original-style=3D"padding:=
+0;Margin:0;width:178px;" fr-original-class=3D"bz bv"><table width=3D"100%" =
+cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border-c=
+ollapse: collapse; border-spacing: 0px; border: none; empty-cells: show; ma=
+x-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=3D"m=
+so-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td align=3D"cen=
+ter" style=3D"padding: 10px; margin: 0px; background-color: rgb(239, 239, 2=
+39); min-width: 5px; user-select: text; border: 1px solid transparent; back=
+ground-image: unset; background-position: unset; background-size: unset; ba=
+ckground-repeat: unset; background-attachment: unset; background-origin: un=
+set; background-clip: unset;" fr-original-style=3D"padding: 10px; margin: 0=
+px; background-color: rgb(239, 239, 239);"><p style=3D"Margin:0;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;f=
+ont-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;=
+color:#333333;font-size:20px;" fr-original-style=3D"Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font=
+-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;col=
+or:#333333;font-size:20px;">Cleared</p> </td></tr></tbody></table></td></tr=
+></tbody></table><!--[if mso]></td><td style=3D"width:20px"></td><td style=
+=3D"width:362px" valign=3D"top"><![endif]--><table align=3D"right" cellspac=
+ing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"border-collapse: collaps=
+e; border-spacing: 0px; float: right; border: none; empty-cells: show; max-=
+width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=3D"mso=
+-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spac=
+ing:0px;float:right;" fr-original-class=3D"cj"><tbody><tr style=3D"border-c=
+ollapse:collapse;"><td align=3D"center" style=3D"padding: 0px; margin: 0px;=
+ width: 362px; min-width: 5px; user-select: text; border: 1px solid transpa=
+rent; background: unset;" fr-original-style=3D"padding:0;Margin:0;width:362=
+px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"pres=
+entation" style=3D"border-collapse: collapse; border-spacing: 0px; border: =
+none; empty-cells: show; max-width: 100%; font-size: 16px; font-family: Ari=
+al;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-=
+collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-collapse:=
+collapse;"><td align=3D"left" style=3D"padding: 10px; margin: 0px; min-widt=
+h: 5px; user-select: text; border: 1px solid transparent; background: unset=
+;" fr-original-style=3D"padding:10px;Margin:0;"><p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:=
+30px;color:#333333;font-size:20px;" fr-original-style=3D"Margin:0;-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:30p=
+x;color:#333333;font-size:20px;">TRANSCRIPT</p></td></tr></tbody></table></=
+td></tr></tbody></table><!--[if mso]></td></tr></table><![endif]--></td></t=
+r> <tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padd=
+ing: 0px 20px; margin: 0px; min-width: 5px; user-select: text; border: 1px =
+solid transparent; background: unset;" fr-original-style=3D"padding:0;Margi=
+n:0;padding-left:20px;padding-right:20px;"><table cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" role=3D"none" style=3D"border-collapse: collapse;=
+ border-spacing: 0px; border: none; empty-cells: show; max-width: 100%; fon=
+t-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody=
+><tr style=3D"border-collapse:collapse;"><td align=3D"center" valign=3D"top=
+" style=3D"padding: 0px; margin: 0px; width: 560px; min-width: 5px; user-se=
+lect: text; border: 1px solid transparent; background: unset;" fr-original-=
+style=3D"padding:0;Margin:0;width:560px;"><table cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"100%" role=3D"presentation" style=3D"border-collapse: co=
+llapse; border-spacing: 0px; border: none; empty-cells: show; max-width: 10=
+0%; font-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-ls=
+pace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"=
+><tbody><tr style=3D"border-collapse:collapse;"><td align=3D"center" style=
+=3D"padding: 20px; margin: 0px; font-size: 0px; min-width: 5px; user-select=
+: text; border: 1px solid transparent; background: unset;" fr-original-styl=
+e=3D"padding:20px;Margin:0;font-size:0;"><table border=3D"0" width=3D"100%"=
+ height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"border-collapse: collapse; border-spacing: 0px; border: none; empt=
+y-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-or=
+iginal-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"=
+><td style=3D"padding: 0px; border-width: 0px 0px 1px; border-style: solid;=
+ border-color: transparent transparent rgb(204, 204, 204); background: unse=
+t; height: 0px; width: 100%; margin: 0px; min-width: 5px; user-select: text=
+; border-image: initial;" fr-original-style=3D"padding:0;Margin:0;border-bo=
+ttom:1px solid #cccccc;background:unset;height:0px;width:100%;margin:0px;">=
+<br></td></tr></tbody></table></td></tr><tr style=3D"border-collapse:collap=
+se;"><td align=3D"center" style=3D"padding: 0px; margin: 0px; min-width: 5p=
+x; user-select: text; border: 1px solid transparent; background: unset;" fr=
+-original-style=3D"padding:0;Margin:0;"><p style=3D"Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font=
+-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:36px;col=
+or:#134f5c;font-size:24px;" fr-original-style=3D"Margin:0;-webkit-text-size=
+-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fa=
+mily:arial, 'helvetica neue', helvetica, sans-serif;line-height:36px;color:=
+#134f5c;font-size:24px;"><strong fr-original-style=3D"" style=3D"font-weigh=
+t: 700;">Details on satisfying your enrollment obligations and arriving for=
+ Spring 2026</strong></p></td></tr><tr style=3D"border-collapse:collapse;">=
+<td align=3D"left" style=3D"padding: 20px 0px 0px; margin: 0px; color: rgb(=
+19, 79, 92); min-width: 5px; user-select: text; border: 1px solid transpare=
+nt; background: unset;" fr-original-style=3D"padding:0;Margin:0;padding-top=
+:20px;color:#134f5c;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'he=
+lvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-si=
+ze:16px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helve=
+tica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:=
+16px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">Hi Denita=
+:</strong></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:24px;color:#333333;font-size:16px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:24px;color:#333333;font-size:16px;"><strong fr-ori=
+ginal-style=3D"" style=3D"font-weight: 700;">Student ID: D10703461</strong>=
+</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', hel=
+vetica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-origi=
+nal-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;"><br></p><p =
+style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica,=
+ sans-serif;line-height:24px;color:#333333;font-size:16px;" fr-original-sty=
+le=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sa=
+ns-serif;line-height:24px;color:#333333;font-size:16px;">We look forward to=
+ welcoming you for the start of the Spring 2026 semester! Please see detail=
+s below about satisfying your enrollment obligations, and if you're a resid=
+ential or commuter student, your arrival on campus.</p></td></tr></tbody></=
+table> </td></tr></tbody></table></td></tr> <tr style=3D"border-collapse:co=
+llapse;"><td align=3D"left" style=3D"padding: 0px 20px; margin: 0px; min-wi=
+dth: 5px; user-select: text; border: 1px solid transparent; background: uns=
+et;" fr-original-style=3D"padding:0;Margin:0;padding-left:20px;padding-righ=
+t:20px;"><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"=
+none" style=3D"border-collapse: collapse; border-spacing: 0px; border: none=
+; empty-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;"=
+ fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-coll=
+apse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-collapse:coll=
+apse;"><td align=3D"center" valign=3D"top" style=3D"padding: 0px; margin: 0=
+px; width: 560px; min-width: 5px; user-select: text; border: 1px solid tran=
+sparent; background: unset;" fr-original-style=3D"padding:0;Margin:0;width:=
+560px;"><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"p=
+resentation" style=3D"border-collapse: collapse; border-spacing: 0px; borde=
+r: none; empty-cells: show; max-width: 100%; font-size: 16px; font-family: =
+Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bord=
+er-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-collap=
+se:collapse;"><td align=3D"center" style=3D"padding: 20px; margin: 0px; fon=
+t-size: 0px; min-width: 5px; user-select: text; border: 1px solid transpare=
+nt; background: unset;" fr-original-style=3D"padding:20px;Margin:0;font-siz=
+e:0;"><table border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse: collapse;=
+ border-spacing: 0px; border: none; empty-cells: show; max-width: 100%; fon=
+t-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0p=
+t;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody=
+><tr style=3D"border-collapse:collapse;"><td style=3D"padding: 0px; border-=
+width: 0px 0px 1px; border-style: solid; border-color: transparent transpar=
+ent rgb(204, 204, 204); background: unset; height: 0px; width: 100%; margin=
+: 0px; min-width: 5px; user-select: text; border-image: initial;" fr-origin=
+al-style=3D"padding:0;Margin:0;border-bottom:1px solid #cccccc;background:u=
+nset;height:0px;width:100%;margin:0px;"><br></td></tr></tbody></table></td>=
+</tr><tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"pa=
+dding: 10px 0px; margin: 0px; background-color: rgb(207, 226, 243); min-wid=
+th: 5px; user-select: text; border: 1px solid transparent; background-image=
+: unset; background-position: unset; background-size: unset; background-rep=
+eat: unset; background-attachment: unset; background-origin: unset; backgro=
+und-clip: unset;" fr-original-style=3D"padding: 10px 0px; margin: 0px; back=
+ground-color: rgb(207, 226, 243);"><p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fami=
+ly:arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#1=
+34f5c;font-size:20px;" fr-original-style=3D"Margin:0;-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+arial, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#134f=
+5c;font-size:20px;"><strong fr-original-style=3D"" style=3D"font-weight: 70=
+0;">&nbsp;Residential Students</strong></p></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr> <tr style=3D"border-collapse:collapse;"><td =
+align=3D"left" style=3D"padding: 20px 20px 0px; margin: 0px; min-width: 5px=
+; user-select: text; border: 1px solid transparent; background: unset;" fr-=
+original-style=3D"padding:0;Margin:0;padding-top:20px;padding-left:20px;pad=
+ding-right:20px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ role=3D"none" style=3D"border-collapse: collapse; border-spacing: 0px; bor=
+der: none; empty-cells: show; max-width: 100%; font-size: 16px; font-family=
+: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"border-coll=
+apse:collapse;"><td align=3D"center" valign=3D"top" style=3D"padding: 0px; =
+margin: 0px; width: 560px; min-width: 5px; user-select: text; border: 1px s=
+olid transparent; background: unset;" fr-original-style=3D"padding:0;Margin=
+:0;width:560px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+role=3D"presentation" style=3D"border-collapse: collapse; border-spacing: 0=
+px; border: none; empty-cells: show; max-width: 100%; font-size: 16px; font=
+-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rspace=
+:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"bord=
+er-collapse:collapse;"><td align=3D"left" style=3D"padding: 0px; margin: 0p=
+x; background-color: rgb(19, 79, 92); min-width: 5px; user-select: text; bo=
+rder: 1px solid transparent; background-image: unset; background-position: =
+unset; background-size: unset; background-repeat: unset; background-attachm=
+ent: unset; background-origin: unset; background-clip: unset;" fr-original-=
+style=3D"padding: 0px; margin: 0px; background-color: rgb(19, 79, 92);"><p =
+style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica,=
+ sans-serif;line-height:24px;color:#ffffff;font-size:16px;" fr-original-sty=
+le=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sa=
+ns-serif;line-height:24px;color:#ffffff;font-size:16px;"><strong fr-origina=
+l-style=3D"" style=3D"font-weight: 700;">&nbsp; &nbsp; ARRIVAL INFORMATION<=
+/strong></p> </td></tr><tr style=3D"border-collapse:collapse;"><td align=3D=
+"left" style=3D"padding: 20px 0px 0px; margin: 0px; min-width: 5px; user-se=
+lect: text; border: 1px solid transparent; background: unset;" fr-original-=
+style=3D"padding:0;Margin:0;padding-top:20px;"><p style=3D"Margin:0;-webkit=
+-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exact=
+ly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:2=
+1px;color:#333333;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-te=
+xt-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;=
+font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px=
+;color:#333333;font-size:14px;"><em>Note: All students must have completely=
+ satisfied all financial obligations and requirements and must have a compl=
+eted health form on file with Campus Health Services prior to moving into a=
+ residence hall.&nbsp;</em></p><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:a=
+rial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#33333=
+3;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:aria=
+l, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;f=
+ont-size:14px;"><br></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;">Move-in for ne=
+w residential students will take place on the following dates. Students may=
+ only check in on their assigned day <strong fr-original-style=3D"" style=
+=3D"font-weight: 700;">(no early or late check-in allowed)</strong>.</p><ul=
+ fr-original-style=3D"" style=3D"font-size: 16px; font-family: Arial;"> <li=
+ style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-se=
+rif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font-si=
+ze:14px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">FRIDAY=
+, JANUARY 9 |</strong> 9 a.m.- 4 p.m. | <strong fr-original-style=3D"" styl=
+e=3D"font-weight: 700;"><span style=3D"background-color:#FFFF00;">New fresh=
+man and transfer students only</span></strong></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">SAT=
+URDAY, JANUARY 10 |</strong> 9 a.m.- noon | <strong fr-original-style=3D"" =
+style=3D"font-weight: 700;"><span style=3D"background-color:#FFFF00;">Retur=
+ning students only</span></strong></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"><s=
+trong fr-original-style=3D"" style=3D"font-weight: 700;">Students are asked=
+ to bring no more than two guests to campus</strong>;&nbsp;those two guests=
+ may enter the building to help you unload&nbsp;items.&nbsp;<em>Bring a per=
+sonal cart or dolly if available, as DSU has limited carts on-site. </em></=
+p></li> </ul>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;text-align:ce=
+nter;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text=
+-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetic=
+a neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14p=
+x;text-align:center;"><strong fr-original-style=3D"" style=3D"font-weight: =
+700;"><em><span style=3D"background-color:#FFFFFF;">Any student who does no=
+t successfully check in by January 21 to claim their room will automaticall=
+y forfeit their room reservation.</span></em></strong></p></td></tr><tr sty=
+le=3D"border-collapse:collapse;"><td align=3D"center" style=3D"padding: 20p=
+x; margin: 0px; font-size: 0px; min-width: 5px; user-select: text; border: =
+1px solid transparent; background: unset;" fr-original-style=3D"padding:20p=
+x;Margin:0;font-size:0;"><table border=3D"0" width=3D"100%" height=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-=
+collapse: collapse; border-spacing: 0px; border: none; empty-cells: show; m=
+ax-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-s=
+pacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td style=3D"pa=
+dding: 0px; border-width: 0px 0px 1px; border-style: solid; border-color: t=
+ransparent transparent rgb(204, 204, 204); background: none; height: 0px; w=
+idth: 100%; margin: 0px; min-width: 5px; user-select: text; border-image: i=
+nitial;" fr-original-style=3D"padding:0;Margin:0;border-bottom:1px solid #c=
+ccccc;background:none;height:0px;width:100%;margin:0px;"><br></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+ <tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"paddin=
+g: 0px 20px; margin: 0px; min-width: 5px; user-select: text; border: 1px so=
+lid transparent; background: unset;" fr-original-style=3D"padding:0;Margin:=
+0;padding-left:20px;padding-right:20px;"><table cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" role=3D"none" style=3D"border-collapse: collapse; b=
+order-spacing: 0px; border: none; empty-cells: show; max-width: 100%; font-=
+size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><=
+tr style=3D"border-collapse:collapse;"><td align=3D"center" valign=3D"top" =
+style=3D"padding: 0px; margin: 0px; width: 560px; min-width: 5px; user-sele=
+ct: text; border: 1px solid transparent; background: unset;" fr-original-st=
+yle=3D"padding:0;Margin:0;width:560px;"><table cellpadding=3D"0" cellspacin=
+g=3D"0" width=3D"100%" role=3D"presentation" style=3D"border-collapse: coll=
+apse; border-spacing: 0px; border: none; empty-cells: show; max-width: 100%=
+; font-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspa=
+ce:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><=
+tbody><tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"p=
+adding: 0px; margin: 0px; min-width: 5px; user-select: text; border: 1px so=
+lid transparent; background: unset;" fr-original-style=3D"padding:0;Margin:=
+0;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', hel=
+vetica, sans-serif;line-height:24px;color:#ffffff;font-size:16px;" fr-origi=
+nal-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:24px;color:#ffffff;font-size:16px;"><strong fr-=
+original-style=3D"" style=3D"font-weight: 700;"><span style=3D"background-c=
+olor:#134f5c;">&nbsp; ARRIVING ON CAMPUS&nbsp;&nbsp;</span></strong></p>
+ </td></tr><tr style=3D"border-collapse:collapse;"><td align=3D"left" style=
+=3D"padding: 20px 0px 0px; margin: 0px; min-width: 5px; user-select: text; =
+border: 1px solid transparent; background: unset;" fr-original-style=3D"pad=
+ding:0;Margin:0;padding-top:20px;"><p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fami=
+ly:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#3=
+33333;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#3333=
+33;font-size:14px;"><strong style=3D"text-align: center; font-weight: 700;"=
+ fr-original-style=3D"text-align:center;">ALL STUDENTS WITH OUTSTANDING CLE=
+ARANCE REQUIREMENTS:</strong>&nbsp;</p><ul fr-original-style=3D"" style=3D"=
+font-size: 16px; font-family: Arial;"> <li style=3D"-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:a=
+rial, 'helvetica neue', helvetica, sans-serif;line-height:21px;Margin-botto=
+m:15px;margin-left:0;color:#333333;font-size:14px;"><strong fr-original-sty=
+le=3D"" style=3D"font-weight: 700;">On your designated date, please enter t=
+he Main Campus through Gate 1</strong>, the first gate on College Road west=
+ of Route 13/North DuPont&nbsp;Highway.</li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">Rev=
+iew your Red Pass and complete any outstanding requirements</strong> at the=
+ Martin Luther King Jr. Student Center.&nbsp;<a href=3D"https://gt7ps.r.sp1=
+-brevo.net/mk/cl/f/sh/SMK1E8tHeFuBoPfytZhwHreKN3iz/4l8bn9yV9s69" target=3D"=
+_blank" style=3D"text-size-adjust: none; text-decoration: underline; color:=
+ rgb(19, 79, 92); font-size: 14px; user-select: auto;" fr-original-style=3D=
+"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;text-decoration:underline;color:#134f5c;font-size:14px;" sib_lin=
+k_id=3D"0" templating=3D"n">Main Campus Virtual Map</a></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">Onc=
+e cleared</strong>, report to your designated residence hall.<br><a href=3D=
+"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeG13GYUw4jrQNgx4LMJF/uZKE=
+-3vLvLiI" target=3D"_blank" style=3D"text-size-adjust: none; text-decoratio=
+n: underline; color: rgb(19, 79, 92); font-size: 14px; user-select: auto;" =
+fr-original-style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;mso-line-height-rule:exactly;text-decoration:underline;color:#134f5c;font=
+-size:14px;" sib_link_id=3D"1" templating=3D"n">Main Campus Virtual Map</a>=
+ | <a target=3D"_blank" href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SM=
+K1E8tHeG7uihJtFu0uTWFoJetV/fmn-Cahe8U_g" style=3D"text-size-adjust: none; t=
+ext-decoration: underline; color: rgb(19, 79, 92); font-size: 14px; user-se=
+lect: auto;" fr-original-style=3D"-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color=
+:#134f5c;font-size:14px;" sib_link_id=3D"2" templating=3D"n">DSU Downtown V=
+irtual Map</a></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;">Up=
+on your arrival:<br><br></p> <ul fr-original-style=3D"" style=3D"font-size:=
+ 16px; font-family: Arial;"> <li style=3D"-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'hel=
+vetica neue', helvetica, sans-serif;line-height:21px;Margin-bottom:15px;mar=
+gin-left:0;color:#333333;font-size:14px;"><strong fr-original-style=3D"" st=
+yle=3D"font-weight: 700;">Present your digital FastPass and Photo ID</stron=
+g> to the Department of Residential Education (DRE)&nbsp;team, who will ver=
+ify your information and room assignment.</li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Complete your key card details and return it to our staff. You=
+ will then be provided with your room key. Incoming freshman and transfer s=
+tudents will also receive a welcome packet.</li> <li style=3D"-webkit-text-=
+size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fon=
+t-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;Ma=
+rgin-bottom:15px;margin-left:0;color:#333333;font-size:14px;">After 30 minu=
+tes of unloading, you will be directed to park in a secondary parking&nbsp;=
+lot.</li> </ul></li></ul></td></tr> <tr style=3D"border-collapse:collapse;"=
+><td align=3D"center" style=3D"padding: 20px; margin: 0px; font-size: 0px; =
+min-width: 5px; user-select: text; border: 1px solid transparent; backgroun=
+d: unset;" fr-original-style=3D"padding:20px;Margin:0;font-size:0;"><table =
+border=3D"0" width=3D"100%" height=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"border-collapse: collapse; border-spa=
+cing: 0px; border: none; empty-cells: show; max-width: 100%; font-size: 16p=
+x; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table=
+-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=
+=3D"border-collapse:collapse;"><td style=3D"padding: 0px; border-width: 0px=
+ 0px 1px; border-style: solid; border-color: transparent transparent rgb(20=
+4, 204, 204); background: unset; height: 0px; width: 100%; margin: 0px; min=
+-width: 5px; user-select: text; border-image: initial;" fr-original-style=
+=3D"padding:0;Margin:0;border-bottom:1px solid #cccccc;background:unset;hei=
+ght:0px;width:100%;margin:0px;"><br></td></tr></tbody></table></td></tr><tr=
+ style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padding: 1=
+0px 0px; margin: 0px; background-color: rgb(207, 226, 243); min-width: 5px;=
+ user-select: text; border: 1px solid transparent; background-image: unset;=
+ background-position: unset; background-size: unset; background-repeat: uns=
+et; background-attachment: unset; background-origin: unset; background-clip=
+: unset;" fr-original-style=3D"padding: 10px 0px; margin: 0px; background-c=
+olor: rgb(207, 226, 243);"><p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial=
+, 'helvetica neue', helvetica, sans-serif;line-height:30px;color:#134f5c;fo=
+nt-size:20px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;=
+-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, '=
+helvetica neue', helvetica, sans-serif;line-height:30px;color:#134f5c;font-=
+size:20px;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">&nbs=
+p; &nbsp; Commuter/Nonresidential/Online Students</strong></p></td></tr> <t=
+r style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padding: =
+20px 0px 0px; margin: 0px; min-width: 5px; user-select: text; border: 1px s=
+olid transparent; background: unset;" fr-original-style=3D"padding:0;Margin=
+:0;padding-top:20px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'he=
+lvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-si=
+ze:14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helve=
+tica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:=
+14px;">Commuter/nonresidential students&nbsp;receiving on-campus academic i=
+nstruction who have remaining enrollment obligations are asked to report to=
+ campus <strong fr-original-style=3D"" style=3D"font-weight: 700;">Friday, =
+January 9</strong>, from 9 a.m.-4 p.m. to meet with student services repres=
+entatives and, once cleared, receive a welcome packet (new students) and/or=
+ digital FastPass. On this date, please enter campus through&nbsp;Gate 1, t=
+he first gate on College Road west of Route 13/North DuPont&nbsp;Highway, a=
+nd report to the Martin Luther King Jr. Student Center, 2nd Floor Parlors.<=
+a target=3D"_blank" href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8=
+tHeGEmAq8qR4AOZLYYHxTl/zw9KbHjEdp9w" style=3D"text-size-adjust: none; text-=
+decoration: underline; color: rgb(19, 79, 92); font-size: 14px; user-select=
+: auto;" fr-original-style=3D"-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#13=
+4f5c;font-size:14px;" sib_link_id=3D"3" templating=3D"n"> Virtual campus ma=
+p</a></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;"><br></p><p sty=
+le=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sa=
+ns-serif;line-height:21px;color:#333333;font-size:14px;" fr-original-style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;color:#333333;font-size:14px;"><strong fr-original-=
+style=3D"" style=3D"font-weight: 700;">Please note:</strong></p><ul fr-orig=
+inal-style=3D"" style=3D"font-size: 16px; font-family: Arial;">=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"><e=
+m>Online-only students are not required to report to campus in person to sa=
+tisfy enrollment obligations. Please follow the instructions in your enroll=
+ment materials or contact the respective student services areas for assista=
+nce.</em></p></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Student Services offices will be closed in the Administration =
+Building on Friday, January 9, to assist students in the MLK.</li> </ul></t=
+d></tr><tr style=3D"border-collapse:collapse;"><td align=3D"center" style=
+=3D"padding: 20px; margin: 0px; font-size: 0px; min-width: 5px; user-select=
+: text; border: 1px solid transparent; background: unset;" fr-original-styl=
+e=3D"padding:20px;Margin:0;font-size:0;"><table border=3D"0" width=3D"100%"=
+ height=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"border-collapse: collapse; border-spacing: 0px; border: none; empt=
+y-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-or=
+iginal-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"=
+><td style=3D"padding: 0px; border-width: 0px 0px 1px; border-style: solid;=
+ border-color: transparent transparent rgb(204, 204, 204); background: none=
+; height: 0px; width: 100%; margin: 0px; min-width: 5px; user-select: text;=
+ border-image: initial;" fr-original-style=3D"padding:0;Margin:0;border-bot=
+tom:1px solid #cccccc;background:none;height:0px;width:100%;margin:0px;"><b=
+r></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></t=
+able></td></tr> <tr style=3D"border-collapse:collapse;"><td align=3D"left" =
+style=3D"padding: 0px 20px; margin: 0px; min-width: 5px; user-select: text;=
+ border: 1px solid transparent; background: unset;" fr-original-style=3D"pa=
+dding:0;Margin:0;padding-left:20px;padding-right:20px;"><table width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" role=3D"none" style=3D"border-collap=
+se: collapse; border-spacing: 0px; border: none; empty-cells: show; max-wid=
+th: 100%; font-size: 16px; font-family: Arial;" fr-original-style=3D"mso-ta=
+ble-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing=
+:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td align=3D"center" =
+valign=3D"top" style=3D"padding: 0px; margin: 0px; width: 560px; min-width:=
+ 5px; user-select: text; border: 1px solid transparent; background: unset;"=
+ fr-original-style=3D"padding:0;Margin:0;width:560px;"><table width=3D"100%=
+" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentation" style=3D"border=
+-collapse: collapse; border-spacing: 0px; border: none; empty-cells: show; =
+max-width: 100%; font-size: 16px; font-family: Arial;" fr-original-style=3D=
+"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td align=3D"l=
+eft" style=3D"padding: 0px; margin: 0px; background-color: rgb(19, 79, 92);=
+ min-width: 5px; user-select: text; border: 1px solid transparent; backgrou=
+nd-image: unset; background-position: unset; background-size: unset; backgr=
+ound-repeat: unset; background-attachment: unset; background-origin: unset;=
+ background-clip: unset;" fr-original-style=3D"padding: 0px; margin: 0px; b=
+ackground-color: rgb(19, 79, 92);"><p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fami=
+ly:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#f=
+fffff;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adju=
+st:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:=
+arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffff=
+ff;font-size:14px;"><strong fr-original-style=3D"" style=3D"font-weight: 70=
+0;">&nbsp;&nbsp;SATISFY YOUR FINANCIAL OBLIGATIONS</strong></p> </td></tr><=
+tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padding:=
+ 20px 0px 0px; margin: 0px; min-width: 5px; user-select: text; border: 1px =
+solid transparent; background: unset;" fr-original-style=3D"padding:0;Margi=
+n:0;padding-top:20px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'h=
+elvetica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-s=
+ize:14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-=
+text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helv=
+etica neue', helvetica, sans-serif;line-height:21px;color:#333333;font-size=
+:14px;">Satisfy your&nbsp;financial obligations&nbsp;with the Office of Stu=
+dent Accounts <strong fr-original-style=3D"" style=3D"font-weight: 700;">im=
+mediately (due date was</strong><strong fr-original-style=3D"" style=3D"fon=
+t-weight: 700;"> January 2).&nbsp;</strong></p><ul fr-original-style=3D"" s=
+tyle=3D"font-size: 16px; font-family: Arial;"> <li style=3D"-webkit-text-si=
+ze-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-=
+family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;Marg=
+in-bottom:15px;margin-left:0;color:#333333;font-size:14px;">View your accou=
+nt and make payments using Banner Self Service at <a href=3D"https://gt7ps.=
+r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGLdcyxncEJsfArIGG41/WLto8CXejEud" targe=
+t=3D"_blank" style=3D"text-size-adjust: none; text-decoration: underline; c=
+olor: rgb(0, 51, 51); font-size: 14px; user-select: auto;" fr-original-styl=
+e=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-heigh=
+t-rule:exactly;text-decoration:underline;color:#003333;font-size:14px;" sib=
+_link_id=3D"4" templating=3D"n">my.desu.edu</a></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><a href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeG=
+SV57mknOTMl0A2EYeH/FSTrx2wKjuOw" target=3D"_blank" style=3D"text-size-adjus=
+t: none; text-decoration: underline; color: rgb(0, 51, 51); font-size: 14px=
+; user-select: auto;" fr-original-style=3D"-webkit-text-size-adjust:none;-m=
+s-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underl=
+ine;color:#003333;font-size:14px;" sib_link_id=3D"5" templating=3D"n">Enrol=
+l in the Hornets Tuition Payment Plan</a></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Address prior semester balances by contacting the Office of St=
+udent Accounts at <a href=3D"mailto:studentaccounts@desu.edu" style=3D"text=
+-size-adjust: none; text-decoration: underline; color: rgb(0, 51, 51); font=
+-size: 14px; user-select: auto;" fr-original-style=3D"-webkit-text-size-adj=
+ust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decora=
+tion:underline;color:#003333;font-size:14px;">studentaccounts@desu.edu</a>.=
+</li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Get details about <a href=3D"https://gt7ps.r.sp1-brevo.net/mk/=
+cl/f/sh/SMK1E8tHeGZMXGbhyYcqqpSmCrEX/gzERmdSYDpxN" target=3D"_blank" style=
+=3D"text-size-adjust: none; text-decoration: underline; color: rgb(0, 51, 5=
+1); font-size: 14px; user-select: auto;" fr-original-style=3D"-webkit-text-=
+size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;tex=
+t-decoration:underline;color:#003333;font-size:14px;" sib_link_id=3D"6" tem=
+plating=3D"n">Parent PLUS loans</a> (for parents of dependent undergraduate=
+ students)</li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">FAFSA applicants =E2=80=93 Log into <a href=3D"https://gt7ps.r=
+.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGgDzPQf9imKwelWB9on/Kec8hcGgKpys" target=
+=3D"_blank" style=3D"text-size-adjust: none; text-decoration: underline; co=
+lor: rgb(0, 51, 51); font-size: 14px; user-select: auto;" fr-original-style=
+=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height=
+-rule:exactly;text-decoration:underline;color:#003333;font-size:14px;" sib_=
+link_id=3D"7" templating=3D"n">Banner Self Service</a> to: <ol fr-original-=
+style=3D"" style=3D"font-size: 16px; font-family: Arial;"> <li style=3D"-we=
+bkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-heig=
+ht:21px;Margin-bottom:15px;margin-left:0;color:#333333;font-size:14px;">Vie=
+w the status of your Spring 2026 award(s) (from the Financial Aid tab, sele=
+ct 2025-2026)</li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Review your current Satisfactory Academic Progress (SAP) statu=
+s; and</li> <li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', hel=
+vetica, sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:=
+#333333;font-size:14px;">Check for outstanding documents.</li> </ol></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;">Unsatisfied documents can be completed/uploaded through the <a=
+ href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/SMK1E8tHeGn5RYFcKsvp2U4G9=
+SP3/y0Ur_Xl_7vsC" target=3D"_blank" style=3D"text-size-adjust: none; text-d=
+ecoration: underline; color: rgb(0, 51, 51); font-size: 14px; user-select: =
+auto;" fr-original-style=3D"-webkit-text-size-adjust:none;-ms-text-size-adj=
+ust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#0033=
+33;font-size:14px;" sib_link_id=3D"8" templating=3D"n">DSU Student Forms</a=
+> (To create an account, <a href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/s=
+h/SMK1E8tHeGtwth4ZW35J8JN07kzJ/Lf53Ov0fnkOO" target=3D"_blank" style=3D"tex=
+t-size-adjust: none; text-decoration: underline; color: rgb(0, 51, 51); fon=
+t-size: 14px; user-select: auto;" fr-original-style=3D"-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decor=
+ation:underline;color:#003333;font-size:14px;" sib_link_id=3D"9" templating=
+=3D"n">click here</a>.). Even if you currently do not have outstanding requ=
+irements or need to submit an appeal, we encourage you to create an account=
+ for future use.</li> </ul></td></tr><tr style=3D"border-collapse:collapse;=
+"><td align=3D"left" style=3D"padding: 0px; margin: 0px; background-color: =
+rgb(19, 79, 92); min-width: 5px; user-select: text; border: 1px solid trans=
+parent; background-image: unset; background-position: unset; background-siz=
+e: unset; background-repeat: unset; background-attachment: unset; backgroun=
+d-origin: unset; background-clip: unset;" fr-original-style=3D"padding: 0px=
+; margin: 0px; background-color: rgb(19, 79, 92);"><p style=3D"Margin:0;-we=
+bkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:e=
+xactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-heig=
+ht:21px;color:#ffffff;font-size:14px;" fr-original-style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:=
+21px;color:#ffffff;font-size:14px;"><strong fr-original-style=3D"" style=3D=
+"font-weight: 700;">&nbsp;&nbsp;SUBMIT YOUR HEALTH FORM</strong></p></td></=
+tr><tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"padd=
+ing: 20px 0px; margin: 0px; min-width: 5px; user-select: text; border: 1px =
+solid transparent; background: unset;" fr-original-style=3D"padding:0;Margi=
+n:0;padding-top:20px;padding-bottom:20px;"><p style=3D"Margin:0;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;f=
+ont-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;=
+color:#134f5c;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-text-s=
+ize-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font=
+-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;col=
+or:#134f5c;font-size:14px;"><strong fr-original-style=3D"" style=3D"font-we=
+ight: 700;">NEW FRESHMAN AND TRANSFER STUDENTS</strong></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;"><br></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;"><a href=3D"htt=
+ps://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/1t6Af4OiGsDhYHeaVmbZc36U6CVirh/jp9PJ3=
+zfWwdx" style=3D"text-size-adjust: none; text-decoration: underline; color:=
+ rgb(0, 51, 51); font-size: 14px; user-select: auto;" target=3D"_blank" fr-=
+original-style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;text-decoration:underline;color:#003333;font-si=
+ze:14px;" sib_link_id=3D"10" templating=3D"n">Complete your health form</a>=
+ for&nbsp;the Office of Campus Health Services and <a style=3D"text-size-ad=
+just: none; text-decoration: underline; color: rgb(0, 51, 51); font-size: 1=
+4px; user-select: auto;" href=3D"#" fr-original-style=3D"-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-dec=
+oration:underline;color:#003333;font-size:14px;"></a><a href=3D"https://gt7=
+ps.r.sp1-brevo.net/mk/cl/f/sh/1t6Af4OiGsE9szr0u8hUmJAJU1USZl/zQ-0_fhTIUgW" =
+target=3D"_blank" style=3D"text-size-adjust: none; text-decoration: underli=
+ne; color: rgb(0, 51, 51); font-size: 14px; user-select: auto;" fr-original=
+-style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;text-decoration:underline;color:#003333;font-size:14px;=
+" sib_link_id=3D"11" templating=3D"n">complete your electronic medical hist=
+ory forms online via the Student Health Portal</a><strong fr-original-style=
+=3D"" style=3D"font-weight: 700;">&nbsp;immediately (due date was December =
+1)</strong>.&nbsp;</p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;"><br></p><p sty=
+le=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sa=
+ns-serif;line-height:21px;color:#134f5c;font-size:14px;" fr-original-style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;color:#134f5c;font-size:14px;"><strong fr-original-=
+style=3D"" style=3D"font-weight: 700;">RETURNING STUDENTS</strong></p><p st=
+yle=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso=
+-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, s=
+ans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original-style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;color:#333333;font-size:14px;"><br></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;">Review the Pre=
+-Entrance Exam section at&nbsp;<a href=3D"https://gt7ps.r.sp1-brevo.net/mk/=
+cl/f/sh/1t6Af4OiGsEcDi3RIUnPwZE8rqTCHp/9741IEGONkH7" target=3D"_blank" styl=
+e=3D"text-size-adjust: none; text-decoration: underline; color: rgb(0, 51, =
+51); font-size: 14px; user-select: auto;" fr-original-style=3D"-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;te=
+xt-decoration:underline;color:#003333;font-size:14px;" sib_link_id=3D"12" t=
+emplating=3D"n">https://www.desu.edu/student-life/campus-health-services/ca=
+mpus-health-center</a>&nbsp;and complete the process if you have not alread=
+y.&nbsp;</p><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-siz=
+e-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica ne=
+ue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;" =
+fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue'=
+, helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"><br=
+></p>
+ <p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:no=
+ne;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvet=
+ica, sans-serif;line-height:21px;color:#333333;font-size:14px;" fr-original=
+-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;=
+mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica=
+, sans-serif;line-height:21px;color:#333333;font-size:14px;"><strong fr-ori=
+ginal-style=3D"" style=3D"font-weight: 700;">Please note:</strong><br><br><=
+/p><ul fr-original-style=3D"" style=3D"font-size: 16px; font-family: Arial;=
+">=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;">Yo=
+u can&nbsp;bring the form with you when you arrive on campus for move-in ra=
+ther than mailing it. If you=E2=80=99re a commuter student, please stop at =
+the Student Health Center to turn your form in when you arrive for the firs=
+t day of classes.</p></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;">St=
+udents who previously submitted a health form do not have to resubmit one.<=
+/p></li>=20
+<li style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#333333;font=
+-size:14px;"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica n=
+eue', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;"=
+ fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-=
+adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue=
+', helvetica, sans-serif;line-height:21px;color:#333333;font-size:14px;">&n=
+bsp;If you are an online student who <em>will not</em> be taking any classe=
+s on campus, you are waived from submitting a health form for the Spring 20=
+26 term.</p></li> </ul></td></tr> <tr style=3D"border-collapse:collapse;"><=
+td align=3D"left" style=3D"padding: 0px; margin: 0px; background-color: rgb=
+(19, 79, 92); min-width: 5px; user-select: text; border: 1px solid transpar=
+ent; background-image: unset; background-position: unset; background-size: =
+unset; background-repeat: unset; background-attachment: unset; background-o=
+rigin: unset; background-clip: unset;" fr-original-style=3D"padding: 0px; m=
+argin: 0px; background-color: rgb(19, 79, 92);"><p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:=
+21px;color:#ffffff;font-size:14px;" fr-original-style=3D"Margin:0;-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21p=
+x;color:#ffffff;font-size:14px;"><strong fr-original-style=3D"" style=3D"fo=
+nt-weight: 700;">&nbsp;&nbsp;SUBMIT YOUR FINAL HIGH SCHOOL TRANSCRIPT</stro=
+ng></p></td></tr> <tr style=3D"border-collapse:collapse;"><td align=3D"left=
+" style=3D"padding: 20px 0px 0px; margin: 0px; min-width: 5px; user-select:=
+ text; border: 1px solid transparent; background: unset;" fr-original-style=
+=3D"padding:0;Margin:0;padding-top:20px;"><p style=3D"Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;fo=
+nt-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;c=
+olor:#134f5c;font-size:14px;" id=3D"isPasted" fr-original-style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:21px;color:#134f5c;font-size:14px;"><strong fr-original-style=3D"" s=
+tyle=3D"font-weight: 700;">NEW FRESHMEN ONLY</strong></p><p style=3D"Margin=
+:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-=
+rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;lin=
+e-height:21px;color:#333333;font-size:14px;" fr-original-style=3D"Margin:0;=
+-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rul=
+e:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-h=
+eight:21px;color:#333333;font-size:14px;"><br></p><p style=3D"Margin:0;-web=
+kit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:ex=
+actly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-heigh=
+t:21px;color:#333333;font-size:14px;" fr-original-style=3D"Margin:0;-webkit=
+-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exact=
+ly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:2=
+1px;color:#333333;font-size:14px;">Submit your final official high school t=
+ranscript (<em>must be signed with graduation date</em>) or final official =
+college transcript (<em>if applicable</em>)&nbsp;by mail to the Office of A=
+dmissions, Delaware State University, 1200 N. DuPont Highway, Dover, DE 199=
+01 or have your high school counselor submit your signed official transcrip=
+t to&nbsp;<a href=3D"mailto:admissionsdocs@desu.edu" target=3D"_blank" styl=
+e=3D"text-size-adjust: none; text-decoration: underline; color: rgb(0, 51, =
+51); font-size: 14px; user-select: auto;" fr-original-style=3D"-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;te=
+xt-decoration:underline;color:#003333;font-size:14px;">admissionsdocs@desu.=
+edu</a> <strong fr-original-style=3D"" style=3D"font-weight: 700;">immediat=
+ely (due date was December 1)</strong>.</p> </td></tr>
+<tr style=3D"border-collapse:collapse;"><td align=3D"center" style=3D"paddi=
+ng: 20px; margin: 0px; font-size: 0px; min-width: 5px; user-select: text; b=
+order: 1px solid transparent; background: unset;" fr-original-style=3D"padd=
+ing:20px;Margin:0;font-size:0;"><table border=3D"0" width=3D"100%" height=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse: collapse; border-spacing: 0px; border: none; empty-cel=
+ls: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-origina=
+l-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collap=
+se;border-spacing:0px;"><tbody><tr style=3D"border-collapse:collapse;"><td =
+style=3D"padding: 0px; border-width: 0px 0px 1px; border-style: solid; bord=
+er-color: transparent transparent rgb(204, 204, 204); background: unset; he=
+ight: 0px; width: 100%; margin: 0px; min-width: 5px; user-select: text; bor=
+der-image: initial;" fr-original-style=3D"padding:0;Margin:0;border-bottom:=
+1px solid #cccccc;background:unset;height:0px;width:100%;margin:0px;"><br><=
+/td></tr></tbody></table></td></tr> <tr style=3D"border-collapse:collapse;"=
+><td align=3D"left" style=3D"padding: 10px 0px; margin: 0px; background-col=
+or: rgb(207, 226, 243); min-width: 5px; user-select: text; border: 1px soli=
+d transparent; background-image: unset; background-position: unset; backgro=
+und-size: unset; background-repeat: unset; background-attachment: unset; ba=
+ckground-origin: unset; background-clip: unset;" fr-original-style=3D"paddi=
+ng: 10px 0px; margin: 0px; background-color: rgb(207, 226, 243);"><p style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:30px;color:#134f5c;font-size:20px;" fr-original-style=3D=
+"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-se=
+rif;line-height:30px;color:#134f5c;font-size:20px;"><strong fr-original-sty=
+le=3D"" style=3D"font-weight: 700;">&nbsp; &nbsp;&nbsp;Special Info for New=
+ Freshmen &amp; Transfer Students</strong></p></td></tr></tbody></table></t=
+d></tr></tbody></table></td></tr> <tr style=3D"border-collapse:collapse;"><=
+td align=3D"left" style=3D"padding: 20px; margin: 0px; min-width: 5px; user=
+-select: text; border: 1px solid transparent; background: unset;" fr-origin=
+al-style=3D"padding:20px;Margin:0;"><table cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" role=3D"none" style=3D"border-collapse: collapse; border=
+-spacing: 0px; border: none; empty-cells: show; max-width: 100%; font-size:=
+ 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><tr st=
+yle=3D"border-collapse:collapse;"><td align=3D"center" valign=3D"top" style=
+=3D"padding: 0px; margin: 0px; width: 560px; min-width: 5px; user-select: t=
+ext; border: 1px solid transparent; background: unset;" fr-original-style=
+=3D"padding:0;Margin:0;width:560px;"><table cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" role=3D"presentation" style=3D"border-collapse: colla=
+pse; border-spacing: 0px; border: none; empty-cells: show; max-width: 100%;=
+ font-size: 16px; font-family: Arial;" fr-original-style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><t=
+body><tr style=3D"border-collapse:collapse;"><td align=3D"left" style=3D"pa=
+dding: 0px; margin: 0px; background-color: rgb(19, 79, 92); min-width: 5px;=
+ user-select: text; border: 1px solid transparent; background-image: unset;=
+ background-position: unset; background-size: unset; background-repeat: uns=
+et; background-attachment: unset; background-origin: unset; background-clip=
+: unset;" fr-original-style=3D"padding: 0px; margin: 0px; background-color:=
+ rgb(19, 79, 92);"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-t=
+ext-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helve=
+tica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:=
+14px;" fr-original-style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text=
+-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetic=
+a neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14p=
+x;"><strong fr-original-style=3D"" style=3D"font-weight: 700;">&nbsp;&nbsp;=
+STUDENT ID</strong></p></td></tr> <tr style=3D"border-collapse:collapse;"><=
+td align=3D"left" style=3D"padding: 20px 0px 0px; margin: 0px; min-width: 5=
+px; user-select: text; border: 1px solid transparent; background: unset;" f=
+r-original-style=3D"padding:0;Margin:0;padding-top:20px;"><p style=3D"Margi=
+n:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height=
+-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;li=
+ne-height:21px;color:#333333;font-size:14px;" fr-original-style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-=
+height:21px;color:#333333;font-size:14px;">Residential students' ID will be=
+ available in their welcome packet if the ID photo was emailed and approved=
+ prior to the deadline. Commuter students' ID will be available for pickup =
+from Campus Police. If you have not yet emailed your ID photo, please visit=
+ <a target=3D"_blank" href=3D"https://gt7ps.r.sp1-brevo.net/mk/cl/f/sh/1t6A=
+f4OiGsF4YQFrgqtL6pHyFfRvzt/_urcje8zR3Cp" style=3D"text-size-adjust: none; t=
+ext-decoration: underline; color: rgb(19, 79, 92); font-size: 14px; user-se=
+lect: auto;" fr-original-style=3D"-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color=
+:#134f5c;font-size:14px;" sib_link_id=3D"13" templating=3D"n">www.desu.edu/=
+admissions/undergraduate-students/accepted-students</a> for the instruction=
+s to complete this step. Instructions for ID pickup for students with photo=
+s approved after the deadline will be provided by Campus Police.</p>
+ </td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table> <table cellpadding=3D"0" cellspacing=3D"0" a=
+lign=3D"center" role=3D"none" style=3D"border-collapse: collapse; border-sp=
+acing: 0px; width: 100%; table-layout: fixed !important; border: none; empt=
+y-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr-or=
+iginal-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:c=
+ollapse;border-spacing:0px;table-layout:fixed !important;width:100%;" fr-or=
+iginal-class=3D"cc"><tbody><tr style=3D"border-collapse:collapse;"><td alig=
+n=3D"center" style=3D"padding: 0px; margin: 0px; min-width: 5px; user-selec=
+t: text; border: 1px solid transparent; background: unset;" fr-original-sty=
+le=3D"padding:0;Margin:0;"><table align=3D"center" cellspacing=3D"0" cellpa=
+dding=3D"0" role=3D"none" style=3D"border-collapse: collapse; border-spacin=
+g: 0px; background-color: rgb(255, 255, 255); width: 600px; border: none; e=
+mpty-cells: show; max-width: 100%; font-size: 16px; font-family: Arial;" fr=
+-original-style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px;" fr-ori=
+ginal-class=3D"cq"><tbody><tr style=3D"border-collapse:collapse;"><td align=
+=3D"left" style=3D"padding: 20px; margin: 0px; min-width: 5px; user-select:=
+ text; border: 1px solid transparent; background: unset;" fr-original-style=
+=3D"padding:20px;Margin:0;"><table width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" role=3D"none" style=3D"border-collapse: collapse; border-spacing=
+: 0px; border: none; empty-cells: show; max-width: 100%; font-size: 16px; f=
+ont-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><tr style=3D"b=
+order-collapse:collapse;"><td align=3D"center" valign=3D"top" style=3D"padd=
+ing: 0px; margin: 0px; width: 560px; min-width: 5px; user-select: text; bor=
+der: 1px solid transparent; background: unset;" fr-original-style=3D"paddin=
+g:0;Margin:0;width:560px;"><table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" role=3D"presentation" style=3D"border-collapse: collapse; border-=
+spacing: 0px; border: none; empty-cells: show; max-width: 100%; font-size: =
+16px; font-family: Arial;" fr-original-style=3D"mso-table-lspace:0pt;mso-ta=
+ble-rspace:0pt;border-collapse:collapse;border-spacing:0px;"><tbody><tr sty=
+le=3D"border-collapse:collapse;"><td align=3D"center" style=3D"padding: 0px=
+; margin: 0px; min-width: 5px; user-select: text; border: 1px solid transpa=
+rent; background: unset;" fr-original-style=3D"padding:0;Margin:0;"><p styl=
+e=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, san=
+s-serif;line-height:30px;color:#134f5c;font-size:20px;" fr-original-style=
+=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-li=
+ne-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans=
+-serif;line-height:30px;color:#134f5c;font-size:20px;"><strong fr-original-=
+style=3D"" style=3D"font-weight: 700;">We look forward to seeing you soon!<=
+/strong></p> </td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></div> =
+<div align=3D"center" style=3D"color: #727272; font-size: 10px;">If you wis=
+h to unsubscribe from our newsletter, click <a style=3D"color:#01a4c6;" tar=
+get=3D"_blank" href=3D"https://gt7ps.r.sp1-brevo.net/mk/un/v2/sh/SMJz09a0vk=
+bXsUaHbnlcJAvCzkBV/FwZqwAgWjEUh">here</a></div>  </body></html>
+
+---------?=_25467-5524454927843--

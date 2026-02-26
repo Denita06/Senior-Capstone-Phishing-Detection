@@ -1,0 +1,366 @@
+Received: from CO1PR01MB6696.prod.exchangelabs.com (2603:10b6:303:d7::13) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Tue, 13 Jun 2023 19:49:33
+ +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=RfXXlqWiCZM4Knat0M5xvkDzHYssxJFyb3X37TcjdNc3klCLGNVYzi81Zn44BYFGo9LrhRaNfcOtcmnMXTpvCgjt57M33OcuGjfkX1VOnGMV+LVsJ8zm1/U2Oqj6Mc9YOEOn6sW5i1wUFQfNyIjkvnsZlIxK7/X3fr539xuFGlX6Zrje5EkIIe+dZ2o3bepuy16TrVABcyYZ4J35MGwrKbu3ltMopAWjEChE0TKbkW7gZhrvfT7V6t3TWVQIbvhEflE0P2y/6a4Jg88WQRBCcv91qGGtTNnW4n/yiaGQw6YyNHaKOGayfUhy8DgC4Iqpi/sUmjxe659WStYqA5iTjg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=V2E2Po+X1b5Ndd8igw1Jt+ae1XnOuHSvw8RALd+CMdY=;
+ b=jhzcMQCJFd/8qR8cZKmrr2zUoDHnb7IKiXGVVP/0uOLkTYz7VP6pTGaUnxNTo7m9vvJ3lZI7V1IYWcr4UMVolinuM+Bjr3IwP42rfmOa8glfQG2CBcLgKVwohfZ/87pwdma04603nssIWjX+IVOuUKoCYFX/338PFMadu7u1MOxqR2Ad2FJdOUe/U7c7QMGOdGH708dWfHK4mOPMxaMIzAgQ9spGpZMSywfi5UlgkqA33X2afyowo+MJVe51RSnVBfTs4H0fLjD9qA/3jmBvMzoIZDLFiTlgPXmihbKKaLw1CRTED4fAk9JFbL3EDAXeBrNSaN5ebQGH7WlbqqpTnw==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 40.107.92.59) smtp.rcpttodomain=students.desu.edu smtp.mailfrom=desu.edu;
+ dmarc=bestguesspass action=none header.from=desu.edu; dkim=pass (signature
+ was verified) header.d=delawarestateuniversity.onmicrosoft.com; arc=pass (0
+ oda=0 ltdi=1)
+Received: from MW4PR04CA0162.namprd04.prod.outlook.com (2603:10b6:303:85::17)
+ by CO1PR01MB6696.prod.exchangelabs.com (2603:10b6:303:d7::13) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6477.31; Tue, 13 Jun 2023 19:49:30 +0000
+Received: from MW2NAM04FT038.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:303:85:cafe::21) by MW4PR04CA0162.outlook.office365.com
+ (2603:10b6:303:85::17) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6477.35 via Frontend
+ Transport; Tue, 13 Jun 2023 19:49:30 +0000
+Authentication-Results: spf=pass (sender IP is 40.107.92.59)
+ smtp.mailfrom=desu.edu; dkim=pass (signature was verified)
+ header.d=delawarestateuniversity.onmicrosoft.com;dmarc=bestguesspass
+ action=none header.from=desu.edu;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of desu.edu designates
+ 40.107.92.59 as permitted sender) receiver=protection.outlook.com;
+ client-ip=40.107.92.59; helo=NAM10-BN7-obe.outbound.protection.outlook.com;
+ pr=C
+Received: from NAM10-BN7-obe.outbound.protection.outlook.com (40.107.92.59) by
+ MW2NAM04FT038.mail.protection.outlook.com (10.13.31.135) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6500.23 via Frontend Transport; Tue, 13 Jun 2023 19:49:30 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=RUSXFi0rW5+f84CeT+AR7lweqfnLZZhZKOQcjloPpRuHcSD+fJ6K1XNvJBlHA19z2eZDvwjf+TPo7dDReF4YVczM2PyT3tEeribLPgEVFvBFmU7m1Lh251WflqqpvA8nVUa3z+x5mCZ03z1xHys0L6BkGNPHQQjzUvHezlPdOHy/MmolBrmx9Ry7QuzambAO76vcMwDepvbxLy9qAivpcfsicDdbHcYLUYPfXRKka/H1Op3K46jsOlBXtEp5DKrZVTVX0KJmRjYhbVpVWce7WuGDHQAbz8Cr8P2OPl+nsrT3b4T8RuBOAUTgz+M/ZZCtME+LEB0ZeYGuHw/w148kcw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=V2E2Po+X1b5Ndd8igw1Jt+ae1XnOuHSvw8RALd+CMdY=;
+ b=I6PBo605gATHbWdrkBo5wHMa4OM3FGS7BNfBUPYPeP6S0mrqoCMdlbSHmENheB67Ys3FLPrUgr2SSc2VHWQhX8hEp1UYaHEYUKP9OlhR34PhOM1j4/tINaY2yTorK6DCcrwBQWTauFCc+CD3ay2IMFxPtCFr4rlcPUznnJU9PHEzlKVsgCVt041g4mb/q7HEhhW089dJBkqHa6+rKr3/h/YjbeBiZl+Ji0i+X5ShxZ0sak3pVXHbdLabDbRmC/1ExIAWB4oMypMVVNkRYV3G3Lv1Tw6ZqUnfVIjEFX2N5OeNV0QeoxxnZ2vFOCCQu2W21Z3CU6yxwLHnHnlIZ/zU0A==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=neutral (sender ip is
+ 216.228.143.87) smtp.rcpttodomain=students.desu.edu smtp.mailfrom=desu.edu;
+ dmarc=none action=none header.from=desu.edu; dkim=none (message not signed);
+ arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=delawarestateuniversity.onmicrosoft.com;
+ s=selector2-delawarestateuniversity-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=V2E2Po+X1b5Ndd8igw1Jt+ae1XnOuHSvw8RALd+CMdY=;
+ b=aznKsuZ+En1HP3+SDfdKfkZHwb2L4QIqK+71iF186APkgTzWOyLnnZotbsO3RiFMYrz33Jqy+3ZNVQxNIebaIuIWEh+QLXzXzjrBEmR2/p4IOADGZkn+9ZbHbZil3IHjej9sBjeDXgIl2vw11Y3OPlVIP+iaDOdkLvgZ6QcDprI=
+Received: from DM6PR01CA0025.prod.exchangelabs.com (2603:10b6:5:296::30) by
+ SJ0PR13MB5769.namprd13.prod.outlook.com (2603:10b6:a03:40c::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6455.31; Tue, 13 Jun
+ 2023 19:49:26 +0000
+Received: from CY4PEPF0000EE3E.namprd03.prod.outlook.com
+ (2603:10b6:5:296:cafe::17) by DM6PR01CA0025.outlook.office365.com
+ (2603:10b6:5:296::30) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6477.35 via Frontend
+ Transport; Tue, 13 Jun 2023 19:49:26 +0000
+X-MS-Exchange-Authentication-Results: spf=neutral (sender IP is
+ 216.228.143.87) smtp.mailfrom=desu.edu; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=desu.edu;
+Received-SPF: Neutral (protection.outlook.com: 216.228.143.87 is neither
+ permitted nor denied by domain of desu.edu)
+Received: from EXCH2016.desu.edu (216.228.143.87) by
+ CY4PEPF0000EE3E.mail.protection.outlook.com (10.167.242.18) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6500.23 via Frontend Transport; Tue, 13 Jun 2023 19:49:26 +0000
+Received: from dest-prod-xs3.desu.edu ([167.21.184.51]) by EXCH2016.desu.edu with Microsoft SMTPSVC(10.0.14393.4169);
+	 Tue, 13 Jun 2023 15:49:20 -0400
+Date: Tue, 13 Jun 2023 15:49:20 -0400 (EDT)
+From: Student Accounts Office <studentaccounts@desu.edu>
+Reply-To: Student Accounts Office <StudentAccounts@desu.edu>
+To: <djefferson22@students.desu.edu>
+Message-ID: <633049195.5073.1686685760874@dest-prod-xs3.desu.edu>
+Subject: Past Due Balance
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_5072_631025139.1686685760874"
+Return-Path: studentaccounts@desu.edu
+X-OriginalArrivalTime: 13 Jun 2023 19:49:20.0895 (UTC) FILETIME=[2580B0F0:01D99E30]
+X-EOPAttributedMessage: 1
+X-MS-TrafficTypeDiagnostic: CY4PEPF0000EE3E:EE_|SJ0PR13MB5769:EE_|MW2NAM04FT038:EE_|CO1PR01MB6696:EE_|BL0PR01MB4161:EE_
+X-MS-Office365-Filtering-Correlation-Id: f2e4ebc3-0bf1-4660-9b71-08db6c474dd9
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original: K/jx6XTJ5bpcUEdqZBP4F5+mvQFFRpM9+dyMFUWZ0B3nFpjs/CmUiO3K2S/aTxFcal+CEH73XXV3Ziuw6WzRKqD84YwXyClGmdIrIB1kqGhngRxW7H4LQaS5apNKeQZzmnT7P+mdUTvCHaujf5975B1PSZFI7Nw8Nn/EyL++wA1k/wpknTYh+WKVvul/y1ae8YAEYgshr30kwpZuH9MBuAnzhHqHnOFIQ8K2y0IOs3VeXf7gcdO/wcH5mQXCxSTaQ706hqloweGOxbIIjUTJSxRlBR2r9yOvabwLJFeWpvUuNjmhzn1jmLp9qXPfotvttUtlS0cYaTyT1YE0o5burexK2ZHuzXjrRhVUrPvFbcl54jeLydIs45+BiE8wlQzYtyY+o/TG9zarQS+NgYCbNDfw5W9HzZaWfjJB05NFtJJbJETPo3aw878Iwe0mZkD7ffPZ4FDnyFjJ1LOH6QDirQUGc6AEYfrbf7O/Au8MnChqhgps0AqhhilNfrNYB5CsxKBUfbie6E8c8j/Z/AoNTR7daq3+rbsAfmQUnv51Q1B1ZP1y1N4H+zhz90V3kXz4iZVma08VkMlUnXKckqFmBnzS05kA+PkSEdDAVwdQZhMoE8k1vFaNBv2+yk2kEsgA3QiZ3leke4GfvUpP9jfhrm7l506QpBPxlgbfNvqV3s5OgUvY9YAt6R1mHRhDTvLc/JF8i/4gvLRlgJWWli7fMxy+8zEQWYwuSNU2oxM4+p4=
+X-Forefront-Antispam-Report-Untrusted: CIP:216.228.143.87;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:EXCH2016.desu.edu;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230028)(4636009)(39850400004)(346002)(376002)(396003)(136003)(451199021)(46966006)(36840700001)(41300700001)(40480700001)(8676002)(5660300002)(7116003)(8936002)(70586007)(296002)(6916009)(786003)(316002)(70206006)(7036003)(55016003)(47076005)(2906002)(478600001)(3450700001)(75432002)(40140700001)(26005)(86362001)(356005)(82740400003)(3480700007)(7696005)(33964004)(83380400001)(186003)(81166007)(36860700001)(82310400005)(336012)(956004)(426003)(36900700001);DIR:OUT;SFP:1101;
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ0PR13MB5769
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Jun 2023 19:49:30.7641
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: f2e4ebc3-0bf1-4660-9b71-08db6c474dd9
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: MW2NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: MW2NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: MW2NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 625ee9ba-2f4b-4f27-00aa-08db6c474b1c
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:5;
+X-Forefront-Antispam-Report: CIP:40.107.92.59;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:NAM10-BN7-obe.outbound.protection.outlook.com;PTR:mail-bn7nam10on2059.outbound.protection.outlook.com;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Jun 2023 19:49:30.5141
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f2e4ebc3-0bf1-4660-9b71-08db6c474dd9
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=1a576c15-cba7-4f15-aed5-b851323730e6;Ip=[216.228.143.87];Helo=[EXCH2016.desu.edu]
+X-MS-Exchange-CrossTenant-AuthSource: MW2NAM04FT038.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1PR01MB6696
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.8120381
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6455.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?R0g2NEFRelBQMEkycFA1czdSZW1mdWFPaCszeGtTZi91ekoyK2lkREY1L0JS?=
+ =?utf-8?B?dHp2WFhRRVNLQnUvbklpOTB3bFJ0YUFEK01wSEVwblpYUmx2MWY2cUJyTVRr?=
+ =?utf-8?B?OC9tU1g0UzNQVzlyTmJZUTJlNk5wRjVsSHJVRk1UMXRiYmpZWXJrb1Y1bFpn?=
+ =?utf-8?B?MUpQOHhEU2tjbDFYWHFNQ1dwMlpNdy94ZVg4WkExRGJ5bGhVNy85L1hMUEh2?=
+ =?utf-8?B?ZzExTWVBNjhVa3BpcDNveEEzYWxURE5OZ1podnhDeGRjeWJBbzdEc05YTVY5?=
+ =?utf-8?B?SnlaSlFoZ1plK29lSG11UGJJN3M2ZDlNZHViSURNZGVvU2gyb21Qb2hoOUIx?=
+ =?utf-8?B?UU45Y3QzbVNkM29icGVHQzV4RzU0NHZmWVdLYnVTaXk0Q1IrY29WSW5IcEVW?=
+ =?utf-8?B?b0JmYU9oeDBjWEhNODFrSm13NnUyOTZrMFp1bm0veUxsdm5SLzVkWWlkT21Y?=
+ =?utf-8?B?YVNiTkM5aDNNOEFWL0VqU1VWUWJTdWkzZUpEUm1HZVhPZndTRTlVam9wQy9C?=
+ =?utf-8?B?Yk1RYS93VWg4czBiWmZ6dzdtd2IxSXo3dk8rZ1QyWUdTRXM3bWVjc1A4V3FT?=
+ =?utf-8?B?QnRRVjhHUUtXSWErZDhHdHY1R012OTlQR25SbXEvNVFnWU9GbThwZmYvOURY?=
+ =?utf-8?B?U0w2bXhMRnp3SkhhT3I0STErbld2dFhJV2pDWDZ3VHhqRWZYTG5aQldSeVZw?=
+ =?utf-8?B?QVl3OFUxUUtQd0UrVDZDQmtIUjNGRTQ5QzcwRklrK3BsWjN0NHIrZ2Y0WGFq?=
+ =?utf-8?B?dkJoVUJSZGg5cm91S2NVRHBXR0s2SVh6OWlCc2RhWW5iRzZMeWM2VHN3MjN2?=
+ =?utf-8?B?Z0hoaU9qV3VURERsQzF3ajFNS3lUYllXMW5FYVhlUjBJaWdCdG9wdEQwRmtB?=
+ =?utf-8?B?MkFPUlhScEpQQTdGQ2Vwa1F6Y0NNWnV2K0ZxWVpIbUF0K1NGY0lnTFVyRVhS?=
+ =?utf-8?B?OEFGVHpnNVVyajg2aWVPak9pcldoZFg1WFhUWGxIQTVzZDM5QTR5dG1SMTl1?=
+ =?utf-8?B?WHI0S2tTVkhSNTNnd2JwL01JY2Z0RlExckdTTFB6MVBwZStHckMxcjVmbEln?=
+ =?utf-8?B?OG9oVjVpK3d5dTZtOVFhUktMbWtVRzFpV0ZSbHhsMlhmTndieDZmVVZ6TzJa?=
+ =?utf-8?B?MjlzQnA1NlBORmFsOUVHVkh1alRLZjFjaW1jRjQ0aktveFpCN1dXQll0eWdk?=
+ =?utf-8?B?bDNLM01vMkxQTnFXM1RJdXJvY1paS3RWSFJQZ1NkQVh6RmpQRnZ3K1p5ZWUw?=
+ =?utf-8?B?T2J3UGV6QVJ1R3JkeGE4bmtBbTdZU1RxRGR0MXE1cHk2SnR4SnhEK1hCb0Vt?=
+ =?utf-8?B?TmpRdGtEVWlBRDFtVGR1UHdRU1prRFVmQ2NWYUt1Tmw5UEZReDFOT2U2U05v?=
+ =?utf-8?B?aXYxRjRBcDk0emkxM3p2OGtVTHd3Wml6cStNSTBJMU00ZmFRS1NJa2JkMTcy?=
+ =?utf-8?B?TVhVUy9uZ2xRZDJFdkpoTUp2T1NUT1FqdlNMdlExVWpSaHlUOUJHa0R0OGRI?=
+ =?utf-8?B?SDBFcmMxbHl2NlVTMGxRS3FMMWFkMW5ZR1E2WG9HdlhrZUpGOGEwTVJacWY5?=
+ =?utf-8?B?dGROOUdud1NZQi9MSzRsa3N3TTV5WEJhQk1MeXJmc0lsUXV1TklCQWJrMXlx?=
+ =?utf-8?B?WnhBOUdEcUVQM2xsVGpjSlE1dnBYREE2dXJpU3l4SU5rTUo4N25kMHVadXpT?=
+ =?utf-8?B?SER0eXJhOTM4SUZjSW9nOW1jdlM2akdwa1VNQk9jMGFTSmNZZ2NzOThQN242?=
+ =?utf-8?B?MWZUUVVjSkFEWkNpbllxR0xLaWhLek9UTExUajZKTUNIcytuZGFQYXAxYTZI?=
+ =?utf-8?B?UWFydm1NYWtEMURCL2FXZXVlSTRZaW9Nd3FLR3lYTXBDaFJ0RTRLRDdSdjdS?=
+ =?utf-8?B?SktYMzExN09LZjhhTldYaDV4UWtLdzdUUXJ0dWJVT1hqdWplVmY5ajFOeUhp?=
+ =?utf-8?B?cm5IeWYzekZUNVhscENlRDA1c2huMXU4bE5CcHBrV240bWZaNTZTRDJSMUJH?=
+ =?utf-8?B?SzdpT2VwTlBIN0F4TnpJdTNQY0RaY3lIT1MrRE9JenRVOW96RkczV1lXWnc4?=
+ =?utf-8?B?V2RtOXB1NVZOT1NGcFJuR1dIMXRFRnVMMHhLbjJzOFQzUm8xM082SHh3NG5u?=
+ =?utf-8?B?WTRTNnJ5R0pZZ2hHaFUvK3ZWRXVoVVh6QVo1R0xWVTdmb2dtMmNreE1lYjF5?=
+ =?utf-8?B?OXZqTVB4N0FPUmRXbFFETXQrdHFzb2Z4RnlCTTV1WFZCZzd5cVBBVnJ1VEFD?=
+ =?utf-8?B?bndZaUlxZ3c3a1ExTE9GN1pySTE1SVc0SXZIOW5yd0VPRHY1YWZsQkdxTi81?=
+ =?utf-8?B?bi9SSGt2OUUwdUlHaUtJYVA5ZUQ5cFBCN0k4REphRjI0aE02OC9sNzlxSXQ4?=
+ =?utf-8?B?T2NGbi9vY1FtMW9IcVdjdXJYQzhQQVJ4TDJFSG02bW41eGNVemQzK1Zla0dU?=
+ =?utf-8?B?c1hBYlVNaGFzV3pMUzlKdkg4dk85SGpJZkZwcGluM2NzdmhRY012eElTTVAv?=
+ =?utf-8?B?djk3b2lrTndDYnBZeVVwWTh5UjA2d3AwS2o2UkJSQjd3PT0=?=
+MIME-Version: 1.0
+
+------=_Part_5072_631025139.1686685760874
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle></title>
+</head>
+<body>
+<div>June      13, 2023</div>
+
+<div>&nbsp;</div>
+
+<div>Dear Denita,<br>
+<br>
+Our record show your Tuition Account having a Past Due Balance.<br>
+<br>
+Payment in full is due immediately. If you are unable to do so, please cont=
+act Student Accounts at 302-857-6240 or email <a href=3D"mailto:studentacco=
+unts@desu.edu">studentaccounts@desu.edu</a> to make Payment Arrangements.<b=
+r>
+<br>
+Thanking you in advance for your prompt response.<br>
+&nbsp;</div>
+
+<div>The office of Student Accounts<br>
+Division of Strategic Enrollment Management and Student Affairs<br>
+E: <a href=3D"mailto:studentaccounts@desu.edu">studentaccounts@desu.edu</a>=
+ | O: 302.857.6240<br>
+1200 N. DuPont Highway, Dover, DE 19901 | <a href=3D"mailto:desu.edu">desu.=
+edu</a></div>
+
+<div>&nbsp;</div>
+
+<div><span style=3D"font-size:11.0pt"><span calibri=3D"" style=3D"font-fami=
+ly:"><img alt=3D"dsu logo" src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUh=
+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
+ggg=3D=3D" style=3D"height:91px; width:250px"></span></span></div>
+</body>
+</html>
+
+------=_Part_5072_631025139.1686685760874--

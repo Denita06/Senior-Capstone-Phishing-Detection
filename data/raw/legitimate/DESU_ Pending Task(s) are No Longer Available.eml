@@ -1,0 +1,155 @@
+Received: from CH1PR01MB9311.prod.exchangelabs.com (2603:10b6:610:2b0::17) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Fri, 17 Oct 2025 14:15:38
+ +0000
+Received: from SJ0PR03CA0009.namprd03.prod.outlook.com (2603:10b6:a03:33a::14)
+ by CH1PR01MB9311.prod.exchangelabs.com (2603:10b6:610:2b0::17) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9228.12; Fri, 17 Oct 2025 14:15:36 +0000
+Received: from CO1PEPF000042AC.namprd03.prod.outlook.com
+ (2603:10b6:a03:33a:cafe::3) by SJ0PR03CA0009.outlook.office365.com
+ (2603:10b6:a03:33a::14) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9203.12 via Frontend Transport; Fri,
+ 17 Oct 2025 14:15:35 +0000
+Authentication-Results: spf=pass (sender IP is 167.89.16.8)
+ smtp.mailfrom=clpdkim.desu.edu; dkim=pass (signature was verified)
+ header.d=desu.edu;dmarc=pass action=none header.from=desu.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of clpdkim.desu.edu
+ designates 167.89.16.8 as permitted sender) receiver=protection.outlook.com;
+ client-ip=167.89.16.8; helo=o1.contact.verifymyfafsa.com; pr=C
+Received: from o1.contact.verifymyfafsa.com (167.89.16.8) by
+ CO1PEPF000042AC.mail.protection.outlook.com (10.167.243.41) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9253.7
+ via Frontend Transport; Fri, 17 Oct 2025 14:15:34 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=desu.edu;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	to:cc:content-type:date:from:subject:to;
+	s=clp; bh=eoAm9/p9lVSDCXUcGV3UT01AFGsFGeW8l1lS1Gq+dlQ=;
+	b=Nt5u9jG55U5g7HihX9WdWuD9XLeJVDJfXS3UP9EpcxQWFjJXtYWxuuRK905ThtauQRwV
+	nXabI9yi4JLl71I2y2DWOK4Zv+nPULf4niF0qia8U84XXPsSKewTwKgodWr3wEU50EylFU
+	5dRJzR7xU1ZpO7uVXvzqHL6RsJg7KdQ4BRWjoMYil+tginrEFOABqWRERGvxbBKXIrGWWA
+	5pqhrcWpJZd9EHJaFa0DQMF5V5bQ30rcqCivsXqZOhn57/nw3//BAULPxfO4ucNa7+s/DT
+	mwfubGZrHCNZdZB1kVXwwGKEWYCtMUpNJ4sP8/ahAWGtkjBc+N3Qxhv4MqHbfmbA==
+Received: by recvd-85b768ccf6-8v4vw with SMTP id recvd-85b768ccf6-8v4vw-1-68F24F85-AC
+	2025-10-17 14:15:33.883503345 +0000 UTC m=+11655059.352974879
+Received: from MTE5OTg1Nw (unknown)
+	by geopod-ismtpd-5 (SG) with HTTP
+	id NFWE4YcqQAO4tsreXGrCFA
+	Fri, 17 Oct 2025 14:15:33.856 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Fri, 17 Oct 2025 14:15:33 +0000 (UTC)
+From: DESU Office of Financial Aid <FAID@desu.edu>
+Message-ID: <NFWE4YcqQAO4tsreXGrCFA@geopod-ismtpd-5>
+Subject: DESU: Pending Task(s) are No Longer Available
+X-SG-EID: =?us-ascii?Q?u001=2Eh2SWqG++lGyWzm9HzAJ+c6RyIemvd0ITs7kaekUohj4VH1lfLdMSNyWiy?=
+ =?us-ascii?Q?0uYYt8lEo4kwKKn23ZeYlDp9tP3GlsM+ybfUNyY?=
+ =?us-ascii?Q?4TgavUyTLE5zCfsRTE9+sZ+sXoXKWxiyKbc8q83?=
+ =?us-ascii?Q?EsJsb3wiHZQkapSlaVDXUJZEljFc5hmhwR7Oom5?=
+ =?us-ascii?Q?viXGjMDLubJTrAo37MdYZv2=2Fcw0oHo57PX+RZ2G?=
+ =?us-ascii?Q?2IE6zsxIy88WikUSzsGFgazMFm+idl77oKqIsHe?=
+ =?us-ascii?Q?C3LLgSelfHhKBzh3DX9JmHbonQ=3D=3D?=
+X-SG-ID: =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprBfwKhr6xYcvlSkW?=
+ =?us-ascii?Q?33omPcFagl4=2FN18WaNgmympNTia5upUxsbz95LC?=
+ =?us-ascii?Q?yWQgzevEdDOtQbl0BsdVtxA3ORA4ak25M45vEsH?=
+ =?us-ascii?Q?jZZ9UZRxaAM5QkMGfCvqLjv4C47Z1+GnukUmYOg?=
+ =?us-ascii?Q?hMxjMPeQoejnROuFoAw2wabdPQMOzIMMNhuaQ4o?=
+ =?us-ascii?Q?UDoqr8gOm2suFQROJ7gXLSd3ITUfIKccKEhnLd+?=
+ =?us-ascii?Q?VjfO0SYEk0m+r3r4Cnt5OuvVtO2qmdfULVJ6LuY?=
+ =?us-ascii?Q?DSwZAok3Xch0grNZKsTQmLD4tlHDY2sTS26R4GZ?=
+ =?us-ascii?Q?AjkzeS+5NYj4PHIo19OzX5QSZr6U1T5SIyy6UjU?=
+ =?us-ascii?Q?FNUAIzu3B9cBIEXgcBXSENABUdcZa8KUjw200cd?=
+ =?us-ascii?Q?5TmrKRtoetlIzkn6mjH+=2FnCzfj38hhOCqhDqdTl?=
+ =?us-ascii?Q?bNVC6daPzXbQF9=2FsZvelhqiu3oMaTrPcJJij4hI?=
+ =?us-ascii?Q?GC1SHjj00N+5QVD0Co=2FCvWuaMWHqgLLFIQQqe=2FN?=
+ =?us-ascii?Q?YJ3aBWeUpWIg7o1HN+xGjWb5nJSp9IRhLdSw9Jk?=
+ =?us-ascii?Q?ZkGJsESvHGCkZb7L=2FfT30hHOvVQEahBS0oSX2jV?=
+ =?us-ascii?Q?uC0ORuYnLr9Dh5kFhqvmmv=2FrGYPr=2FfwTshiTb?=
+To: djefferson22@students.desu.edu
+X-Entity-ID: u001.9F+/2Crbu1vZDQml6cd1YQ==
+Return-Path: bounces+1199857-3a38-djefferson22=students.desu.edu@clpdkim.desu.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 17 Oct 2025 14:15:34.7489
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 31441704-bb90-436c-0e47-08de0d87a378
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CO1PEPF000042AC:EE_|CH1PR01MB9311:EE_|BL0PR01MB4161:EE_
+X-MS-Exchange-Organization-AuthSource: CO1PEPF000042AC.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 31441704-bb90-436c-0e47-08de0d87a378
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:3;ARA:13230040|4022899009|5062899012|2092899012|3072899012|29132699027|12012899012|8096899003;
+X-Forefront-Antispam-Report: CIP:167.89.16.8;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:o1.contact.verifymyfafsa.com;PTR:o1.contact.verifymyfafsa.com;CAT:NONE;SFS:(13230040)(4022899009)(5062899012)(2092899012)(3072899012)(29132699027)(12012899012)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Oct 2025 14:15:34.5506
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 31441704-bb90-436c-0e47-08de0d87a378
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-AuthSource: CO1PEPF000042AC.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH1PR01MB9311
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5204313
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9228.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?mvvXkyB8Ma9ZHpAlKiqMO0dvRYCE0nY0lp38b9t/Nt+EIGVLrMR184ZjxXD8?=
+ =?us-ascii?Q?sLk5yLw0MV9tts3LedaZXxqnfya37yBvagKykP/KdOwEuJpJ9x3xInUlgI1S?=
+ =?us-ascii?Q?gLI7vv+h+SNPGbZSyYowM7ZV5KUhfwNIS9riAPWo5DBWycmKm9my+qExrFJm?=
+ =?us-ascii?Q?wXdXK0Cp/m9n9gyqebw5nRMoELvlvzp9lvem3Al9dL2OoMKoddKbWML3n7lQ?=
+ =?us-ascii?Q?WRMlhan51/fLaqygwBG+Dka8u6vL1BXYHfXyRpjmf/xmrzzmVvSbChm4cmN7?=
+ =?us-ascii?Q?344FJJ0xk8tFWp+hJL98u/KNwLAe7NROTI9+0VXQyQ+3IONR7d0poIIExOlL?=
+ =?us-ascii?Q?JRBz9Fw6wyNz548T8/gYSA4FWdVWciQXAcLh21UBj7FdJVT+8Q/iJAzGrncA?=
+ =?us-ascii?Q?P5Giqj8cNaNvg7ng+e08Ntr875lKMlU79TItfczTTjelO1vyORU6oOuLSHLa?=
+ =?us-ascii?Q?8SaddVGtrBezwDVJCHZg90EY1lCimb78D9HtXEoBe7Mso4q3PR3Kx3LBbpkA?=
+ =?us-ascii?Q?qtXN956uzeCuWN4cI28uXQgNJKGzLE7Y6Lri0sPFVYFSuQJxUA8ctTEgzhRE?=
+ =?us-ascii?Q?/MCJMDdkbzWDe3YNFRD1nK4xR+Y6eQt4Z7W7d6YXydgYSNGljClWtpYAsJqg?=
+ =?us-ascii?Q?65v3qScYNnGgJVGqs+TYbvFJmloXnJ1KvT737spJFZqn1y+7+9hQSuuQh5A2?=
+ =?us-ascii?Q?jyc1nxzh/6bp4cntye4o0uBXonZEdnJUs5Gx7tU6BNJmJO3w6jOPxnGXQh2Z?=
+ =?us-ascii?Q?8tjAyxzco6y8GAqLN24C6a6sV3YgomKev6c1ZlN3AsJ03PO3g+UYvrYqlaFg?=
+ =?us-ascii?Q?jMfrk0FMd0J02hG57v6iTEbeytKse8e5sMBKHfnNDBPd+0VNQC1lzAy9414n?=
+ =?us-ascii?Q?tUeGlnSSEXeMgQGTnImsstcvuIM3YCq6TzdJM/QqZBshmcSU/XIkDCExtPqO?=
+ =?us-ascii?Q?RxLLQbZxc9KR2H/+oKu4t5QoY4gcMdglxd11wpTJgtKNcTrqyOns86qMwmTz?=
+ =?us-ascii?Q?HiwdRsBqWXmZ7yosdm3IFNSSwsjawf/zcWmhaiIZ/gl3umg5bDi77Jys97Ri?=
+ =?us-ascii?Q?igEPzIUpavqEYRyqWQ0IoGpIrDt810NLzkic74uKBR0PuqP7ClAiIVaJI0AE?=
+ =?us-ascii?Q?RQdR9HpP48khblHBANzlmQFC6wz9ocJUWeIuh/qJ2JeejmyOSKxKV8D0OZqP?=
+ =?us-ascii?Q?Ah99zJmF1uU8M4Z91GgxHwxgF3sQtlShflN9IgwSNPCP2X1YsNKpIe2cw7tr?=
+ =?us-ascii?Q?tknRUCitYDEPueVhV8b41y1TTPqjlK3/NgCois56Y/a68lcaOJGz7Ztov2U/?=
+ =?us-ascii?Q?y+iXt6XKnPaBkh/CMBuLaD0jodUyDE7vTPfaAhlphNCPTzfGBr8tEBv1RAUw?=
+ =?us-ascii?Q?6188ZhdVcFvo0Az0H+NDUpL9nOscCkDvISZYNIHqlOjiEtgKxV5CWuRAS4AF?=
+ =?us-ascii?Q?cEbYLzGK3cchNll8s88BqA6GMQKaYI3x1hPuDJCJIWa0OTNvguaDnkIiQ6eY?=
+ =?us-ascii?Q?UwgpsFYTPCJDUJIQnichv2yZq5Zlip2M/aNOqBKQY9SZZ12tLsoPjKaS/I1w?=
+ =?us-ascii?Q?bS4LNKttDH4FJOTY53e3Dss6P9ceJdkCuPjkZX0loUCQ4Yqsgcqg5jEw65U2?=
+ =?us-ascii?Q?jak4NEah8K9CjLRdSlKlt852JrzuAu4i9T2qxh6wmvuvounTF+acyvblRyHc?=
+ =?us-ascii?Q?A36Hp0JQhafZ3fs8b2HexqvXlm2wX4/Fc1xRLdBZAko4X0IIqW7Uds7ZZrVJ?=
+ =?us-ascii?Q?ZDbdM0L99Vky4Pdz6USxI5nLx3wXEhcWRTXRRuhkoHDNOJHiBCynrLsl2R5j?=
+ =?us-ascii?Q?j9NechX2Z2h/7rct+f1TV++jpAcKCd2hG55EBJ371Fo9BKa/1jv+OV7taF5i?=
+ =?us-ascii?Q?CPQUbsHHyLvNvnPcuiWVH6S5HjYGLo7/FK0xzsliPse7AMgFe0cSNkt5331v?=
+ =?us-ascii?Q?LlXJl1mJ0xnYGXltkJMLeWW5JQVnAkRuugJtFdAUzdrzhQar3ZsTovtToYQD?=
+ =?us-ascii?Q?b3akQpHmMtGtxnIyr2op4CvKqllT5HTxR6nhKmgGr/ysUCJDBsZ6pYdybYjK?=
+ =?us-ascii?Q?TG/L6eae5eiwPQj1Dr6oQ34aXtkgGVjJRTV35G33Ad8BpW5FpvPuhghSNriO?=
+ =?us-ascii?Q?LRs/o2Is9FZ1h26RitXeJEyWq+GnShrSkbK2Nslzyy85+ByassZZoBFEjf56?=
+ =?us-ascii?Q?y7HZza63bIGhya2voqhIpsKa0f1M/nu1Y1JTeEGU1eVIAEG/+p4dIhkKgpNI?=
+ =?us-ascii?Q?Z7j/ttzFvZIvrrXWGZjo/XnwA3gvElxUuPPpR7oipFustQLsrrMIyxfW9wu1?=
+ =?us-ascii?Q?cHxLrMwZp1UHVEaNA24wf7XNzQZkE1c0RqKlF8oQyuVk9g=3D=3D?=
+MIME-Version: 1.0
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+><p>D100#: D10703461</p><p>Dear Denita Jefferson,</p><p>&nbsp;</p><p>This e=
+mail serves to notify you that pending task(s) for the 2022-2023 financial =
+aid eligibility is no longer available. To review the status of your task(s=
+), please log in to your <a href=3D"https://desu.studentforms.com/login/stu=
+dent">desu.studentforms.com/</a> portal.</p><p>&nbsp;</p><p>Sincerely,</p><=
+p>&nbsp;</p><p>The Office of Financial Aid</p><p>Delaware State University<=
+/p>If you wish to unsubscribe from this type of communication, <a href=3D"h=
+ttps://desu-pm.campuslogic.com/unsubscribe?token=3DJQMXrURIqEC%2BD%2FegldIt=
+Ig%3D%3D%7C%7C%7CMFzVtOylTdneB5uN8S6WpeVsk22x3hmB%2FP5Ooy5ClMs0FUQYUnASerqv=
+ekCIuLwy9hAl2EAyqxHC31XSz86%2Fe8HhhT4jIdfdihQQeLxP0Gh%2Ftos6mSVQoD6S8U6Vz89=
+x06mpUqjGNN5i8u07GusWO0nqlIMi0ff%2B1V0IlL97QTMuoLdkY5AL5Zg%2FWaf6YGnXlJnbyh=
+TA8%2FX11ep06EsHGg%3D%3D">Unsubscribe Here</a>.

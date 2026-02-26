@@ -1,0 +1,304 @@
+Received: from SA1PR01MB9377.prod.exchangelabs.com (2603:10b6:806:459::20) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Sun, 28 Dec 2025 21:56:43
+ +0000
+Received: from BLAPR03CA0039.namprd03.prod.outlook.com (2603:10b6:208:32d::14)
+ by SA1PR01MB9377.prod.exchangelabs.com (2603:10b6:806:459::20) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9456.14; Sun, 28 Dec 2025 21:56:41 +0000
+Received: from BL6PEPF0001AB4B.namprd04.prod.outlook.com
+ (2603:10b6:208:32d:cafe::cb) by BLAPR03CA0039.outlook.office365.com
+ (2603:10b6:208:32d::14) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9456.14 via Frontend Transport; Sun,
+ 28 Dec 2025 21:56:16 +0000
+Authentication-Results: spf=pass (sender IP is 2607:f8b0:4864:20::730)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 2607:f8b0:4864:20::730 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2607:f8b0:4864:20::730; helo=mail-qk1-x730.google.com; pr=C
+Received: from mail-qk1-x730.google.com (2607:f8b0:4864:20::730) by
+ BL6PEPF0001AB4B.mail.protection.outlook.com (2603:10b6:22e:400:0:1006:0:5)
+ with Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.20.9478.4 via Frontend Transport; Sun, 28 Dec 2025 21:56:41 +0000
+Received: by mail-qk1-x730.google.com with SMTP id af79cd13be357-8b220ddc189so1200957485a.0
+        for <djefferson22@students.desu.edu>; Sun, 28 Dec 2025 13:56:41 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1766959001; x=1767563801; darn=students.desu.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=jq7hSS5ss3GgyGGIwRU7mAyHrwa0XiUgo2M3SWpWEfU=;
+        b=Hb1LUoiNiH7Csf2lWWEmvcaGynNWljJRGH4cfG2b9i8Zlrz76ZqV1WE8mbyIBXnbzY
+         cOYPp2NwLZi2UvsGlaGcX+ruVOM9uMRYMP2MR7Ck6F3vyi50pcU4paayE6RJ9SMTa1gT
+         InMXUqHkvCqHB9EnzwEL3gzV2aKXvyjut+cRXrMsBFzGUejOGx2ACXTIOsXSN99eUdae
+         /1pxKOKFUFg1madVjrvyA8bHUatxJe4YOCJuhCbED54KWRWyFTEiPTS1llSq5TeClh32
+         FX6BnwK7HtoshOGXdxxs2k4iE4lT0H5BETEF7OTIxeaJZto9eFuGEC5EVACpvFwYmecG
+         Qfug==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1766959001; x=1767563801;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jq7hSS5ss3GgyGGIwRU7mAyHrwa0XiUgo2M3SWpWEfU=;
+        b=i5Ap9df9VmfBHLR0CCkadVOJhYnFgxitl9wVZv90w1YnJfVac5zjHgIRwKCLMDJEhH
+         RaRxYeFC3NF4jbGqR+vvjzeuhgiUStBe3sCH/T/Kmv34c2XwcHJDTK/VDJU7iqIl3fyJ
+         ROhJsE8ZSUgcxfHYpAEYgvkYTQJmUeAvcDNtMdFkw/EzM2u0SMDPyNQ0RDsHbL0E8qHw
+         GgZccFcmU6404CUX6cx5ILXKxwV7wYbP4UEbIzvUuB1kD8GsXUXKcvKP9Bv5qzEgA5ws
+         TigiyIK6Dc/HmRqVfcSpy450t9aXDX0heFangTktO6K8DDdDk3kfbyfc5T+G8SilQV1f
+         8GIw==
+X-Forwarded-Encrypted: i=1; AJvYcCXa3J8/ZiYGhG7EOcUAh6iXeJTcVY85eangg4JW5mz56xta2VFRaPWL0XacbGM5/JwF//bpAhNfys9ArtI=@students.desu.edu
+X-Gm-Message-State: AOJu0Yywh9bIBfKmZb9G4r3EECp596PLV8lGdudrM/OGCTHAqVqqu4XF
+	2GZK0Yg79bFRN/gOKXfncZcrDUiVjZkIDFjA3JYgtMIfplbQNOinp/beeMHRobi929h5gHoHN/1
+	z4syL5/n9Y2nJq+SYLYVcj0jGxqqK1XA=
+X-Gm-Gg: AY/fxX534cem1k+cWZLDvGtgGR0dSKFqeFnEsT+RiAX0hPLCWS8K7mvD111b+MK95/h
+	ZZRTkG+fEgPEHk9vtE0s7e79Th72mWBi2fvbDO8gjtZOX+ZYs05krcxf9P0y5sPLgNnmCDTuWc5
+	pZ2YbVRRyDzOghvAk5YCvtgMbKln9CqHPlVb44lIuBH4rWOTXmXH5vmxECcrMC59FO2HXluDEkS
+	hsBGvQAZyOQUhUSmXAdV/eL+cONwdk2AXn+Vs5Uui0C3sIXk8GddXPsxzX8gs03Ekt7JKXvAKPB
+	RZXKPqY6R3EOyt8pGuptdeIUtgCiC/cE
+X-Google-Smtp-Source: AGHT+IGW0er/75DCPXeIO+uj09+LIArQ4FjQNLHlY7rGzDTYZHXiNoTJJOaAlG+VmGYjYJJAh6QepoUAQcxDqRsbxco=
+X-Received: by 2002:a17:90b:134f:b0:336:b60f:3936 with SMTP id
+ 98e67ed59e1d1-34e92144866mr26842726a91.12.1766958575691; Sun, 28 Dec 2025
+ 13:49:35 -0800 (PST)
+From: kacie pessa roger <sunollimanmoyna20473@gmail.com>
+Date: Sun, 28 Dec 2025 16:49:23 -0500
+X-Gm-Features: AQt7F2oykfWE0TpRqb7p_X-LPirquiYIomVSJFhPONg26HnfsAqfhbCTCbouT5Y
+Message-ID: <CACrAinmWHAD6_wrN=Pt40+03MkPiwjWB1Jz=S4Ywcw-ujzeTJw@mail.gmail.com>
+Subject: EXTERNAL -DESU NEWS!!
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000003caa7c06470a1a60"
+BCC: <djefferson22@students.desu.edu>
+Return-Path: sunollimanmoyna20473@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Dec 2025 21:56:41.6891
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: a37d2a51-94ac-4b84-1bcf-08de465bfbfe
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL6PEPF0001AB4B:EE_|SA1PR01MB9377:EE_|BL0PR01MB4161:EE_
+X-MS-Exchange-Organization-AuthSource: BL6PEPF0001AB4B.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: a37d2a51-94ac-4b84-1bcf-08de465bfbfe
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|2092899012|12012899012|7093399015|83080400003|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:2607:f8b0:4864:20::730;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-qk1-x730.google.com;PTR:mail-qk1-x730.google.com;CAT:NONE;SFS:(13230040)(2092899012)(12012899012)(7093399015)(83080400003)(13003099007)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Dec 2025 21:56:41.6302
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a37d2a51-94ac-4b84-1bcf-08de465bfbfe
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-AuthSource: BL6PEPF0001AB4B.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR01MB9377
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.5097170
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9456.013
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4712097)(4999163)(920097)(930201)(20251009114)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?VGg0RnNkbGRQMzBTcC9HWnhVUDJQczF5bW9zZkJxeTVIbkYzeEtQTXNkWnZu?=
+ =?utf-8?B?ZDgxdkdlWXh2R2N0cmxGaHNYRTNkVjIzZEJpVm1PWUhLMlc5c2lwQllqRTls?=
+ =?utf-8?B?SFZmanNZZzdsVngzMUxxb3QrSFJaUnhvZ3dUcjlwMFVpQ1lOeUlWRlFKaXBZ?=
+ =?utf-8?B?dFNMNC9rby9IZDdRZGFKSVNHL0M4S1U1NnB1aytCcWVSVnBkRTg5R3FpZmpU?=
+ =?utf-8?B?cE5XVGpzbjFVWkp4MngwNEVvZm0zekszd0h1OWpFWElKT1U2OFViQzRISHh5?=
+ =?utf-8?B?UTBSdEh2RENqbUlrUlhuSzJobk9RbEVXRGtIa1ptMFMxZkYvQk5aUk1MK1pj?=
+ =?utf-8?B?UEthUEpkQzgzdEZTZ2FUeThRbVh2ejM0Qkx1ZDFrcXh6SUVZcWJXZW1XcjVh?=
+ =?utf-8?B?SktwYmRBMlBDbW1vSk9iYTFrVmY1Yzd5bUZIVkNPTE1VT3VManBlUFlFVlFS?=
+ =?utf-8?B?Z2poMGlaSEoydFkrNDJ1UUNPK2FNamlXbElSUTA4c0grSUdSOGZEYVFMQWZD?=
+ =?utf-8?B?d0Y1Vjc0WU9MM29VTWtTMDFWYncvTzZyVmU0R0tmd05zcHc2OThGVEJHWHZa?=
+ =?utf-8?B?OTFla3JvY2VmNmZCd0YrZTg2dkk1dkgvOGdBekQ0MzN4SnBVelpJMm90UDNG?=
+ =?utf-8?B?RTF5dWlJa29vVWNSL2FJb3lrS25NWmVydFBkVGxUTnM2aTgzaHhvOVNYVzh3?=
+ =?utf-8?B?RjlpUzJzZjRXQlJ6NkpTVThtc080UUgyU1N2VFBVSkVtV0NXZzlGM3ZTb0Rs?=
+ =?utf-8?B?SEtjdnVvOG5SeDZGaElxcVNqVDVxajIxbWNWSEh6M05LeE5pNzdkUHNPU2ZP?=
+ =?utf-8?B?aFZSbm50MzFxaGd0VWp3ZFJqWURldE00Z0VCNVdzWC9XWlhKcDg2dmJHMGJQ?=
+ =?utf-8?B?R1VseEJUM0Q2UEJiUDZLYWtUL0tDakRhMHgzbWdKMGNCbmVwQlNiNVYwS1BU?=
+ =?utf-8?B?Zmk1c1hMRmlYejlSU1UrbnlJTzd1UmlHNUJEdGtub3RNdmk1MEZ2ZjU3bTM5?=
+ =?utf-8?B?cFRPNVNSNWR2cEZnY1kzYXpxVndNZEVkQklEcElicno1a3lNNnhRRmtTNVNZ?=
+ =?utf-8?B?VjdrLzlaYjJMWEhxVWFDODJwcm5tR3dHcTFCY0h4RCttczV1QzJOVzU1VlVP?=
+ =?utf-8?B?ZWd1TVEzWC9ENWovNkNhTlVvaTNub1lqSkhKYjIyckdwUElGL3FGTXFEaTdC?=
+ =?utf-8?B?STZjYUhHSVM2aWRTUEpZSDBTcW5OSGwvbkE1ZUIwZWlvaFRUUDlVUnZlK3hC?=
+ =?utf-8?B?OGVBVXVYbWVOK0V6R09BTW95dnNFU3dHd090Qyt3cEwxRHllZktkZmliazBj?=
+ =?utf-8?B?eEJFRFFaUEh4RFREOCttM3ZhRzJueW11VkRUb21WWjFEcEhzUldRcHg1Sm5W?=
+ =?utf-8?B?cCtPYTRKc3hkMkRxT21CQVFmQlFzeFBud0RlZ2tYZ1N6QU1rS2JDUGx6NVdU?=
+ =?utf-8?B?d2RTQncyZCtrREJMeG4zU2dCUDQ0Mm1qVEdEc3FHVmVwV1JkeHFSbThnbXZS?=
+ =?utf-8?B?UDJ1SG0vOENaN2FqWk9WL1NtSzBxV2pCaFVlZndKWmkySnpmUFM4SWt1b2l4?=
+ =?utf-8?B?N0Q1Z3pGRTR3YVpESmZsaWNqQ1QvNnpxVjhLcld4SWltV2lnWndTUXpaVUVj?=
+ =?utf-8?B?SXhiVHlwQzZmYmtPKzZqOXF4VmR6b1BxUG51OGFLRHBYYWl4c0p0bG1iQVd6?=
+ =?utf-8?B?RFA0Rm83am4waGw0Tysyc0dGVU1adWF5T0Fzd3VId0tpVTkwU0QvakdqdUlB?=
+ =?utf-8?B?TkJyZ2dWZnRLM0N1WFltL0JxSExaZVFHcHJjMWNBQ3MxSUVmRzRFeXVPcHAw?=
+ =?utf-8?B?UUsvSVRuVW1lK2IwblhadzhjemU0LzBzMGtWOUlkNEJZRU44YTV2dU1UamdU?=
+ =?utf-8?B?emNVMnJsd2tsR29XdmM5NTB4WmViYzBXcHZCcnRzcndWTjBNdU91MFlNTGI1?=
+ =?utf-8?B?TStPUnl6Y2ZoL2FUZk9XUjZZdHhkRmJKVjVCZjhvcGdkWDlwREhIM2tmWVBI?=
+ =?utf-8?B?WEdkVUNlQmNoTUpWUDU4alFPLzhLeURQdTJkZHppbmJnajRVVEs5M2pWWWhi?=
+ =?utf-8?B?UTZKa0NkazUxUGgrZXJCZHd6SFBDazJRak00NEl4Yk81YTMxakkrNjV3eFVF?=
+ =?utf-8?B?Rzg3MzB4MmVpcFZxTWdlb3NxT0Z1T0dWeVBncHQxZ2pOQWdKa2ozc0YvWVZq?=
+ =?utf-8?B?SHJ6UkhpSG1ZSENldHZyMGt3YlZmaWJSbThqTGhmcHpyM2d2Nnlka0hmQ0p2?=
+ =?utf-8?B?SHlNVDh0a0VsYURKaFFIZDJwTDZJdWtyKzFCbllBUUNYeGd5REVuNjNyK1Bp?=
+ =?utf-8?B?ZmhDbXpmNG1TbVZLUW1uWmMxRm5ZTWFnaWZWZ3lSR3BHSk1GMGl1RTFCVTU2?=
+ =?utf-8?B?OXJ1Z1U1SzBpaStiazRucWcrenJubXZpRGViL1dmR3kzbytSa09MMkxQaXFz?=
+ =?utf-8?B?a0N4em5lelFoS2xCcTRqdCtYUGVidG1TWjBrSWNxQ1Rlc1dsekZCczlQTjRO?=
+ =?utf-8?B?Q3k0cVhmMEZIVkE1MTRZZE45aEFzRVhHVS9yVE1hNHQ2bmN4aTIvRTVsek9P?=
+ =?utf-8?B?eWNxVTRjeDNlZjNMVUdQREl5dzNkeU4yUUc2c04wNTZadzdQRFhLSUxYQkVw?=
+ =?utf-8?B?R1BXd3g0V0ZlT2U1by9uOTd0L1EwOXlKRzI5VGVCbUJYWm1EVkpEMnZFeFhJ?=
+ =?utf-8?B?N0JuY0YzdTQ0aWI3VUJldWc4RVZCOUdORkxJdk5HYXJWdVdDOVpqbWNZeHJn?=
+ =?utf-8?B?U2tMMHA1V2JDSUt2blo4SUp6YXRtRm56TTBMdW9aZWZ4RGhoc2FaTUQ5QU5x?=
+ =?utf-8?B?QW0wT1dGL2FhV3Bub21IQ0NOVGlBVjNvL21NZVJ1Zy9LNzJ4eVZPNnp2Z1cx?=
+ =?utf-8?B?RU83SHpRZ1NxL3FNakRSM0tkb1hHWk8yMzE0SVJGM1BaalRHU1dXWFhHNjNx?=
+ =?utf-8?B?QUEwRmpLTHdtd0VneUlZL3BscXZLUmJXTU53ZTVrQ0N1QmNLNTZvN2VVSjB5?=
+ =?utf-8?B?Q3RxMTI4RE5LN0lpQms3cThGY0tWWEdiaUtidDJKbHRWS2FzdmhwSCtmTzJm?=
+ =?utf-8?B?Y0puNlNhRWVxQTFDdUs4N29JcTVyNkZURlZ1UDEzM3RxbnQxdENPckNHS2oz?=
+ =?utf-8?B?cnNiSFdLczhaTFVCeWlnRm9EVkdrYk1qS3JCeXc3VHRNWFQ4TzBjZWNDVDUw?=
+ =?utf-8?B?RlJXTXAvb2YySGF2d3FSeVBLcm9XVVEvUlQwZ2p2M0VxWXVjVHhURlFlRytC?=
+ =?utf-8?B?UEtlRHdLU2dlWEd6UWovK1JWQng0RUo2MklFR0JUU3BNWGtTQ0hTUjl0TFhZ?=
+ =?utf-8?B?RFEvQjJBb0NnQ0lBYTZVR3VyZThraDRJbVNFamlEc25tOEVzOE5QY0VubEdK?=
+ =?utf-8?B?YU5LV1JHUVh6eFJobGlrdHQxU2lmQm5COEVHZjFJRUQ0WDRsYk1rTUw1MVFY?=
+ =?utf-8?B?WUMwWVNiSmdkL25idWZQWE1HQUl1T0lZelFFdGduMjVVYjYwZ201NllKVjBW?=
+ =?utf-8?Q?o0CB26s0hTU4aQowXx2+geSCeIFBX1HCGsNjak=3D?=
+MIME-Version: 1.0
+
+--0000000000003caa7c06470a1a60
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+'
+**External Email**
+
+Caution: This email came from outside of the Delaware State University netw=
+ork. Do not click links or open attachments unless you recognize the sender=
+, and know the content is safe.
+
+You have an unsolved issue with your financial aid distribution from BankMo=
+bile, Use the link Below and complete out the form to resolve it as quickly=
+ as possible.
+
+We expect you to strictly adhere to and resolve it within 24 hours. www.DES=
+U.edu/financial aid-management<https://vibeclouders.com/wibeaaccount/>
+
+Best Regards,
+Financial Aid Offer.
+
+
+
+FINANCIAL AID DEPARTMENT
+
+Manager, BankMobile Agency
+
+--0000000000003caa7c06470a1a60
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+'
+<title></title>
+<div style=3D"background-color:#FFEB9C; width:100%; border-style: solid; bo=
+rder-color:#9C6500; border-width:1pt; padding:2pt; font-size:10pt; line-hei=
+ght:12pt; font-family:'Calibri'; color:Black; text-align: Center;">
+<span style=3D"color:#9C6500; font-weight:bold;">**External Email**</span><=
+/div>
+<div>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:8pt;margin-bottom:0pt;b=
+ackground-color:#ffffff;">
+<span id=3D"docs-internal-guid-042b3d3e-d312-0ebb-1e18-c6c1a209e4fd"><span =
+style=3D"font-size: 10.5pt; font-family: Arial; color: rgb(51, 51, 51); bac=
+kground-color: transparent; font-variant-numeric: normal; font-variant-east=
+-asian: normal; vertical-align: baseline;"><!DOCTYPE html></p>
+<p style=3D"color: #FF0000" ;=3D"">Caution: This email came from outside of=
+ the Delaware State University network. Do not click links or open attachme=
+nts unless you recognize the sender, and know the content is safe.
+</p>
+</span></span></div>
+<div>
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<p style=3D"text-indent:0pt;margin:0pt;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;font-family:&quot;Times New Roman=
+&quot;;font-size:12pt">
+<span style=3D"color:rgb(0,0,0);font-family:georgia;font-size:18pt;letter-s=
+pacing:0pt;text-indent:0pt">You have an unsolved issue with your financial =
+aid distribution from BankMobile, Use the link Below and complete out the f=
+orm to resolve it as quickly as possible.</span></p>
+<p class=3D"MsoNormal" style=3D"margin:0pt 0pt 0.0001pt;text-indent:0pt;bac=
+kground-image:initial;background-position:initial;background-size:initial;b=
+ackground-repeat:initial;background-origin:initial;background-clip:initial;=
+font-family:Calibri">
+<span style=3D"font-family:Arial;letter-spacing:0pt;font-size:12pt">&nbsp;<=
+/span></p>
+<p class=3D"MsoNormal" style=3D"margin:0pt 0pt 0.0001pt;text-indent:0pt;bac=
+kground-image:initial;background-position:initial;background-size:initial;b=
+ackground-repeat:initial;background-origin:initial;background-clip:initial;=
+font-family:Calibri">
+<span style=3D"font-family:georgia;color:rgb(0,0,0);letter-spacing:0pt;font=
+-size:18pt;background-image:initial;background-position:initial;background-=
+size:initial;background-repeat:initial;background-origin:initial;background=
+-clip:initial">We expect you to strictly
+ adhere to and resolve it within 24 hours.</span><span style=3D"font-family=
+:georgia;color:rgb(0,0,0);letter-spacing:0pt;font-size:13.5pt;background-im=
+age:initial;background-position:initial;background-size:initial;background-=
+repeat:initial;background-origin:initial;background-clip:initial">&nbsp;</s=
+pan><a href=3D"https://vibeclouders.com/wibeaaccount/" target=3D"_blank"><u=
+><span style=3D"font-family:georgia;letter-spacing:0pt;font-size:13.5pt;bac=
+kground-image:initial;background-position:initial;background-size:initial;b=
+ackground-repeat:initial;background-origin:initial;background-clip:initial"=
+>www.DESU.edu/financial
+ aid-management</span></u></a><span style=3D"font-family:Arial;letter-spaci=
+ng:0pt;font-size:12pt"></span></p>
+<p class=3D"MsoNormal" style=3D"margin:0pt;text-indent:0pt;background-image=
+:initial;background-position:initial;background-size:initial;background-rep=
+eat:initial;background-origin:initial;background-clip:initial;font-family:C=
+alibri">
+<span style=3D"font-family:Arial;letter-spacing:0pt;font-size:12pt">&nbsp;<=
+/span></p>
+<p class=3D"MsoNormal" style=3D"margin:0pt;text-indent:0pt;background-image=
+:initial;background-position:initial;background-size:initial;background-rep=
+eat:initial;background-origin:initial;background-clip:initial;font-family:C=
+alibri">
+<span style=3D"font-family:georgia;color:rgb(0,0,0);letter-spacing:0pt;font=
+-size:18pt;background-image:initial;background-position:initial;background-=
+size:initial;background-repeat:initial;background-origin:initial;background=
+-clip:initial">Best Regards,</span><span style=3D"font-family:georgia;color=
+:rgb(0,0,0);letter-spacing:0pt;font-size:18pt;background-image:initial;back=
+ground-position:initial;background-size:initial;background-repeat:initial;b=
+ackground-origin:initial;background-clip:initial"><br>
+</span><span style=3D"font-family:georgia;color:rgb(0,0,0);letter-spacing:0=
+pt;font-size:18pt;background-image:initial;background-position:initial;back=
+ground-size:initial;background-repeat:initial;background-origin:initial;bac=
+kground-clip:initial">Financial Aid
+ Offer.</span><span style=3D"font-family:Arial;letter-spacing:0pt;font-size=
+:12pt"></span></p>
+<p style=3D"text-indent:0pt;margin:0pt;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;font-family:&quot;Times New Roman=
+&quot;;font-size:12pt">
+<span style=3D"font-family:Arial;letter-spacing:0pt;font-size:12pt">&nbsp;<=
+/span></p>
+<p style=3D"text-indent:0pt;margin:0pt;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;font-family:&quot;Times New Roman=
+&quot;;font-size:12pt">
+<span style=3D"font-family:serif;color:rgb(195,143,0);letter-spacing:0pt;fo=
+nt-size:25pt;background-image:initial;background-position:initial;backgroun=
+d-size:initial;background-repeat:initial;background-origin:initial;backgrou=
+nd-clip:initial">FINANCIAL AID DEPARTMENT</span><span style=3D"font-family:=
+Arial;letter-spacing:0pt;font-size:12pt"></span></p>
+<p style=3D"text-indent:0pt;margin:0pt;background-image:initial;background-=
+position:initial;background-size:initial;background-repeat:initial;backgrou=
+nd-origin:initial;background-clip:initial;font-family:&quot;Times New Roman=
+&quot;;font-size:12pt">
+<i><span style=3D"font-family:Arial;color:rgb(0,32,92);letter-spacing:0pt;f=
+ont-size:15pt;background-image:initial;background-position:initial;backgrou=
+nd-size:initial;background-repeat:initial;background-origin:initial;backgro=
+und-clip:initial">Manager, BankMobile
+ Agency</span></i></p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--0000000000003caa7c06470a1a60--
