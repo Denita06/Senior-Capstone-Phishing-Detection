@@ -1,0 +1,365 @@
+Received: from LV5PR01MB9418.prod.exchangelabs.com (::1) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Tue, 3 Feb 2026 19:34:05
+ +0000
+Received: from LV2PR01MB7693.prod.exchangelabs.com (2603:10b6:408:176::9) by
+ LV5PR01MB9418.prod.exchangelabs.com (2603:10b6:408:307::22) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9564.16; Tue, 3 Feb 2026 19:33:48 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=oMi2odKEr4w+KuPUP3OFqk4fQuFUbWs7OTWzf0F+NR5x1ZFDLOZz2BfFm9zDPjk5d7x/jmRGFT7Jyu2StdbJCSYFz/zF2UdJOAbhN9IT5orF2EwehAtIg9va+9fhBtPYisnA+EcyxH8QJAvvuCLRywSs+8oEivWLUhGC6zWVDmmh1IYtWln/tdxmfBZZoAQdIWLGdZNqeM/gvkg0xZScn4qVwnwDlI9XtSXB1AdMtW4AUjQ4cfoRYwjOOnjcmSDWlNjp9Lst3ZfxfKLllqlb0BAfqHgQ3Xl2lBW0HESGw4FJqvLxueEolbdHvh4k0fUq7Lc9PainSa40rVYZuhkHIA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=MpPwnSd2mqZVEgidmEKpueSOl5Wp8oy2kyWApTMsXyk=;
+ b=rlomjFGNZeQ7bQ+eO7xE/KdEP6KWeV3SD/Ix8Lt1c/cLiGw17qT+CpaEoBYVFUREf9C6TjaIsR9LyDbwYRVjH/9e7YNP3zKqPT4ES83OuUBTc2D8xjOadDWyebGpKL+mzQkR24lkv/YpsE4CIQXUHSSy9Jy2PEPb5f4wSvdQNw9bvre7XcHSgrSxFHlY6scYgYWA6IGzHI/+gKDXjW5Gehr/XCTsnVFJ9txmRIiZU1fsBcD12Onw7+DwB8eEJHwzB+zVTGdXH1v0g1zEeLc1SWA7N1nq8mscaNWsmkySfAxSfKD5iUdCQqDc9pNjG2hDcgTH4zD8lQus3pkrBCgIqA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:c100::f) smtp.rcpttodomain=students.desu.edu
+ smtp.mailfrom=desu.edu; dmarc=pass (p=reject sp=none pct=20) action=none
+ header.from=desu.edu; dkim=pass (signature was verified) header.d=desu.edu;
+ arc=pass (0 oda=1 ltdi=1 spf=[1,1,smtp.mailfrom=desu.edu]
+ dkim=[1,1,header.d=desu.edu] dmarc=[1,1,header.from=desu.edu])
+Received: from BYAPR08CA0055.namprd08.prod.outlook.com (2603:10b6:a03:117::32)
+ by LV2PR01MB7693.prod.exchangelabs.com (2603:10b6:408:176::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9587.12; Tue, 3 Feb 2026 19:31:01 +0000
+Received: from SJ5PEPF000001EB.namprd05.prod.outlook.com
+ (2603:10b6:a03:117:cafe::45) by BYAPR08CA0055.outlook.office365.com
+ (2603:10b6:a03:117::32) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9564.15 via Frontend Transport; Tue,
+ 3 Feb 2026 19:31:02 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:c100::f)
+ smtp.mailfrom=desu.edu; dkim=pass (signature was verified)
+ header.d=desu.edu;dmarc=pass action=none header.from=desu.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of desu.edu designates
+ 2a01:111:f403:c100::f as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a01:111:f403:c100::f;
+ helo=BL2PR02CU003.outbound.protection.outlook.com; pr=C
+Received: from BL2PR02CU003.outbound.protection.outlook.com
+ (2a01:111:f403:c100::f) by SJ5PEPF000001EB.mail.protection.outlook.com
+ (2603:10b6:a0f:fc02::1c7) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9587.10 via Frontend Transport; Tue,
+ 3 Feb 2026 19:30:59 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=PO9GoBfY+jn9ZJbB2Rm3iq7TQgSZKXwFx4HhE42tqrP1O1SDIBtFAC7ZyYOvXaxW5Z+jOWDw7B3U/Aps9jDs2mXozqWHoCBVR8kWptlhM4EDWNDfEf9KZILf1RIpW4BdzTvr3eCOWj+zcxt4MGmf16AYH2p0zNXCrD8Rptq2iqbK5cKsbBtQn356Mnrzn2rES9r6AFxCo5BHxCuAcCnUyPqMepWqN1+MkQ6KkfIPcjd5cEoeVcIJVUQtG+so4ly5KqM5NyQvqEe/1QbXY2IoRSEYczvV2+WVyWRzB+6OC2UPQ/9Y/IyRuObaT/jrOszo4cCsDpOXa8VkzvfGzR5bgQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=MpPwnSd2mqZVEgidmEKpueSOl5Wp8oy2kyWApTMsXyk=;
+ b=cuNcFhBSF//OPOWjL96H05JVRWPvGCGsDm7NgexrKTCf1nCQBkiI+BIzR4VdyI5ms8nMbicSQk/1kIv8DyQ4uHJwvk4p0nywlqV9znXukzatBWalHnMJphQmjRv7esECwCTYCoNmdycq28xAzoZA8NDGhVWu0J9w7c8BhR0ohMINJ/R980lApfD7qxiS0ihfKpXnEtqFytIgrvxBygpQi639Y2o3b5dPn2gUm88DCR2bpWYFyXUzlKIMyB5117oHxM/0n1DjtGQng/fyupQYPyoI93Qqun0hi/rWCoEnJDJlMIGWFpCqxSvcZC/MIVD8bdyYXCfbSn+0B363qKmj+g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=desu.edu; dmarc=pass action=none header.from=desu.edu;
+ dkim=pass header.d=desu.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=desu.edu; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=MpPwnSd2mqZVEgidmEKpueSOl5Wp8oy2kyWApTMsXyk=;
+ b=TMEhKd9oHy3ZSika+Z+3CYnV6cVvt7ieOA+pe1Sagm+V5DYE4EqHpUmNnL4KkELIkr5eus5w8a+U90le1Yk3s2U2KcjzJGLBTkS7zlF+y+kDgCNWSOKhoNhmFnm9fiIZ1Ne/TypqJ2nOBllqootXVWnKsUmwfkGNDj0ntrbkmZE=
+Received: from BYAPR13MB4325.namprd13.prod.outlook.com (2603:10b6:a03:106::20)
+ by LV4PR13MB7394.namprd13.prod.outlook.com (2603:10b6:408:2da::23) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9587.12; Tue, 3 Feb
+ 2026 19:30:56 +0000
+Received: from BYAPR13MB4325.namprd13.prod.outlook.com
+ ([fe80::c0a4:4324:f42e:9014]) by BYAPR13MB4325.namprd13.prod.outlook.com
+ ([fe80::c0a4:4324:f42e:9014%3]) with mapi id 15.20.9564.016; Tue, 3 Feb 2026
+ 19:30:56 +0000
+From: eNews <enews@desu.edu>
+To: "students@students.desu.edu" <students@students.desu.edu>
+Subject: Office of Student Accounts Spring 2026 refund process begins
+Thread-Topic: Office of Student Accounts Spring 2026 refund process begins
+Thread-Index: AQHclUKs9a3MYHtR0UaPfPYfjF1iQA==
+Date: Tue, 3 Feb 2026 19:30:56 +0000
+Message-ID: <BYAPR13MB43258154EA167F376F92C491CC9BA@BYAPR13MB4325.namprd13.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-reactions: allow
+Authentication-Results-Original: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=desu.edu;
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-traffictypediagnostic: BYAPR13MB4325:EE_|LV4PR13MB7394:EE_|SJ5PEPF000001EB:EE_|LV2PR01MB7693:EE_|LV5PR01MB9418:EE_|BL0PR01MB4161:EE_
+X-MS-Office365-Filtering-Correlation-Id: 51a6ca8d-7775-47d9-2248-08de635ac2d0
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|786006|1800799024|366016|10070799003|376014|8096899003|7142099003|38070700021;
+X-Microsoft-Antispam-Message-Info-Original: =?us-ascii?Q?4bsXoq9nXqca14Wx2zJzHG4j0T2mNkexjhnv1J2a1agWY8c+3mNbEr829RTK?=
+ =?us-ascii?Q?csQ4Rl9JATEz2evcUbsd3J8u6k3jMSvM8MnM2/3WOQdD1N3NXOuATaCF4jmC?=
+ =?us-ascii?Q?j4+a7UqPQRUvNehojOLZdkAYfoD7pophI3RIHkpT0GgI54DIecVumOOC5zyg?=
+ =?us-ascii?Q?dIyeHj6xgacfYT+Ggzisc12v95W+W0uRkcrnyXEw/SXMPsS+XpAZILD7WQ0L?=
+ =?us-ascii?Q?5xzKFl71shD7yb6Ehk4f6rIs5TCTK3FKBbbvh7r+ecGZr99zKTchUH+NOxN4?=
+ =?us-ascii?Q?oixaWqGmtbttWlNXbY3oEDTenQIiQQiVh5G6uHE2JUPa86w/T8/mAoU01Bko?=
+ =?us-ascii?Q?GOicmJj/xHyt3gTFfl/bLd8V5KABAV7qhL04F5i6ZxJIO10jUGhACTWz7rqf?=
+ =?us-ascii?Q?Pw+O0sPrfrJChjxPob6uCp/ojAug9sbcNLR528U9zAi/pGGwTYMC1pzc3U+a?=
+ =?us-ascii?Q?+iatKuCVi0wFIpT6REj+AzQLsInupejcua8VBaNSt5/1DDB1P9vb3c37kps4?=
+ =?us-ascii?Q?rvwIZxHDMtrfVu/MA0v4Ft3LBUt+ucQL6hZWTZvYGotbKV7QJeBbHev3l+P0?=
+ =?us-ascii?Q?q1/05nHxWugnZfX42VpHkgJymAKBnpTP5pf26VaW55e8lXNcFrrTyimM67mJ?=
+ =?us-ascii?Q?oEam0QF3PPaMnry4HF/wTflMU7avBoma6eEn1sn8bZUl7w2tJ2/MkqC64VRW?=
+ =?us-ascii?Q?/rV2VCpPRPfKtAi6XxcipQHwu+61EQ+Y0GEGy+Vc7o0ThLC37Zy0UohXTTLY?=
+ =?us-ascii?Q?OSI7k7ZeMRPDSj8ZxcRwE6p4ZvBiAbI5o52kQVj9VjQAZSd+IB+JEamNMtJg?=
+ =?us-ascii?Q?Gj4AKFpXBvWHi+YfH86TqYYQEVF9+jjUY0ojbctY6yvU1JCllVST2D3NVxuf?=
+ =?us-ascii?Q?2hHES/G+ylqyiHOYFH+rug1gK21kfvC7eBq5DQuZVEREE9msByt9gejbskXH?=
+ =?us-ascii?Q?apjLUmgbZSfvxF6nhuSB5m8MWAzit69CEe3tSdH8LL2wPzkKfaAihCuRdlYX?=
+ =?us-ascii?Q?0twEanBZ8IQ8LIaB//nPMDoSsf7d3xy3GbX0mGgq0QqUA1u6+082Fwt/WZtI?=
+ =?us-ascii?Q?f89YGMS0ZXkDZUl++zz/h1D7y3LcCDCd0PMlCId+QW0LFg2oczXL9wio6Hz7?=
+ =?us-ascii?Q?/ILSP/w0eg845yU2o6gHtdO2nfSMmGTjSTDRpkLgXmyE1XURGc8YO7swczBE?=
+ =?us-ascii?Q?zVnri/gXAjRuIIU9op1KSgMocvkD5BxsndmFLcw4YxCkWo1DvAfqgpduQ8BI?=
+ =?us-ascii?Q?4hN95GijITRpv/pMrE0ho0nHxsb9Y0NpcWmQ1AxrUSIYxMDhDSPTcHJTcntE?=
+ =?us-ascii?Q?YQDsSBIjri5+Jn9fo8yzkOvOnkOt9qw7HbNGhsQyXcKLffoQb8l8K8NvAObw?=
+ =?us-ascii?Q?a/FIyHm5dUt0KCbOSfDjQf05RlTa08MkZ2cFC0I9J28suotKRzTk4kMyW1Ey?=
+ =?us-ascii?Q?V17vr2W6pKVd3CPIpmlSa/e6n4yCU/ZS8LpgeeUdD8fQfusGwtI9R8whofsz?=
+ =?us-ascii?Q?FJ4eJezpcNPwueQljq58NHO5HtAVYTgrannUH38rN+PuCKtxEz5ZUVEDUO7n?=
+ =?us-ascii?Q?E53rQnA6q+QEO59MlzI=3D?=
+X-Forefront-Antispam-Report-Untrusted: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:BYAPR13MB4325.namprd13.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(786006)(1800799024)(366016)(10070799003)(376014)(8096899003)(7142099003)(38070700021);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 2
+X-MS-Exchange-AntiSpam-MessageData-Original-0: =?us-ascii?Q?rhnyNBg1Lie4u38LziQJF1TFLqfjDoWhYHByvcfF2dxkmsHLM/2XEwShnfWB?=
+ =?us-ascii?Q?jyT40Q8AQULYKovzN8Oc+LhGNyUEmf7DRx5fdGf4h1ioaYfMExC+Bm7OjHDK?=
+ =?us-ascii?Q?2qj883xTCpwN24swaq9zLs3Hyt7Z1v9ykXnN8/kkyWT06Jy7vPBjiy+xie8W?=
+ =?us-ascii?Q?8yO/gPFiGYgZ9/qoTjAtUgcp3l+g/e4mlFbopfY3TOJDmEqVjBOj9DR3i0Fz?=
+ =?us-ascii?Q?SBl52qj6/lwsiCk7nsPKG1VQy8+LWlTSkjCd3sl0YaywSEgU1TlYPsplaH9V?=
+ =?us-ascii?Q?QvobrFx2U7ej2Jv3uNKQ1jTk4Pmhj6GhkLKKHbU1e7phiFREL0aE4JW274gd?=
+ =?us-ascii?Q?IJ2G1MM1nLiyQQmWQcpgFyjgOM775xOblObytkVmmkemoV6FEkUiWz5RWUXI?=
+ =?us-ascii?Q?LJnzHKF0hblCk4/37L0JzJoqy9tTZXVqTo9QTAEoJMXYvgKdkug9WYEnKJPd?=
+ =?us-ascii?Q?tBRIsH9thPKY2AEhk1tOSLBl/+YGTHNGy8qWRY86cvIhuOIzmDkcvTr3bPLM?=
+ =?us-ascii?Q?TXCpUXkrXJ8CwneegyEiimUVcl+RqLtkPEwQTA3Cc2STYMp+eajCiT22VdL3?=
+ =?us-ascii?Q?tt2vrMlQfHK1xabCfB3Glqbe17Iv0d0gIVZmZB4MUjcwADQ3A5LsulfCrAqv?=
+ =?us-ascii?Q?sQN89stVTJQqHoppv2z1DA2W/Md/71az3JL9rDH6i7t+9nFotAghcEjWBcg5?=
+ =?us-ascii?Q?mzUPj3vvDsgwAZXZarqfrytNR8N2XQ68FEFV1tz98UV9+3p79KqMgU/rXrmz?=
+ =?us-ascii?Q?uGdgjrUEQOoOcnglkDBNx8SDpzafbUTM6HiM8Msf5KN1Rki0niBoCIEHjO+J?=
+ =?us-ascii?Q?XcHYOo8BU+ZbAXQMdo2mWSDmdxs/63ji5uKkMdFVs1UJqiWgmwvincFwWmj7?=
+ =?us-ascii?Q?ska8Sk0f5NdZTJ+aOEmF7WRYjWxwayguBZSYxv2RT+6O2Fei+H7xh5A5mMfP?=
+ =?us-ascii?Q?IfklGtoEqPmLliiYKxNYF07XOBlpIdAmMzYfqzmnEzIKhXewXlgR4nGMUpYf?=
+ =?us-ascii?Q?4CVO6QoNB2LMMIyfcqCrUgV0qEOmrYR6i7uIVqa+b6zukc5MH/sq0qt1mVc/?=
+ =?us-ascii?Q?Y0ZernqiL7s7QmkSb7BRPkTCU4ALG87gosyRYI2IhlHXsaJVTJ1jjzvfdrIr?=
+ =?us-ascii?Q?Xf4u/3yKGFv+JHyL5MGCSJ/14LukfqhgoEflqBzr0BzEpR+eG6JTc93kPHXv?=
+ =?us-ascii?Q?WIdnnZIXukRuh1sA/5+2kjhWlnME3TB2QfSYaEsm+W8z+wWlwLwOPFhAK74u?=
+ =?us-ascii?Q?5Blv5I3i2H9K6D8QOTmJH1GAI2SYZ7t5euxrXMHQVTmx/7jvwC+gkvUCgvxh?=
+ =?us-ascii?Q?/tNGQUmANDZ8JT92vGMY8LCk3bYTCbEIjDpjoGzuvfUh9QZHgcI9WF+ag4IJ?=
+ =?us-ascii?Q?3s6CLO2zra+pAr1xKBfI+xx/FDNR2tsxNtW5N6EUyG3FOo/NL3Ygf0NnGnUq?=
+ =?us-ascii?Q?+JWyAUegsQSdkxnHpGc8e16FwBaB3Nb/XcXYKow/OzsDAnfveHYKb71yikhA?=
+ =?us-ascii?Q?rJywu+OTxamNHp1ZkvQ/sUIVU0utIMBGyBLLyeaMfMoOk9O8f0vHojUEKMr2?=
+ =?us-ascii?Q?vRUAK0bjVlbkKVPflSHv0+g79CJ7i6Luj/HvKpt1+AW2REpygiIYaQuHz9Iq?=
+ =?us-ascii?Q?7PtS1LkxxRKGLeRQzaw4TP0DeA0A1Zd6j6MSYGs1dAjAbFDksetAJlbNAs3u?=
+ =?us-ascii?Q?RWD3P80mFpwDem6SmFiaMHOkbR+M3zQIl4HO+3sIXO/JHIKy04bOKO3Wv0GH?=
+ =?us-ascii?Q?QfzGAuhV4oXLW3g0fXjsCx65Z0I93VXFeflGyOg7WHqFxh/xpx7E/3+PDQ5+?=
+X-MS-Exchange-AntiSpam-MessageData-Original-1: 6E/iEQPSNiGgrGxrK7gz7uSozz1yxDKj2zA=
+Content-Type: multipart/alternative;
+	boundary="_000_BYAPR13MB43258154EA167F376F92C491CC9BABYAPR13MB4325namp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LV4PR13MB7394
+Return-Path: enews@desu.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Feb 2026 19:30:59.9815
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 51a6ca8d-7775-47d9-2248-08de635ac2d0
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: SJ5PEPF000001EB.namprd05.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: SJ5PEPF000001EB.namprd05.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 32746d7e-1ea2-4ca9-ab51-08de635ac0eb
+X-MS-Exchange-Organization-AuthSource: SJ5PEPF000001EB.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-LD-Processed: cce03e76-6214-4113-9961-c1c0feb3a60b,ExtFwd
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:4;ARA:13230040|13012899012|13102899012|4092899012|5062899012|2092899012|35042699022|3072899012|3092899012|12012899012|13003099007|7142099003|54012099003|8096899003;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:c100::f;CTRY:;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SFE;H:BL2PR02CU003.outbound.protection.outlook.com;PTR:mail-eastusazlp17011000f.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(13012899012)(13102899012)(4092899012)(5062899012)(2092899012)(35042699022)(3072899012)(3092899012)(12012899012)(13003099007)(7142099003)(54012099003)(8096899003);DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Feb 2026 19:30:59.7973
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 51a6ca8d-7775-47d9-2248-08de635ac2d0
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-AuthSource: SJ5PEPF000001EB.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LV5PR01MB9418
+X-MS-Exchange-Transport-EndToEndLatency: 00:03:05.9512876
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9564.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944490095)(920097)(811242)(255002)(410001)(930201)(20251009114)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?YOFoFBptYhJoUDJuWIwYGjOYeTi79CQNKqBhaH16Rvblj8y0h1W5SXTa36WJ?=
+ =?us-ascii?Q?T7uOdd/21rHX73CvDH2YMrE77QxuUUZuEgnExqQ5qAVSKnlD17REUyvJLI8u?=
+ =?us-ascii?Q?u6hV1eiVaiMqd1wUZ4FJw5HXNp5Mhf3xdFy1weCya+Bebjl4o1tzLpZjXHdM?=
+ =?us-ascii?Q?8c2OvYSAqfXo+uFIiaRpSIzGrZB63ZVDw3zlL9DBHOWEGgHk0AXTcTEBfoSh?=
+ =?us-ascii?Q?Iu60h9+q3ELn/v7WvoIkxf82V0xd+6DSCIvM/rievo8dx3sZuP4eYYWqldqq?=
+ =?us-ascii?Q?n7JxJba0UnJuQrD08mlNR3KbY480Yk44UeYT1k2YCR3/UyZYgOZqzCxsN8e+?=
+ =?us-ascii?Q?h0dFrdbaxeHV8kgeCvIFmU6+JypNHYNAgzGeRuXyccDAP53VuD22u+GM4N+f?=
+ =?us-ascii?Q?Z7YLEpOf0AMD1QTV8iYM3/I7ICZvQH5WE/ABstUSpbCL7x+XPdu+93dC0TfQ?=
+ =?us-ascii?Q?lymrdfwS8W13bAvShiK0QeYVDL37TI3aDQynHq1i/A2uk2RXWEPuat/I+qxP?=
+ =?us-ascii?Q?7bVG/maJuIkp1t7PwnDt+31RPDS17YCMpL1r/1Z+3nIK4/mISR9xjxuIBjJu?=
+ =?us-ascii?Q?qDr85IJ6nY6678v3089icThsH/CoJFsyXuKDKuDfF8eZ9MxAf0JmFpXkuSez?=
+ =?us-ascii?Q?a50DHagMiJ+DAEU/1xd1CQIdhb1NYuvPyj424TPYvqzf9cxdr/1r3C+2e2Ds?=
+ =?us-ascii?Q?Goqx29BCsiEmSOj06gxuPEdVOJyE10rzW2PTUwzqi/Z22oH9v0UZJzbS/TbY?=
+ =?us-ascii?Q?d2zfa1h+qEp268BsKipDIkgLf91LY/1aQGMwIaAh0rZ3MncRmfFHaC+ZK1aC?=
+ =?us-ascii?Q?zSyyE9DTkUTGV3MkB2pFP757/RDrqGLoVweX19SOIin5WJvtC91v91wRA6LR?=
+ =?us-ascii?Q?ktWxMnf9mxD1aIQiYu1GxkQ5qVLShv6DfxbT2dzIGwC9ng0wvFV54Z6M/tp/?=
+ =?us-ascii?Q?cBzpDe9EkvdSObEwl0pICNBYBgYZhKNJNyWVZPQQ75BN7hIBKkab+qHkfeFl?=
+ =?us-ascii?Q?qBiJ6tnZ5txK1LA2BQvzLXndp2eTTHsaNcpq4+n78YYy9y8BdAgLkbXMM+uW?=
+ =?us-ascii?Q?I5J3eHylXQ7h/safwXXd/viNNDh7+aFGcJjSlBDlKUiGmeqTwfj1mIAjHvfW?=
+ =?us-ascii?Q?fjMpgCEgg8RZs613ZjHEFSSO6LQpswThyxESt42onGLwGpkgxNub2HJW3Hk+?=
+ =?us-ascii?Q?UrVDo4LoJ3AF6ekAQuEbNTt/CwWISYW3MKLXYFjN9qeB9FFYbKPymJ4vu/1N?=
+ =?us-ascii?Q?UO8ATZRbYyyRJx+SRAtD0VlL+N05ZS9Y8LxgVqCJR2WmBD+1zHc4LEJGnsmO?=
+ =?us-ascii?Q?CFZzbXgrYt7eSMlyCsChtcdF+wqP0+5qtsygV1YFPOnVtB9kQy5zsdXeB4D1?=
+ =?us-ascii?Q?nwJv5nxFdN7b6mYjQ7QJAD1X/G1epJLU4MpqkTyKKiA9pNOtbPU+fR1SeUf7?=
+ =?us-ascii?Q?cqE3Dy16CT+3WG9lVHqcxSJIY79ARDeA/UFVQl2yvhoMPRdcpC+UxBBIbWiP?=
+ =?us-ascii?Q?Q3Z22Gs1LFa1wG7JP/5iOXoOOFxcTXDDakSEMO061ZDmAOrFtKhZl5m5IqNb?=
+ =?us-ascii?Q?BzMQb1byNX9zZu3CuwTGpw8R2hnoD9XW9qibgzO6usG97hcy0Dl+Q6D4PZi6?=
+ =?us-ascii?Q?dKP2dl0y/beXcnk8fDf0uuQGh9IOTC3GyIhdjyv1AycpLx6jtmkL4VOKoLkg?=
+ =?us-ascii?Q?tPgx4POPWbRGo5NuvKf43Pf70sLwcK0fuWytynYtW4EDxVy3tQ4ls2Td1gJR?=
+ =?us-ascii?Q?zV092em9r2Eel6+vWSunPUWdxxoDwCEVi96ah6heM8fKgFIerpc59B8b6vWZ?=
+ =?us-ascii?Q?i4Qg+xEIUKtA0x7/hNue11UoNiqxd7gCcqTTVosdBaeCfn4uNsdeP2tafKyP?=
+ =?us-ascii?Q?0z5G7AUhVO3XRTiwZcQBbzNuUsIk2OGlANqTLr5h/MENmFxBWdx10mmXSuqf?=
+ =?us-ascii?Q?DnL2mb2mYFybFDgapenrLLBNcvNekid2h2C0D/4VphGiHiAHtNrZG37/ewAZ?=
+ =?us-ascii?Q?sgta7OUuyfiFYsZHifttQCSpg5EIBRiQmSHoAOyC5mcFCUhrZro4AqcC1ArS?=
+ =?us-ascii?Q?pfA9OGhSXlAgjf3NTMRgKXmRWYTYYoqoofGBlhcUJ5XhA0TTSvfzNL8xrzqA?=
+ =?us-ascii?Q?fj4O3YR6PrpnaTaMpvS0yoyOFQjwOsB3tiH/jNYQuq9aqk2Gfke60jtUJ/y8?=
+ =?us-ascii?Q?bYfY2aIo5l5pFHnfVjwGx5uBQqanHDltN+fDJPDozxSeVbXRNkP3UP3jx4lT?=
+ =?us-ascii?Q?H5ZeUyeyNDD0pQNJZvl8LUmsgp/zLNW9zT7iXRfI+XJNAQFq8GifJCM5J8pw?=
+ =?us-ascii?Q?hC2g8sF+BC3EsLgxdArnQ2C/yKJQSKe3Gom2f92bKBzsIoJK6QpnHhY77Obm?=
+ =?us-ascii?Q?rtEAlYdkhSV96SglIQ+ZvVObMvIIvwTuXO8cQ+6SmcMw6JXO34kGvgBm//L2?=
+ =?us-ascii?Q?36DbuWa+7BeHfYaIReFu8rZJ/9WT0hB4aEkhbzBAr95ALUoFXweBD1ZqUAlX?=
+ =?us-ascii?Q?x62IUtSSP0jpI3ASgz9zWaRxsYueJqR8jlufgY0+RJofbgMMtg5UjZ2pS0DK?=
+ =?us-ascii?Q?V3TuJVToPa0kp1YNFUrwJV3owJtvAYPzvMqv9+cl4RvuPleMuQi6O53T/wyI?=
+ =?us-ascii?Q?I4jAfqMrWOe8QBaYHPya4KlYBk2gUkV5R3r7hDjV1YZ2HjrbKLFfJgcI8Vh9?=
+ =?us-ascii?Q?A72IDYm48dyLzb8KYWUuG0dch3zYrNlJOZ6yooWIj5loaV02/o0ow9El/4NY?=
+ =?us-ascii?Q?nd/xcaj5ZdPsqsgrLXze3ckBWodP+dSuQT7VMoymOdShpLshRzhyLG1nyKg1?=
+ =?us-ascii?Q?MmJaav6ciK96g2RfuQVE4911yBWEs6yOmQCR3AewsUxq9awdbm15KVemcS3M?=
+ =?us-ascii?Q?ocA461YR+LYhfV8kIaM/WPArt+TpP/ss40qveqMVpME5AyM9NnTvXIw8AnUr?=
+ =?us-ascii?Q?qZGPfQCkvsUA+EwjLG+WRw=3D=3D?=
+MIME-Version: 1.0
+
+--_000_BYAPR13MB43258154EA167F376F92C491CC9BABYAPR13MB4325namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+OFFICE OF STUDENT ACCOUNTS SPRING 2026 REFUND PROCESS BEGINS
+
+The Office of Student Accounts has begun the Spring 2026 refund process.
+
+Due to federal regulations, if you have Title IV Federal Funds (including D=
+irect Parent Plus Loans, Subsidized and Unsubsidized loans) that creates a =
+credit on your student account, that refund is required to be refunded for =
+the term in which it was paid.
+
+If you have a prior balance, this may cause a hold on your account. Please =
+review your account and make payment for any past due balances.
+
+If you would like to use your refund to pay a past due balance, payment can=
+ be made through your Banner Self-Service portal at my.desu.edu<https://my.=
+desu.edu> > Student Services > Hornets Payment Portal.
+
+Important Note: DSU and/or Bank Mobile will never send an email requesting =
+students to verify account information electronically. If you receive such =
+an email, do not click on any links within the message and report the email=
+ as Phishing. Should you accidentally click on the links within the message=
+, contact IT at your earliest opportunity and ask that your password be res=
+et.
+
+If you have any questions, please contact the Office of Student Accounts at=
+ 302.857.6240 or studentaccounts@desu.edu<mailto:studentaccounts@desu.edu>.
+
+
+--_000_BYAPR13MB43258154EA167F376F92C491CC9BABYAPR13MB4325namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body>
+<p dir=3D"ltr" class=3D"MsoNormal" style=3D"text-align: left; text-indent: =
+0px; line-height: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 105, 170);"><b>OFFICE OF STUDENT ACCOUNTS SPRING 2026 =
+REFUND PROCESS BEGINS</b></span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">The Office of Student Accounts has begun the S=
+pring 2026 refund process.&nbsp;&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">Due to federal regulations, if you have Title =
+IV Federal Funds (including Direct Parent Plus Loans, Subsidized and Unsubs=
+idized loans) that creates a credit
+ on your student account, that refund is required to be refunded for the te=
+rm in which it was paid.&nbsp;&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">If you have a prior balance, this may cause a =
+hold on your account. Please review your account and make payment for any p=
+ast due balances.</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">If you would like to use your refund to pay a =
+past due balance, payment can be made through your Banner Self-Service port=
+al at
+</span><span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; fon=
+t-size: 11pt; color: rgb(149, 79, 114);"><u><a href=3D"https://my.desu.edu"=
+ data-outlook-id=3D"4b5ab0a7-4d95-43dc-88e6-8343eef9eb09" style=3D"margin-t=
+op: 0px; margin-bottom: 0px;">my.desu.edu</a></u></span><span style=3D"font=
+-family: Arial, Arial, Helvetica, sans-serif; font-size: 11pt; color: rgb(0=
+, 0, 0);">&nbsp;&gt;
+ Student Services &gt; Hornets Payment Portal.</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);"><b>Important Note</b>: DSU and/or Bank Mobile =
+will never send an email requesting students to verify account information =
+electronically. If you receive such
+ an email, do not click on any links within the message and report the emai=
+l as Phishing. Should you accidentally click on the links within the messag=
+e, contact IT at your earliest opportunity and ask that your password be re=
+set. &nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"text-align: left; text-indent: 0px; line-he=
+ight: normal; margin: 0in;">
+<span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; font-size:=
+ 11pt; color: rgb(0, 0, 0);">If you have any questions, please contact the =
+Office of Student Accounts at 302.857.6240 or
+</span><span style=3D"font-family: Arial, Arial, Helvetica, sans-serif; fon=
+t-size: 11pt; color: rgb(149, 79, 114);"><u><a href=3D"mailto:studentaccoun=
+ts@desu.edu" target=3D"_blank" title=3D"mailto:studentaccounts@desu.edu" da=
+ta-outlook-id=3D"a0354fc8-cceb-4cdf-ba5e-733abd67a86b" style=3D"color: rgb(=
+149, 79, 114); margin-top: 0px; margin-bottom: 0px;">studentaccounts@desu.e=
+du</a></u></span><span style=3D"font-family: Arial, Arial, Helvetica, sans-=
+serif; font-size: 11pt; color: rgb(0, 0, 0);">.</span></p>
+<div dir=3D"ltr" style=3D"font-family: Aptos, Arial, Helvetica, sans-serif;=
+ font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+</body>
+</html>
+
+--_000_BYAPR13MB43258154EA167F376F92C491CC9BABYAPR13MB4325namp_--

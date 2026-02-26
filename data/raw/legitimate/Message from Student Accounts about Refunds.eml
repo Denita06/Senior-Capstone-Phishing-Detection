@@ -1,0 +1,294 @@
+Received: from SA1PR01MB8373.prod.exchangelabs.com (::1) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Fri, 29 Sep 2023 20:16:38
+ +0000
+Received: from SA3PR01MB7942.prod.exchangelabs.com (2603:10b6:806:315::14) by
+ SA1PR01MB8373.prod.exchangelabs.com (2603:10b6:806:385::14) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6813.20; Fri, 29 Sep 2023 20:16:19 +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=pass;
+ b=T8WKqmWgiDl+jDjfL4w9kX/VnPUzZoymarnAsiBJwELjz6SbfcwG5CB7NO62JS8yVC3kwKQfnNp52VqdJJCXhGt09wZCCPDrBlJYm+VT78DP22eRImJR/OcA2OzOj2Kn+A9Mar5UTzlLd0SMdsuCIu2MgQS+NwEAeLiZvnDYllv0V7q8h8zSLEZ6j5mB9QEbATPYQL0oNlcbDkI5qJu5fahwkUGFYOLpTRhJQGOotA35y/CS+6+G3bm0FqzP4nuBdRaPLkFKcdR1plu61bCynSFSIag4FAt3VGzrcujVP/S8pdT0UIzUYb/BP/poQkwBeU8uedvCBM+SX62zqXsTjw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=ExkAf0X/4xNtGJPRCtRa8cOa4iSfjmb+YZLPIcu7UbU=;
+ b=Ddv1ibwUeFTzL6NwlMQ6cVuCjnmMKyWE0tM3tBs3jPjgB1T4Kn5+1ohT6KhGQWiMkkey53C374iUb8HlSG4OuvgSScC6s0whYexCRHq05b0GotvELqtSpDQWKMIePW+0NoFrjE3bYMnxO/AIzm1kuDrIlbo1/bFm3c+y6NvDtcDjLIn0rBeNYeRwYvQLZ9ycvd7gGG3ra6stl2KrvKTTiUmnwYGB7QtzEa5VhqRVU9GNv16J+BzpqY3+rmTll40f8t5O9dPulRNUNkoArMB/lKpSth3vV1BQVUky0vv1RJr3w/3fP516kXlGIbXVlgonUVxT35HfRMqajl9LKdIMcw==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 40.107.92.67) smtp.rcpttodomain=students.desu.edu smtp.mailfrom=desu.edu;
+ dmarc=bestguesspass action=none header.from=desu.edu; dkim=pass (signature
+ was verified) header.d=delawarestateuniversity.onmicrosoft.com; arc=pass (0
+ oda=1 ltdi=1 spf=[1,1,smtp.mailfrom=desu.edu] dkim=[1,1,header.d=desu.edu]
+ dmarc=[1,1,header.from=desu.edu])
+Received: from MW4P222CA0013.NAMP222.PROD.OUTLOOK.COM (2603:10b6:303:114::18)
+ by SA3PR01MB7942.prod.exchangelabs.com (2603:10b6:806:315::14) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6838.26; Fri, 29 Sep 2023 20:12:00 +0000
+Received: from MW2NAM04FT019.eop-NAM04.prod.protection.outlook.com
+ (2603:10b6:303:114:cafe::2f) by MW4P222CA0013.outlook.office365.com
+ (2603:10b6:303:114::18) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6838.26 via Frontend
+ Transport; Fri, 29 Sep 2023 20:11:59 +0000
+Authentication-Results: spf=pass (sender IP is 40.107.92.67)
+ smtp.mailfrom=desu.edu; dkim=pass (signature was verified)
+ header.d=delawarestateuniversity.onmicrosoft.com;dmarc=bestguesspass
+ action=none header.from=desu.edu;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of desu.edu designates
+ 40.107.92.67 as permitted sender) receiver=protection.outlook.com;
+ client-ip=40.107.92.67; helo=NAM10-BN7-obe.outbound.protection.outlook.com;
+ pr=C
+Received: from NAM10-BN7-obe.outbound.protection.outlook.com (40.107.92.67) by
+ MW2NAM04FT019.mail.protection.outlook.com (10.13.31.129) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6863.17 via Frontend Transport; Fri, 29 Sep 2023 20:11:59 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=a84SswQBVHJgGK94UG3HDHhHVXnpKnNOwE2pqFR2u5PVGwOBR7jPoVIIyK2ufyCiQLRIf9C2ZHWj6p7oE1uftoEyfPxdO2ssTDqzVj5xmokI/32zeCMBDSMqNOYaMVoJPtoDycnHN+Ku+WqnvYgUXodBo050UzESVKe90l04nNp9AvvmVLO2o4+Gm99v8+Ruj0lACNh91t/cm7XGT0E1BBiehmsg+rOCtETgQcIDwXGMM4pX7bFGQXHfMNagyUCbLWEyaintJNirvthho2wCy28JCvoUmMKrPB0/MYjElydgzExsDsMSOZ9XYPZO67wn42mvF47+WENp81eFlE+vZQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=ExkAf0X/4xNtGJPRCtRa8cOa4iSfjmb+YZLPIcu7UbU=;
+ b=cIA4SLeXoYm0nc4zSioeuYq+usBEPZUvNpFDTpG0Eaz64MDeERKMw5n0u00IgQksjL8jCqqi2yVXWQ4GC7hag8l7HQNy5Sb92mt4G4opyoHXJ98JVmBtfXq7D/nln7N0ByM6ZDHLbBWpDlIoRjiRr+HYv6BuvKyXVBETnzklOyUCKsNDJBSbHzG/XDxfrRHLuZspJkZGJYqHy78GR9mlUNtD9j/xgvx67UIfcteTmZ1AUWL0jfFVmIXIb8jxmh9PuBuVSiHTTISoFmOxNkg7ro95kwhPXeLwiOJK6tj/aRkRqPOluOE6QGfsW3kJl9xMk5V7K9kGDMZ/mdt0rrJ69g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=desu.edu; dmarc=pass action=none header.from=desu.edu;
+ dkim=pass header.d=desu.edu; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=delawarestateuniversity.onmicrosoft.com;
+ s=selector2-delawarestateuniversity-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=ExkAf0X/4xNtGJPRCtRa8cOa4iSfjmb+YZLPIcu7UbU=;
+ b=m2/fxN7UcmxImqZjyvpm+N2n6wC5Orl9+YGnJ9wwu7qZVfmLqyfafBTMzKqDwFhJkI+NTfy3ZO2dsaGKH4TSX1wdke2HN640xHaWL29iJcUequnT+qn9yi/ayKNH9Sop50rjBKRe5agVsJsaE+Hb9l4pry/DqiXICF6Ep9OMO70=
+Received: from MN2PR13MB4336.namprd13.prod.outlook.com (2603:10b6:208:fe::11)
+ by CH3PR13MB6439.namprd13.prod.outlook.com (2603:10b6:610:19a::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6813.28; Fri, 29 Sep
+ 2023 20:11:57 +0000
+Received: from MN2PR13MB4336.namprd13.prod.outlook.com
+ ([fe80::9ffa:4e45:948b:720b]) by MN2PR13MB4336.namprd13.prod.outlook.com
+ ([fe80::9ffa:4e45:948b:720b%4]) with mapi id 15.20.6813.027; Fri, 29 Sep 2023
+ 20:11:56 +0000
+From: eNews <enews@desu.edu>
+To: "'students@students.desu.edu'" <students@students.desu.edu>
+Subject: Message from Student Accounts about Refunds
+Thread-Topic: Message from Student Accounts about Refunds
+Thread-Index: AQHZ8xEyXBI7W2TS/E+Zeumzbn9gsA==
+Date: Fri, 29 Sep 2023 20:11:56 +0000
+Message-ID: <MN2PR13MB43363B400C42ADA812B1B035CCC0A@MN2PR13MB4336.namprd13.prod.outlook.com>
+References: <BY5PR13MB34902E54C4A204CC26AA5758D2C0A@BY5PR13MB3490.namprd13.prod.outlook.com>
+ <BY5PR13MB3490E77F7D8ED185A8CC7A14D2C0A@BY5PR13MB3490.namprd13.prod.outlook.com>
+ <MN2PR13MB4336F94B0D49707F5F92ADC6CCC0A@MN2PR13MB4336.namprd13.prod.outlook.com>
+In-Reply-To: <MN2PR13MB4336F94B0D49707F5F92ADC6CCC0A@MN2PR13MB4336.namprd13.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Authentication-Results-Original: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=desu.edu;
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-traffictypediagnostic: MN2PR13MB4336:EE_|CH3PR13MB6439:EE_|MW2NAM04FT019:EE_|SA3PR01MB7942:EE_|SA1PR01MB8373:EE_|BL0PR01MB4161:EE_
+X-MS-Office365-Filtering-Correlation-Id: 35193dea-f874-4f2e-a0eb-08dbc128563d
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original: fxqRwTyzvr/HrMm+OQKAU5xW4g8Zj7+fQgy8zeILHAECXBoDT6C44oQxSg5j352DPA49h/+3WyH+XwNC8GMjsNPm3fz6MYPxPf4yiXA91elyPeeqDinDphHpK9vPapvvbdsCu72aZ1jlhWMrd3nJcGkxI1dkoS3Ob7V0N2kAMGRaamTWyZbbD+qi2oYSiicKdJI7ClXh9nK83QKNhkzhu0/YX16aOdDsv5XY8Qxd1yVxzPQvlpHKcL6Yk0Y2Ny7alpPl3zTDpqdqDdpX2i23k1HZCxEfzAc+cb4RCpR6oP7H6p4E5TdZu+KuxodsRy3vVZ6X8B6NBdKTv26Ay1zZZnu8ALZLCIJc+lwGR7yGLanmeDZePggCoEGubHHusBy6PwjMN+fZSH26GmUjqWLYZy895ZTBK3WFTsNr5xVfk9UI/bDXUslzewcKX7Bxsk4M4b8M+yfNVWrLWY4ogcawCqGGGvdCEcYVPwxTSgS6qTIKydqj6Xf0Mp52xJ/fGHdoymFMzjbR5lfw4dzRdVGuisN3ZAARX3JHllJFWZKLqmTB4W6WyoP+PwqjjgUeR4TYeh8k5Z0/90jdyXKRFm5NFyWA5/QCvfsy4KVUcI7PuL5VGrkqreUjH0BJec2PgYDY/r9cAlxl1iZXA34Ojbz1oTTDYwXBkF7e/+CSZz7sdjVOyZfg1xUUSGrMslKYAGd5SapHiyeYYs9jRGnaakyhrA==
+X-Forefront-Antispam-Report-Untrusted: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:MN2PR13MB4336.namprd13.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(346002)(376002)(396003)(39860400002)(366004)(136003)(64100799003)(451199024)(186009)(1800799009)(2906002)(40140700001)(33656002)(86362001)(55016003)(75432002)(5660300002)(6506007)(66556008)(26005)(52536014)(66476007)(76116006)(296002)(9686003)(478600001)(8676002)(66446008)(786003)(41300700001)(7696005)(8936002)(6916009)(64756008)(66946007)(166002)(38100700002)(316002)(83380400001)(122000001)(4744005)(38070700005)(71200400001)(2940100002)(15650500001)(11970500027)(491001);DIR:OUT;SFP:1101;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-Original-0: =?us-ascii?Q?cLUcBBHcGyw/vpDt6WBPaa9k4sbW+vlpPQ/nkFp4PfGA6mdBgSg+JXm35ka9?=
+ =?us-ascii?Q?xCxsaDaC+wW2sOSAuNP0LFT0lpPZqQww+qi5gwnaYt+9zL6je5szhvUxPj1x?=
+ =?us-ascii?Q?O/B5Ymcrp6jdWfEUzVr5Oy0JFJ/bwENMRMA1s0xEN7meCQb1ljWBod6MWIEU?=
+ =?us-ascii?Q?5KiCDsEEtQfvONIZ/JayVkYX3+jUCXy44MF4+Ek6S2bR9Kv7Q9krz1ElG9pd?=
+ =?us-ascii?Q?HrCNwrreSQT8vlO7OiJwAyKZX05wYELcH+u4sSEVr0h8uxFyKjuBWFvOUrvZ?=
+ =?us-ascii?Q?Vml8IdZjDaTw0giEDrPSnyTPqtJFqeafnjcK5dRdE4QUzgt0V2Dtm7fenHnF?=
+ =?us-ascii?Q?6aawESu6ilVvyfSiPt6HP9W7moUGqStAzBuWpQITb8Bbr9wq/jPy1F9/p+yc?=
+ =?us-ascii?Q?Tg4H9e7GY3h3yOsF6pXnjE4fT6UmkI6BoS4Gt27IiHD/RxGcMcmofxZ3HVss?=
+ =?us-ascii?Q?0Y251hqXDTsITkn1iVCpLoM14Tazx57WZNXoJondcXdZvuDCwtMy9+l4vH2d?=
+ =?us-ascii?Q?8Pn4zmlXMoo4Ls5lK8yZUSMS11VgndbGQsuKgNGB0B7vI2NsjnJDD2PK4gbU?=
+ =?us-ascii?Q?4jnnUkLVsiW+sN4AhtNMQjsnalyKJ9C80hz3imG3iyES6PReu65WBwbPEGcs?=
+ =?us-ascii?Q?BRpm2DS8kcnOUsRJ9eGdfBc+ruX6qrKhOoVB1QkI8gsk4BcfsoEYDFiKaoTs?=
+ =?us-ascii?Q?P+d0h8wzGp0lsTDjPTPkJquDrsXMobISduoPi4YjoD8PHyJWuQoiegNE060s?=
+ =?us-ascii?Q?kfB1o6fUkPxKfjntJgEzhO8PWMpuTEJOvugr5NkAGLrAfgnS4QeZrUkmrFNK?=
+ =?us-ascii?Q?qtvGsdaL1kH/4+0x/abngyzNOEXP6chwU0/5SX7Klfxr2EbL1sNykRq3JVqd?=
+ =?us-ascii?Q?c1rDl7Yf0wEDF/Pf1yhqVVMW7TdHPcLuGV5WLtGIJQ8gnMNmEchKgP1j2bHh?=
+ =?us-ascii?Q?3hFgi5Xl2bhWR6Ez9T4g1xLx1SkUo2XNTfvpvFdRPfbtmdM5v49yuilHpAON?=
+ =?us-ascii?Q?adfSQk0HgTBCaBIMGOXiL9h9aWNcUXYlt7AlxJFyibNbZNt7vOoEcAlIWk1y?=
+ =?us-ascii?Q?Zu139lQqGdNSsc6iM8PVH9bQWsjDawub/0jFtoNTmUCpylnRdzvBEvKwT0XF?=
+ =?us-ascii?Q?EZa73fxUVmNggVNLWF6fColQpzdbGNtCD2Vs3yYX7GQCzfDTmYQRJlpTTb1X?=
+ =?us-ascii?Q?IsddqvzI3/EBWhvn1xoft9imciV29XiHJnKjDFf8Wr8LS9EUuW/9PKayDEMA?=
+ =?us-ascii?Q?c6YhqlUHAVtOw98L0OA9He8/9W6n1BjwxCHx0P/ID9Exn5iywtIeLwZMoftb?=
+ =?us-ascii?Q?6Xv0MtA0hJTM0ltlArHnuZNRVgHywnxPW9J7ZUL+SHBTsFm6Eo8PCUVS57E/?=
+ =?us-ascii?Q?ObFBfXr8QNSdISgyOG6kYAG08NpbDTFUxuvL3jug5bZ9bcE23yfw5upQY3G+?=
+ =?us-ascii?Q?vJluxKaUO2KF4dOATR2913JWXJJ4+xhfANaIre3HKATqrDVPAPm2dTORVhuH?=
+ =?us-ascii?Q?yZB2EuOVXmGM+zSinuoRE1FuCSp2CXxv4Jb+Y4jV29heAJWqy5C4L0CPiZF0?=
+ =?us-ascii?Q?z2dMoZLBX6UjnHHxRwk=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_MN2PR13MB43363B400C42ADA812B1B035CCC0AMN2PR13MB4336namp_"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR13MB6439
+Return-Path: enews@desu.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Sep 2023 20:11:59.2789
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 35193dea-f874-4f2e-a0eb-08dbc128563d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: MW2NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: MW2NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 43f0649c-eb7c-4063-940f-08dbc12854c7
+X-MS-Exchange-Organization-AuthSource: MW2NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-LD-Processed: cce03e76-6214-4113-9961-c1c0feb3a60b,ExtFwd
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:2;
+X-Forefront-Antispam-Report: CIP:40.107.92.67;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:NAM10-BN7-obe.outbound.protection.outlook.com;PTR:mail-bn7nam10on2067.outbound.protection.outlook.com;CAT:NONE;SFS:;DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Sep 2023 20:11:59.0914
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 35193dea-f874-4f2e-a0eb-08dbc128563d
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-AuthSource: MW2NAM04FT019.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR01MB8373
+X-MS-Exchange-Transport-EndToEndLatency: 00:04:39.7343957
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6838.024
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?r55EJIyZrIH8IbV6XMqUJMfrJp/7t0BJ0GoBc1S9dAxiVYfBr+D2xSID8pcw?=
+ =?us-ascii?Q?TXN0rlgiC3xtMIv5XNlnhIBuN/YVrEHH4UkJG4TQXbjdWiw3lju2r8UqGRNK?=
+ =?us-ascii?Q?KmF5obwsO+B+6SCv1Tz6kQ4EAlgh3QWk1whPB9VPV0LEIVCQzF479cWb+TEK?=
+ =?us-ascii?Q?OuUdPijDLUFARhZUDtc6/iTF6SgbXzsQXfi5Bd3bYMATvIdSDGwklSDBFMXf?=
+ =?us-ascii?Q?8ir3QqwyuyuddLyoSQMAvXz5bO4D9Df/4Mqqzf8afQdIHbm0SGpZUFZBzl7P?=
+ =?us-ascii?Q?Bk+Y38d7hjaLAzj8ttOVBgOjfeNu0rZuoCFHu+BX54KY38brPdbE8Uyms92s?=
+ =?us-ascii?Q?IDHQh+IhEMkdvQooYZfpi3vnKnvtYyCdhUCo/aUr5EYWnK2xqM41L034s9Hq?=
+ =?us-ascii?Q?gBbBzS6h+xAVWSAbG8Rb1R/IwLnNAddHQFhAPr36zyGmVnp3x9sUdjqmK+3U?=
+ =?us-ascii?Q?vfx5FMyEjMEcselXjU6N322cAikfCL/c1kod345u/G2jFLaIeYteer1649Wb?=
+ =?us-ascii?Q?tkLhEWnIfYx8GK5nqoumIroM0pecwx/0W/62dcvHmr12K+sz6WG+DmdqxV5n?=
+ =?us-ascii?Q?OrtrIVTP68BhnRXU+xbHnmmc6QGNkH8/BGNOYPPLJDfLH5INp7Rx4pdLmZb8?=
+ =?us-ascii?Q?LSE6lWiVc/18v6IVHKW7CPcVImdJkPh4YNFp17W98riMVfHFHbF8jHWs2qdJ?=
+ =?us-ascii?Q?0ccy6KEpF7AupUX0y8Q/eKoPVy4fO3QQZPlgrun4obj43dMV0bWDNP15vx6H?=
+ =?us-ascii?Q?vfY6xPq/YEvziUCshN6uzyaHHOZ2gvghgMqOyARUyFN0n8L3ZB7JSs/WTkJo?=
+ =?us-ascii?Q?vreiccpCU1rByrCbwJwlfoZVvzfO57iDr1lM69uXrVaotBxceKPvzsoRt03l?=
+ =?us-ascii?Q?2WSqlPptQAJ/RbeJur9NReXV6tzDZXq/vyr7+JmvaWW7038SOC4JNG39YtwY?=
+ =?us-ascii?Q?9VrZCu43XT9v+k9ckRot0TX5PnbV3XGEAWV98qHtvPF1sArWCkzvBGZx5lCn?=
+ =?us-ascii?Q?d3LndtPN4CPsyTvdz7wZ6taRW5D7A/5YCDUs3KcRucrw2kJob/aDVVLLC7v+?=
+ =?us-ascii?Q?uPAD51W69xqlXK5VtkG+uJjQD1g9MnynHZakZ/77DtOBWL/rfLEIpmT0lwHV?=
+ =?us-ascii?Q?1cBgBeTI8zNF/mJVWuoBt4qwzeL9JnUcfCNR/3/AhTL7s/6giIA6usvuuzt6?=
+ =?us-ascii?Q?VJ9ItDykfGFHGB+e8PZD6X8hfLryl9Y2qnv3kq89MFpedRSUBT/0j2zKH8R1?=
+ =?us-ascii?Q?vb5kfHzRH5xkk0LNOxDmgjvqn7CBsnztpczUz9b1i0GDFBaj4XYTci9XvImn?=
+ =?us-ascii?Q?yKT6QW+Mqi00zbHZd5A6fheiWXE27n7k+9DJLB3MEdw8AOF5mxAP9XlYDdwt?=
+ =?us-ascii?Q?f39zmVFAlDc83jzFeTpgKnxSOWnKFaGYOSNCwDqvhatrET7kMTmfobYetVa6?=
+ =?us-ascii?Q?N7dBjwWUfwFLWST/DTZee2qpT82mG7LW7ppG3dItcWng/RQVQ+tCk6C74DEa?=
+ =?us-ascii?Q?3rneWjRhksW3WrwKcRXmYGy1ITEOHlJQWb8kMNDL5cILQgV8PTBNcWTlszQQ?=
+ =?us-ascii?Q?2tykEI6fzptdpxHEArLfMiCiGWVsDLN8my7ZCCDsjPj+k+gnXZiZ1OhSRKtH?=
+ =?us-ascii?Q?n9cKibqVcD1Twfp2OGV3YfxtwZUM/NYlZvoDfQCf+CiiPSyNSJdi1uAmpRzz?=
+ =?us-ascii?Q?UPy7qGvU6gPxf3yALGlqkkaOcZGuWSK3TjAiGqArc4+Xr2LEeHttTE7mdWbR?=
+ =?us-ascii?Q?Et/QnWD2XjDRco8DhIRy2CuNEgGCrx58Ke+Q2kNmx+MVw3iStLZBjpp6IeWQ?=
+ =?us-ascii?Q?q8rX4nSfrkuW2C0coAznHn8Rd5LfBBUob/sJlrcDwtvB5Lmf7gHo4dyQXh+o?=
+ =?us-ascii?Q?jYD3/DO65uhnIcYt+g=3D=3D?=
+MIME-Version: 1.0
+
+--_000_MN2PR13MB43363B400C42ADA812B1B035CCC0AMN2PR13MB4336namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+MESSAGE FROM STUDENT ACCOUNTS ABOUT REFUNDS
+
+The Office of Student Accounts has begun the refund process. Due to federal=
+ regulation, if you have Title IV Federal Funds that creates a credit on yo=
+ur student account, that refund is required to be refunded for the term in =
+which it was paid. If you have a prior balance, this may cause a hold on yo=
+ur account.
+
+If you would like to use your refund to pay a past due balance, payment can=
+ be made through your Banner Self-Service portal at my.desu.edu<https://my.=
+desu.edu/>.
+
+If you have any questions, please contact the Office of Student Accounts at=
+ 302.857.6240 or studentaccounts@desu.edu<mailto:studentaccounts@desu.edu>.
+
+--_000_MN2PR13MB43363B400C42ADA812B1B035CCC0AMN2PR13MB4336namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+span.EmailStyle21
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.5pt;font-family:&quot=
+;Arial&quot;,sans-serif;color:#00549A">MESSAGE FROM STUDENT ACCOUNTS ABOUT =
+REFUNDS<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">The Office of Student Accounts has begun the refund p=
+rocess. Due to federal regulation, if you have Title IV Federal Funds that =
+creates a credit on your student account, that
+ refund is required to be refunded for the term in which it was paid. If yo=
+u have a prior balance, this may cause a hold on your account.<o:p></o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">If you would like to use your refund to pay a past du=
+e balance, payment can be made through your Banner Self-Service portal at
+<a href=3D"https://my.desu.edu/">my.desu.edu</a>.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.5pt;font-family:&quot;Ar=
+ial&quot;,sans-serif">If you have any questions, please contact the Office =
+of Student Accounts at
+<span style=3D"color:#333333;background:white">302.857.6240 or&nbsp;</span>=
+<span style=3D"color:#00549A"><a href=3D"mailto:studentaccounts@desu.edu" t=
+arget=3D"_blank" title=3D"mailto:studentaccounts@desu.edu"><span style=3D"c=
+olor:#00549A">studentaccounts@desu.edu</span></a></span><span style=3D"colo=
+r:#333333;background:white">.</span><o:p></o:p></span></p>
+</div>
+</body>
+</html>
+
+--_000_MN2PR13MB43363B400C42ADA812B1B035CCC0AMN2PR13MB4336namp_--

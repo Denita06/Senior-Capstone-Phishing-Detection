@@ -1,0 +1,228 @@
+Received: from CO6PR01MB7482.prod.exchangelabs.com (2603:10b6:303:142::12) by
+ BL0PR01MB4161.prod.exchangelabs.com with HTTPS; Fri, 6 Feb 2026 01:37:17
+ +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=kW6MTQ8HzgnHOS8alnE+oU9e3Fk5ocshquRQKJ6S1FbXgbVIjjpFL5qm1LkCBaDAOCxlp9ogjUAJ094YCY7eUpYiHADkf/mSuCP5RpklGF3h53hNDcrr06q4f0ag972RYvChhKBa1bP72JIb6Ei4PWrT63bujPKFafpSwDWQIkkVutnLyKnvyAOkFz08JdxLQ1aESIp4XaIT1b547MXL1vX9FnGgUzWCLodAchAzGG1y/lAP2LnV5ay1hdaWFWvN0GJD90ZxVD6r9FJnDbokMdQhPXPJGno0zq5EUtcdkHCGs/El14oeDMXIT9+p5rqk2touNyEJvyBDwDUcGWXe9g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=N1ZM5eL+mO62L3gl2+nfZyZczZ/T/0OF50wXXM583dg=;
+ b=YMjxOOhlz81iytWyngVjKhg8EwE9oEi+iPyi4zKEJvnZ6Y2JDFSK1p5arxe9H3xhjEOJsrGNgn3/09u8j8EseXHGo1PtfMK54CR0+ydROsx6vTZCaUKFvPbM2V4D2aDH1KKsY0TIJGGvk7OTRKneRNt/R22PfYip5wSFlW8wQIU1pYqzsrEopdZTxKavWEJNmW2krXNe1IIgLNCB2cJ3aTzuXRcxjY//gzjiFZdvaifb7Qr0cB/bHGngpOpVNTDXIgqNSGptHnR4uznowUU3FhTkD2aa4FNVGc8R7xrRS9zS7M4a79QDWiREYWAO47tkPpEXj2h2+gfdUAd0s2p5Bg==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:c112::5) smtp.rcpttodomain=students.desu.edu
+ smtp.mailfrom=desu.edu; dmarc=pass (p=reject sp=none pct=20) action=none
+ header.from=desu.edu; dkim=pass (signature was verified) header.d=desu.edu;
+ arc=pass (0 oda=0 ltdi=1)
+Received: from BY3PR05CA0050.namprd05.prod.outlook.com (2603:10b6:a03:39b::25)
+ by CO6PR01MB7482.prod.exchangelabs.com (2603:10b6:303:142::12) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9587.15; Fri, 6 Feb 2026 01:37:14 +0000
+Received: from BY1PEPF0001AE1D.namprd04.prod.outlook.com
+ (2603:10b6:a03:39b:cafe::56) by BY3PR05CA0050.outlook.office365.com
+ (2603:10b6:a03:39b::25) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9587.15 via Frontend Transport; Fri,
+ 6 Feb 2026 01:37:04 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:c112::5)
+ smtp.mailfrom=desu.edu; dkim=pass (signature was verified)
+ header.d=desu.edu;dmarc=pass action=none header.from=desu.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of desu.edu designates
+ 2a01:111:f403:c112::5 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a01:111:f403:c112::5;
+ helo=CY7PR03CU001.outbound.protection.outlook.com; pr=C
+Received: from CY7PR03CU001.outbound.protection.outlook.com
+ (2a01:111:f403:c112::5) by BY1PEPF0001AE1D.mail.protection.outlook.com
+ (2603:10b6:a0f:fc02::16a) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9587.10 via Frontend Transport; Fri,
+ 6 Feb 2026 01:37:12 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=rjrudZ33ezNMhPUMiH3WVyW6LagIcl76d3c7LVooHXuzdJDvoQouGGDzEskV2QIacaOM1sma/aZpNv6U+9v3RpgIHbjlXWqeCCOJUmxtDgIkJVE0kBfJ/MC8dGSfbj6O98mz0LRaf09Kd1wjejMy9PbtlcgLhiaJz+aZi35o9t8bjnQR19qtbuqOAwrwH+OmLeheSujC2wN1Lgq4qLdv3RMMPp85ihX8KlPHrj3A069BdllNRc+4U8T6r5yRQCjh8l/VU8frOzEZ4omtfFybifHfQv07yyMtCoZP2Z6/e5qqJavJBnkJO2J42s4O7SKyYFhj3SW25mzUvjqFxX1YFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=N1ZM5eL+mO62L3gl2+nfZyZczZ/T/0OF50wXXM583dg=;
+ b=lXp9hToIE3ynp7NGdaU9Yj+8D2iEItqNt5iDxb0jO+pErpkbLGnOuTkY7t3N7CNkZAXad8EIIYtUqWMbSSIFYAA9aKK2+BwhZaws8OgfPl3YxCTOcPKEwar7yNYHAo2SK+wAMlWa6Q0w7UH/ENWhPb9KXloDC3rmlGn6yuCIezOOHlreC9HJnFa8ptCOnmnJuDDGEY8I0ZLsMCnbX/CcPK1ZGubBowJRQLpMBZBi9mc4tJDuu008Xa0Aooj20j6sV5RVhnRHHS+dvQBTCyZ1Dzf8Pns4FzM3SsXX+NKpmaj3JrUUUjNhWTduZFhDfaVBVyPQqieplgN4YdSTmvdv7g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=softfail (sender ip
+ is 216.228.143.87) smtp.rcpttodomain=students.desu.edu
+ smtp.mailfrom=desu.edu; dmarc=fail (p=reject sp=none pct=20)
+ action=opctreject header.from=desu.edu; dkim=none (message not signed);
+ arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=desu.edu; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=N1ZM5eL+mO62L3gl2+nfZyZczZ/T/0OF50wXXM583dg=;
+ b=FYyn+3NwKlWP/j9S4aVfR+hgl+3CLKAQXcRVZ2TXP5/nsADZdgryM1JPwGHCo6eaTCZVOmWETFlanpYd7ABJFAcHT+0LwGcfGv10+OBwvPVT1WI/4phUEKdSArPf2AwWTEem2bZtu4vlQgJOSQdLm+EBlDBtIBrWjne79Eo0V6M=
+Received: from DS7P220CA0061.NAMP220.PROD.OUTLOOK.COM (2603:10b6:8:224::12) by
+ CH3PR13MB7022.namprd13.prod.outlook.com (2603:10b6:610:20c::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9587.13; Fri, 6 Feb
+ 2026 01:37:03 +0000
+Received: from CH3PEPF00000014.namprd21.prod.outlook.com
+ (2603:10b6:8:224:cafe::c7) by DS7P220CA0061.outlook.office365.com
+ (2603:10b6:8:224::12) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9587.15 via Frontend Transport; Fri,
+ 6 Feb 2026 01:36:58 +0000
+X-MS-Exchange-Authentication-Results: spf=softfail (sender IP is
+ 216.228.143.87) smtp.mailfrom=desu.edu; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=opctreject header.from=desu.edu;
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ desu.edu discourages use of 216.228.143.87 as permitted sender)
+Received: from EXCH2016.desu.edu (216.228.143.87) by
+ CH3PEPF00000014.mail.protection.outlook.com (10.167.244.119) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9611.0 via Frontend Transport; Fri, 6 Feb 2026 01:37:01 +0000
+Received: from exchcas.desu.edu ([167.21.184.47]) by EXCH2016.desu.edu with Microsoft SMTPSVC(10.0.14393.4169);
+	 Thu, 5 Feb 2026 20:36:58 -0500
+From: studentaccounts@desu.edu
+To: <djefferson22@students.desu.edu>
+Subject: =?UTF-8?Q?Student=20Account=20Change?=
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Return-Path: studentaccounts@desu.edu
+Message-ID: <EXCH2016cVVTPpnRyyq000005e2@EXCH2016.desu.edu>
+X-OriginalArrivalTime: 06 Feb 2026 01:36:58.0657 (UTC) FILETIME=[15909910:01DC9709]
+Date: 5 Feb 2026 20:36:58 -0500
+X-EOPAttributedMessage: 1
+X-MS-TrafficTypeDiagnostic: CH3PEPF00000014:EE_|CH3PR13MB7022:EE_|BY1PEPF0001AE1D:EE_|CO6PR01MB7482:EE_|BL0PR01MB4161:EE_
+X-MS-Office365-Filtering-Correlation-Id: fcec5fe3-cb65-4fbd-15a8-08de6520405d
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|82310400026|36860700013|34020700016|1800799024|376014|786006;
+X-Microsoft-Antispam-Message-Info-Original: =?us-ascii?Q?sxZzBDMOW1pPhDR1H1c/R1y3Gue1D2higyYse1brsGE705ZbbARq8PmPvkCO?=
+ =?us-ascii?Q?hgkUurfmPI/JbWvckhp4AdbT8OwXfKW0+ontSEMNwzwcAmlYZp6yZm/CKBUQ?=
+ =?us-ascii?Q?5yyICLdgG0TbMU5cKyMWCmN7IZUSqILZzxKrJeY76SfwC9n/1KEzi4nsQQlj?=
+ =?us-ascii?Q?PpgxiGiTPX9B+FouBgtZ7soUUVHKVlf5oQi9SjeApS+xnHAl60W9mKpxT9wv?=
+ =?us-ascii?Q?lu+vKSMzoThy/Tlirwo4Eb6nFCemOE2EVo+S0opIFw8oDvmKgfwmuRULkL4z?=
+ =?us-ascii?Q?f76X8mMX4MkVTAmg8zAA+VHMpDL7N6SmRIfuebRg4m/TNRJZQqZPhf8DHUvO?=
+ =?us-ascii?Q?QYdGcA3QJV0BczffkzKD8Ohxf+y1XvoZod9PHEmAmgXbofgTycbdtkJ0SjwQ?=
+ =?us-ascii?Q?oIrKAO/H+4dY6ZsCLq/Wt0H7SmgcOQETJu4XoEnW1m+txcQzUrbWqw7TguQB?=
+ =?us-ascii?Q?/6MYl4YTkxpzn28VpiifuhDVkwZqAKbn48U4Eo6N48kd4vn6IGWyDgVingcc?=
+ =?us-ascii?Q?f5zmtDnwIV/3LNqRmv73ifvFrTc9GgYsgjpm4eocbmbFmZoobthfue3wEPDk?=
+ =?us-ascii?Q?DM8ckg8te4XXyjn4hhvYFU2HpJYc7INB1CtFRkNCWwcM3Tre43UMre+WGZ5O?=
+ =?us-ascii?Q?uk+XOjh/+GBMczHNfftFa9MpT9JdDgLWhts9mzz89c3hgolzg6RDFZ70ir+D?=
+ =?us-ascii?Q?B+sd2nqqH0kkK+7gLmpARuCBLSRQHvnz+iU2mT8/aq4HZSIKhK6X/to+/uBU?=
+ =?us-ascii?Q?2VC7gaW4GITayDsOgeoQXM5XRfQBZ60KfFNfzjZWZy5qzJLpAV00Ra0oBil7?=
+ =?us-ascii?Q?hiD1EYHD8vlMrjZcp/H7ANB79w7JaFaTedOovgLLK6pMwoM0sazelVMlFir0?=
+ =?us-ascii?Q?7v12haE+Y2ICt7m78Spb5Tma2GzBr5hgs4sCVBHLZpJaD/Iw2b7xwvQ3J/hx?=
+ =?us-ascii?Q?KjyMxlxlen4j6cES0bPtkbZ1zXBc9IGou8kkGpiGJyhZDLxYbzUmg/7UBVI2?=
+ =?us-ascii?Q?xc2aeV8mxC8LirpxhuVg25mDhkvDrGsVXZZxp2btOfusSDOQ5RPV+4SYYOQl?=
+ =?us-ascii?Q?gNgKUWcHCAZYCzyunXlbb6s6Ugteqj3cUjAoTgcWtT0Q883V1Ob2zqFSWimQ?=
+ =?us-ascii?Q?Kr7RhC0CjG/TOk8iEVkymb7m0MH758BY3bqtkunehWhr5MqJIbGmAn4b6Ym4?=
+ =?us-ascii?Q?0V/h1rDCmvx69pO2l7hbFzVsyGeJhL4OApWClOiikadqXWJYkfgp6y8Q0lnv?=
+ =?us-ascii?Q?hEP7Q0NUej2+T2sIOo13dXlWMzNatd0gDwXybywSRN/utAEMZe8yWg6BYfmN?=
+ =?us-ascii?Q?n2SIv2XD0q63bJ5gtX6/V+cHN1PlZ2wHiJ9IX580nLSEuQKy0yaICz5K5yW7?=
+ =?us-ascii?Q?JZmfi8L5AuJ51/NJH6XXEcEyeuSQRU91fwvLnTXbgYueCOI5mFEeIVp5u5eN?=
+ =?us-ascii?Q?bo+I7SB57P/Rt2MnD0Fm7C8QbnNA19WHw6vEIsA77QxKfQhCVpMZnqjHz3+f?=
+ =?us-ascii?Q?gToFgipijfEEuhBu6gYwHVENP5e+CsWGZTy6N0mtXdQOREc4+SME/k7MUm10?=
+ =?us-ascii?Q?05BATMDylg6x6XGw+BjLSkPQaXFLfOTfkrOLLsV7mi1gpG6Il1SZrSooaS0x?=
+ =?us-ascii?Q?6uI4e9rPJ4d4XYd4aOnjMJCVQtknpuWuNKRKGM77fEEn6WOUuI+WraCyMcwC?=
+ =?us-ascii?Q?6pRJKQ=3D=3D?=
+X-Forefront-Antispam-Report-Untrusted: CIP:216.228.143.87;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:EXCH2016.desu.edu;PTR:ErrorRetry;CAT:NONE;SFS:(13230040)(82310400026)(36860700013)(34020700016)(1800799024)(376014)(786006);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-Original-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-Original-0: HYb0DbAuQ6pzQKUdji/zzb94sqxVfsKr8WA+mbNfNsNGT/f0cTNpA9ZfrTWdHkK5l3MaUWaJ0Lpc+pp/KwkEccPUWmK0jba86rU6jUq3LSSJfWWn5ALDX+A9Mq+jSPrRtwnXV8doP7bUT/jR7/qf1mE1LTQUQukjLkywd16WH8Q3nh3GQnMvVKhfsFUQl2cgpEU8wHU9/B1Oy5cYWM2nob20veHjGR8cVnKQrgVZOhP2gurHOg8wyi/N7FbIHpsRv0er27F6HmD5BLxFqQnqjfS4hw07luhY+YLdVXVPNypsNNb9btfV/epgfsQZkyVZ6uHvwQCp1sfGqTZr9rOQY3Zx1r695xcajp3O7Rm1dgXlB4EgyF1kzqj+BqJbGE3gYpWHxcPZDu6dHllIyRa1BgtHjpJaEN5/Fjo6S9skgF06Vih7hw/sv5SGEp2DHRj3
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR13MB7022
+X-MS-Exchange-Organization-ExpirationStartTime: 06 Feb 2026 01:37:12.6390
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: fcec5fe3-cb65-4fbd-15a8-08de6520405d
+X-EOPTenantAttributedMessage: cce03e76-6214-4113-9961-c1c0feb3a60b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: BY1PEPF0001AE1D.namprd04.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: BY1PEPF0001AE1D.namprd04.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource: BY1PEPF0001AE1D.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs: 4e7bb63f-db6d-4643-ddb6-08de652039e7
+X-MS-Exchange-Organization-BypassClutter: true
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:2;ARA:13230040|12012899012|2092899012|3072899012|35042699022;
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:c112::5;CTRY:;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:CY7PR03CU001.outbound.protection.outlook.com;PTR:mail-westcentralusazlp170100005.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(12012899012)(2092899012)(3072899012)(35042699022);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 Feb 2026 01:37:12.5049
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fcec5fe3-cb65-4fbd-15a8-08de6520405d
+X-MS-Exchange-CrossTenant-Id: cce03e76-6214-4113-9961-c1c0feb3a60b
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=1a576c15-cba7-4f15-aed5-b851323730e6;Ip=[216.228.143.87];Helo=[EXCH2016.desu.edu]
+X-MS-Exchange-CrossTenant-AuthSource: BY1PEPF0001AE1D.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO6PR01MB7482
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.5358774
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.9587.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944490095)(944506478)(944626604)(920097)(930201)(20251009114)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?MAIBlRfu6UseNl0MYp1zAw4D/qwEHhaLmaqpvdrSoDJPTn5zxIs5PIqGY1BV?=
+ =?us-ascii?Q?uRVGiGe16He9897xvUH/sWQ7ye9VxB9Ozjn+DAGw5FoMvtO7+YOFbF1UOvzG?=
+ =?us-ascii?Q?hSW75wxoweSzqZj+XYNi1kWm59/sBWEByd1Ho4dIV7l1iZXkMpEIKQNGKxY7?=
+ =?us-ascii?Q?hRdK49NOeRTwiZJbM+cdG1tFV4tGlyVV+dh6k+U+wWC2RK8SMQOvIw68mU26?=
+ =?us-ascii?Q?qB472oAhSRCAkPlG92Hi4eDU8XYBcMcLZkDTQ/x7kRYXSLK6Lfz3/yecd5gb?=
+ =?us-ascii?Q?D4DGFBncy2C+lRhJgdrOL0WvAj1N3/7Y5QNPqfZPPiGG6IxfyooDFcw3jClr?=
+ =?us-ascii?Q?k08/ZCfMGSEdF3I7rqdkb+m09ALHCPMu9oOLQOjCj3POHZ5d65SzCtDqOLx5?=
+ =?us-ascii?Q?yO4KULfbv//vURPdwW9UkUAY7WnKFWXBZrcFSJGFa21xj+XmXiWr80Qnem/K?=
+ =?us-ascii?Q?enOfQ2jsEklD+f0gSa90kM25jZFZzsqM2q8PULy+O2OaeleuXT16Ad3tUnx4?=
+ =?us-ascii?Q?/WnbUeY8D0Bt1UTEijlEgwFCu7qMIcR1BJmFEZ+kC5Ge9rE1dvmdLtZbuMgX?=
+ =?us-ascii?Q?35KSs/TypIQtGVS/qjo1/PnIe4TiZjR4v45Br17kfayufc2KuIclnLK8HjXJ?=
+ =?us-ascii?Q?pTzrAPI0hOLkUTdMw/BuOpQfME+A1QTv+G4cMOrsSLeFlNXJIOUEU8TKnDb5?=
+ =?us-ascii?Q?nPzZ2mGcX/p0IUBF/DYbOw+1G9YZOBAvOnwKNOmMVejBi+NuXZcjakN9qdZk?=
+ =?us-ascii?Q?gC1+9Q2AvVeokgDF/d21JvbCN5vnekDCuMyqS7CaxQfScnrNLSz6/WRYU6RF?=
+ =?us-ascii?Q?UIDSwELNHFqUuancRuIyqhMftcwixbo/g1qJi9Omo+UyE4kaAgoFNqyL9ccL?=
+ =?us-ascii?Q?EyfKZ511ps/JkkXvhqieERidmEsGDzYkrQCofiV8E0NeV3VM3GNcB6XbNide?=
+ =?us-ascii?Q?BT05cRc+L7G6srKw10UCiu/+WXIvXGl8ZjouCENQIh4lUVDf2g9BAaASYDK6?=
+ =?us-ascii?Q?wQUTmfGWwu5SAz27eZCzkxl2WQp8THZR/m9s+mmh6sSPTs2KYpa3LKcsIDvm?=
+ =?us-ascii?Q?L+ApOsdj9u938+/Rxr9IPL0hDHhLxzPr1jmdIw6y5/qb206a6qF1zS/BT0I5?=
+ =?us-ascii?Q?SAiogBCzn4HKvV+5sbaljUXrpxWtG8YfMQWJCRwja3QI1gsS2AMJTReTS/pT?=
+ =?us-ascii?Q?rpUb5KdH/pXcWei23w1NoqL9D9AuIVc4eiJYdyCHS7E/kq+EgHRCDj36RV2J?=
+ =?us-ascii?Q?ihAjXrANWQnu+gvpghYDGS2HG2IqAgmgpAAxuxiWPEcYV3f9/XzIiwY8Sx4W?=
+ =?us-ascii?Q?fvvaKe+axGCi4hc2r0IOoACO1wfiJ9Y7JWL1Utvv8rQoJnsl3k0UKaiQqKAg?=
+ =?us-ascii?Q?jM4+mGPYfd0iQb4ZACz0NGl85arCfvszrJDuh8I1d7XTqZK27cujtIAdJEwY?=
+ =?us-ascii?Q?Ym4AfVNN5+yqGy2oDumJRvro1Vy7OuF+qTOgFmsozpLTA40fFTDZU8ok5rSM?=
+ =?us-ascii?Q?h8c+P9t+qLspVS68stbtISac680jVk5bj/sefXXkfVK0ldPEuYnyeU+Vje3c?=
+ =?us-ascii?Q?iCH2hswwKWM1QUn/w9He7gYRU+9xVlpxrGF9TV81v7G5AKcB6bCozGxjnPsn?=
+ =?us-ascii?Q?Py0BbaZAQOoizLZTCUx0MZh7tXgOYmKW7yXBGt8+NjM1sXwBufyzTQgo1gJi?=
+ =?us-ascii?Q?amhikP2PR9CkFeXIe4ugowkb6YMt3r4Q8vCp9vhXUHK5XQIhcVMyQGrFgGFG?=
+ =?us-ascii?Q?JrkD0V10mbFejdV9RLLiiPctTD2PvHEc32KoY7zLRb4KpAZAHkOv2KP0dCAi?=
+ =?us-ascii?Q?2rQDBMA25OacA0SrP5Fzj7Szr8QWuf7BxpbRYB3SlypWUxu/V+6bdzYsNXzO?=
+ =?us-ascii?Q?YvgsG0weBQsVvMkNfQ4PJTY7uqiTueJBMt/NN5t5/dlu3IIETT6lCLiScDJA?=
+ =?us-ascii?Q?lXAOcAntRt2YfsCKCdNQv060/g5zhAf2pl/5ptJjZQhapglPs4mioB0ZUscs?=
+ =?us-ascii?Q?Wlc/59guzhNgounSxttIjDNeiXRGtXobU3QFOzsQB5BGW1D4SpmNrk57RH0P?=
+ =?us-ascii?Q?QtpRYNNcHpSDZlB30vpw1cuZipR/T12xzhKhUGVlRlsAX3kbjD9uz0zwCMty?=
+ =?us-ascii?Q?wRQUWNTwuKYuCxJyo5pRiJvlAiS5+zjs6hjYsIO1g5l2Yua0cZjH5xndSIlb?=
+ =?us-ascii?Q?ZoQ2SclC3opc4HgxDWd0t+MQ9QGfCD3F5eVX7kO3ttO0ri5HDirxvhbOo5zN?=
+ =?us-ascii?Q?NGqtIfOLycjDuIg0Jyz2/03Uu0selphiAYWfrU5cREpGEqiAsXubEgXvSUec?=
+ =?us-ascii?Q?09IHjNkbu9eYQh4Cz3ybXsvsr1PdNCI5P5EdSiqVBNVfwa0SFAR/YH1IGyyw?=
+ =?us-ascii?Q?HmzfX8vKCCclPxb4uZdqYljTMkywyjIl5eRG2NIE3s4XjgSoJsStgIDQJ94J?=
+ =?us-ascii?Q?YNApvW4uVKdf+zpeSLfFyGk6+daxpx+GzmMLtmwpWJvEl7bwp+XqFZ79KLSE?=
+ =?us-ascii?Q?s26STvQefbDtj+eDX43slSb66Dnkk1uiamUFhMfKx+33kdJQt48rV5pAGmMY?=
+ =?us-ascii?Q?SgZC4q1llOc4xly5lmYwGVhhwyd7ij2p6UgdsZJ5Yv3N8HNaCJFUT0NXBmcW?=
+ =?us-ascii?Q?M4eLRUQQKZviRYiVqt7Qoe3Hf6/vtYizAbN7IILqHrc8fHsdxx4DQ4qX9P8E?=
+ =?us-ascii?Q?dCFwSymRdRzwIRHSQXYD6Iy/Y9Y6PtmhRtn4RIqfT/v3HBF2L5Cq8G0yanBp?=
+ =?us-ascii?Q?lsSRuoKgpYMyMQS5SBZjQLkZLI+MWJeBiY/j7yhctqYZ3yTYSiNm01LnmCT2?=
+ =?us-ascii?Q?mmUbFQ04SU65nFpnlWAc+WmbgvfNhQuFWDo=3D?=
+MIME-Version: 1.0
+
+February 5, 2026
+Denita Jefferson (D10703461)
+
+Dear Denita Jefferson, 
+
+There has been a change to your student account. Changes that affect your student account include (but are not limited to):
+
+     *  Payments/Credits applied to the account
+     *  Registering for or dropping a course
+     *  Scholarships and Financial aid awarding/disbursement
+     *  Student Housing Charges and Housing-related fines
+     *  Receiving vouchers for bookstore, laundry, or print
+     *  Changes to meal plans/flex dollars
+     *  Parking fines, library fines, judicial fines, fire fines, or other penalties assessed
+
+Please log into Banner Self-Service on MyDESU to review your account.
+
+For information about fines assessed to your account, please contact the issuing office (i.e. Residence Life, Public Safety, Library, Policy and Compliance, Judicial Affairs). The contact information for the various areas can be found on the desu.edu website.     For other questions or concerns regarding your account, please contact Student Accounts at (302) 857-6240 and speak to a representative or respond via email to studentaccounts@desu.edu.
+
+Sincerely,
+
+Office of Student Accounts
+
+
+
