@@ -1,4 +1,4 @@
-# Senior CapstonL AI Phishing Email Detection System
+# Senior Capstone: AI Phishing Email Detection System
 
 ## Overview
 This project develops a machine learning system that analyzes email metadata and content to detect phishing attacks. The system extracts security-relevant features from .eml email files and applies machine learning models to classify emails as phishing or legitimate.
