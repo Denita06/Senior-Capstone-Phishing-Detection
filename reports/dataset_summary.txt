@@ -1,0 +1,23 @@
+=== UNIFIED DATASET REPORT ===
+
+Total rows: 605634
+
+Label distribution:
+label
+0    521491
+1     84143
+Name: count, dtype: int64
+
+Source distribution:
+source
+enron           517401
+fraud_corpus     82034
+kaggle            5783
+nazario            416
+Name: count, dtype: int64
+
+Class balance (%):
+label
+0    86.106625
+1    13.893375
+Name: proportion, dtype: float64
