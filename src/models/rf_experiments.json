@@ -1,0 +1,62 @@
+[
+    {
+        "depth": 5,
+        "n_trees": 10,
+        "accuracy": 0.99285
+    },
+    {
+        "depth": 5,
+        "n_trees": 50,
+        "accuracy": 0.992875
+    },
+    {
+        "depth": 5,
+        "n_trees": 100,
+        "accuracy": 0.992875
+    },
+    {
+        "depth": 5,
+        "n_trees": 200,
+        "accuracy": 0.992875
+    },
+    {
+        "depth": 10,
+        "n_trees": 10,
+        "accuracy": 0.99315
+    },
+    {
+        "depth": 10,
+        "n_trees": 50,
+        "accuracy": 0.99305
+    },
+    {
+        "depth": 10,
+        "n_trees": 100,
+        "accuracy": 0.993
+    },
+    {
+        "depth": 10,
+        "n_trees": 200,
+        "accuracy": 0.993025
+    },
+    {
+        "depth": 20,
+        "n_trees": 10,
+        "accuracy": 0.995925
+    },
+    {
+        "depth": 20,
+        "n_trees": 50,
+        "accuracy": 0.9955
+    },
+    {
+        "depth": 20,
+        "n_trees": 100,
+        "accuracy": 0.995525
+    },
+    {
+        "depth": 20,
+        "n_trees": 200,
+        "accuracy": 0.99565
+    }
+]

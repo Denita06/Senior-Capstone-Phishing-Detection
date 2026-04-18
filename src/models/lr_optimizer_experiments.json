@@ -1,0 +1,18 @@
+[
+    {
+        "solver": "lbfgs",
+        "accuracy": 0.99365
+    },
+    {
+        "solver": "saga",
+        "accuracy": 0.994175
+    },
+    {
+        "solver": "liblinear",
+        "accuracy": 0.994175
+    },
+    {
+        "solver": "newton-cg",
+        "accuracy": 0.993925
+    }
+]
