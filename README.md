@@ -22,7 +22,11 @@ The findings suggest that AI-driven phishing detection systems can significantly
 
 
 ## Features
-
+- **SOC Analyst Dashboard**: A professional Streamlit-based interface for real-time email triage.
+- **MITRE ATT&CK® Mapping**: Automatically maps detected threats to specific adversarial techniques (e.g., T1036, T1566).
+- **ML Ensemble Engine**: Combines TF-IDF vectorization with a high-performance ensemble model (Random Forest/XGBoost).
+- **Heuristic URL Analysis**: Extracts and scores features from embedded links (TLD reputation, IP-hosting).
+- **Incident Response Workflow**: Built-in actions for analysts to purge, blacklist, or flag emails for model retraining.
 - Parsing and processing `.eml` email files  
 - Feature extraction from email headers and body content  
 - Multi-source dataset integration  
@@ -38,6 +42,16 @@ The findings suggest that AI-driven phishing detection systems can significantly
 - Email parsing libraries (imaplib / email module)
 - Matplotlib / Seaborn (for visualization)
 
+## SOC Analyst Workflow & Threat Modeling
+
+This system transforms raw data into actionable intelligence by mapping detections to the **MITRE ATT&CK® Framework**.
+
+### Automated Threat Analysis
+| Technique | Component | Friendly Description |
+| :--- | :--- | :--- |
+| **T1036** | **Identity Deception** | Detection of display name spoofing and domain age anomalies. |
+| **T1566.002** | **Malicious Link** | Heuristic URL analysis identifying suspicious TLDs and IP-based hosting. |
+| **T1204.001** | **Urgency Tactics** | NLP detection of high-pressure language used to elicit user action. |
 
 
 ## Machine Learning Models
@@ -50,6 +64,42 @@ The findings suggest that AI-driven phishing detection systems can significantly
 | Naive Bayes | Fast probabilistic model |
 | Ensemble Voting | Combines all models for improved accuracy |
 
+
+
+```mermaid
+graph TD
+    subgraph "User Interface Layer (Frontend)"
+        A[Streamlit Web App]
+        A --> B(SOC Triage Console)
+    end
+
+    subgraph "Logic & Application Layer (Middleware)"
+        C[Gmail API - imaplib]
+        D[Scikit-learn Ensemble Classifier]
+        E[MITRE ATT&CK Mapper]
+        
+        B --> C
+        B --> D
+        B --> E
+    end
+
+    subgraph "Data & Infrastructure Layer (Backend)"
+        F[Pickled Models - RF/XGB]
+        G[WHOIS Lookup API & Cache]
+        
+        D --> F
+        E --> G
+    end
+
+    %% Styles
+    classDef frontend fill:#b2ebf2,stroke:#00838f,stroke-width:1px;
+    classDef middleware fill:#ffecb3,stroke:#ff8f00,stroke-width:1px;
+    classDef backend fill:#f8bbd0,stroke:#ad1457,stroke-width:1px;
+    
+    class A,B frontend;
+    class C,D,E middleware;
+    class F,G backend;
+```
 
 
 ## Dataset Sources
@@ -126,17 +176,26 @@ After training and evaluation, the following outputs are generated:
 
 ## ▶ How to Run
 
-### 1. Install dependencies
+### 1. Prerequisites & Installation
+Ensure you have Python 3.10+ installed.
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Train all models
+### 2. Launch the SOC Dashboard (GUI)
+The primary interface for security analysts to scan Gmail inboxes and analyze threats.
 ```bash
-python src/scripts/train_all_models.py
+streamlit run src/deployment/streamlit_app.py
 ```
 
-### 3. Generate visualizations
+### 3. Run the CLI Tool
+Analyze local .eml files directly from your terminal without a browser.
 ```bash
-python src/dashboard/plots.py
+# Analyze a single email file
+python src/deployment/detect_email.py --file samples/suspicious_email.eml
+
+# Analyze a directory of emails
+python src/deployment/detect_email.py --dir samples/inbox_dump/
 ```
+
+
