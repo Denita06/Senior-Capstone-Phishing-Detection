@@ -1,4 +1,9 @@
-scikit-learn
+streamlit
 pandas
-numpy
+google-api-python-client
+google-auth-oauthlib
 beautifulsoup4
+joblib
+scikit-learn
+python-whois
+numpy

@@ -1,0 +1,17 @@
+# Data
+src/data/raw/
+src/data/processed/
+*.csv
+
+# Models
+src/models/*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+
+credentials.json
+token.json
