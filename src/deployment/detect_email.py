@@ -6,196 +6,251 @@ import json
 import os
 import requests
 import base64
+import dns.resolver
 from datetime import datetime
 from bs4 import BeautifulSoup
 from src.features.url_analysis import analyze_urls
 
-# Local cache to prevent WHOIS/VT rate-limiting and speed up execution
 CACHE_FILE = "domain_cache.json"
 
 class EmailPhishingDetector:
-    """
-    A hybrid detection engine that uses ML text classification, 
-    domain reputation auditing, and external threat intelligence.
-    """
-    def __init__(self, model_path="src/models/ensemble_model.pkl", vectorizer_path="src/models/tfidf_vectorizer.pkl"):
-        # Load the pre-trained ML model and TF-IDF vectorizer
+    def __init__(self, model_path="src/models/Support Vector Machine (SVM)_model.pkl", vectorizer_path="src/models/tfidf_vectorizer.pkl"):
         self.model = joblib.load(model_path)
         self.vectorizer = joblib.load(vectorizer_path)
         self.cache = self._load_cache()
-        # API Key for VirusTotal - used to check if links are known-malicious
         self.virusTotal_api_key = os.getenv("VT_API_KEY", "627bf46587e5f39b7f20ac60104ad1baf9973cf82f37d2242efdff544bee9929")
         
+        self.top_domains = self._load_top_domains()
+
     def _load_cache(self):
-        """Loads historical domain data to save time and API credits."""
         if os.path.exists(CACHE_FILE):
             try:
                 with open(CACHE_FILE, "r") as f:
                     return json.load(f)
-            except:
-                return {}
+            except: return {}
         return {}
 
     def _save_cache(self):
-        
         with open(CACHE_FILE, "w") as f:
             json.dump(self.cache, f)
 
+    def verify_spf(self, domain, sender_ip):
+        if not sender_ip: return False
+        try:
+            answers = dns.resolver.resolve(domain, 'TXT')
+            for txt_record in answers:
+                record = txt_record.to_text().lower()
+                if "v=spf1" in record:
+                    if sender_ip in record or "include:" in record:
+                        return True
+        except: pass
+        return False
+
+    def check_auth_headers(self, headers_raw):
+        results = {"dkim": False, "dmarc": False}
+        if not headers_raw: return results
+        if re.search(r'dkim=pass', headers_raw, re.I): results["dkim"] = True
+        if re.search(r'dmarc=pass', headers_raw, re.I): results["dmarc"] = True
+        return results
+
     def get_vt_reputation(self, url):
-        """
-        Queries VirusTotal V3 API to see if a URL has been flagged as malicious by 70+ antivirus engines.
-        """
-        if self.virusTotal_api_key == "627bf46587e5f39b7f20ac60104ad1baf9973cf82f37d2242efdff544bee9929":
-            return 0 # Default if key is invalid or placeholder
-        
-        # VT V3 requires URL to be base64 encoded without padding
         url_id = base64.urlsafe_b64encode(url.encode()).decode().strip("=")
         headers = {"x-apikey": self.virusTotal_api_key}
-        
         try:
             response = requests.get(f"https://www.virustotal.com/api/v3/urls/{url_id}", headers=headers, timeout=5)
             if response.status_code == 200:
                 stats = response.json()['data']['attributes']['last_analysis_stats']
                 return stats.get('malicious', 0) + stats.get('suspicious', 0)
-        except Exception:
-            pass
+        except: pass
         return 0
 
+    def _load_top_domains(self):
+        path = "tranco_VQWQN.csv"
+        if os.path.exists(path):
+            try:
+                import pandas as pd
+                # Only load the top 50,000 rows to keep it fast
+                # Tranco CSV format is usually: Rank, Domain
+                df = pd.read_csv(path, header=None, nrows=50000) 
+                return set(df[1].str.lower().tolist())
+            except Exception as e:
+                print(f"Error loading reputation data: {e}")
+        return set()
+    
     def get_domain_age(self, domain):
-        """
-        Checks how old a domain is. New domains (under 30 days) are high risk.
-        Uses WHOIS protocol.
-        """
         if domain in self.cache and "age" in self.cache[domain]:
             return self.cache[domain]["age"]
-
-        # Whitelist for massive, trusted domains to skip WHOIS lookups
-        trusted_roots = ["google.com", "microsoft.com", "apple.com", "amazon.com", "uber.com"]
-        if any(root in domain for root in trusted_roots):
-            return 5000 
-
         try:
             w = whois.whois(domain)
             creation_date = w.creation_date
-            if isinstance(creation_date, list):
-                creation_date = creation_date[0]
-            
+            if isinstance(creation_date, list): creation_date = creation_date[0]
             if creation_date:
                 age_days = (datetime.now() - creation_date).days
                 if domain not in self.cache: self.cache[domain] = {}
                 self.cache[domain]["age"] = age_days
                 self._save_cache()
                 return age_days
-        except:
-            pass
-        
-        return 30 # Default to 30 days (suspicious) if lookup fails
+        except: pass
+        return 365 
 
     def clean_text(self, raw_html): 
-        """Strips HTML for the ML model."""
         soup = BeautifulSoup(raw_html, "html.parser")
-        for element in soup(["script", "style"]):
-            element.decompose()
+        for element in soup(["script", "style"]): element.decompose()
         return " ".join(soup.get_text().split())    
 
-    def predict(self, text, sender_raw="", reply_to="", subject=""):
-        """
-        The core logic: Aggregates ML text risk, Sender reputation, and URL analysis
-        into a single risk score and maps it to MITRE ATT&CK techniques.
-        """
+    def predict(self, text, sender_raw="", headers_raw="", sender_ip="", subject=""):
         if not text:
-            return {"prediction": "LEGITIMATE", "risk_score": 0.0, "risk_level": "LOW"}
+            return {"prediction": "LEGITIMATE", "risk_score": 0.0, "risk_level": "LOW", "threat_indicators": []}
             
+        threat_indicators = []
+
         processed_text = self.clean_text(text)
         tfidf_features = self.vectorizer.transform([processed_text])
+        
+        decision_score = self.model.decision_function(tfidf_features)[0]
+        text_risk = 1 / (1 + np.exp(-decision_score))
 
-        # 1. ML Text Risk (30% weight): Uses the Ensemble model to find phishing keywords/intent
-        probs = []
-        for model in self.model.named_estimators_.values():
-            if hasattr(model, "predict_proba"):
-                prob = model.predict_proba(tfidf_features)[0][1]
-            else:
-                prob = 1 / (1 + np.exp(-model.decision_function(tfidf_features)[0]))
-            probs.append(prob)
-        text_risk = np.mean(probs)
-
-        # 2. Sender and Reputation Analysis (40% weight): Checks domain age and lookalike branding
         sender_risk = 0.0
         email_addr = re.search(r'<(.*?)>', sender_raw).group(1) if '<' in sender_raw else sender_raw
         domain = email_addr.split('@')[-1].lower()
         
+        # Check if domain or its parent (e.g., email.vidangel.com -> vidangel.com) is in Tranco
+        is_reputable = False
+        if domain in self.top_domains:
+            is_reputable = True
+        else:
+            # Check if the base domain (last two parts) is in the top domains
+            parts = domain.split('.')
+            if len(parts) > 2:
+                base_domain = ".".join(parts[-2:])
+                if base_domain in self.top_domains:
+                    is_reputable = True
+
+        auth_status = self.check_auth_headers(headers_raw)
+        spf_valid = self.verify_spf(domain, sender_ip)
         domain_age = self.get_domain_age(domain)
-        
-        threat_patterns = ["stolen", "blocked", "action required", "unauthorized", "deleted", "hacked"]
-        combined_content = (subject + " " + processed_text).lower()
-        has_threat = any(word in combined_content for word in threat_patterns)
 
-        if domain_age <= 30 and has_threat:
-            sender_risk += 0.85  
-        elif domain_age <= 30:
-            sender_risk += 0.40
-            
-        # Detect Display Name Spoofing (e.g., Sender says "Uber" but email is "scammer@gmail.com")    
-        display_name = re.sub(r'<.*?>', '', sender_raw).strip().lower()
-        if "uber" in display_name and "uber.com" not in domain:
-            sender_risk += 0.60
+        if is_reputable:
+            # If it's a known brand and passes auth, it's almost certainly legit
+            if auth_status["dkim"] and auth_status["dmarc"] and spf_valid:
+                sender_risk = -0.45 
+            else:
+                # If it's a known brand but has minor auth issues (like VidAngel in image_016df4.jpg)
+                # give it a small trust bonus instead of a penalty.
+                sender_risk = -0.15 
+        else:
+            # Existing logic for unknown domains
+            if domain_age <= 60: sender_risk += 0.5 
+            if not spf_valid: sender_risk += 0.4
 
-        # 3. URL and VirusTotal Analysis (30% weight): Checks links for malware/phishing signatures
+            local_part = email_addr.split('@')[0]
+            if len(local_part) > 8 and not any(v in local_part for v in 'aeiou'):
+                sender_risk += 0.30
+
         url_stats = analyze_urls(text)
         url_risk = 0.0
-        flagged_entities = []
         
-        # Logic to check first 2 URLs in VT to stay within rate limits
-        urls_to_check = re.findall(r'https?://[^\s)>"\]]+', text)[:2]
-        vt_total_hits = 0
+        urls_to_check = re.findall(r'https?://[^\s)>"\]]+', text)
         for url in urls_to_check:
+            if "storage.googleapis.com" in url or "blob.core.windows.net" in url:
+                url_risk += 0.5
+
+                threat_indicators.append({
+                    "tech": "T1566.002",
+                    "name": "Cloud-Hosted Phish",
+                    "desc": "Hosting phishing content on reputable cloud storage (Google/Azure) to bypass filters."
+                })
+            
             hits = self.get_vt_reputation(url)
             if hits > 0:
-                vt_total_hits += hits
-                flagged_entities.append({"type": "URL", "value": url[:50]+"...", "hits": hits})
+                url_risk += 0.6
+
+        if len(urls_to_check) > 3:
+            url_risk += 0.2
         
-        if vt_total_hits > 0: url_risk += 0.7
         if url_stats["has_ip_url"]: url_risk += 0.5
-        if url_stats["has_suspicious_tld"]: url_risk += 0.3
+        if url_stats["url_count"] > 5: url_risk += 0.2
         url_risk = min(url_risk, 1.0)
 
-        # 4. Final Score Calculation
-        combined_score = (
-            (text_risk * 0.30) + 
-            (sender_risk * 0.40) + 
-            (url_risk * 0.30)
-        )
-        combined_score = max(0.0, min(1.0, combined_score))
-        
-        prediction = "PHISHING" if combined_score >= 0.50 else "LEGITIMATE"
+        if text_risk < 0.05:
+            sender_risk = min(sender_risk, 0.1)
+            url_risk = min(url_risk, 0.1)
 
-        # 5. MITRE ATT&CK Mapping: Converts findings into industry-standard security terminology
-        threat_indicators = []
-        if sender_risk > 0.5:
-            threat_indicators.append({"tech": "T1036", "name": "Masquerading", "desc": "Domain age/display name mismatch."})
-        if vt_total_hits > 0 or url_stats["has_ip_url"]:
-            threat_indicators.append({"tech": "T1566.002", "name": "Spearphishing Link", "desc": "Malicious URL/IP identified."})
-        if has_threat:
-            threat_indicators.append({"tech": "T1204.001", "name": "User Execution", "desc": "Urgency used to elicit clicks."})
-        if "malware" in combined_content or vt_total_hits > 5:
-            threat_indicators.append({"tech": "T1566.001", "name": "Spearphishing Attachment/Link", "desc": "High confidence malware signature."})
+        # Brand Alignment Check
+        subject_lower = subject.lower()
+        brand_name = domain.split('.')[0]
+        if is_reputable and brand_name in subject_lower:
+            # Subject matches verified sender domain
+            sender_risk -= 0.15
+
+        # DYNAMIC WEIGHTING BASED ON REPUTATION
+        # DYNAMIC WEIGHTING BASED ON REPUTATION
+        if is_reputable and auth_status["dkim"] and auth_status["dmarc"] and spf_valid:
+            # Identity is 100% verified for a top domain.
+            # Drop the text risk significantly so it doesn't cause false positives.
+            adjusted_text_risk = text_risk * 0.15 
+            combined_score = (
+                (adjusted_text_risk * 0.10) + 
+                (sender_risk * 0.70) + 
+                (url_risk * 0.20)
+            )
+        elif is_reputable:
+            combined_score = (
+                (text_risk * 0.20) + 
+                (sender_risk * 0.60) + 
+                (url_risk * 0.20)
+            )
+        else:
+            # Standard weighting for unknown or unverified senders
+            # If the domain is UNKNOWN, text risk is much more dangerous
+            # Especially if text_risk is high (Social Engineering Lure)
+            text_weight = 0.70 if text_risk > 0.60 else 0.50
+
+            combined_score = (
+                (text_risk * text_weight) + 
+                (sender_risk * 0.10) + 
+                (url_risk * (0.90 - text_weight)) 
+            )
+
+        combined_score = max(0.0, min(1.0, combined_score))
+        prediction = "PHISHING" if combined_score >= 0.49 else "LEGITIMATE"
+
+        if not spf_valid and sender_risk > 0:
+            threat_indicators.append({
+                "tech": "T1566", 
+                "name": "Phishing", 
+                "desc": "Failed SPF/Identity verification."
+            })
+
+        if url_risk > 0.4:
+            threat_indicators.append({
+                "tech": "T1566.002", 
+                "name": "Spearphishing Link", 
+                "desc": "Suspicious URL detected."
+            })
+
+        if text_risk > 0.65:
+            threat_indicators.append({
+                "tech": "T1566.001", 
+                "name": "Social Engineering Lure", 
+                "desc": "High linguistic risk detected: Text matches patterns for financial/urgency lures."
+            })
 
         return {
             "prediction": prediction,
             "risk_score": round(float(combined_score), 2),
             "risk_level": self.get_risk_level(combined_score),
-            "threat_matrix": threat_indicators,
-            "flagged_entities": flagged_entities,
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "auth_results": {"spf": spf_valid, "dkim": auth_status["dkim"], "dmarc": auth_status["dmarc"]},
+            "threat_indicators": threat_indicators, 
             "analysis_details": {           
-                "text_risk": round(float(text_risk), 2),
-                "sender_risk": round(float(sender_risk), 2),
+                "text_risk": round(float(text_risk), 2),    
+                "sender_risk": round(float(max(0.0, sender_risk)), 2),
                 "url_risk": round(float(url_risk), 2)
             }
         }
 
     def get_risk_level(self, score):
-        if score <= 0.35: return "LOW"
-        elif score <= 0.55: return "MEDIUM"
-        elif score <= 0.80: return "HIGH"
+        if score <= 0.34: return "LOW"
+        elif score <= 0.49: return "MEDIUM"
+        elif score <= 0.60: return "HIGH"
         else: return "CRITICAL"

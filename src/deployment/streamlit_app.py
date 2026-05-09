@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -107,9 +112,9 @@ col_left, col_right = st.columns(2)
 df_viz = pd.DataFrame([
     {
         "Severity": e["risk_level"],
-        "Technique": t["name"] if e["threat_matrix"] else "None",
+        "Technique": t["name"] if e["threat_indicators"] else "None",
         "Score": e["risk_score"]
-    } for e in processed_emails for t in (e["threat_matrix"] if e["threat_matrix"] else [{"name": "None"}])
+    } for e in processed_emails for t in (e["threat_indicators"] if e["threat_indicators"] else [{"name": "None"}])
 ])
 
 with col_left:
@@ -197,9 +202,9 @@ for idx, email in enumerate(display_emails):
         
         # Status
         if email['prediction'] == "PHISHING":
-            c5.markdown('<span class="status-phish">PHISH</span>', unsafe_allow_html=True)
+            c5.markdown('<span class="status-phish">PHISHING</span>', unsafe_allow_html=True)
         else:
-            c5.markdown('<span class="status-legit">LEGIT</span>', unsafe_allow_html=True)
+            c5.markdown('<span class="status-legit">LEGITIMATE</span>', unsafe_allow_html=True)
             
         # Action Dropdown
         with c6:
@@ -229,8 +234,8 @@ for idx, email in enumerate(display_emails):
 
             with f_col2:
                 st.markdown("#### MITRE ATT&CK Mapping")
-                if email.get("threat_matrix"):
-                    for threat in email["threat_matrix"]:
+                if email.get("threat_indicators"):
+                    for threat in email["threat_indicators"]:
                         # NEW STYLE: Card-based layout with accent border
                         st.markdown(f"""
                             <div style="
@@ -267,11 +272,13 @@ for idx, email in enumerate(display_emails):
                     </div>
                 """, unsafe_allow_html=True)
                 
-                details = email.get("analysis_details", {'text_risk':0, 'sender_risk':0, 'url_risk':0})
-                st.progress(details['text_risk'], text=f"Linguistic: {details['text_risk']*100:.0f}%")
-                st.progress(details['sender_risk'], text=f"Reputation: {details['sender_risk']*100:.0f}%")
-                st.progress(details['url_risk'], text=f"URL Risk: {details['url_risk']*100:.0f}%")
+                details = email.get("analysis_details", {'text_risk': 0.0, 'sender_risk': 0.0, 'url_risk': 0.0})
 
+                st.progress(details['text_risk'], text=f"Linguistic: {details['text_risk']*100:.0f}%")
+                display_risk = max(0.0, min(1.0, details['sender_risk'])) 
+                st.progress(display_risk, text=f"Sender Risk Level: {display_risk*100:.0f}%")
+                st.progress(details['url_risk'], text=f"URL Risk: {details['url_risk']*100:.0f}%")
+                
             with b_col2:
                 st.markdown("#### Full Email Body")
                 st.text_area("Source Code", value=email['body'], height=300, disabled=True, key=f"src_{email['id']}")
