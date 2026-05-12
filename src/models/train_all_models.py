@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val
 from sklearn.feature_extraction.text import TfidfVectorizer
 # ML models used in this project
 from sklearn.linear_model import LogisticRegression   # Linear model for classification
-from sklearn.svm import LinearSVC                     # Support Vector Machine (fast for text)
+from sklearn.svm import SVC                     # Support Vector Machine (fast for text)
 from sklearn.ensemble import RandomForestClassifier, VotingClassifier   # Tree-based + ensemble
 from sklearn.naive_bayes import MultinomialNB  # Probalistic model (best for text)
 # Evaluation metrics
@@ -139,7 +139,9 @@ models = {
         class_weight="balanced"
     ),
 
-    "Support Vector Machine (SVM)": LinearSVC(
+    "Support Vector Machine (SVM)": SVC(
+        kernel='rbf',
+        probability=True,
         class_weight="balanced",
     ),
 
