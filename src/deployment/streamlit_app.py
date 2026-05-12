@@ -282,6 +282,11 @@ for idx, email in enumerate(display_emails):
             with b_col2:
                 st.markdown("#### Full Email Body")
                 st.text_area("Source Code", value=email['body'], height=300, disabled=True, key=f"src_{email['id']}")
+                
+                # Show extracted URLs for transparency
+                if "urls" in email:
+                    st.markdown("#### Detected Links")
+                    st.dataframe(pd.DataFrame(email["urls"], columns=["Destination URL"]))
 
             if st.button("Close Analysis", key=f"cls_{email['id']}", width="stretch"):
                 st.rerun()

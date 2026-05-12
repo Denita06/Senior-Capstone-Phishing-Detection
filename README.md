@@ -20,7 +20,7 @@ We propose a multi-classifier NLP framework extracting semantic and syntactic fe
 The Ensemble method, combining LR, SVM and RF predictions, resulted with 99.62% accuracy with 16 False positives over 5544 phishing emails. RF consistently exceeded 99.5% across different numbers of trees and depth configurations. SVM=RBF outperformed the individual performance at 99.76% accuracy with F1 score of 0.99 and an AUC-ROC of 0.999. Because of the RDF non-linear kernel, the SVM was able to handle complex phishing email patterns that linear models can't capture, the high 99.76% accuracy was also due to the  best RBF's high-dimensional TF-IDF space with local decision boundaries. The TF-IDF bigram achieved significantly higher discriminative power than unigrams alone. Unlike signature-based systems, our approach extracts semantic and syntactic features via TF-IDF vectorization and advanced n-gram analysis, enabling generalization to unseen phishing variants.
 The framework demonstrates that kernel-based NLP classifiers provide scalable, real-time defense against AI-generated phishing emails, SVM-RBF 2-gram was the right tool for semantic complex text classification.
 
-
+![](docs/diagram-6.png)
 
 ## Features
 - **SOC Analyst Dashboard**: A professional Streamlit-based interface for real-time email triage.
@@ -229,3 +229,42 @@ If the sender is unknown or fails identity checks, the system "boosts" the impor
 ![SOC Dashboard - SPAM FOLDER](docs/SOC-Dashboard-SPAM-2.png)
 
 
+## SOC Analyst Workflow & Threat Modeling
+
+This system transforms raw data into actionable intelligence by mapping detections to the **MITRE ATT&CK® Framework**.
+
+### Automated Threat Analysis
+| Technique | Component | Friendly Description |
+| :--- | :--- | :--- |
+| **T1036** | **Identity Deception** | Detection of display name spoofing and domain age anomalies. |
+| **T1566.002** | **Malicious Link** | Heuristic URL analysis identifying suspicious TLDs and IP-based hosting. |
+| **T1204.001** | **Urgency Tactics** | NLP detection of high-pressure language used to elicit user action. |
+
+
+### SOC Dashboard Logic & Implementation
+
+I designed the SOC Console as a practical tool for security analysis or to be used as a Security Operations Center (SOC) tool. The goal was to bridge the gap between complex machine learning and use real-world data to show the model handles real life threats.
+
+1. Real-time Data Ingestion
+The dashboard uses the **imaplib** libraryand **OAuth 2.0** to securely connect to my Gmail accoumt. It fetches raw email content and parses out the headers and body. Building this connection wasimportant because it allowed me to test how the model handels real-world formatting, tracking pixels, and complex HTML that are not always found in cleaned data sets.
+
+2. Multi-Layered Analysis Pipeline
+Every email that comes through goes through three specific checkpoints before it is labeled as **phishing** or **legitimate**:
+- NLP Text Analysis: I ussed a TF-IDF Vectorizer with N-Grams (Bigrams) to look for phrase patterns. By focusing on word collocations like "Action Required" or "Account Suspension", the model can detct the urgency and pressure commonly found in AI-generated social engineering.
+- Domain Reputation (Tranco Integration): To minimize false positives, I integrated the Tranco top-50k reputable domains dataset. If an email comes from a trusted domain or a verified sender and passes SPF/DKIN/DMARC checks, the system gives it a trust bonus to keep it out of the 
+- URL & Cloud Analysis: The system retreives every link the email and checks them against the VirusTotal API for known malware, but it also flags links hosted on clous services like Google Storage or Azure Blobs. Attackers often hide phishing pages on Google Storage or Azure Blobs because these domains already have a good reputation.
+
+3. Balanced Scoring
+One challenge I experiences was ensuring the legitimate marketing were not flagged as phishing because of its language. I was able to solve this issue by using this approach.
+If the domain is highly reputable (verified via Tranco), the system prioritizes the verified identity over the suspicious language.
+If the sender is unknown or fails identity checks, the system "boosts" the importance of the text analysis. In these cases, if the language looks even slightly suspicious, it gets pushed into the HIGH or CRITICAL severity tier.
+
+4. MITRE ATT&CK Mapping
+
+
+### Gmail Inbox Folder Analysis
+![SOC Dashboard - INBOX](docs/SOC-Dashboard-INBOX-1.png)
+![SOC Dashboard - INBOX](docs/SOC-Dashboard-INBOX-2.png)
+### Gmail Spam Folder Analysis
+![SOC Dashboard - SPAM FOLDER](docs/SOC-Dashboard-SPAM-1.png)
+![SOC Dashboard - SPAM FOLDER](docs/SOC-Dashboard-SPAM-2.png)
